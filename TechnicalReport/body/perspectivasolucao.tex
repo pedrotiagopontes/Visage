@@ -1,0 +1,49 @@
+\chapter{Perspectiva de Solução} \label{chap:solução}
+
+O reconhecimento facial em imagens sofreu uma evolução notável nos últimos 20 anos, tal como documentado no capítulo 1 deste relatório. Em cenários cooperativos, onde as condições de captura de imagens são controladas, considera-se mesmo que o problema de verificação 1:1 se encontra relativamente resolvido, uma vez que as taxas de reconhecimento atingidas são satisfatórias para a grande maioria das aplicações \citep{Li2011}. Existem também várias aplicações em situações reais com um bom nível de satisfação por parte dos seus utilizadores , como é o caso do sistema de fronteira automático dos aeroportos portugueses, ou o controlo de entradas nas cerimónias inaugurais dos jogos olímpicos de Pequim.
+
+Cenários coope
+
+Estudos efetuados demonstraram que aplicação destes filtros no âmbito da abstração de imagens para a ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento \citep{Coelho2012}. Tendo em conta os resultados previamente obtidos, e uma vez que não existem estudos relativos à utilização destes filtros no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto no âmbito desta dissertação.
+
+
+A hipótese é que usar a abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar a qualidade do reconhecimento.
+
+\section{Objetivos} \label{sec:goals}
+O principal objetivos deste projeto visa o estudo do impacto de filtros visuais de informação de contexto no processo de reconhecimento facial.
+Adicionalmente propõe-se também o desenvolvimento de um sistema de reconhecimento facial de personalidades que integre a abstração de imagens no processo de reconhecimento facial. Este sistema deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.
+
+\section{Implementação} \label{sec:implementacao}
+Uma vez que não se pretende neste projecto efectuar investigação ao nível dos algoritmos de reconhecimento facial, mas sim ao nível do impacto do uso de imagens abstraidas nesse sistemas, a implementação desses algoritmos terá por base a biblioteca OpenCV (Open Source Computer Vision) nomeadamente o módulo "Face Recognizer" (3 algorimos de reconhecimento facial - Eigenfaces, FisherFaces e Local Binary Patterns Histograms)
+
+Ao nível dos filtros de abstração o estudo será efectuado utilizado o filtro Anisotropic Kuwahara Filter
+Este filtro foi utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia, pelo que se considera adequado a sua utilização no âmbito deste projecto.
+
+Por último, ao nível da coleção de dados a analisar, e uma vez que este projeto se encontra a ser desenvolvido em parceria com o laboratório da Sapo da FEUP, temos em vista analisar a coleção de imagens Sapo Fama, a qual agrega uma base de dados de imagens de personalidades famosas nacionais e internacionais.
+
+\subsection{OpenCV - Face Recognizer}
+descrever genericamente 
+
+\subsubsection{Eigenfaces}
+lorem ipsum
+
+\subsubsection{Fisherfaces}
+lorem ipsum
+
+\subsubsection{Local Binary Patterns Histograms}
+lorem ipsum
+
+\subsection{Base de dados}
+
+
+\subsection{Avaliação Resultados}
+	
+
+\section{Resumo ou Conclusões}
+
+Aliquam erat volutpat. Nunc pede ipsum, porttitor eu, bibendum non,
+bibendum nec, nisl. Maecenas eget mauris. Nullam pulvinar. Curabitur
+rutrum commodo est. Nam sapien pede, interdum eu, accumsan ultrices,
+venenatis sit amet, tellus. Praesent ac ante bibendum enim varius
+suscipit. Donec enim. Proin nisi. Quisque libero turpis, varius ut,
+elementum vel, pulvinar sed, nunc. 
