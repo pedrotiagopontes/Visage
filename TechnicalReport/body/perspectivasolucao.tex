@@ -1,6 +1,6 @@
 \chapter{Perspectiva de Solução} \label{chap:solução}
 
-O reconhecimento facial em imagens sofreu uma evolução notável nos últimos 20 anos, tal como documentado no capítulo 1 deste relatório. 
+O reconhecimento facial em imagens sofreu uma evolução notável nos últimos 20 anos, tal como documentado no capítulo \ref{chap:reco} deste relatório. 
 
 Em cenários cooperativos com condições de captura de imagens controladas, nomeadamente ao nível da pose, iluminação e expressões faciais, considera-se mesmo que o problema de verificação 1:1 se encontra resolvido, uma vez que as taxas de reconhecimento atingidas são satisfatórias para a grande maioria das aplicações \citep{Li2011}. Existem também várias aplicações em situações reais com um bom nível de satisfação por parte dos seus utilizadores, como é o caso do sistema de fronteira automático dos aeroportos portugueses, ou o controlo de entradas nas cerimónias inaugurais dos jogos olímpicos de Pequim. Em condições favoráveis, é então possível considerar que os sistemas de reconhecimento facial automático atuais conseguem mesmo ultrapassar a capacidade de reconhecimento humana, uma vez que conseguem identificar com precisão um maior número de faces do que aquelas que um humano consegue.
 
@@ -41,7 +41,7 @@ O \textit{OpenCV} é uma biblioteca de código aberto nas áreas de visão por c
 
 Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontra implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}.
 
-Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela sua comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base à implementação dos sistema de reconhecimento facial a criar. De seguida encontram-se brevemente descritos os três algoritmos implementados no módulo \textit{Face Recognizer.}
+Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela sua comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. De seguida encontram-se brevemente descritos os três algoritmos implementados no módulo \textit{Face Recognizer:}
 
 \subsubsection{Eigenfaces}
 lorem ipsum
@@ -54,7 +54,8 @@ lorem ipsum
 
 No âmbito desta dissertação será utilizado o algoritmo ?...todos?
 
-\begin{figure}[t]
+\subsection{	Filtro \textit{Anisotropic Kuwahara}}
+\begin{figure}[h]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.7\textwidth]{filterskid}
@@ -63,8 +64,13 @@ No âmbito desta dissertação será utilizado o algoritmo ?...todos?
   \end{center}
 \end{figure}
 
-\subsection{	Filtro \textit{Anisotropic Kuwahara}}
-Explicar filtro
+Ao nível dos filtros de abstração o estudo será efectuado utilizado o filtro Anisotropic Kuwahara (FAK).
+
+Este filtro consiste numa generalização do filtro Kuwahara que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+
+O filtro em questão foi também utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia. 
+
+Tendo em conta os fatores apresentados consideramos que este filtro é o mais adequado para a utilização no âmbito deste projeto.
 
 \subsection{Coleções de dados}
 Ao nível das coleções de dados a analisar serão utilizadas duas coleções de dados Sapo Fama e \textit{Labeled Faces in the Wild}.
