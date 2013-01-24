@@ -90,21 +90,83 @@ A coleção Sapo Fama será obtida no âmbito da integração desta dissertaçã
 \subsubsection{\textit{Labeled Faces in the Wild}}
 A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Esta coleção possuí 13233 imagens, de 5749 pessoas diferentes, sendo que dessas pessoas 1680 possuem mais do que uma imagem na galeria. O uso desta galeria no âmbito desta dissertação permitirá efetuar uma análise dos resultados obtidos num conjunto de dados standard e já previamente analisado por outros investigadores, assim como agilizar os testes dos sistemas desenvolvidos uma vez que a coleção já se encontra preparada especificamente para o estudo do desempenho de sistemas de reconhecimento facial automático. Na figura \ref{lbw} encontram-se representados alguns exemplos das imagens contidas nesta coleção.
 
-\subsection{Avaliação Performance}
-(explicar três sub-casos?)
-A performance em sistemas de reconhecimento facial pode ser avaliada em taxa de deteção e identificação e taxa de falso-alarme. Um sistema de reconhecimento facial ideal teria uma taxa de deteção e identificação de 1.0 e uma taxa de falso-alame de 0.0.
-//explicar taxas
-//exemplo ROC 
-\textit{Receiver Operating Characteristic (ROC)}
+\section{Avaliação Performance}
+
+$amostras$ $biometricas$ capturas de características de uma pessoa que permitem efetuar o seu reconhecimento, no caso do reconhecimento facial em imagens, é o conjunto de fotografias que permite reconhecer uma pessoa.
+
+$prova$ amostra biométrica apresentada ao sistema para ser reconhecida.
+
+Conjuntos de imagens:
+
+$\mathscr{G}$ designado de galeria, contem amostras biométricas das pessoas conhecidas para o sistema.
+
+$\mathscr{P}_\mathscr{G}$ conjunto de provas de pessoas conhecidas pelo sistema, mas que são diferentes das amostras biométricas presentes na galeria.
+
+$\mathscr{P}_\mathscr{N}$ conjunto de provas de pessoas não presentes na galeria, designados de impostores.
+
+Dada uma prova $p_j$ apresentada ao sistema, essa prova é então comparada com toda a cada amostra biométrica da galeria $g_i$, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$.
+
+$s_{ij}$ é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$.
+
+A função $id()$ retorna a identidade de uma amostra biométrica, em que $id(p_j) = id(g^*)$, sendo $g^*$ a única correspondência de $p_j$ na galeria e $s_{*j}$ o respetivo índice de similaridade.
+
+\subsection{Identificação}
+Tal como referido no capítulo \ref{chap:reco} deste relatório, em sistemas de reconhecimento facial automático o problema de identificação consiste na determinação da identidade de uma amostra biométrica (prova) fornecida ao sistema.
+
+Na identificação de uma dada prova são calculados os índices de similaridade para todas as amostras na galeria, e ordenados os seus resultados. Uma prova $p_j$ tem ranking $n$ se o seu índice de similaridade for o enésimo maior índice de similaridade. Caso haja empates nos índices de similaridade é necessário resolver esses empates para determinar o ranking de uma prova, havendo para isso três métodos: otimista, pessimista e média. No método otimista,uma prova é associada ao ranking mais alto possível, obtido pelo número de índices estritamente maiores do que $s_{*j}$ mais um ($|> s_{*j}| + 1$). Na abordagem pessimista, um prova é associada ao ranking mais baixo possível, sendo esse devolvido pelo número de índices maiores ou iguais a $s_{*j}$ mais um ($|\geqslant s_{*j}| + 1$). Na média, tal como o seu nome indica é efetuada uma média entre os valores obtidos pelos métodos pessimista e otimista, sendo esta a abordagem mais utilizada. 
+
+A performance da identificação em sistemas de reconhecimento facial pode ser avaliada em taxa de deteção e identificação e taxa de falso-alarme.
+
+ \begin{description}
+ \item[Taxa de deteção e identificação $(T_{DI})$:] Percentagem de provas do conjunto $\mathscr{P}_\mathscr{G}$ que são corretamente  identificadas. Uma prova é corretamente identificada caso o índice de similaridade para o seu $match$ $score$ seja seja maior do que um limite operacional pré-definido $\tau$.
+
+\begin{equation}
+ T_{DI}(\tau, n) = \frac{|\{p_j:p_j \in \mathscr{P}_\mathscr{G}, rank(p_j) \leqslant n, s_{*j} \geqslant \tau\}|}{|\mathscr{P}_\mathscr{G}|}
+\end{equation}
+ 
+  \item[Taxa de falso-alarme $(T_{FA})$:] Percentagem de impostores identificados erradamente, ou seja, percentagem de pessoas do conjunto de provas $\mathscr{P}_\mathscr{N}$, identificadas como alguém presente na galeria $\mathscr{G}$.
+  
+\begin{equation}
+ T_{FA}(\tau) = \frac{|\{p_j:p_j \in \mathscr{P}_\mathscr{N}, s_{ij} \geqslant \tau\}|}{|\mathscr{P}_\mathscr{N}|}
+\end{equation}
+
+\end{description}
+
+Um sistema de reconhecimento facial ideal teria uma taxa de deteção e identificação de 1.0 e uma taxa de falso-alarme de 0.0.
+
+A modificação do valor de $\tau$ irá ter influência direta nas percentagens de deteção e falsos-alarmes calculadas. Ao aumentar o limite operacional, ambas as taxas diminuem, não sendo por isso possível maximizar ambos os valores, havendo sempre um compromisso entre o aumento da taxa de deteção e identificação e o aumento do número de falsos-alarmes. Este compromisso é tradicionalmente representado num gráfico do tipo \textit{receiver operating characteristic} (ROC). Um exemplo de um ROC encontra-se representado na figura \ref{roc}, com um ranking constante de 1. 
+
+Outra forma de representar a performance de sistemas de reconhecimento facial é em função do ranking das provas presentes na galeria e encontra-se representada na figura \ref{roc2}. Nesta figura, o eixo vertical representa a taxa de deteção e reconhecimento e o eixo horizontal o ranking numa escala logarítmica. Cada curva representa a performance do mesmo sistema com uma diferente taxa de falso-alarme.
+
+\subsection{Verificação}
+
+Em situações de verificação da identidade, para além de uma amostra biométrica ($prova$) é também fornecida ao sistema a identidade da pessoa que se pretende identificar. Cabe ao sistema determinar se a identidade e amostra fornecidas pertencem à mesma pessoa. O sistema compara então a prova à amostra biométrica  da pessoa a quem corresponde a identidade fornecida guardada na galeria, dessa comparação é gerado o índice de similaridade entre a prova fornecida e os dados já armazenados no sistema. O sistema aceita como verdadeira a identidade fornecida caso o índice de similaridade seja superior a um  limite operacional fornecido.
+
+Em termos formais, a verificação pode ser avaliada pela taxa de verificação e taxa de falsa-aceitação, as quais podem ser descritas da seguinte forma:
+
+\begin{description}
+ \item[Taxa verificação $(T_{V})$:] Percentagem de provas do conjunto $\mathscr{P}_\mathscr{G}$ que são corretamente verificadas.
+
+\begin{equation}
+ T_{V}(\tau, n) = \frac{|\{p_j:p_j \in \mathscr{P}_\mathscr{G}, s_{ij} \geqslant \tau, id(g_i)=id(p_j)\}|}{|\mathscr{P}_\mathscr{G}|}
+\end{equation}
+
+  \item[Taxa de falsa-aceitação $(T_{FA})$:] Percentagem de impostores aceites erradamente, ou seja, percentagem de pessoas do conjunto de provas $\mathscr{P}_\mathscr{N}$, verificadas como alguém presente na galeria $\mathscr{G}$.
+  
+\begin{equation}
+ T_{FA}(\tau) = \frac{|\{p_j:p_j \in \mathscr{P}_\mathscr{N}, s_{ij} \geqslant \tau\}|}{|\mathscr{P}_\mathscr{N}||\mathscr{G}|}
+\end{equation}
+
+\end{description}
 
 
 
-\subsection{Resultados Esperados}
+\section{Resultados Esperados}
 Tendo em conta os resultados anteriormente observados no recurso à utilização de filtros de abstração para a ilustração automática de texto e o estado da arte da área de reconhecimento facial automático em imagens, o principal resultado esperado é que o uso de abstração de imagens melhore a qualidade do reconhecimento facial automático. No entanto, tendo em conta a complexidade do problema de reconhecimento facial automático, é também esperada alguma variação na performance verificada nos vários casos de teste.
 
 Adicionalmente, espera-se que o uso da abstração de imagens leve a uma redução das necessidades de processamento e armazenamento do sistema desenvolvido.
 
-\subsection{Plano de Trabalho}
+\section{Plano de Trabalho}
 
 \begin{figure}[t]
   \begin{center}

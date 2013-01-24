@@ -33,8 +33,10 @@
 \contentsline {subsection}{\numberline {4.2.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{23}{subsection.4.2.3}
 \contentsline {subsubsection}{\numberline {4.2.3.1}Sapo Fama}{23}{subsubsection.4.2.3.1}
 \contentsline {subsubsection}{\numberline {4.2.3.2}\textit {Labeled Faces in the Wild}}{23}{subsubsection.4.2.3.2}
-\contentsline {subsection}{\numberline {4.2.4}Avalia\IeC {\c c}\IeC {\~a}o Performance}{24}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Resultados Esperados}{24}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Plano de Trabalho}{25}{subsection.4.2.6}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{26}{chapter.5}
-\contentsline {chapter}{Refer\^{e}ncias}{27}{section*.11}
+\contentsline {section}{\numberline {4.3}Avalia\IeC {\c c}\IeC {\~a}o Performance}{24}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Identifica\IeC {\c c}\IeC {\~a}o}{25}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Verifica\IeC {\c c}\IeC {\~a}o}{26}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Resultados Esperados}{26}{section.4.4}
+\contentsline {section}{\numberline {4.5}Plano de Trabalho}{27}{section.4.5}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{28}{chapter.5}
+\contentsline {chapter}{Refer\^{e}ncias}{29}{section*.11}
