@@ -44,17 +44,36 @@ Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo den
 Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela sua comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. De seguida encontram-se brevemente descritos os três algoritmos implementados no módulo \textit{Face Recognizer:}
 
 \subsubsection{Eigenfaces}
-lorem ipsum
+O método \textit{Eigenfaces} foi introduzido por \cite{Belhumeur1997} e tira partido da Análise dos Componentes Principais (ACP) para efetuar o reconhecimento facial automático.
+
+A análise de componentes principais tem como objetivo determinar as relações existentes entre diferentes conjuntos de dados, nomeadamente ao nível das suas diferenças e semelhanças, tirando partido da redundância existente para criar uma representação reduzida dos dados sem que a perda de informação ocorrida seja significativa. As imagens faciais possuem uma grande redundância natural, o algoritmo \textit{Eigenfaces}, através da análise dos componentes principais dessas imagens, efetua uma projeção das imagens faciais num sub-espaço onde se evidenciam apenas as variações entre as diversas caras conhecidas pelo sistema.
+
+A redução do espaço de representação revela-se fulcral no problema de reconhecimento facial em imagens, devido à grande dimensionalidade exigida para a representação de uma face, considerando, por exemplo, uma dada imagem de $nxm$ \textit{pixels} de tons cinzentos, essa imagem poderia ser traduzida por um espaço vetorial de $m = nxm$ \textit{pixels}, assim sendo, uma imagem de apenas $200x200$ \textit{pixels} necessitaria de um total de $400000$ \textit{pixels} para ser representada.
+
+O processo de reconhecimento facial com recurso ao algoritmo \textit{Eigenfaces} consiste então nos seguintes passos:
+\begin{enumerate}
+\item Aquisição de um conjunto de dados iniciais (conjunto de treino);
+\item Projeção dos dados obtidos num sub-espaço de faces através da ACP;
+\item Aquisição de uma imagem a reconhecer;
+\item Projeção da face a reconhecer no sub-espaço do conjunto de treino, calculando as distâncias obtidas para cada face conhecida pelo sistema;
+\item Determinar qual o face do conjunto de treino com menor distância à face a reconhecer;
+\item Caso a distância para a face obtida seja menor do que um limite operacional estabelecido, a imagem é reconhecida como sendo essa pessoa, caso contrário, a face é identificada como sendo uma pessoa desconhecida pelo sistema.
+\end{enumerate}
+
+Este método efetua assim uma abordagem holística ao problema de reconhecimento facial em imagens, uma vez que tem em consideração a representação facial como um todo, não fazendo a distinção entre pontos específicos da face como olhos, orelhas ou nariz para efetuar o reconhecimento facial. Uma vantagem deste tipo de representação é a reduzida sensibilidade ao ruído presente nas imagens \cite{Zhao2003}.
 
 \subsubsection{Fisherfaces}
-lorem ipsum
+A análise dos componentes principais visa determinar o sub-espaço onde se verifica uma maior variação entre um conjunto de imagens, no entanto, a variação na representação facial de uma pessoa encontra-se muitas vezes relacionada com mudanças de expressões faciais ou iluminação dos indivíduos. Assim sendo, o sub-espaço criado pelo algoritmo \textit{Eigenfaces} não traduz muitas vezes as apenas as diferenças de identidade entre os diversos indivíduos, mas também as diferenças verificadas ao nível das condições de captura das imagens, mesmo considerando o mesmo indivíduo devido à sua tolerância reduzida em termos de representação das variações intra-indivíduo. O algoritmo \textit{Fisherfaces} tenta resolver este problema, através da aplicação de um passo de \textit{Linear Discriminant Analysis (LDA)} após a análise dos componentes principais, de forma a determinar mais corretamente as variações intra-classe existentes no conjunto de imagens a avaliar.
+
+A LDA tenta maximizar as diferenças existentes entre diferentes indivíduos(inter-classe) e minimizar as variações entre imagens da mesma pessoa(intra-classe) de modo a obter uma representação mais robusta em termos de variação ao nível da iluminação.
+
+
+
 
 \subsubsection{Local Binary Patterns Histograms}
 lorem ipsum
 
-No âmbito desta dissertação será utilizado o algoritmo ?...todos?
-
-\subsection{	Filtro \textit{Anisotropic Kuwahara}}
+\subsection{Filtro \textit{Anisotropic Kuwahara}}
 \begin{figure}[h]
   \begin{center}
     \leavevmode
