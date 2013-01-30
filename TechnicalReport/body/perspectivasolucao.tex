@@ -70,7 +70,7 @@ A LDA tenta maximizar as diferenças existentes entre diferentes indivíduos(int
 lorem ipsum
 
 \subsection{Filtros de Abstração - Filtro \textit{Anisotropic Kuwahara}}
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.7\textwidth]{filterskid}
@@ -94,7 +94,7 @@ Ao nível das coleções de dados a analisar serão utilizadas duas coleções d
 A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Esta coleção possuí 13233 imagens, de 5749 pessoas diferentes, sendo que dessas pessoas 1680 possuem mais do que uma imagem na galeria. O uso desta galeria no âmbito desta dissertação permitirá efetuar uma análise dos resultados obtidos num conjunto de dados standard e já previamente analisado por outros investigadores, assim como agilizar os testes dos sistemas desenvolvidos uma vez que a coleção já se encontra preparada especificamente para o estudo do desempenho de sistemas de reconhecimento facial automático. Nas figuras \ref{fig:galeria}, \ref{fig:gp} e \ref{fig:gn} encontram-se representados alguns exemplos das imagens contidas nesta coleção e respetivas anotações.
 
 \subsubsection{Sapo Fama}
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{sapoFama.png}
@@ -110,7 +110,7 @@ Para a utilização deste conjunto de dados será ainda necessário efetuar a pr
 A avaliação da performance dos sistemas de reconhecimento facial é normalmente efetuada em duas situações específicas: identificação e verificação de faces. No âmbito da avaliação desses sistemas designam-se de $amostras$ $biometricas$ as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema essas amostras podem ser apenas uma imagem, um conjunto de imagens ou até um vídeo. Designa-se ainda de $prova$ a amostra biométrica apresentada ao sistema para ser reconhecida.
 
 Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial são necessários três conjuntos de imagens:
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{galeria.png}
@@ -120,7 +120,7 @@ Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial 
 \end{figure}
 O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biométricas das pessoas já conhecidas pelo sistema. Um exemplo de imagens da galeria pode ser visto na figura \ref{fig:imggaleria}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gp.png}
@@ -130,7 +130,7 @@ O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biomé
 \end{figure}
 O segundo grupo de imagens é o conjunto $\mathscr{P}_\mathscr{G}$, engloba o conjunto de provas de pessoas conhecidas pelo sistema, mas que são diferentes das amostras biométricas presentes na galeria. Um exemplo de imagens deste conjunto pode ser visto na figura \ref{fig:gp}, onde se encontram representadas imagens da cantora Norah Jones, mas que são diferentes das imagens presentes no conjunto $\mathscr{G}$.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gn.png}
@@ -187,7 +187,7 @@ Em termos formais, a verificação pode ser avaliada pela taxa de verificação 
 \end{equation}
 \end{description}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.8\textwidth]{roc.png}
@@ -197,7 +197,7 @@ Em termos formais, a verificação pode ser avaliada pela taxa de verificação 
 \end{figure}
 A modificação do valor de $\tau$ tem influência direta nas percentagens de deteção e/ou verificação e de falsos-alarmes calculadas. Ao aumentar o limite operacional, ambas as taxas diminuem, não sendo por isso possível maximizar ambos os valores, uma vez que existe sempre um compromisso entre o aumento da taxa de deteção e identificação e o aumento do número de falsos-alarmes. Este compromisso é tradicionalmente representado num gráfico do tipo \textit{receiver operating characteristic} (ROC). Um exemplo de um ROC encontra-se representado na figura \ref{roc}, com um ranking constante de 1. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.8\textwidth]{roc.png}

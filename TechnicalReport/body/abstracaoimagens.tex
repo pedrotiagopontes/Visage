@@ -1,7 +1,44 @@
-\chapter{Abstração de Imagens} \label{chap:abstracao} - TO-DO
-A abstração de imagens permite uma simplificação do conteúdo visual ao retirar informação redundante e dar destaque apenas à informação essencial representada. Desta forma, os artistas têm a capacidade  de guiar a atenção de quem visualiza a imagem para conteúdos específicos, influenciando assim a perceção da mesma e tornado a comunicação mais eficaz.
+\chapter{Abstração de Imagens} \label{chap:abstracao}
 
-Este filtros permitem uma simplificação do conteúdo visual ao retirar informação redundante e destacando a apenas a informação essencial. Estes filtros são tradicionalmente utilizados por artistas para comunicar de uma forma mais eficaz a informação pretendida ao retirar a informação desnecessária de imagens foto-realistas \citep{Kyprianidis2009}.
+A área do \textit{Image Based Artistic Rendering (IB-AR} tem como objetivo fazer a transformação de imagens e vídeos foto-realistas 2D em novas formas de representação estilizadas artisticamente. A estilização de imagens e vídeos foto-realistas permite simplificar o conteúdo visual, assim como estrutura-lo de forma a dar ênfase e enfoque a determinadas características das imagens. Desta forma é possível guiar a perceção obtida dos conteúdos visuais conforme o objetivo da mensagem visual a transmitir. Por outro lado, as técnicas de NPR  permitem criar novas formas de representação gráfica de informação, dotando assim os artistas de novas ferramentas de comunicação e de criação de conteúdos visuais. 
 
+Atualmente a área da IB-AR diversificou-se numa atividade multidisciplinar que engloba áreas como a visão por computador, interação humano computador, computação gráfica e a modelação percetual \footnote{verificar \textit{perceptual modeling}}. Paralelamente a área do IB-AR evoluiu desde sistemas semi-automáticos de processamento de imagem no início dos anos 90, até sistemas totalmente automáticos de renderização. De forma análoga, com recurso a técnicas de visão por computador e com o uso de filtros \textit{edge-preserving} \footnote{edge-preserving}, os resultados obtidos registaram melhorias notáveis ao nível da informação visual representada.  
 
-\section{Resumo ou Conclusões}
+As técnicas de IB-AR existentes podem ser divididas nos seguites quatro grupos\cite{Kyprianidis2012}:
+\begin{itemize}
+\item \textit{Stoke Based Rendering}, as quais criam iterativamente camadas virtuais de traços imitando um pincel, cujas cores, orientação e escala são derivadas de processos automáticos ou semi-automáticos de processamento de imagem; 
+\item \textit{Region Based Techniques}, que usam a segmentação da imagem em diversas regiões para a sua posterior estilização; 
+\item Renderização Baseada em Exemplo, que tentam imitar estilos artísticos específicos através de heurísticas apreendidas para a renderização automática de novas imagens nesses mesmos estilos;
+\item Filtros de Abstração de Imagens, os quais usam técnicas de processamento de imagem para efetuar operações de filtragem local para a renderização artística e abstração  do conteúdo visual.
+\end{itemize}
+
+Apesar de os filtros de abstração de imagens possuírem uma menor diversidade de estilos artísticos de renderização,  a utilização de uma abordagem local por parte destes filtros torna-os vantajosos, quando comparada com as restantes técnicas de renderização artística de imagens, uma vez que permite uma maior adaptação a processadores multi-core, assim como uma implementação baseada em GPU mais fácil. Nesse sentido, e devido ao grande número de imagens utilizadas no processo de reconhecimento facial automático a utilização de filtros de abstração de imagens torna-se mais vantajosa no âmbito desta dissertação.
+
+\section{Filtros de Abstração de Imagens}
+
+\subsection{Filtro Bilateral}
+efeito desfocado
+suavizam as zonas com pouco contraste e preservam as restantes zonas
+imagens com elevado contraste tem pouco efeito
+imagens com pouco contraste pode remover info em demasiada
+computacionalmente custoso
+
+\subsection{Kuwahara}
+remove detalhe em zonas com elevado contraste mas preserva as formas presentes na imagem
+instável na presença de ruído e cria \textit{bloick artifacts}
+cria uma efeito de local area flattening
+classico qd há anisotropia pode ser muito agressivo
+
+Anisotropia - qualidade de certos materiais cujas propriedades são diferentes consoante as direções;
+
+\subsection{Diffusion Shock Filter}
+MCF (Mean Curvature Flow)
+Para além de suavizar variações irrelevantes de cor enquanto mantém limites das regiões, tb simplifica os limites dessas regiões;
+Tipicamente é mt agressivo e não preserva info direcional
+Imagens tb desfocadas
+
+\subsection{Morphological Filtering}
+
+\subsection{Gradient Domain Tecniques}
+ideia é construir um campo de gradientes que representa o resultado tratar o contráste é problemático e requer correcção
+Pesado e não é aplicável em tempo real

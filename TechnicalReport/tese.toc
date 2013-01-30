@@ -19,24 +19,29 @@
 \contentsline {subsection}{\numberline {2.4.2}Performance}{14}{subsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.2.1}FERET}{15}{subsubsection.2.4.2.1}
 \contentsline {subsubsection}{\numberline {2.4.2.2}FRVT}{16}{subsubsection.2.4.2.2}
-\contentsline {section}{\numberline {2.5}Resumo ou Conclus\IeC {\~o}es}{18}{section.2.5}
-\contentsline {chapter}{\numberline {3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Resumo ou Conclus\IeC {\~o}es}{19}{section.3.1}
-\contentsline {chapter}{\numberline {4}Perspectiva de Solu\IeC {\c c}\IeC {\~a}o}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Objetivos}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Implementa\IeC {\c c}\IeC {\~a}o}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{22}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Eigenfaces}{22}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}Fisherfaces}{23}{subsubsection.4.2.1.2}
-\contentsline {subsubsection}{\numberline {4.2.1.3}Local Binary Patterns Histograms}{23}{subsubsection.4.2.1.3}
-\contentsline {subsection}{\numberline {4.2.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro \textit {Anisotropic Kuwahara}}{23}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{24}{subsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.3.1}\textit {Labeled Faces in the Wild}}{24}{subsubsection.4.2.3.1}
-\contentsline {subsubsection}{\numberline {4.2.3.2}Sapo Fama}{25}{subsubsection.4.2.3.2}
-\contentsline {section}{\numberline {4.3}Avalia\IeC {\c c}\IeC {\~a}o Performance}{25}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Identifica\IeC {\c c}\IeC {\~a}o}{27}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Verifica\IeC {\c c}\IeC {\~a}o}{28}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Resultados Esperados}{29}{section.4.4}
-\contentsline {section}{\numberline {4.5}Plano de Trabalho}{30}{section.4.5}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{32}{chapter.5}
-\contentsline {chapter}{Refer\^{e}ncias}{33}{section*.16}
+\contentsline {section}{\numberline {2.5}Resumo ou Conclus\IeC {\~o}es}{19}{section.2.5}
+\contentsline {chapter}{\numberline {3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Filtro Bilateral}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Kuwahara}{21}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Diffusion Shock Filter}{21}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Morphological Filtering}{21}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Gradient Domain Tecniques}{21}{subsection.3.1.5}
+\contentsline {chapter}{\numberline {4}Perspectiva de Solu\IeC {\c c}\IeC {\~a}o}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Objetivos}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Implementa\IeC {\c c}\IeC {\~a}o}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{24}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Eigenfaces}{24}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}Fisherfaces}{25}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}Local Binary Patterns Histograms}{25}{subsubsection.4.2.1.3}
+\contentsline {subsection}{\numberline {4.2.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro \textit {Anisotropic Kuwahara}}{25}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{26}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}\textit {Labeled Faces in the Wild}}{26}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}Sapo Fama}{27}{subsubsection.4.2.3.2}
+\contentsline {section}{\numberline {4.3}Avalia\IeC {\c c}\IeC {\~a}o Performance}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Identifica\IeC {\c c}\IeC {\~a}o}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Verifica\IeC {\c c}\IeC {\~a}o}{30}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Resultados Esperados}{31}{section.4.4}
+\contentsline {section}{\numberline {4.5}Plano de Trabalho}{32}{section.4.5}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{34}{chapter.5}
+\contentsline {chapter}{Refer\^{e}ncias}{35}{section*.16}
