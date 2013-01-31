@@ -5,21 +5,20 @@
 \contentsline {section}{\numberline {1.3}Objetivos}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Estrutura do Relat\IeC {\'o}rio}{2}{section.1.4}
 \contentsline {chapter}{\numberline {2}Reconhecimento Facial em Imagens}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Problema}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Solu\IeC {\c c}\IeC {\~a}o}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Desafios}{6}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}\IeC {\'A}reas de Aplica\IeC {\c c}\IeC {\~a}o}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Controlo de Acesso e Seguran\IeC {\c c}a de Informa\IeC {\c c}\IeC {\~a}o}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Cart\IeC {\~o}es inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{9}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Entretenimento}{9}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Gest\IeC {\~a}o de Conte\IeC {\'u}dos Multim\IeC {\'e}dia e Bases de Dados}{10}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Seguran\IeC {\c c}a e Refor\IeC {\c c}o da Lei}{11}{subsection.2.3.5}
-\contentsline {section}{\numberline {2.4}Estado da Arte}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Solu\IeC {\c c}\IeC {\~o}es Existentes}{13}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Performance}{14}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.2.1}FERET}{15}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {2.4.2.2}FRVT}{16}{subsubsection.2.4.2.2}
-\contentsline {section}{\numberline {2.5}Resumo ou Conclus\IeC {\~o}es}{19}{section.2.5}
+\contentsline {section}{\numberline {2.1}Defini\IeC {\c c}\IeC {\~a}o do Problema}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Sub-Problemas}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Desafios}{6}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}\IeC {\'A}reas de Aplica\IeC {\c c}\IeC {\~a}o}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Controlo de Acesso e Seguran\IeC {\c c}a de Informa\IeC {\c c}\IeC {\~a}o}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Cart\IeC {\~o}es inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Entretenimento}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Gest\IeC {\~a}o de Conte\IeC {\'u}dos Multim\IeC {\'e}dia e Bases de Dados}{10}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Seguran\IeC {\c c}a e Refor\IeC {\c c}o da Lei}{11}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.3}Estrat\IeC {\'e}gias de Reconhecimento Facial}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Solu\IeC {\c c}\IeC {\~o}es Existentes}{13}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}Evolu\IeC {\c c}\IeC {\~a}o Desempenho}{14}{section.2.4}
+\contentsline {subsubsection}{\numberline {2.4.0.1}FERET}{15}{subsubsection.2.4.0.1}
+\contentsline {subsubsection}{\numberline {2.4.0.2}FRVT}{16}{subsubsection.2.4.0.2}
 \contentsline {chapter}{\numberline {3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{20}{chapter.3}
 \contentsline {section}{\numberline {3.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Filtro Bilateral}{21}{subsection.3.1.1}
@@ -27,6 +26,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Diffusion Shock Filter}{22}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Morphological Filtering}{22}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Gradient Domain Tecniques}{22}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Trabalho Preliminar}{22}{section.3.2}
 \contentsline {chapter}{\numberline {4}Perspectiva de Solu\IeC {\c c}\IeC {\~a}o}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Objetivos}{24}{section.4.1}
 \contentsline {section}{\numberline {4.2}Implementa\IeC {\c c}\IeC {\~a}o}{24}{section.4.2}
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{27}{subsection.4.2.3}
 \contentsline {subsubsection}{\numberline {4.2.3.1}\textit {Labeled Faces in the Wild}}{27}{subsubsection.4.2.3.1}
 \contentsline {subsubsection}{\numberline {4.2.3.2}Sapo Fama}{28}{subsubsection.4.2.3.2}
-\contentsline {section}{\numberline {4.3}Avalia\IeC {\c c}\IeC {\~a}o Performance}{28}{section.4.3}
+\contentsline {section}{\numberline {4.3}Avalia\IeC {\c c}\IeC {\~a}o Desempenho}{28}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Identifica\IeC {\c c}\IeC {\~a}o}{30}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Verifica\IeC {\c c}\IeC {\~a}o}{31}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Resultados Esperados}{32}{section.4.4}

@@ -106,8 +106,8 @@ A coleção Sapo Fama foi disponibilizada no âmbito da integração desta disse
 
 Para a utilização deste conjunto de dados será ainda necessário efetuar a preparação do mesmo nomeadamente através da extração e segmentação das diversas entidades presentes em cada imagem, assim como da normalização das imagens em termos de dimensão.
 
-\section{Avaliação Performance}
-A avaliação da performance dos sistemas de reconhecimento facial é normalmente efetuada em duas situações específicas: identificação e verificação de faces. No âmbito da avaliação desses sistemas designam-se de $amostras$ $biometricas$ as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema essas amostras podem ser apenas uma imagem, um conjunto de imagens ou até um vídeo. Designa-se ainda de $prova$ a amostra biométrica apresentada ao sistema para ser reconhecida.
+\section{Avaliação Desempenho}
+A avaliação da desempenho dos sistemas de reconhecimento facial é normalmente efetuada em duas situações específicas: identificação e verificação de faces. No âmbito da avaliação desses sistemas designam-se de $amostras$ $biometricas$ as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema essas amostras podem ser apenas uma imagem, um conjunto de imagens ou até um vídeo. Designa-se ainda de $prova$ a amostra biométrica apresentada ao sistema para ser reconhecida.
 
 Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial são necessários três conjuntos de imagens:
 \begin{figure}[ht]
@@ -144,14 +144,14 @@ Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada
 
 A função $id()$ retorna a identidade de uma amostra biométrica, em que $id(p_j) = id(g^*)$, sendo $g^*$ a única correspondência de $p_j$ na galeria e $s_{*j}$ o respetivo índice de similaridade.
 
-De seguida encontra-se descrita brevemente a forma como é efetuada a avaliação da performance dos sistemas de reconhecimento facial para os casos de identificação e verificação.
+De seguida encontra-se descrita brevemente a forma como é efetuada a avaliação da desempenho dos sistemas de reconhecimento facial para os casos de identificação e verificação.
 
 \subsection{Identificação}
 Tal como referido no capítulo \ref{chap:reco} deste relatório, em sistemas de reconhecimento facial automático o problema de identificação consiste na determinação da identidade de uma amostra biométrica (prova) fornecida ao sistema.
 
 Na identificação de uma dada prova são calculados os índices de similaridade para todas as amostras na galeria, e ordenados os seus resultados. Uma prova $p_j$ tem ranking $n$ se o seu índice de similaridade for o enésimo maior índice de similaridade. Caso haja empates nos índices de similaridade é necessário resolver esses empates para determinar o ranking de uma prova, havendo para isso três métodos: otimista, pessimista e média. No método otimista, uma prova é associada ao ranking mais alto possível, obtido pelo número de índices estritamente maiores do que $s_{*j}$ mais um ($|> s_{*j}| + 1$). Na abordagem pessimista, um prova é associada ao ranking mais baixo possível, sendo esse devolvido pelo número de índices maiores ou iguais a $s_{*j}$ mais um ($|\geqslant s_{*j}| + 1$). Na média, tal como o seu nome indica é efetuada uma média entre os valores obtidos pelos métodos pessimista e otimista, sendo esta a abordagem mais utilizada. 
 
-A performance da identificação em sistemas de reconhecimento facial pode ser avaliada em taxa de deteção e identificação e taxa de falso-alarme:
+O desempenho da identificação em sistemas de reconhecimento facial pode ser avaliada em taxa de deteção e identificação e taxa de falso-alarme:
 
  \begin{description}
  \item[Taxa de deteção e identificação $(T_{DI})$:] Percentagem de provas do conjunto $\mathscr{P}_\mathscr{G}$ que são corretamente  identificadas. Uma prova é corretamente identificada caso o índice de similaridade para o seu $match$ $score$ seja seja maior do que um limite operacional pré-definido $\tau$.
