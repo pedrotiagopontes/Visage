@@ -1,41 +1,40 @@
 \chapter{Abstração de Imagens} \label{chap:abstracao}
 
-A área do \textit{Image Based Artistic Rendering (IB-AR} tem como objetivo fazer a transformação de imagens e vídeos foto-realistas 2D em novas formas de representação estilizadas artisticamente. A estilização de imagens e vídeos foto-realistas permite simplificar o conteúdo visual, assim como estrutura-lo de forma a dar ênfase e enfoque a determinadas características das imagens. Desta forma é possível guiar a perceção obtida dos conteúdos visuais conforme o objetivo da mensagem visual a transmitir. Por outro lado, as técnicas de NPR  permitem criar novas formas de representação gráfica de informação, dotando assim os artistas de novas ferramentas de comunicação e de criação de conteúdos visuais. 
+Os conteúdos foto-realistas, possuem muitas vezes mais informação do que a necessária para uma comunicação visual eficaz. A área do \textit{Image Based Artistic Rendering (IB-AR)} tem como objetivo fazer a transformação de imagens e vídeos foto-realistas 2D em novas formas de representação visuais estilizadas artisticamente. A estilização de imagens e vídeos permite simplificar o conteúdo visual, assim como estrutura-lo de forma a dar ênfase e enfoque a determinadas características das imagens. Desta forma, é possível guiar a perceção obtida dos conteúdos visuais conforme o objetivo da mensagem a comunicar. Por outro lado, as técnicas de IB-AR  permitem criar novas formas de representação gráfica de informação, dotando assim os artistas de novas ferramentas de comunicação e de criação de conteúdos visuais. 
 
-Atualmente a área da IB-AR diversificou-se numa atividade multidisciplinar que engloba áreas como a visão por computador, interação humano computador, computação gráfica e a modelação percetual \footnote{verificar \textit{perceptual modeling}}. Paralelamente a área do IB-AR evoluiu desde sistemas semi-automáticos de processamento de imagem no início dos anos 90, até sistemas totalmente automáticos de renderização. De forma análoga, com recurso a técnicas de visão por computador e com o uso de filtros \textit{edge-preserving} \footnote{edge-preserving}, os resultados obtidos registaram melhorias notáveis ao nível da informação visual representada.  
+Atualmente a área da IB-AR diversificou-se numa atividade multidisciplinar que engloba áreas como a visão por computador, interação humano computador, computação gráfica e a modelação percetual \footnote{verificar \textit{perceptual modeling}}. Os sistemas de IB-AR evoluiram também desde sistemas semi-automáticos de processamento de imagem no início dos anos 90, até sistemas totalmente automáticos de renderização. Adicionalmente o recurso a técnicas de visão por computador e o uso de filtros de abstração de imagens, permitiram melhorias notáveis ao nível da manipulação de grandes quantidades de informação, assim como da informação visual produzida.
 
-As técnicas de IB-AR existentes podem ser divididas nos seguites quatro grupos\cite{Kyprianidis2012}:
+As técnicas de IB-AR existentes podem ser divididas nas seguintes quatro categorias\cite{Kyprianidis2012}:
 \begin{itemize}
 \item \textit{Stoke Based Rendering}, as quais criam iterativamente camadas virtuais de traços imitando um pincel, cujas cores, orientação e escala são derivadas de processos automáticos ou semi-automáticos de processamento de imagem; 
-\item \textit{Region Based Techniques}, que usam a segmentação da imagem em diversas regiões para a sua posterior estilização; 
+\item \textit{Region Based Techniques}, que usam a segmentação da imagem em diversas regiões para a sua posterior estilização;
 \item Renderização Baseada em Exemplo, que tentam imitar estilos artísticos específicos através de heurísticas apreendidas para a renderização automática de novas imagens nesses mesmos estilos;
 \item Filtros de Abstração de Imagens, os quais usam técnicas de processamento de imagem para efetuar operações de filtragem local para a renderização artística e abstração  do conteúdo visual.
 \end{itemize}
 
-Apesar de os filtros de abstração de imagens possuírem uma menor diversidade de estilos artísticos de renderização,  a utilização de uma abordagem local por parte destes filtros torna-os vantajosos, quando comparada com as restantes técnicas de renderização artística de imagens, uma vez que permite uma maior adaptação a processadores multi-core, assim como uma implementação baseada em GPU mais fácil. Nesse sentido, e devido ao grande número de imagens utilizadas no processo de reconhecimento facial automático a utilização de filtros de abstração de imagens torna-se mais vantajosa no âmbito desta dissertação.
+Apesar de os filtros de abstração de imagens possuírem uma menor diversidade numa perspetiva artística de renderização, a utilização de uma abordagem local por parte destes filtros torna-os vantajosos, quando comparada com as restantes técnicas de renderização artística de imagens. Esta abordagem permite uma fácil adaptação dos processos de abstração de imagens a tecnologias de processamento paralelo, presentes nos CPUs modernos, assim como uma implementação direta do processo de abstração de alguns dos fitros pelos próprios GPUs. Nesse sentido, e devido ao grande número de imagens utilizadas no processo de reconhecimento facial automático a utilização de filtros de abstração de imagens torna-se mais vantajosa no âmbito desta dissertação.
 
 \section{Filtros de Abstração de Imagens}
+Os filtros de abstração de imagens permitem simplificar o conteúdo visual, destacando apenas a informação essencial contida nas imagens. 
 
 \subsection{Filtro Bilateral}
-efeito desfocado
-suavizam as zonas com pouco contraste e preservam as restantes zonas
-imagens com elevado contraste tem pouco efeito
-imagens com pouco contraste pode remover info em demasiada
-computacionalmente custoso
+Uma abordagem baseada num filtro bilateral foi proposta em primeira mão por Tomasi e Manduchi em 1998. \cite{w} Já em 2006  Winnemöller \textit{et al.} propuseram uma melhoria dos resultados obtidos através da associação de um fitro de \textit{difference of gaussians} na aplicação do filtro bilateral \cite{w}. Trabalhos posteriores com vista a melhorar, os contornos produzidos pelas imagens abstraídas foram também realizados com sucesso através da introdução de um \textit{flow based difference of gaussians filter}  \cite{w}.
+
+O filtro bilateral caracteriza-se por suavizar as zonas com menor contraste da imagem enquanto preserva os limites de maior contraste. No entanto, os efeitos deste filtro são poucos visíveis quando toda a imagem possui um elevado contraste. Por outro lado, em imagens pouco contrastadas a informação visual removida é por vezes demasiada, causando um efeito de imagem desfocada na imagem abstraída.
 
 \subsection{Kuwahara}
-remove detalhe em zonas com elevado contraste mas preserva as formas presentes na imagem
-instável na presença de ruído e cria \textit{bloick artifacts}
-cria uma efeito de local area flattening
-classico qd há anisotropia pode ser muito agressivo
+O filtro Kuwahara e as suas variantes, representam uma classe de filtros onde se tem verificado uma pesquisa ativa ao longo das últimas décadas \cite{K2009}.
 
-Anisotropia - qualidade de certos materiais cujas propriedades são diferentes consoante as direções;
+A ideia geral do filtro do tipo Kuwahara consiste em efetuar um achatamento da área local, através da divisão da área a filtrar em sub-regiões retangulares de menor dimensão. Desta forma, o filtro Kuwahara remove detalhe em zonas com elevado contraste mas preserva as formas presentes na imagem. No entanto, na presença de ruído este filtro revela-se instável, criando artefactos na imagem. Este filtro revela-se também agressivo na presença de anisotropia \footnote{Anisotropia - qualidade de certos materiais cujas propriedades são diferentes consoante as direções.}, ou seja quando a informação direcional presente na imagem é forte (por exemplo: pelo, cabelos), não preservando essa informação na imagem abstraída.
+
+Existem várias variantes ao filtro Kuwahara, sendo que a grande diferença entre a maior parte das variantes consiste na forma como são definidas as sub-regiões a filtrar. Papari \textit{et al.} \cite{p}, apresentaram, com bons resultados, uma variante deste filtro em que a divisão das sub-regiões é efetuada em regiões circulares, que por sua vez se encontram divididas em oito regiões de igual tamanho. Apesar das melhorias registadas na abordagem de Papari \textit{et al.}, esta continua a não preservar a informação direcional contida nas imagens resultando assim no aparecimento de alguns artefactos na imagem, ainda que mais pequenos e com maior definição do que na solução proposta pelo o filtro original.
+
+Uma abordagem para ultrapassar as limitações do filtro Kuwahara original na presença de anisotropia, foi proposta por Kyprianidis \textit{et al.} \cite{K}, com o \textit{Kuwahara Anisotropic Filter}. Nesta solução, é feita uma adaptação da forma, orientação e escala do  método de seleção das sub-regiões à estrutura local da imagem, resultando numa forma que varia entre um círculo e um elipse alongada conforme a própria estrutura local da imagem. Assim, para além de preservada, a informação direcional é ainda enfatizada, resultando em imagens tipo pintura, com limites bem definidos e sem grandes artefactos visíveis.
 
 \subsection{Diffusion Shock Filter}
-MCF (Mean Curvature Flow)
-Para além de suavizar variações irrelevantes de cor enquanto mantém limites das regiões, tb simplifica os limites dessas regiões;
-Tipicamente é mt agressivo e não preserva info direcional
-Imagens tb desfocadas
+Kang e Lee \cite{KL}, foram os primeiros a utilizar \textit{shock filtering} para IB-AR através do uso de \textit{Mean Curvature Flow (MCF)}, resultando em imagens onde para além de suavizadas variações irrelevantes das cores, são simplificados os limites das formas presentes nas mesmas. O resultando da aplicação de \textit{shock filtered MFC}, é, no entanto, tipicamente é muito agressivo, resultando em imagens desfocadas, onde não é preservada a  informação direcional. Esta técnica revela-se também, pouco indicada para a abtração de vídeo, uma vez que é pouco sensível a pequenas alterações nas imagens.
+
+Kyprianidis e Kang \cite{KK} propuseram a aplicação de um filtro de reforço de coerência de forma a melhorar os resultados obtidos pelo filtro original.
 
 \subsection{Morphological Filtering}
 
