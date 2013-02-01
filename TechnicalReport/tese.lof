@@ -5,14 +5,15 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces A redu\IeC {\c c}\IeC {\~a}o da taxa de erro para os algoritmos estados da arte tal como documentado nas avalia\IeC {\c c}\IeC {\~o}es FERET, FRVT 2002, FRVT 2006 e MBE 2010 \cite {Phillips2007, Grother2010}\relax }}{18}{figure.caption.9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o da aplica\IeC {\c c}\IeC {\~a}o de diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o sobre a mesma imagem\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{23}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita).\relax }}{29}{figure.caption.12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemplos de imagens da cole\IeC {\c c}\IeC {\~a}o Sapo Fama.\relax }}{30}{figure.caption.13}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Galeria com faces conhecidas pelo sistema e respectivas anota\IeC {\c c}\IeC {\~o}es.\relax }}{31}{figure.caption.14}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Imagens de pessoas conhecidas pelo sistema, mas n\IeC {\~a}o presentes na galeria.\relax }}{32}{figure.caption.15}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Imagens de pessoas n\IeC {\~a}o conhecidas pelo sistema.\relax }}{33}{figure.caption.16}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC.\relax }}{34}{figure.caption.17}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces ROC2.\relax }}{35}{figure.caption.18}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Plano de Trabalho 1\IeC {\textordmasculine } e 2\IeC {\textordmasculine } Semestres\relax }}{36}{figure.caption.19}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita).\relax }}{29}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemplos de imagens da cole\IeC {\c c}\IeC {\~a}o Sapo Fama.\relax }}{30}{figure.caption.14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Galeria com faces conhecidas pelo sistema e respectivas anota\IeC {\c c}\IeC {\~o}es.\relax }}{31}{figure.caption.15}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Imagens de pessoas conhecidas pelo sistema, mas n\IeC {\~a}o presentes na galeria.\relax }}{32}{figure.caption.16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Imagens de pessoas n\IeC {\~a}o conhecidas pelo sistema.\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC.\relax }}{34}{figure.caption.18}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ROC2.\relax }}{35}{figure.caption.19}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Plano de Trabalho 1\IeC {\textordmasculine } e 2\IeC {\textordmasculine } Semestres\relax }}{36}{figure.caption.20}
 \addvspace {10\p@ }
