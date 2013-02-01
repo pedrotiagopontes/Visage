@@ -1,8 +1,7 @@
-\chapter{Introdução} \label{chap:intro} TO-DO
-NOTA:Versão antiga feita perto da antiga apresentação
+\chapter{Introdução} \label{chap:intro}
 
 \section{Contexto} \label{sec:context}
-
+--- desatualizado---
 A sociedade atual caracteriza-se pelo constante fluxo de informação a que os seus indivíduos estão expostos. A título de exemplo e de acordo com dados divulgados pela Intel em \citep{IntelCorporation}, a cada minuto, na Internet são visualizados no Youtube 1,3 milhões de vídeos e carregadas para os seus servidores 30 novas horas de vídeo. Já o Flicker, no mesmo período de tempo, regista a visualização de 20 milhões de fotos e o carregamento de 3000 novas imagens para a sua plataforma.
 Segundo os mesmos dados, atualmente o número de dispositivos com ligação à Internet é equivalente ao da população mundial e é esperado que em 2015 seja o dobro dessa população.
 Este aumento e diversificação de conteúdos digitais e respetivos dispositivos que a eles acedem, torna particularmente difícil a sua categorização, organização e posterior pesquisa por porte dos utilizadores. A área da  Recuperação de Informação Multimédia (RIM), que trata a pesquisa de informação em todas as suas formas, ganha assim especial importância na atualidade, nomeadamente através da utilização de métodos baseados em conteúdo na pesquisa de informação, os quais tem a potencialidade de melhorar a exatidão da informação extraída, mesmo quando existem anotações textuais acerca dos conteúdos, ao possibilitar uma visão adicional sobre as coleções multimédia.\citep{Lew2006}.
@@ -13,14 +12,26 @@ De uma forma geral o problema de reconhecimento facial pode ser formulado da seg
 	
 
 \section{Motivação} \label{sec:motivation}
-A pesquisa ao nível do reconhecimento facial é motivada não só pelos desafios inerentes ao processo de reconhecimento facial, mas também pelos inúmeras aplicações onde a identificação de indivíduos é necessária \citep{Li2011}. Esta é uma área de investigação em aberto e para a qual ainda existe uma grande margem de progressão, no entanto, tal como mencionado anteriormente, esta é uma tarefa que envolve um conjunto grande de subproblemas que devem ser abordados separadamente.
+O reconhecimento facial automático em imagens é uma área de investigação em aberto, principalmente quando considerados ambientes onde onde as condições de captura de imagens não são controladas, uma situação muito comum na grande maioria das bibliotecas de imagens existentes. Nessas situações, as grandes variações existentes ao nível da iluminação, pose e expressão dos indivíduos propõem grandes desafios à tarefa de reconhecimento facial automático para os quais existe ainda a necessidade de evoluir as soluções existentes.
 
-No âmbito desta dissertação o impacto de filtros visuais de abstração de informação no processo de reconhecimento facial será o principal foque de investigação. Este filtros permitem uma simplificação do conteúdo visual ao retirar informação redundante e destacando a apenas a informação essencial. Estes filtros são tradicionalmente utilizados por artistas para comunicar de uma forma mais eficaz a informação pretendida ao retirar a informação desnecessária de imagens foto-realistas \citep{Kyprianidis2009}. Estudos efetuados demonstraram que aplicação destes filtros no âmbito da abstração de imagens para a ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento \citep{Coelho2012}. Tendo em conta os resultados previamente obtidos, e uma vez que não existem estudos relativos à utilização destes filtros no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto no âmbito desta dissertação.
+A pesquisa ao nível do reconhecimento facial é motivada não só pelos desafios inerentes ao processo de reconhecimento facial, mas também, pelas inúmeras aplicações onde a identificação de indivíduos é necessária \citep{Li2011}. A esse nível, a evolução tecnológica registada nos últimos vinte anos culminou com o surgimento de uma panóplia de dispositivos e áreas onde se verifica um aumento do interesse na aplicação desta tecnologia, desde a mais tradicional segurança e controlo de informação, a áreas como o entretenimento ou a gestão de conteúdos multimédia e bases de dados. Ao nível dos dispositivos, o surgimento de novas plataformas, e o aumento da capacidade de computação das já existentes, torna possível a aplicação destes sistemas, não só em máquinas dedicadas para o efeito, mas  também em computadores pessoais ou mesmo em dispositivos móveis como \textit{smartphones} ou \textit{tablets}.
 
-Falar da crescente importância na atualidade e porquê - aplicações comerciais
+Por outro lado, o elevado valor comercial associado aos sistemas de reconhecimento facial existentes, tem como  consequência a existência de um número reduzido de soluções abertas, fazendo com que os resultados eventualmente obtidos no âmbito desta dissertação possam ter uma boa visibilidade.
+
+Finalmente, a aplicação de filtros de abstração de imagens para a ilustração automática de texto demonstrou melhorias ao  nível da informação retornada, assim como, na redução significativa das necessidades de processamento e armazenamento necessárias \citep{Coelho:2012:IAC:2260641.2260676}, tornando-se assim pertinente o estudo do impacto dos filtros de abstração no processo de reconhecimento facial no âmbito desta dissertação.
 
 \section{Objetivos} \label{sec:objetivosintro}
-O principal objetivos deste projeto visa o estudo do impacto de filtros visuais de informação de contexto no processo de reconhecimento facial.
-Adicionalmente propõe-se também o desenvolvimento de um sistema de reconhecimento facial de personalidades que integre a abstração de imagens no processo de reconhecimento facial. Este sistema deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.
+O principal objetivo deste projeto visa o estudo do impacto de filtros de abstração visual de informação no processo de reconhecimento facial automático em imagens. Para isso, destacam-se o seguinte conjunto de objetivos parciais:
+
+\begin{enumerate}
+\item Desenvolvimento de um sistema de reconhecimento facial de personalidades;
+\item Integração da abstração de imagens no sistema desenvolvido;
+\item Avaliação dos resultados da abstração de imagens no processo de reconhecimento facial;
+\end{enumerate}
+
+O sistema desenvolvido deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.
+
+Da avaliação efetuada, para além da publicação desta dissertação, espera-se ainda a publicação de um artigo científico onde sejam descritos os resultados obtidos.
 
 \section{Estrutura do Relatório} \label{sec:struct}
+Este relatório encontra-se dividido em quatro capítulos. Após uma breve introdução, é efetuada, no segundo capítulo, uma revisão do problema de reconhecimento facial automático em imagens, analisando os desafios existentes, as suas diversas áreas de aplicação e as estratégias adotadas para os sistemas atualmente existentes. No terceiro capítulo deste relatório, é abordado o tema da abstração de imagens, ilustrando as soluções existentes, assim como o trabalho relacionado com esta dissertação efetuado com  recurso à abstração de imagens. Por último, no quarto capítulo, é apresentada a perspetiva de solução a desenvolver, nomeadamente os detalhes da sua implementação, a forma como temos em vista analisar o desempenho do sistema e o plano de trabalho previsto.
