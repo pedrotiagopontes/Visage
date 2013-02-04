@@ -183,19 +183,49 @@ $\qquad$        Component-based            & Face region and components [Huang e
 O investimento realizado na investigação de metodologias de reconhecimento facial automático tem permitido progressos notáveis na área. Do mesmo modo, a investigação em áreas relacionadas como a deteção de faces nas imagens, o envelhecimento facial ou o reconhecimento de expressões faciais em imagens tem permitido evoluir ainda os resultados obtidos. Devido à complexidade envolvida no processo de reconhecimento facial automático a evolução na área encontra-se assim intrinsecamente ligada à evolução verificada nas múltiplas áreas envolvidas, sendo que a investigação independente de cada uma é crítica para uma resolução eficaz da grande variabilidade de desafios que o reconhecimento facial automático se propõe ultrapassar.
 
 \subsection{Soluções Existentes}\label{sec:soluções}
-A investigação desenvolvida nos vários centros de investigação na década de 90, levou à passagem das soluções de reconhecimento facial automático de meros protótipos de laboratório, para soluções comerciais de elevado valor acrescentado, dessas soluções resultaram três categorias comerciais de produtos na área do reconhecimento facial:
+A investigação desenvolvida nos vários centros de investigação na década de 90, levou à passagem das soluções de reconhecimento facial automático de meros protótipos laboratoriais, para soluções comerciais de elevado valor acrescentado, dessas soluções resultaram três categorias comerciais de produtos na área do reconhecimento facial:
 \begin{itemize}
 \item Soluções Completas. Estas soluções caracterizam-se por oferecer toda a infraestrutura necessária para efetuar o reconhecimento facial, quer a nível de software, quer a nível de hardware.
 \item Software. Soluções tradicionais de sistemas de reconhecimento facial, que consistem em software que permite efetuar o reconhecimento facial independentemente do hardware utilizado para a captura de informação.  Dentro destas soluções existe uma grande variedade nos produtos oferecidos, desde soluções baseadas na captura de imagens 2D estáticas, imagens 3D e vídeo. Para além disso, as soluções oferecidas encontram disponíveis para serem utilizadas em diversas plataformas, como por exemplo dispositivos móveis ou através da Internet.
-\item SDK para reconhecimento facial. Permitem aos clientes, através de módulos independentes ou APIs, a criação de novas aplicações de reconhecimento facial.
+\item \textit{Software Development Kit (SDK)} de reconhecimento facial. Permitem aos clientes, a criação de novas soluções de reconhecimento facial a partir de módulos independentes ou APIs desenvolvidas por terceiros.
 \end{itemize}
 
 Para além do reconhecimento facial automático, as soluções disponíveis possuem muitas vezes também associados outros métodos de biometria, como por exemplo reconhecimento de íris ou impressões digitais, assim como métodos mais tradicionais de autenticação como o uso de cartões de identificação ou passwords, de modo a aumentar a robustez e segurança dos sistemas.
 
-Na tabela \ref{tab:solucoesExistente}, encontram-se listadas algumas das soluções comerciais atualmente existentes de reconhecimento facial, assim como alguns exemplos de aplicações onde estas foram utilizadas. Esta tabela não pretende representar um levantamento exaustivo das soluções existentes mas apenas ilustrar a vasta gama de produtos disponíveis.
+Na tabela \ref{tab:mbe2010}, encontram-se listadas as soluções participantes na última avaliação, para a qual existem dados disponíveis, realizada a sistemas de reconhecimento facial automático em imagens.
 
-Para além das soluções comerciais de reconhecimento facial ao longo dos últimos anos surgiram também algumas soluções gratuitas de reconhecimento facial. Deste tipo de soluções são exemplo o software Picasa da Google, ou software iPhoto da Apple que permitem aos seus utilizadores a organização de álbuns multimédia com recurso ao reconhecimento facial. Por outro lado, redes sociais como Google Plus e o Facebook, lançaram também recentemente serviços que permitem aos seus utilizadores a deteção e identificação automática de outros utilizadores presentes nas imagens carregadas para os seus servidores.
+\begin{center}
+\begin{table}
+	\caption{Participantes na avaliação MBE 2010 \cite{Grother2010}.}
+	% title of Table
+	\centering
+	% used for centering table
+	\begin{tabular}{l p{8cm}}
+		\hline\hline
+		Empresa/Organização             & Website                                  \\ \hline
+		Cognitec                        & \url{http://www.cognitec-systems.de}           \\ 
+		Dalian University of Technology & \url{http://www.dlut.edu.cn}                   \\ 
+		L1 Identity Solutions           & \url{http://www.l1id.com} \footnote{Integrada no grupo Morphotrust USA - http://www.morphotrust.com}                      \\ 
+		NEC                             & \url{http://www.nec.com/en/global/solutions/security/technologies/face_recognition.html}                       \\ 
+		Neurotechnology                 & \url{http://www.neurotechnology.com}           \\ 
+		Pittsburg Pattern Recognition   & \url{http://www.pittpatt.com} \footnote{Adquirida pela Google Inc.}                  \\ 
+		Sagem                           & \url{http://www.sagem.com} \footnote{Integrada no grupo Morphotrust USA - http://www.morphotrust.com}                     \\ 
+		Surrey University               & \url{http://www.surrey.ac.uk}                  \\ 
+		Toshiba                         & \url{http://www.toshiba.com}                   \\ 
+		Tsinghua University             & \url{http://www.tsinghua.edu.cn}               \\
+		\hline
+    \end{tabular}
+	\label{tab:mbe2010}
+\end{table}
+\end{center}
 
+\footnotetext[1]{Integrada no grupo Morphotrust USA - http://www.morphotrust.com}
+
+\footnotetext[2]{Adquirida pela Google Inc.}
+
+\footnotetext[3]{Integrada no grupo Morphotrust USA - http://www.morphotrust.com}
+
+Para além das soluções comerciais de reconhecimento facial ao longo dos últimos anos surgiram também algumas soluções gratuitas de reconhecimento facial. Deste tipo de soluções são exemplo o software Picasa da Google, ou software iPhoto da Apple que permitem aos seus utilizadores a organização de álbuns multimédia com recurso ao reconhecimento facial. Por outro lado, redes sociais como Google Plus e o Facebook, lançaram também recentemente serviços que permitem a deteção e identificação automática de utilizadores presentes nas imagens carregadas para os seus servidores. Finalmente ao nível das plataformas de desenvolvimento, existem também alguns sistemas de código aberto, sendo que a este nível se destaca a biblioteca \textit{OpenCV}, pelo seu grau de maturidade, grande número de utilizadores e dimensão da comunidade de suporte.
 
 \section{Análises de Desempenho Efetuadas}\label{sec:performance}
 A performance de um sistema de reconhecimento facial depende de uma grande variedade de fatores como a iluminação, posição da face na imagem, expressão facial e presença ou ausência de adereços (ex:óculos). Por outro lado, as condições de utilização do próprio sistema, tais como o número de utilizadores diferentes e a frequência de utilização, são também fatores a ter em conta ao avaliar a performance de um sistema. Uma avaliação apropriada dos sistemas de reconhecimento facial encontra-se então dependente da existência de uma base de dados de grandes dimensões e consequentemente um conjunto de casos de teste vasto, assim como, da existência de métodos apropriados para essa avaliação.
