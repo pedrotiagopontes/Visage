@@ -10,7 +10,7 @@ Por outro lado, a crescente ubiquidade tecnológica e poder computacional presen
 
 Assim sendo, torna-se pertinente a continuação da investigação na área do reconhecimento facial em imagens. Para além disso, o elevado valor comercial das soluções existentes e consequente falta soluções abertas permite alcançar uma boa visibilidade dos resultados obtidos.
 
-Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicação destes filtros na recuperação de informação multimédia, nomeadamente no âmbito da da ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento das imagens \citep{Coelho2012}. 
+Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicação destes filtros na recuperação de informação multimédia, nomeadamente no âmbito da da ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento das imagens \citep{Coelho:2012:IAC:2260641.2260676}. 
 
 Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso de a abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar a o processo de reconhecimento facial automático em imagens.
 
@@ -118,7 +118,7 @@ Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial 
     \label{fig:galeria}
   \end{center}
 \end{figure}
-O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biométricas das pessoas já conhecidas pelo sistema. Um exemplo de imagens da galeria pode ser visto na figura \ref{fig:imggaleria}
+O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biométricas das pessoas já conhecidas pelo sistema. Um exemplo de imagens da galeria pode ser visto na figura \ref{fig:galeria}
 
 \begin{figure}[ht]
   \begin{center}
@@ -195,17 +195,17 @@ Em termos formais, a verificação pode ser avaliada pela taxa de verificação 
     \label{fig:roc}
   \end{center}
 \end{figure}
-A modificação do valor de $\tau$ tem influência direta nas percentagens de deteção e/ou verificação e de falsos-alarmes calculadas. Ao aumentar o limite operacional, ambas as taxas diminuem, não sendo por isso possível maximizar ambos os valores, uma vez que existe sempre um compromisso entre o aumento da taxa de deteção e identificação e o aumento do número de falsos-alarmes. Este compromisso é tradicionalmente representado num gráfico do tipo \textit{receiver operating characteristic} (ROC). Um exemplo de um ROC encontra-se representado na figura \ref{roc}, com um ranking constante de 1. 
+A modificação do valor de $\tau$ tem influência direta nas percentagens de deteção e/ou verificação e de falsos-alarmes calculadas. Ao aumentar o limite operacional, ambas as taxas diminuem, não sendo por isso possível maximizar ambos os valores, uma vez que existe sempre um compromisso entre o aumento da taxa de deteção e identificação e o aumento do número de falsos-alarmes. Este compromisso é tradicionalmente representado num gráfico do tipo \textit{receiver operating characteristic} (ROC). Um exemplo de um ROC encontra-se representado na figura \ref{fig:roc}, com um ranking constante de 1. 
 
 \begin{figure}[ht]
   \begin{center}
     \leavevmode
-    \includegraphics[width=0.8\textwidth]{roc.png}
+    \includegraphics[width=0.8\textwidth]{roc2.png}
     \caption{ROC2.}	
     \label{fig:roc2}
   \end{center}
 \end{figure}
-Outra forma de representar a performance de sistemas de reconhecimento facial é em função do ranking das provas presentes na galeria e encontra-se representada na figura \ref{roc2}. Nesta figura, o eixo vertical representa a taxa de deteção e reconhecimento e o eixo horizontal o ranking numa escala logarítmica. Cada curva representa a performance do mesmo sistema com uma diferente taxa de falso-alarme.
+Outra forma de representar a performance de sistemas de reconhecimento facial é em função do ranking das provas presentes na galeria e encontra-se representada na figura \ref{fig:roc2}. Nesta figura, o eixo vertical representa a taxa de deteção e reconhecimento e o eixo horizontal o ranking numa escala logarítmica. Cada curva representa a performance do mesmo sistema com uma diferente taxa de falso-alarme.
 
 \section{Resultados Esperados}
 Tendo em conta os resultados anteriormente observados no recurso à utilização de filtros de abstração para a ilustração automática de texto e o estado da arte da área de reconhecimento facial automático em imagens, esperamos, no contexto desta dissertação, determinar o impacto do uso da abstração de imagens no processo de reconhecimento facial automático, nomeadamente nos seguintes pontos:
@@ -217,16 +217,65 @@ Tendo em conta os resultados anteriormente observados no recurso à utilização
 Em cada um dos pontos identificados anteriormente pretendemos determinar, qual o impacto ao nível na performance (melhoria ou perda de eficácia) com o uso de abstração de imagens, e qual o compromisso existente entre a eficácia do reconhecimento e as necessidades de processamento e armazenamento das imagens.
 
 \section{Plano de Trabalho}
+Na figura \ref{fig:gantt} encontra-se representado o plano de trabalho para a disciplina de dissertação. Este plano engloba um período de 25 semanas, com início na segunda semana do mês de Fevereiro e fim na última semana do mês de Julho, sendo que as últimas quatro semanas do mês de Julho se encontram reservadas para o período de realização das provas públicas de dissertação.
 
-\begin{figure}[t]
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=1\textwidth]{GantSemSemanas}
-    \caption{Plano de Trabalho 1º e 2º Semestres}	
-    \label{fig:planotrabalho}
-  \end{center}
+\begin{figure}[ht]
+	\begin{center}
+		\begin{gantt}[xunitlength=0.4cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{10}{25}
+		\begin{ganttitle}
+		 \titleelement{Feb}{3}
+		 \titleelement{Mar}{4}
+		 \titleelement{Apr}{5}
+		 \titleelement{May}{4}
+		 \titleelement{Jun}{4}	
+		 \titleelement{Jul}{5}
+		\end{ganttitle}
+		\begin{ganttitle}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{1}{1}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{1}{1}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{5}{1}
+		 \titleelement{1}{1}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{1}{1}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{1}{1}
+		 \titleelement{2}{1}
+		 \titleelement{3}{1}
+		 \titleelement{4}{1}
+		 \titleelement{5}{1}
+		\end{ganttitle}
+		\ganttbar{1. Sistema Reconhecimento Facial Base}{0}{4}
+		\ganttbar{2. Experiências Conjunto Dados}{2}{2}
+		\ganttbar{3. Preparação Conjunto Dados}{3}{4}
+		\ganttbar{4. Avaliação Desempenho sem Filtros}{5}{4}
+		\ganttbar{5. Aplicação Filtros e Adaptação Sistema}{8}{3}
+		\ganttbar{6. Análise Impacto Filtros Abstração}{9}{5}
+		\ganttbar{7. Escrita Dissertação}{7}{14}
+		\ganttbar{8. Escrita Artigo}{16}{5}
+		\end{gantt}
+		\caption{Plano Trabalho 2º Semestre.}
+		\label{fig:gantt}
+	\end{center}
 \end{figure}
 
-//Novo gant só com 2º semestre?
+O plano de trabalho engloba um conjunto de oito tarefas. A primeira tarefa consiste na implementação de um sistema de reconhecimento facial base com recurso à biblioteca OpenCV. Paralelamente, irão também ser realizadas algumas experiências com os conjuntos de dados a utilizar de forma a determinar as necessidades de preparação e adaptação dos dados existentes.
 
+A terceira e quarta tarefas compreendem a preparação do conjunto de dados de acordo com as necessidades determinadas na tarefa anterior e a posterior avaliação do desempenho do sistema criado sem a utilização de filtros de abstração para referência futura.
+
+A quinta e sexta tarefa dizem respeito à aplicação dos filtros de abstração às coleções de dados existentes e a posterior adaptação e avaliação do sistema de reconhecimento facial com a utilização de imagens abstraídas para efetuar o reconhecimento.
+
+Finalmente, as últimas duas tarefas englobam a escrita da dissertação e a escrita de um artigo científico acerca dos resultados obtidos.
 %Adicionalmente propõe-se também o desenvolvimento de um sistema de reconhecimento facial de personalidades que integre a abstração de imagens no processo de reconhecimento facial. Este sistema deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.

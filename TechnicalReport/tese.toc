@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.1.2}Desafios}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}\IeC {\'A}reas de Aplica\IeC {\c c}\IeC {\~a}o}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Controlo de Acesso e Seguran\IeC {\c c}a de Informa\IeC {\c c}\IeC {\~a}o}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Cart\IeC {\~o}es inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Cart\IeC {\~o}es Inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{10}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Entretenimento}{10}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Gest\IeC {\~a}o de Conte\IeC {\'u}dos Multim\IeC {\'e}dia e Bases de Dados}{11}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Seguran\IeC {\c c}a e Aplica\IeC {\c c}\IeC {\~a}o da Lei}{12}{subsection.2.2.5}
