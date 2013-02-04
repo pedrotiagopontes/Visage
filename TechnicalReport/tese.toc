@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Cart\IeC {\~o}es inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{10}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Entretenimento}{10}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Gest\IeC {\~a}o de Conte\IeC {\'u}dos Multim\IeC {\'e}dia e Bases de Dados}{11}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Seguran\IeC {\c c}a e Refor\IeC {\c c}o da Lei}{12}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.5}Seguran\IeC {\c c}a e Aplica\IeC {\c c}\IeC {\~a}o da Lei}{12}{subsection.2.2.5}
 \contentsline {section}{\numberline {2.3}Estrat\IeC {\'e}gias de Reconhecimento Facial}{12}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Solu\IeC {\c c}\IeC {\~o}es Existentes}{14}{subsection.2.3.1}
 \contentsline {section}{\numberline {2.4}An\IeC {\'a}lises de Desempenho Efetuadas}{15}{section.2.4}
