@@ -14,22 +14,11 @@ Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicaç
 
 Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso de a abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar a o processo de reconhecimento facial automático em imagens.
 
-\section{Objetivos} \label{sec:objetivosperpectiva}
-O principal objetivo deste projeto visa o estudo do impacto de filtros de abstração visual de informação no processo de reconhecimento facial automático em imagens. Para isso, destacam-se o seguinte conjunto de objetivos parciais:
-
-\begin{enumerate}
-\item Desenvolvimento de um sistema de reconhecimento facial de personalidades;
-\item Integração da abstração de imagens no sistema desenvolvido;
-\item Avaliação dos resultados da abstração de imagens no processo de reconhecimento facial;
-\end{enumerate}
-
-Da avaliação efetuada, para além da publicação desta dissertação, espera-se ainda a publicação de um artigo científico onde sejam descritos os resultados obtidos.
-
 \section{Implementação} \label{sec:implementacao}
 
 Uma vez que não se pretende no âmbito desta dissertação efetuar investigação ao nível dos algoritmos de reconhecimento facial, mas sim ao nível do impacto do uso de imagens abstraídas nesse sistemas, a implementação desses algoritmos terá por base a utilização de soluções abertas de reconhecimento facial, nomeadamente a biblioteca \textit{Open CV (Open Source Computer Vision)}.
 
-Ao nível dos filtros de abstração o estudo será efetuado utilizado o filtro \textit{Anisotropic Kuwahara}.
+Ao nível dos filtros de abstração o estudo será efetuado com recurso ao filtro \textit{Anisotropic Kuwahara}.
 Este filtro foi utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia, pelo que se considera adequada a sua utilização no âmbito deste projeto.
 
 Por último, ao nível das coleções de dados a analisar, temos em vista a utilização de duas coleções a primeira é a uma coleção standard, chamada \textit{Labeled Faces in the Wild} e que permite obter resultados comparativos com avaliações efetuadas anteriormente a sistemas de reconhecimento facial existentes. A segunda é a coleção de imagens Sapo Fama, qual agrega uma base de dados de imagens de personalidades famosas nacionais e internacionais, representado uma possível área de aplicação do sistema desenvolvido.
@@ -78,14 +67,14 @@ Ahonen \textit{et al.} \cite{ahonen2004face}, propuseram o uso de LBP para o rec
   \begin{center}
     \leavevmode
     \includegraphics[width=0.7\textwidth]{filterskid}
-    \caption{Comparação entre imagem não abstraída (esquerda) e imagem abstraída (direita).}	
+    \caption{Comparação entre imagem não abstraída (esquerda) e imagem abstraída (direita) \cite{Kyprianidis2009}.}	
     \label{fig:filterskid}
   \end{center}
 \end{figure}
 
 Ao nível dos filtros de abstração o estudo será efetuado utilizado o filtro Anisotropic Kuwahara (FAK).
 
-Este filtro consiste numa generalização do filtro Kuwahara que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+Este filtro consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
 
 O filtro em questão foi também utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia. 
 
@@ -102,13 +91,13 @@ A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotogr
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{sapoFama.png}
-    \caption{Exemplos de imagens da coleção Sapo Fama.}	
+    \caption{Exemplos de imagens da coleção Sapo Fama. \cite{PTC2011}}	
     \label{fig:sapoFama}
   \end{center}
 \end{figure}
-A coleção Sapo Fama foi disponibilizada no âmbito da integração desta dissertação no laboratório de investigação da Sapo da Universidade do Porto. Esta galeria multimédia agrega uma coleção de imagens utilizadas na plataforma online de notícias sobre personalidades públicas da Sapo, capturadas num grande número de eventos com condições de iluminação, pose e expressão facial muito variáveis. Para além disso, a cada imagem encontra-se ainda associada uma descrição textual. As imagens contidas nesta coleção representam uma oportunidade única de avaliação do sistema desenvolvido numa biblioteca de imagens real e com elevado valor comercial. Na figura \ref{fig:sapoFama} encontram-se representados alguns exemplos das imagens contidas nesta coleção.
+A coleção Sapo Fama irá ser disponibilizada no âmbito da integração desta dissertação no laboratório de investigação da Sapo da Universidade do Porto. Esta galeria multimédia agrega uma coleção de imagens utilizadas na plataforma online de notícias sobre personalidades públicas da Sapo, capturadas num grande número de eventos com condições de iluminação, pose e expressão facial muito variáveis. Para além disso, a cada imagem encontra-se ainda associada uma descrição textual. As imagens contidas nesta coleção representam uma oportunidade única de avaliação do sistema desenvolvido numa biblioteca de imagens real e com elevado valor comercial. Na figura \ref{fig:sapoFama} encontram-se representados alguns exemplos das imagens contidas nesta coleção.
 
-Para a utilização deste conjunto de dados será ainda necessário efetuar a preparação do mesmo nomeadamente através da extração e segmentação das diversas entidades presentes em cada imagem, assim como da normalização das imagens em termos de dimensão.
+Para a utilização deste conjunto de dados será ainda necessário efetuar a preparação do mesmo nomeadamente através da extração e segmentação das diversas entidades presentes em cada imagem, assim como da normalização das imagens, por exemplo, em termos de dimensão.
 
 \section{Avaliação Desempenho}
 A avaliação da desempenho dos sistemas de reconhecimento facial é normalmente efetuada em duas situações específicas: identificação e verificação de faces. No âmbito da avaliação desses sistemas designam-se de $amostras$ $biometricas$ as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema essas amostras podem ser apenas uma imagem, um conjunto de imagens ou até um vídeo. Designa-se ainda de $prova$ a amostra biométrica apresentada ao sistema para ser reconhecida.
@@ -118,7 +107,7 @@ Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial 
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{galeria.png}
-    \caption{Galeria com faces conhecidas pelo sistema e respectivas anotações.}	
+    \caption{Galeria com faces conhecidas pelo sistema e respectivas anotações. \cite{UniversityofMassachussets}}	
     \label{fig:galeria}
   \end{center}
 \end{figure}
@@ -128,27 +117,27 @@ O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biomé
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gp.png}
-    \caption{Imagens de pessoas conhecidas pelo sistema, mas não presentes na galeria.}	
+    \caption{Imagens de pessoas conhecidas pelo sistema, mas não presentes na galeria.\cite{UniversityofMassachussets}}	
     \label{fig:gp}
   \end{center}
 \end{figure}
-O segundo grupo de imagens é o conjunto $\mathscr{P}_\mathscr{G}$, engloba o conjunto de provas de pessoas conhecidas pelo sistema, mas que são diferentes das amostras biométricas presentes na galeria. Um exemplo de imagens deste conjunto pode ser visto na figura \ref{fig:gp}, onde se encontram representadas imagens da cantora Norah Jones, mas que são diferentes das imagens presentes no conjunto $\mathscr{G}$.
+O segundo grupo de imagens é o conjunto $\mathscr{P}_\mathscr{G}$ e engloba o conjunto de provas de pessoas conhecidas pelo sistema, mas que são diferentes das amostras biométricas presentes na galeria. Um exemplo de imagens deste conjunto pode ser visto na figura \ref{fig:gp}, onde se encontram representadas imagens da cantora Norah Jones, mas que são diferentes das imagens presentes no conjunto $\mathscr{G}$.
 
 \begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gn.png}
-    \caption{Imagens de pessoas não conhecidas pelo sistema.}	
+    \caption{Imagens de pessoas não conhecidas pelo sistema. \cite{UniversityofMassachussets}}	
     \label{fig:gn}
   \end{center}
 \end{figure}
 O último conjunto é designado de $\mathscr{P}_\mathscr{N}$, e corresponde ao conjunto de provas de pessoas não presentes na galeria. Essas imagens são também muitas vezes designadas de impostores, uma vez que servem para testar as situações em que o sistema identifica erradamente pessoas desconhecidas pelo sistema como pessoas presentes na galeria. Um exemplo deste conjunto de imagens encontra-se representado na figura \ref{fig:gn}
 
-Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada a cada amostra biométrica da galeria $g_i$, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$. Este índice é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$.
+Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada a cada amostra biométrica $g_i$ da galeria, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$. Este índice é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$.
 
 A função $id()$ retorna a identidade de uma amostra biométrica, em que $id(p_j) = id(g^*)$, sendo $g^*$ a única correspondência de $p_j$ na galeria e $s_{*j}$ o respetivo índice de similaridade.
 
-De seguida encontra-se descrita brevemente a forma como é efetuada a avaliação da desempenho dos sistemas de reconhecimento facial para os casos de identificação e verificação.
+De seguida, encontra-se descrita brevemente a forma como é efetuada a avaliação da desempenho dos sistemas de reconhecimento facial para os casos de identificação e verificação.
 
 \subsection{Identificação}
 Tal como referido no capítulo \ref{chap:reco} deste relatório, em sistemas de reconhecimento facial automático o problema de identificação consiste na determinação da identidade de uma amostra biométrica (prova) fornecida ao sistema.
@@ -195,7 +184,7 @@ Em termos formais, a verificação pode ser avaliada pela taxa de verificação 
   \begin{center}
     \leavevmode
     \includegraphics[width=0.8\textwidth]{roc.png}
-    \caption{ROC.}	
+    \caption{ROC computado durante os FRVT 2002 \cite{Li2011}.}	
     \label{fig:roc}
   \end{center}
 \end{figure}
@@ -205,7 +194,7 @@ A modificação do valor de $\tau$ tem influência direta nas percentagens de de
   \begin{center}
     \leavevmode
     \includegraphics[width=0.8\textwidth]{roc2.png}
-    \caption{ROC2.}	
+    \caption{Desempenho em identificação para 8 níveis de taxas de falso-alarme. A curva superior corresponde a uma taxa de falso alarme de 1.0 \cite{Li2011}.}	
     \label{fig:roc2}
   \end{center}
 \end{figure}
@@ -214,11 +203,11 @@ Outra forma de representar a performance de sistemas de reconhecimento facial é
 \section{Resultados Esperados}
 Tendo em conta os resultados anteriormente observados no recurso à utilização de filtros de abstração para a ilustração automática de texto e o estado da arte da área de reconhecimento facial automático em imagens, esperamos, no contexto desta dissertação, determinar o impacto do uso da abstração de imagens no processo de reconhecimento facial automático, nomeadamente nos seguintes pontos:
 \begin{itemize}
-\item Eficácia do Reconhecimento;
-\item Necessidades de Processamento das imagens;
-\item Necessidades de Armazenamento das imagens.
+\item Eficácia do reconhecimento;
+\item Necessidades de processamento das imagens;
+\item Necessidades de armazenamento das imagens.
 \end{itemize}
-Em cada um dos pontos identificados anteriormente pretendemos determinar, qual o impacto ao nível na performance (melhoria ou perda de eficácia) com o uso de abstração de imagens, e qual o compromisso existente entre a eficácia do reconhecimento e as necessidades de processamento e armazenamento das imagens.
+Para além do impacto ao nível do desempenho com o uso de abstração de imagens, esperamos determinar qual o compromisso existente entre a eficácia do reconhecimento e as necessidades de processamento e armazenamento das imagens.
 
 \section{Plano de Trabalho}
 Na figura \ref{fig:gantt} encontra-se representado o plano de trabalho para a disciplina de dissertação. Este plano engloba um período de 25 semanas, com início na segunda semana do mês de Fevereiro e fim na última semana do mês de Julho, sendo que as últimas quatro semanas do mês de Julho se encontram reservadas para o período de realização das provas públicas de dissertação.
@@ -277,9 +266,9 @@ Na figura \ref{fig:gantt} encontra-se representado o plano de trabalho para a di
 
 O plano de trabalho engloba um conjunto de oito tarefas. A primeira tarefa consiste na implementação de um sistema de reconhecimento facial base com recurso à biblioteca OpenCV. Paralelamente, irão também ser realizadas algumas experiências com os conjuntos de dados a utilizar de forma a determinar as necessidades de preparação e adaptação dos dados existentes.
 
-A terceira e quarta tarefas compreendem a preparação do conjunto de dados de acordo com as necessidades determinadas na tarefa anterior e a posterior avaliação do desempenho do sistema criado sem a utilização de filtros de abstração para referência futura.
+A terceira e quarta tarefas compreendem a preparação do conjunto de dados de acordo com as necessidades determinadas na tarefa anterior e a posterior avaliação do desempenho do sistema criado sem a utilização de filtros de abstração.
 
-A quinta e sexta tarefa dizem respeito à aplicação dos filtros de abstração às coleções de dados existentes e a posterior adaptação e avaliação do sistema de reconhecimento facial com a utilização de imagens abstraídas para efetuar o reconhecimento.
+A quinta e sexta tarefa dizem respeito à aplicação dos filtros de abstração às coleções de dados existentes e a posterior adaptação e avaliação do sistema de reconhecimento facial anteriormente desenvolvido com a utilização de imagens abstraídas.
 
 Finalmente, as últimas duas tarefas englobam a escrita da dissertação e a escrita de um artigo científico acerca dos resultados obtidos.
 %Adicionalmente propõe-se também o desenvolvimento de um sistema de reconhecimento facial de personalidades que integre a abstração de imagens no processo de reconhecimento facial. Este sistema deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.

@@ -70,7 +70,7 @@ Uma abordagem baseada num filtro bilateral foi proposta em primeira mão por Tom
 
 O filtro bilateral caracteriza-se por suavizar as zonas com menor contraste da imagem enquanto preserva os limites de maior contraste. No entanto, os efeitos deste filtro são poucos visíveis quando toda a imagem possui um elevado contraste. Por outro lado, em imagens pouco contrastadas a informação visual removida é por vezes demasiada, causando um efeito de imagem desfocada na imagem abstraída.
 
-\subsection{Kuwahara}
+\subsection{Kuwahara} \label{subsec:kuwahara}
 O filtro Kuwahara(fig. \ref{fig:kuwahara}) e as suas variantes, representam uma classe de filtros onde se tem verificado uma pesquisa ativa ao longo das últimas décadas \cite{Kyprianidis2009}.
 
 A ideia geral do filtro do tipo Kuwahara consiste em efetuar um achatamento da imagem, através da divisão da área a filtrar em quatro sub-regiões retangulares de menor dimensão, e a posterior substituição da informação contida numa dessas regiões pela média da sub-região com menor variância. Desta forma, é removido o detalhe em zonas com elevado contraste mas são preservadas as limites das formas presentes na imagem. No entanto, na presença de ruído este filtro revela-se instável, criando artefactos na imagem. Por último, esta abordagem revela-se também agressiva na presença de anisotropia \footnote{Anisotropia - qualidade de certos materiais cujas propriedades são diferentes consoante as direções.}, ou seja quando a informação direcional presente na imagem é forte (por exemplo: pelo, cabelos), não preservando essa informação na imagem abstraída.
