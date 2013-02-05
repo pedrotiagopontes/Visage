@@ -4,16 +4,16 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema Gen\IeC {\'e}rico de Reconhecimento Facial\relax }}{7}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces A redu\IeC {\c c}\IeC {\~a}o da taxa de erro para os algoritmos estados da arte tal como documentado nas avalia\IeC {\c c}\IeC {\~o}es FERET, FRVT 2002, FRVT 2006 e MBE 2010 \cite {Phillips2007, Grother2010}\relax }}{20}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{21}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{23}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{24}{figure.caption.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{25}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{30}{figure.caption.14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemplos de imagens da cole\IeC {\c c}\IeC {\~a}o Sapo Fama. \cite {PTC2011}\relax }}{31}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Galeria com faces conhecidas pelo sistema e respectivas anota\IeC {\c c}\IeC {\~o}es. \cite {UniversityofMassachussets}\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Imagens de pessoas conhecidas pelo sistema, mas n\IeC {\~a}o presentes na galeria.\cite {UniversityofMassachussets}\relax }}{33}{figure.caption.17}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Imagens de pessoas n\IeC {\~a}o conhecidas pelo sistema. \cite {UniversityofMassachussets}\relax }}{34}{figure.caption.18}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC computado durante os FRVT 2002 \cite {Li2011}.\relax }}{35}{figure.caption.19}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Desempenho em identifica\IeC {\c c}\IeC {\~a}o para 8 n\IeC {\'\i }veis de taxas de falso-alarme. A curva superior corresponde a uma taxa de falso alarme de 1.0 \cite {Li2011}.\relax }}{36}{figure.caption.20}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Plano Trabalho 2\IeC {\textordmasculine } Semestre.\relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{32}{figure.caption.17}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemplos de imagens da cole\IeC {\c c}\IeC {\~a}o Sapo Fama \cite {PTC2011}.\relax }}{33}{figure.caption.18}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Galeria com faces conhecidas pelo sistema e respectivas anota\IeC {\c c}\IeC {\~o}es \cite {UniversityofMassachussets}.\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Imagens de pessoas conhecidas pelo sistema, mas n\IeC {\~a}o presentes na galeria \cite {UniversityofMassachussets}.\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Imagens de pessoas n\IeC {\~a}o conhecidas pelo sistema \cite {UniversityofMassachussets}.\relax }}{35}{figure.caption.21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC computado durante os FRVT 2002 \cite {Li2011}.\relax }}{37}{figure.caption.22}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Desempenho em identifica\IeC {\c c}\IeC {\~a}o para 8 n\IeC {\'\i }veis de taxas de falso-alarme. A curva superior corresponde a uma taxa de falso alarme de 1.0 \cite {Li2011}.\relax }}{38}{figure.caption.23}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Plano Trabalho 2\IeC {\textordmasculine } Semestre.\relax }}{39}{figure.caption.24}
 \addvspace {10\p@ }

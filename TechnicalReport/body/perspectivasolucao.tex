@@ -1,5 +1,8 @@
 \chapter{Perspectiva de Solução} \label{chap:solução}
 
+Neste capítulo encontra-se descrita a perspetiva de solução proposta no âmbito desta dissertação para a análise do impacto dos filtros de abstração no reconhecimento facial em imagens. Em primeiro lugar é apresentada a hipótese levantada tendo em consideração o estado da arte do reconhecimento facial e da abstração de imagens. Posteriormente são apresentados os detalhes de implementação do sistema que se pretende desenvolver e descritas as coleções de dados a utilizar. Em quarto lugar é efetuada uma descrição da forma como temos em vista efetuar a avaliação do desempenho do sistema a desenvolver. Por último, encontram-se descritos os resultados esperados e o plano de trabalho para o próximo semestre.
+
+\section{Filtros de Abstração de Imagens no Reconhecimento Facial}
 O reconhecimento facial em imagens sofreu uma evolução notável nos últimos 20 anos, tal como documentado no capítulo \ref{chap:reco} deste relatório. 
 
 Em cenários cooperativos com condições de captura de imagens controladas, nomeadamente ao nível da pose, iluminação e expressões faciais, considera-se mesmo que o problema de verificação 1:1 se encontra praticamente resolvido, uma vez que as taxas de reconhecimento atingidas são satisfatórias para a grande maioria das aplicações \citep{Li2011}. Existem também várias aplicações em situações reais com um bom nível de satisfação por parte dos seus utilizadores, como é o caso do sistema de fronteira automático dos aeroportos portugueses (ver \ref{CartoesInteligentes}), ou o controlo de entradas nas cerimónias inaugurais dos jogos olímpicos de Pequim (ver \ref{sec:SegurancaAplicaçãoLei}). Em condições específicas e favoráveis, é então possível considerar que os sistemas de reconhecimento facial automático atuais conseguem mesmo ultrapassar a capacidade de reconhecimento humana, uma vez que conseguem identificar com precisão um maior número de faces do que aquelas que um humano consegue.
@@ -15,13 +18,10 @@ Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicaç
 Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso de a abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar a o processo de reconhecimento facial automático em imagens.
 
 \section{Implementação} \label{sec:implementacao}
-
 Uma vez que não se pretende no âmbito desta dissertação efetuar investigação ao nível dos algoritmos de reconhecimento facial, mas sim ao nível do impacto do uso de imagens abstraídas nesse sistemas, a implementação desses algoritmos terá por base a utilização de soluções abertas de reconhecimento facial, nomeadamente a biblioteca \textit{Open CV (Open Source Computer Vision)}.
 
-Ao nível dos filtros de abstração o estudo será efetuado com recurso ao filtro \textit{Anisotropic Kuwahara}.
+Ao nível dos filtros de abstração o estudo será efetuado com recurso ao filtro Kuwahara Anisotrópico.
 Este filtro foi utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia, pelo que se considera adequada a sua utilização no âmbito deste projeto.
-
-Por último, ao nível das coleções de dados a analisar, temos em vista a utilização de duas coleções a primeira é a uma coleção standard, chamada \textit{Labeled Faces in the Wild} e que permite obter resultados comparativos com avaliações efetuadas anteriormente a sistemas de reconhecimento facial existentes. A segunda é a coleção de imagens Sapo Fama, qual agrega uma base de dados de imagens de personalidades famosas nacionais e internacionais, representado uma possível área de aplicação do sistema desenvolvido.
 	
 \subsection{Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}
 O \textit{OpenCV} é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontra disponível a implementação de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. 
@@ -30,8 +30,8 @@ Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo den
 
 Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. De seguida encontram-se brevemente descritas as principais diferenças entre os três algoritmos implementados no módulo \textit{Face Recognizer:}
 
-\subsubsection{\textit{Eigenfaces}}
-O método \textit{Eigenfaces} foi introduzido por \cite{Belhumeur1997} e tira partido da Análise dos Componentes Principais (ACP) para efetuar o reconhecimento facial automático.
+\subsubsection*{\textit{Eigenfaces}}
+O método \textit{Eigenfaces} foi introduzido por Turk e Pentland em 1991 \cite{Turk1991}, e tira partido da Análise dos Componentes Principais (ACP) para efetuar o reconhecimento facial automático.
 
 A análise de componentes principais tem como objetivo determinar as relações existentes entre diferentes conjuntos de dados, nomeadamente ao nível das suas diferenças e semelhanças, tirando partido da redundância existente para criar uma representação reduzida dos dados sem que a perda de informação ocorrida seja significativa. As imagens faciais possuem uma grande redundância natural, o algoritmo \textit{Eigenfaces}, através da análise dos componentes principais dessas imagens, efetua uma projeção das imagens faciais num sub-espaço onde se evidenciam apenas as variações entre as diversas caras conhecidas pelo sistema.
 
@@ -49,20 +49,20 @@ O processo de reconhecimento facial com recurso ao algoritmo \textit{Eigenfaces}
 
 Este método efetua assim uma abordagem holística ao problema de reconhecimento facial em imagens, uma vez que tem em consideração a representação facial como um todo, não fazendo a distinção entre pontos específicos da face como olhos, orelhas ou nariz para efetuar o reconhecimento facial. Uma vantagem deste tipo de representação é a reduzida sensibilidade ao ruído presente nas imagens \cite{Zhao2003}.
 
-\subsubsection{\textit{Fisherfaces}}
-A análise dos componentes principais visa determinar o sub-espaço onde se verifica uma maior variação entre um conjunto de imagens. No entanto, a variação na representação facial de uma pessoa encontra-se muitas vezes relacionada com mudanças de expressões faciais ou iluminação dos indivíduos, pelo que, o sub-espaço criado pelo algoritmo \textit{Eigenfaces} não traduz muitas vezes apenas as diferenças de identidade entre os diversos indivíduos, mas também as diferenças verificadas entre as várias representações de um indivíduo devido à variação nas condições de captura das imagens. O algoritmo \textit{Fisherfaces} \cite{Belhumeur1997, Etemad1997, Zhao1998}, tenta resolver este problema, através da aplicação de um passo de \textit{Linear Discriminant Analysis (LDA)} após a análise dos componentes principais, de forma a determinar mais corretamente as variações intra-classe existentes no conjunto de imagens a avaliar.
+\subsubsection*{\textit{Fisherfaces}}
+A análise dos componentes principais visa determinar o sub-espaço onde se verifica uma maior variação entre um conjunto de imagens. No entanto, a variação na representação facial de uma pessoa encontra-se muitas vezes relacionada com mudanças de expressões faciais ou iluminação dos indivíduos, pelo que, o sub-espaço criado pelo algoritmo \textit{Eigenfaces} não traduz muitas vezes apenas as diferenças de identidade entre os diversos indivíduos, mas também as diferenças verificadas entre as várias representações de um indivíduo devido à variação nas condições de captura das imagens. O algoritmo \textit{Fisherfaces} \cite{Belhumeur1997, Etemad1997, Zhao1998}, tenta resolver este problema, através da aplicação de um passo de Análise Linear Discriminante (ALD) \textit{(Linear Discriminant analysis)} após a análise dos componentes principais, de forma a determinar mais corretamente as variações intra-classe existentes no conjunto de imagens a avaliar.
 
-A LDA, inicialmente introduzida por Fisher em 1936 \cite{FISHER1936}, tenta maximizar as diferenças existentes entre diferentes indivíduos(inter-classe) e minimizar as variações entre imagens da mesma pessoa(intra-classe) de modo a obter uma representação mais robusta em termos de variação ao nível da iluminação. Após a aplicação dos passos de PCA e LDA, o processo de reconhecimento do método \textit{Fisherfaces} é semelhante ao efetuado pelo método \textit{Eigenfaces}, sendo também efetuada uma abordagem holística ao reconhecimento facial.
+A ALD, inicialmente introduzida por Fisher em 1936 \cite{FISHER1936}, tenta maximizar as diferenças existentes entre diferentes indivíduos(inter-classe) e minimizar as variações entre imagens da mesma pessoa(intra-classe) de modo a obter uma representação mais robusta em termos de variação ao nível da iluminação. Após a aplicação dos passos de ACP e ADL, o processo de reconhecimento do método \textit{Fisherfaces} é semelhante ao efetuado pelo método \textit{Eigenfaces}, sendo também efetuada uma abordagem holística ao reconhecimento facial.
 
 
-\subsubsection{\textit{Local Binary Patterns Histograms (LBPH)}}
+\subsubsection*	{\textit{Local Binary Patterns Histograms (LBPH)}}
 Ao contrário dos algoritmos descritos anteriormente, o LBPH efetua uma abordagem local ao problema de reconhecimento facial, efetuando uma extração das características locais de uma imagem. Este tipo de abordagem possuí a vantagem de possuir uma baixa dimensionalidade implícita, pelo que não existe a necessidade de efetuar a projeção das imagens num sub-espaço.
 
 A ideia base das \textit{Local Binary Patterns (LBP)}, consiste em resumir a estrutura local de imagem através de uma comparação de um pixel com os seus vizinhos. Dado um pixel central é analisada a diferença entre esse pixel e cada um dos seus vizinhos. Se a intensidade do pixel for maior ou igual do que a do seu vizinho é atribuído o valor 1, caso contrário é atribuído o valor 0. Cada pixel pode então ser traduzido por um número binário do género $11001111$. Dados $8$ pixeis é então possível efetuar $2^8$ combinações, cada uma designada de LBP.
 
 Ahonen \textit{et al.} \cite{ahonen2004face}, propuseram o uso de LBP para o reconhecimento facial em imagens. A sua abordagem consiste na divisão da face em pequenas regiões das quais são derivadas LBP e concatenas numa representação única designada de LBPH, a qual representa uma imagem facial. O reconhecimento é depois efetuado através do determinação do vizinho mais próximo no espaço de faces computado.
 
-\subsection{Filtros de Abstração - Filtro \textit{Anisotropic Kuwahara}}
+\subsection{Filtros de Abstração - Filtro Kuwahara Anisotrópico}
 \begin{figure}[ht]
   \begin{center}
     \leavevmode
@@ -72,7 +72,7 @@ Ahonen \textit{et al.} \cite{ahonen2004face}, propuseram o uso de LBP para o rec
   \end{center}
 \end{figure}
 
-Ao nível dos filtros de abstração o estudo será efetuado utilizado o filtro Anisotropic Kuwahara (FAK).
+Ao nível dos filtros de abstração o estudo será efetuado utilizado o filtro Kuwahara Anisotrópico (FKA).
 
 Este filtro consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
 
@@ -80,8 +80,8 @@ O filtro em questão foi também utilizado anteriormente, e com resultados posit
 
 Tendo em conta os fatores apresentados consideramos que este filtro é o mais adequado para a utilização no âmbito deste projeto.
 
-\subsection{Coleções de dados}
-Ao nível das coleções de dados a analisar serão utilizadas duas coleções de dados Sapo Fama e \textit{Labeled Faces in the Wild}.
+\section{Coleções de dados}
+Ao nível das coleções de dados a analisar, temos em vista a utilização de duas coleções a primeira é a uma coleção standard, chamada \textit{Labeled Faces in the Wild} e que permite obter resultados comparativos com avaliações efetuadas anteriormente a sistemas de reconhecimento facial existentes. A segunda é a coleção de imagens Sapo Fama, qual agrega uma base de dados de imagens de personalidades famosas nacionais e internacionais, representado uma possível área de aplicação do sistema desenvolvido.
 
 \subsubsection{\textit{Labeled Faces in the Wild}}
 A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Esta coleção possuí 13233 imagens, de 5749 pessoas diferentes, sendo que dessas pessoas 1680 possuem mais do que uma imagem na galeria. O uso desta galeria no âmbito desta dissertação permitirá efetuar uma análise dos resultados obtidos num conjunto de dados standard e já previamente analisado por outros investigadores, assim como agilizar os testes dos sistemas desenvolvidos uma vez que a coleção já se encontra preparada especificamente para o estudo do desempenho de sistemas de reconhecimento facial automático. Nas figuras \ref{fig:galeria}, \ref{fig:gp} e \ref{fig:gn} encontram-se representados alguns exemplos das imagens contidas nesta coleção e respetivas anotações.
@@ -91,7 +91,7 @@ A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotogr
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{sapoFama.png}
-    \caption{Exemplos de imagens da coleção Sapo Fama. \cite{PTC2011}}	
+    \caption{Exemplos de imagens da coleção Sapo Fama \cite{PTC2011}.}	
     \label{fig:sapoFama}
   \end{center}
 \end{figure}
@@ -107,7 +107,7 @@ Para uma avaliação precisa dos sistemas automáticos de reconhecimento facial 
   \begin{center}
     \leavevmode
     \includegraphics[width=0.9\textwidth]{galeria.png}
-    \caption{Galeria com faces conhecidas pelo sistema e respectivas anotações. \cite{UniversityofMassachussets}}	
+    \caption{Galeria com faces conhecidas pelo sistema e respectivas anotações \cite{UniversityofMassachussets}.}	
     \label{fig:galeria}
   \end{center}
 \end{figure}
@@ -117,7 +117,7 @@ O primeiro, conjunto $\mathscr{G}$, designado de galeria, contem amostras biomé
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gp.png}
-    \caption{Imagens de pessoas conhecidas pelo sistema, mas não presentes na galeria.\cite{UniversityofMassachussets}}	
+    \caption{Imagens de pessoas conhecidas pelo sistema, mas não presentes na galeria \cite{UniversityofMassachussets}.}	
     \label{fig:gp}
   \end{center}
 \end{figure}
@@ -127,7 +127,7 @@ O segundo grupo de imagens é o conjunto $\mathscr{P}_\mathscr{G}$ e engloba o c
   \begin{center}
     \leavevmode
     \includegraphics[width=0.6\textwidth]{gn.png}
-    \caption{Imagens de pessoas não conhecidas pelo sistema. \cite{UniversityofMassachussets}}	
+    \caption{Imagens de pessoas não conhecidas pelo sistema \cite{UniversityofMassachussets}.}	
     \label{fig:gn}
   \end{center}
 \end{figure}
