@@ -42,4 +42,4 @@
 \contentsline {section}{\numberline {4.5}Resultados Esperados}{38}{section.4.5}
 \contentsline {section}{\numberline {4.6}Plano de Trabalho}{39}{section.4.6}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{40}{chapter.5}
-\contentsline {chapter}{Refer\^{e}ncias}{42}{section*.25}
+\contentsline {chapter}{Refer\^{e}ncias}{42}{section*.24}
