@@ -102,8 +102,10 @@ Para ultrapassar as limitações do filtro Kuwahara original na presença de ani
 \end{figure}
 Kang e Lee \cite{Kang2008}, foram os primeiros a utilizar \textit{shock filtering} para a abstraçao de imagens através do uso de \textit{Mean Curvature Flow (MCF)}, resultando em imagens onde para além de suavizadas as variações irrelevantes das cores, são simplificados os limites das formas presentes nas mesmas, como é possível visualizar na figura \ref{fig:diffusion_shock_filter}. O resultando da aplicação de \textit{shock filtered MFC}, é, no entanto, tipicamente é muito agressivo, resultando em imagens desfocadas, onde apenas é parcialmente preservada a  informação direcional contida na imagem. Esta técnica revela-se também, pouco indicada para a abstração de vídeo, uma vez que é pouco sensível a pequenas alterações nas imagens.
 
-\subsection{Filtragem Morfológica}
-Os filtros desta categoria, utilizam os princípios da morfologia matemática(\textit{mathematical morphology} \footnote{Mathematical morphology (MM) is a theory and technique for the analysis and processing of geometrical structures, based on set theory, lattice theory, topology, and random functions.} para reduzir o detalhe existente nas zonas coloridas, criando um efeito de uniformização da cor.
+\subsection{Filtros Morfológicos}
+Os filtros desta categoria, utilizam os princípios da morfologia matemática para reduzir o detalhe existente nas zonas coloridas, criando um efeito de uniformização da cor. A morfologia matemática foi introduzida originalmente por Matheron and Serra em 1982 \cite{serra1982image}, e consiste numa teoria para a análise e processamento de estruturas geométricas. De uma forma geral maioria das operações morfológicas são baseadas em simples operações de expansão e encolhimento e são designadas dilatação e erosão.
+
+Existe uma grande variedade de abordagens e filtros baseados nos princípios da morfologia matemática, existindo consequentemente uma grande variedade ao nível dos resultados obtidos, conforme o filtro morfológico aplicado.
 
 \subsection{Técnicas \textit{Gradient Domain}}
 O gradiente de uma imagem representa de forma direcional as mudanças de intensidade de uma imagem independente das suas cores originais, permitindo assim uma maior flexibilidade na manipulação das imagens. As técnicas baseadas no uso de gradientes, consistem na construção de um campo de gradiente que representa a imagem, o qual é posteriormente utilizado na reconstrução da imagem filtrada.

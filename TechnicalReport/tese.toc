@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Filtro Bilateral}{24}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Kuwahara}{24}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}\textit {Diffusion Shock Filter}}{25}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Filtragem Morfol\IeC {\'o}gica}{26}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Filtros Morfol\IeC {\'o}gicos}{26}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}T\IeC {\'e}cnicas \textit {Gradient Domain}}{26}{subsection.3.2.5}
 \contentsline {section}{\numberline {3.3}Trabalho Relacionado}{26}{section.3.3}
 \contentsline {chapter}{\numberline {4}Perspectiva de Solu\IeC {\c c}\IeC {\~a}o}{28}{chapter.4}
@@ -34,8 +34,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{29}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{32}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{32}{section.4.3}
-\contentsline {subsubsection}{\numberline {4.3.0.1}\textit {Labeled Faces in the Wild}}{33}{subsubsection.4.3.0.1}
-\contentsline {subsubsection}{\numberline {4.3.0.2}Sapo Fama}{33}{subsubsection.4.3.0.2}
+\contentsline {subsection}{\numberline {4.3.1}\textit {Labeled Faces in the Wild}}{33}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sapo Fama}{33}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Avalia\IeC {\c c}\IeC {\~a}o Desempenho}{34}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Identifica\IeC {\c c}\IeC {\~a}o}{36}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Verifica\IeC {\c c}\IeC {\~a}o}{36}{subsection.4.4.2}
