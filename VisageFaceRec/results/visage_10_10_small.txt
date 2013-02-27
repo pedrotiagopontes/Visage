@@ -1,0 +1,19 @@
+Loaded 40 images in 0 seconds
+Trainning 32 images.
+
+Trained FaceRecognizer.Eigenfaces in 1 seconds
+
+Testing 8 different images.
+
+                   Class     Pred           Conf
+Abdullah_Gul\Abdullah_Gul_0009.jpg  17     121        11714.3
+Abdullah_Gul\Abdullah_Gul_0010.jpg  17       -        8875.18
+Adrien_Brody\Adrien_Brody_0009.jpg  50      17          14728
+Adrien_Brody\Adrien_Brody_0010.jpg  50      17          12466
+Alejandro_Toledo\Alejandro_Toledo_0009.jpg  121       -          10365
+Alejandro_Toledo\Alejandro_Toledo_0010.jpg  121     204          10078
+Alvaro_Uribe\Alvaro_Uribe_0009.jpg  204       -        10726.5
+Alvaro_Uribe\Alvaro_Uribe_0010.jpg  204     121        12058.8
+Tested in 0 seconds
+
+Right predictions: 3, 37.5%
