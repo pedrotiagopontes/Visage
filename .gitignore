@@ -2,3 +2,7 @@
 *.log
 *.bbl
 *.blg
+*.opensdf
+VisageFaceRec/Debug/
+VisageFaceRec/ipch/
+VisageFaceRec/VisageFaceRec/Debug/
