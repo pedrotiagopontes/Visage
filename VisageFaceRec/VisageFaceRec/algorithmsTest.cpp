@@ -18,7 +18,7 @@ void testModel(Ptr<FaceRecognizer>& model, vector<Mat>& imagesTrain, vector<Mat>
 	outputfile << "Testing " << nImagesToTest << " different images." << endl;
 
 	outputfile << endl;
-	outputfile << setw(25) << "Class " << setw(8) << "Pred" << setw(15) << "Conf" << endl;
+	outputfile << setw(35) << "Class " << setw(8) << "Pred" << setw(15) << "Conf" << endl;
 	
 	int rightPredictions = 0;
 	for(unsigned int i=0; i<nImagesToTest; i++){
@@ -34,7 +34,7 @@ void testModel(Ptr<FaceRecognizer>& model, vector<Mat>& imagesTrain, vector<Mat>
 		stringstream labeledName;
 		labeledName << names[i] << "  " << testLabel;
 		//labeledName << testLabel;
-		outputfile << setw(25) << labeledName.str();
+		outputfile << setw(35) << labeledName.str();
 
 		if(predictedLabel != testLabel){
 			outputfile << setw(8) << predictedLabel << setw(15) << predictedConfindence;
@@ -161,6 +161,7 @@ void algorithmsTest(const string path, const string outputfilename) {
 	vector<int> labelsTrain;
 	vector<int> labelsTest;
 	vector<string> names;
+	string imagesPath;
 
 	clock_t tStart, tEnd;
 	double timespent;
@@ -170,12 +171,14 @@ void algorithmsTest(const string path, const string outputfilename) {
     try {
         //read_csv_lfw(path, names, imagesTrain, imagesTest, labelsBW);
 		tStart = clock();
-			read_csv(path, 8, imagesTrain, imagesTest, labelsTrain, labelsTest, names);
+		imagesPath = read_csv(path, 8, imagesTrain, imagesTest, labelsTrain, labelsTest, names);
 		tEnd = clock();
 		timespent = (double)((tEnd - tStart)/CLOCKS_PER_SEC);
 
 		int totalImages = imagesTrain.size() + imagesTest.size();
 
+		outputfile << "Source file: " << path << endl;
+		outputfile << "Images path: " << imagesPath << endl << endl;
 		outputfile << "Loaded " << totalImages << " images in " << timespent << " seconds" << endl;
     } catch (cv::Exception& e) {
         cerr << "Error opening file \"" << path << "\". Reason: " << e.msg << endl;
@@ -190,6 +193,15 @@ void algorithmsTest(const string path, const string outputfilename) {
 
 	Ptr<FaceRecognizer> modelEigen = createEigenFaceRecognizer();
 	testModel(modelEigen, imagesTrain, imagesTest, labelsTrain, labelsTest, names, outputfile);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+
+	Ptr<FaceRecognizer> modelFisher = createFisherFaceRecognizer();
+	testModel(modelFisher, imagesTrain, imagesTest, labelsTrain, labelsTest, names, outputfile);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+
+	Ptr<FaceRecognizer> modelLBPH = createLBPHFaceRecognizer();
+	testModel(modelLBPH, imagesTrain, imagesTest, labelsTrain, labelsTest, names, outputfile);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 
 	cout << "Results in " << outputfilename << endl;
 	outputfile.close();

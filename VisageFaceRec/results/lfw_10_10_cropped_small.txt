@@ -1,0 +1,58 @@
+Source file: ..\etc\csv_lfw_cropped_10_10 _small.txt
+Images path: C:\Users\Pedro\Pictures\lfw\lfwcrop_grey\
+
+Loaded 30 images in 0 seconds
+Trainning 24 images.
+
+Trained FaceRecognizer.Eigenfaces in 0 seconds
+
+Testing 6 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       -        1854.74
+           Abdullah_Gul_0010.pgm  0       -        1280.95
+           Adrien_Brody_0009.pgm  1       0        2005.63
+           Adrien_Brody_0010.pgm  1       0        1674.48
+       Alejandro_Toledo_0009.pgm  2       0         1867.5
+       Alejandro_Toledo_0010.pgm  2       -        1553.91
+Tested in 0 seconds
+
+Right predictions: 3, 50%
+
+-------------------------------------------------------------------------------
+Trainning 24 images.
+
+Trained FaceRecognizer.Fisherfaces in 0 seconds
+
+Testing 6 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       2        621.941
+           Abdullah_Gul_0010.pgm  0       -        324.429
+           Adrien_Brody_0009.pgm  1       2        553.992
+           Adrien_Brody_0010.pgm  1       2        514.884
+       Alejandro_Toledo_0009.pgm  2       -        583.249
+       Alejandro_Toledo_0010.pgm  2       -         65.724
+Tested in 0 seconds
+
+Right predictions: 3, 50%
+
+-------------------------------------------------------------------------------
+Trainning 24 images.
+
+Trained FaceRecognizer.LBPH in 0 seconds
+
+Testing 6 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       1        58.9607
+           Abdullah_Gul_0010.pgm  0       1         56.283
+           Adrien_Brody_0009.pgm  1       -        79.5212
+           Adrien_Brody_0010.pgm  1       0        75.8942
+       Alejandro_Toledo_0009.pgm  2       -        56.3979
+       Alejandro_Toledo_0010.pgm  2       1        68.4624
+Tested in 0 seconds
+
+Right predictions: 2, 33.3333%
+
+-------------------------------------------------------------------------------

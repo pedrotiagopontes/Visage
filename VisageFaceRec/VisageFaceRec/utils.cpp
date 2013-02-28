@@ -56,7 +56,7 @@ void read_csv_lfw(const string& filename, vector<string> &names, vector<Mat>& im
     }
 }
 
-void read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator) {
+string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator) {
     std::ifstream file(filename.c_str(), ifstream::in);
     if (!file) {
         string error_message = "No valid input file was given, please check the given filename.";
@@ -78,19 +78,21 @@ void read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imag
 				lastLabel = classlabel;
 			}
 			if(i<trainedImgsPerClass){
-				//cout << path << name << " -"<<i<<"- " << mat1.rows <<"x"<< mat1.cols<<endl;
 				imagesTrain.push_back(imread(path+name, CV_LOAD_IMAGE_GRAYSCALE));
 				labelsTrain.push_back(atoi(classlabel.c_str()));
+				//cout << name << ";"<<classlabel << endl;
 			}else{
 				Mat mat2 = imread(path+name, CV_LOAD_IMAGE_GRAYSCALE);
 				//cout << path << name << " -test"<<i<<"- " << mat2.rows <<"x"<< mat2.cols<<endl;
 				imagesTest.push_back(imread(path+name, CV_LOAD_IMAGE_GRAYSCALE));
 				names.push_back(name);
 				labelsTest.push_back(atoi(classlabel.c_str()));
+				//cout << name << ";"<<classlabel << "-test-"<< endl;
 			}
         }
 		i++;
     }
+	return path;
 }
 
 void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names){
