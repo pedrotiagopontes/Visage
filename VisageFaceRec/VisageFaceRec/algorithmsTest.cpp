@@ -18,7 +18,7 @@ void testModel(Ptr<FaceRecognizer>& model, vector<Mat>& imagesTrain, vector<Mat>
 	outputfile << "Testing " << nImagesToTest << " different images." << endl;
 
 	outputfile << endl;
-	outputfile << setw(35) << "Class " << setw(8) << "Pred" << setw(15) << "Conf" << endl;
+	outputfile << setw(45) << "Class " << setw(8) << "Pred" << setw(15) << "Conf" << endl;
 	
 	int rightPredictions = 0;
 	for(unsigned int i=0; i<nImagesToTest; i++){
@@ -34,7 +34,7 @@ void testModel(Ptr<FaceRecognizer>& model, vector<Mat>& imagesTrain, vector<Mat>
 		stringstream labeledName;
 		labeledName << names[i] << "  " << testLabel;
 		//labeledName << testLabel;
-		outputfile << setw(35) << labeledName.str();
+		outputfile << setw(45) << labeledName.str();
 
 		if(predictedLabel != testLabel){
 			outputfile << setw(8) << predictedLabel << setw(15) << predictedConfindence;
