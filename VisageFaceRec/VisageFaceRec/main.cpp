@@ -1,6 +1,8 @@
 #include "utils.h"
 #include "algorithmsTest.h"
 
+#include "Library.h"
+
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
@@ -92,8 +94,24 @@ int main(int argc, const char *argv[]) {
 		outputfilename = string(argv[2]);
     }
 	
-	algorithmsTest(path, outputfilename);
+	//algorithmsTest(path, outputfilename);
 	//detectAndCropDir(path, "maskedImages");
+
+	Library myLib(path, 50);	
+	for(int i=0; i < myLib.people.size(); i++){
+		cout << myLib.people[i].toString() << endl;
+		vector<string> trainImages = myLib.people[i].getTrainImages();
+		vector<string> testImages = myLib.people[i].getTestImages();
+		
+		for(int j=0; j < trainImages.size(); j++){
+			cout << '\t' << trainImages[j] << endl;
+		}
+
+		for(int k=0; k < testImages.size(); k++){
+			cout << '\t' << testImages[k]<< " teste" << endl;
+		}
+	}
+
 
 	waitKey(0);
 	return 0;

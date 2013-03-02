@@ -31,8 +31,24 @@ void testModel(Ptr<FaceRecognizer>& model, vector<Mat>& imagesTrain, vector<Mat>
 		model->predict(testSample, predictedLabel, predictedConfindence);
 
 
+		string path, name, extractedName;
+		stringstream liness(names[i]);
 		stringstream labeledName;
-		labeledName << names[i] << "  " << testLabel;
+		getline(liness, path, '\\');
+		getline(liness, name);
+
+		if(name.size() > 9){
+			extractedName = name.substr(0, name.size() - 9);
+		}else{
+			extractedName = "impossible";
+		}
+
+		if(extractedName != path){
+			labeledName << names[i] << "  " << testLabel;
+		}else{
+			labeledName << name << "  " << testLabel;
+		}
+		
 		//labeledName << testLabel;
 		outputfile << setw(45) << labeledName.str();
 

@@ -69,7 +69,7 @@ string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& im
 					labelsTrain.push_back(atoi(classlabel.c_str()));
 					//cout << name << ";"<<classlabel << endl;
 				}else{
-					cout << "ERROR loading " << path+name;
+					cout << "ERROR loading " << path+name << endl;
 				}
 			}else{
 				Mat im2 = imread(path+name, CV_LOAD_IMAGE_GRAYSCALE);
@@ -79,7 +79,7 @@ string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& im
 					names.push_back(name);
 					labelsTest.push_back(atoi(classlabel.c_str()));
 				}else{
-					cout << "ERROR loading " << path+name;
+					cout << "ERROR loading " << path+name <<endl;
 				}
 			}
         }
@@ -88,7 +88,8 @@ string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& im
 	return path;
 }
 
-void read_csv_lfw(const string& filename, vector<string> &names, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labels, char separator, string ext) {
+//outdated!
+void read_csv_pairs(const string& filename, vector<string> &names, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labels, char separator, string ext) {
     std::ifstream file(filename.c_str(), ifstream::in);
     if (!file) {
         string error_message = "No valid input file was given, please check the given filename.";
