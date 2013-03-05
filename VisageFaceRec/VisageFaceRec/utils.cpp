@@ -19,32 +19,106 @@ float timespent(clock_t timeStart){
 	return (((float)tEnd - timeStart)/CLOCKS_PER_SEC);
 }
 
-void read_and_createDir(const string& filename, const string& outputname, vector<Mat>& images, vector<string>& dirs, vector<string>& names, char separator) {
-    ifstream file(filename.c_str(), ifstream::in);
+// random generator function:
+int myrandom (int i) { return std::rand()%i;}
+
+void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names){
+	ifstream file(filename.c_str(), ifstream::in);
+	ofstream outputfile;
+	outputfile.open(outputfilename);
+
     if (!file) {
         string error_message = "No valid input file was given, please check the given filename.";
         CV_Error(CV_StsBadArg, error_message);
     }
-	
 	string path;
 	getline(file, path);
+    string line, lastname, name, img, classlabel;
+	string lastclasslabel = "-1";
+	int count = 0;
+	int max = 0;
 
-    string line, name, pic;
-	int i=0;
+	outputfile << "Stats of file: " << filename <<endl;
+	outputfile << "Images dir: " << path << endl;
+
     while (getline(file, line)) {
+
         stringstream liness(line);
         getline(liness, name, '\\');
-		getline(liness, pic, separator);
-        if(!path.empty()) {
-			string dirname ="mkdir "+ outputname +"\\"+ name;
-			system(dirname.c_str());
-			images.push_back(imread(path+name+"\\"+pic, CV_LOAD_IMAGE_COLOR));
-			dirs.push_back(name);
-			names.push_back(pic);
+        getline(liness, img, ';');
+		getline(liness, classlabel);
+
+        if(!path.empty() && !classlabel.empty() && !name.empty()) {
+			if(lastclasslabel == classlabel){
+				count++;
+			}
+			else{
+				if(count > 0){
+					labelsPerClass.push_back(count);
+					names.push_back(lastname);
+					outputfile << setw(30) << lastname << setw(5) << count << endl;
+				}
+				if(count > max){
+					max = count;
+				}
+				count = 1;
+			}
+			lastclasslabel = classlabel;
+			lastname = name;
         }
     }
+	labelsPerClass.push_back(count);
+	names.push_back(lastname);
+	outputfile << setw(30) << lastname << setw(5) << count << endl;
+
+	vector<int> stats;
+	for(int i=0; i <= max; i++)
+		stats.push_back(0);
+
+	for(unsigned int i=0; i < labelsPerClass.size(); i++){
+		stats[labelsPerClass[i]]++;
+	}
+
+	outputfile << endl;
+	int sum=0;
+	for(unsigned int i=0; i<stats.size(); i++){
+		if(stats[i] > 0){
+			outputfile << "Classes with " << i << " images: " << stats[i] << "| >= " << names.size() - sum<<  endl;
+			sum+= stats[i];
+		}
+	}
+	outputfile.close();
+	cout << "Created stats file " << outputfilename <<endl;
 }
 
+void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes, int bottomLimit, int topLimit, string fileExtension){
+	ofstream outputfile;
+	outputfile.open("..\\data\\" + filename);
+	srand ( unsigned ( std::time(0) ) );
+
+	for(unsigned int i=0; i < imgsPerClass.size(); i++){
+		if(imgsPerClass[i] >= bottomLimit){
+			int picInt = 1;
+			vector<string> pics;
+			while(picInt <= imgsPerClass[i] && picInt <= topLimit){
+				stringstream ss, pictureStr;
+				ss << picInt;
+				//outputfile << classes[i] << "\\" << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
+				pictureStr << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
+				pics.push_back(pictureStr.str());
+				picInt++;
+			}
+			
+			random_shuffle ( pics.begin(), pics.end(), myrandom);
+			for(unsigned int j=0; j < pics.size(); j++){
+				outputfile << pics[j];
+			}
+		}
+	}
+	cout << "Created CSV file " << filename <<endl;
+}
+
+//deprecated
 string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator) {
     std::ifstream file(filename.c_str(), ifstream::in);
     if (!file) {
@@ -134,88 +208,4 @@ void read_csv_pairs(const string& filename, vector<string> &names, vector<Mat>& 
 			names.push_back(name);
         }
     }
-}
-
-void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names){
-	ifstream file(filename.c_str(), ifstream::in);
-	ofstream outputfile;
-	outputfile.open("..\\results\\"+outputfilename);
-
-    if (!file) {
-        string error_message = "No valid input file was given, please check the given filename.";
-        CV_Error(CV_StsBadArg, error_message);
-    }
-	string path;
-	getline(file, path);
-    string line, lastname, name, img, classlabel;
-	string lastclasslabel = "-1";
-	int count = 0;
-	int max = 0;
-
-    while (getline(file, line)) {
-
-        stringstream liness(line);
-        getline(liness, name, '\\');
-        getline(liness, img, ';');
-		getline(liness, classlabel);
-
-        if(!path.empty() && !classlabel.empty() && !name.empty()) {
-			if(lastclasslabel == classlabel){
-				count++;
-			}
-			else{
-				if(count > 0){
-					labelsPerClass.push_back(count);
-					names.push_back(lastname);
-					outputfile << setw(30) << lastname << setw(5) << count << endl;
-				}
-				if(count > max){
-					max = count;
-				}
-				count = 1;
-			}
-			lastclasslabel = classlabel;
-			lastname = name;
-        }
-    }
-	labelsPerClass.push_back(count);
-	names.push_back(lastname);
-	outputfile << setw(30) << lastname << setw(5) << count << endl;
-
-	vector<int> stats;
-	for(int i=0; i <= max; i++)
-		stats.push_back(0);
-
-	for(unsigned int i=0; i < labelsPerClass.size(); i++){
-		stats[labelsPerClass[i]]++;
-	}
-
-	outputfile << endl;
-	int sum=0;
-	for(unsigned int i=0; i<stats.size(); i++){
-		if(stats[i] > 0){
-			outputfile << "Classes with " << i << " images: " << stats[i] << "| >= " << names.size() - sum<<  endl;
-			sum+= stats[i];
-		}
-	}
-	outputfile.close();
-}
-
-void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes, int bottomLimit, int topLimit, string fileExtension){
-	ofstream outputfile;
-	outputfile.open("..\\etc\\" + filename);
-
-	for(unsigned int i=0; i < imgsPerClass.size(); i++){
-		if(imgsPerClass[i] >= bottomLimit){
-			int picInt = 1;
-			while(picInt <= imgsPerClass[i] && picInt <= topLimit){
-				stringstream ss;
-				ss << picInt;
-				//outputfile << classes[i] << "\\" << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
-				outputfile << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
-				picInt++;
-			}
-		}
-	}
-
 }

@@ -62,12 +62,12 @@ FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int
 
 void FaceModel::loadImagesFromPeople(vector<Person> people)
 {
-	for(int i=0; i<people.size(); i++){
+	for(unsigned int i=0; i<people.size(); i++){
 		vector<string> images = people[i].getTrainImages();
 		string imageDir = people[i].getImageDir();
 		string personName = people[i].getName();
 
-		for(int k=0; k<images.size(); k++){
+		for(unsigned int k=0; k<images.size(); k++){
 			Mat image = imread(imageDir+personName+"\\"+images[k], CV_LOAD_IMAGE_GRAYSCALE);
 			if(image.rows > 0){
 				this->trainnedImages.push_back(image);
@@ -112,7 +112,7 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 	clock_t tStart = clock();
 	outputfile << endl;
 	outputfile << setw(35) << "Image " << setw(8) << "Label" << setw(8) << "Pred" << setw(15) << "Conf" << endl;
-	for(int i=0; i<people.size(); i++){
+	for(unsigned int i=0; i<people.size(); i++){
 		vector<string> images = people[i].getTestImages();
 		string imageDir = people[i].getImageDir();
 		string personName = people[i].getName();
@@ -120,7 +120,7 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 		outputfile << people[i].getName() << "  " << people[i].getTrainImages().size() << " | " << 
 			people[i].getTestImages().size() << endl;
 
-		for(int k=0; k<images.size(); k++){
+		for(unsigned int k=0; k<images.size(); k++){
 			int label = -1;
 			double confidence = -1.0;
 			Mat image = imread(imageDir+personName+"\\"+images[k], CV_LOAD_IMAGE_GRAYSCALE);
