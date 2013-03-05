@@ -14,6 +14,11 @@ static string nomalize_number(string num){
 	return newNum + num;
 }
 
+float timespent(clock_t timeStart){
+	clock_t tEnd = clock();
+	return (((float)tEnd - timeStart)/CLOCKS_PER_SEC);
+}
+
 void read_and_createDir(const string& filename, const string& outputname, vector<Mat>& images, vector<string>& dirs, vector<string>& names, char separator) {
     ifstream file(filename.c_str(), ifstream::in);
     if (!file) {

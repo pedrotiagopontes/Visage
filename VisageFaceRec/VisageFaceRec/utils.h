@@ -22,6 +22,9 @@ void read_csv_pairs(const string& filename, vector<string> &names, vector<Mat>& 
 
 void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names);
 void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes, int bottomLimit, int topLimit, string fileExtension = ".jpg");
+
 void read_and_createDir(const string& filename, const string& outputname, vector<Mat>& images,vector<string>& dirs, vector<string>& names, char separator = ';');
+
+float timespent(clock_t timeStart);
  
 #endif

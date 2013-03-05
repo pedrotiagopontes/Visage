@@ -2,6 +2,7 @@
 #include "algorithmsTest.h"
 
 #include "Library.h"
+#include "FaceModel.h"
 
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
@@ -73,7 +74,7 @@ int detectAndCropDir(string path = "..\\etc\\csv_lfw_10_10_short.txt", string ou
 
 	read_and_createDir(path, outputdir, images, dirs, names);
 	Size imgSize = images[0].size();
-	for(int i = 0; i < images.size(); i++){
+	for(unsigned int i = 0; i < images.size(); i++){
 		detectAndCrop(images[i], names[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112));
 	}
 
@@ -93,26 +94,48 @@ int main(int argc, const char *argv[]) {
     if (argc == 3) {
 		outputfilename = string(argv[2]);
     }
+	ofstream outputfile;
+	outputfile.open(outputfilename);
 	
 	//algorithmsTest(path, outputfilename);
 	//detectAndCropDir(path, "maskedImages");
 
-	Library myLib(path, 50);	
-	for(int i=0; i < myLib.people.size(); i++){
-		cout << myLib.people[i].toString() << endl;
-		vector<string> trainImages = myLib.people[i].getTrainImages();
-		vector<string> testImages = myLib.people[i].getTestImages();
-		
-		for(int j=0; j < trainImages.size(); j++){
-			cout << '\t' << trainImages[j] << endl;
-		}
+	/*
+	vector<int> originalLabels;
+	vector<string> names;
+	vector<int> testResults;
+	vector<double> testConfidence;
+	*/
 
-		for(int k=0; k < testImages.size(); k++){
-			cout << '\t' << testImages[k]<< " teste" << endl;
-		}
-	}
+	clock_t tStart = clock();
+	Library myLib(path, 80);	
+	outputfile << myLib.toString();
+	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
 
+	tStart = clock();
+	FaceModel modelEIGEN(EIGENFACES, myLib.people);
+	outputfile << "Trainned model " << modelEIGEN.getName() << " with "<< modelEIGEN.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
-	waitKey(0);
+	modelEIGEN.testModel(myLib.people, outputfile);
+
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+	tStart = clock();
+	FaceModel modelFisher(FISHERFACES, myLib.people);
+	outputfile << "Trainned model " << modelFisher.getName() << " with "<< modelEIGEN.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+
+	modelFisher.testModel(myLib.people, outputfile);
+
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+	tStart = clock();
+	FaceModel modelLBPH(LBPH, myLib.people);
+	outputfile << "Trainned model " << modelLBPH.getName() << " with "<< modelFisher.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+
+	modelLBPH.testModel(myLib.people, outputfile);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+	
+	cout << "Results in " << outputfilename << endl;
+	outputfile.close();
+
+	//waitKey(0);
 	return 0;
 }
