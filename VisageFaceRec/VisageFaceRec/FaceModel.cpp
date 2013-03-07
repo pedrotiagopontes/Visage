@@ -125,9 +125,10 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 			double confidence = -1.0;
 			Mat image = imread(imageDir+personName+"\\"+images[k], CV_LOAD_IMAGE_GRAYSCALE);
 
-			outputfile << setw(35) << images[k] << setw(8) << people[i].getLabel();
 			//ensure that image was loaded
 			if(image.rows > 0){
+				outputfile << setw(35) << images[k] << setw(8) << people[i].getLabel();
+
 				if (isSamePerson(people[i].getLabel(), image, label, confidence)){
 					outputfile << setw(8) << "-" << setw(15) << confidence << endl;
 					rightPredictions++;
@@ -142,6 +143,7 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 				
 			}else{
 				cout << "ERROR loading test " << images[k] << endl;
+				outputfile << endl;
 			}
 		}
 	}

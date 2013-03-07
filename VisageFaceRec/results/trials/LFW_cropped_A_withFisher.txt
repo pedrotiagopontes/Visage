@@ -1,0 +1,3 @@
+Trainning 101 images.
+
+Trained Eigenfaces model in 1 seconds

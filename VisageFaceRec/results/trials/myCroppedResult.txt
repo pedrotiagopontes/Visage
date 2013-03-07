@@ -1,0 +1,64 @@
+Source file: ..\etc\myCropped.txt
+Images path: C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\croppedImages\
+
+Loaded 40 images in 0 seconds
+Trainning 32 images.
+
+Trained FaceRecognizer.Eigenfaces in 0 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+Abdullah_Gul\Abdullah_Gul_0009.jpg  17       -         3724.1
+Abdullah_Gul\Abdullah_Gul_0010.jpg  17       -        2699.96
+Adrien_Brody\Adrien_Brody_0009.jpg  50     204        5063.77
+Adrien_Brody\Adrien_Brody_0010.jpg  50     204        4429.95
+Alejandro_Toledo\Alejandro_Toledo_0009.jpg  121     204         3668.2
+Alejandro_Toledo\Alejandro_Toledo_0010.jpg  121       -        3210.23
+Alvaro_Uribe\Alvaro_Uribe_0009.jpg  204     121        4171.83
+Alvaro_Uribe\Alvaro_Uribe_0010.jpg  204     121        3386.77
+Tested in 0 seconds
+
+Right predictions: 3, 37.5%
+
+-------------------------------------------------------------------------------
+Trainning 32 images.
+
+Trained FaceRecognizer.Fisherfaces in 0 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+Abdullah_Gul\Abdullah_Gul_0009.jpg  17       -        1022.87
+Abdullah_Gul\Abdullah_Gul_0010.jpg  17       -        277.933
+Adrien_Brody\Adrien_Brody_0009.jpg  50     121         295.99
+Adrien_Brody\Adrien_Brody_0010.jpg  50     204        774.772
+Alejandro_Toledo\Alejandro_Toledo_0009.jpg  121     204        550.265
+Alejandro_Toledo\Alejandro_Toledo_0010.jpg  121       -        222.331
+Alvaro_Uribe\Alvaro_Uribe_0009.jpg  204       -        837.546
+Alvaro_Uribe\Alvaro_Uribe_0010.jpg  204       -        166.755
+Tested in 0 seconds
+
+Right predictions: 5, 62.5%
+
+-------------------------------------------------------------------------------
+Trainning 32 images.
+
+Trained FaceRecognizer.LBPH in 1 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+Abdullah_Gul\Abdullah_Gul_0009.jpg  17       -        73.7062
+Abdullah_Gul\Abdullah_Gul_0010.jpg  17       -         40.508
+Adrien_Brody\Adrien_Brody_0009.jpg  50     204        105.246
+Adrien_Brody\Adrien_Brody_0010.jpg  50     204        89.4631
+Alejandro_Toledo\Alejandro_Toledo_0009.jpg  121       -        62.4592
+Alejandro_Toledo\Alejandro_Toledo_0010.jpg  121       -        91.0691
+Alvaro_Uribe\Alvaro_Uribe_0009.jpg  204       -        60.1349
+Alvaro_Uribe\Alvaro_Uribe_0010.jpg  204       -        51.5073
+Tested in 0 seconds
+
+Right predictions: 6, 75%
+
+-------------------------------------------------------------------------------

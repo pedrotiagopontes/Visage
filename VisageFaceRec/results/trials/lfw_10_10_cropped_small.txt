@@ -1,0 +1,64 @@
+Source file: ..\etc\csv_lfw_cropped_10_10 _small.txt
+Images path: C:\Users\Pedro\Pictures\lfw\lfwcrop_grey\
+
+Loaded 40 images in 0 seconds
+Trainning 32 images.
+
+Trained FaceRecognizer.Eigenfaces in 0 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       2        2014.51
+           Abdullah_Gul_0010.pgm  0       -        1374.14
+           Adrien_Brody_0009.pgm  1       3        2085.25
+           Adrien_Brody_0010.pgm  1       3         2109.7
+       Alejandro_Toledo_0009.pgm  2       0        1888.64
+       Alejandro_Toledo_0010.pgm  2       -         1629.5
+           Alvaro_Uribe_0009.pgm  3       -        2092.26
+           Alvaro_Uribe_0010.pgm  3       2        1652.31
+Tested in 0 seconds
+
+Right predictions: 3, 37.5%
+
+-------------------------------------------------------------------------------
+Trainning 32 images.
+
+Trained FaceRecognizer.Fisherfaces in 0 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       1        527.789
+           Abdullah_Gul_0010.pgm  0       -        435.296
+           Adrien_Brody_0009.pgm  1       3        432.942
+           Adrien_Brody_0010.pgm  1       3        181.618
+       Alejandro_Toledo_0009.pgm  2       -        400.224
+       Alejandro_Toledo_0010.pgm  2       -        125.331
+           Alvaro_Uribe_0009.pgm  3       -        194.936
+           Alvaro_Uribe_0010.pgm  3       2        287.876
+Tested in 0 seconds
+
+Right predictions: 4, 50%
+
+-------------------------------------------------------------------------------
+Trainning 32 images.
+
+Trained FaceRecognizer.LBPH in 0 seconds
+
+Testing 8 different images.
+
+                             Class     Pred           Conf
+           Abdullah_Gul_0009.pgm  0       1        58.9607
+           Abdullah_Gul_0010.pgm  0       1         56.283
+           Adrien_Brody_0009.pgm  1       -        79.5212
+           Adrien_Brody_0010.pgm  1       3        74.7108
+       Alejandro_Toledo_0009.pgm  2       -        56.3979
+       Alejandro_Toledo_0010.pgm  2       1        68.4624
+           Alvaro_Uribe_0009.pgm  3       1        67.0617
+           Alvaro_Uribe_0010.pgm  3       -        58.2078
+Tested in 0 seconds
+
+Right predictions: 3, 37.5%
+
+-------------------------------------------------------------------------------

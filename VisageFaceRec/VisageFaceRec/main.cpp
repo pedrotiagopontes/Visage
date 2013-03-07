@@ -8,38 +8,56 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile){
 	Library myLib(path, percetageTrainned);	
 	outputfile << myLib.toString();
 	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
-
+	/*
 	tStart = clock();
 	FaceModel modelEIGEN(EIGENFACES, myLib.people);
 	outputfile << "Trainned model " << modelEIGEN.getName() << " with "<< modelEIGEN.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
 	modelEIGEN.testModel(myLib.people, outputfile);
-
+	*/
+	/*
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 	tStart = clock();
 	FaceModel modelFisher(FISHERFACES, myLib.people);
-	outputfile << "Trainned model " << modelFisher.getName() << " with "<< modelEIGEN.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+	outputfile << "Trainned model " << modelFisher.getName() << " with "<< modelFisher.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
 	modelFisher.testModel(myLib.people, outputfile);
+	*/
 
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 	tStart = clock();
 	FaceModel modelLBPH(LBPH, myLib.people);
-	outputfile << "Trainned model " << modelLBPH.getName() << " with "<< modelFisher.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+	outputfile << "Trainned model " << modelLBPH.getName() << " with "<< modelLBPH.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
 	modelLBPH.testModel(myLib.people, outputfile);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+	
 };
 
-int main(int argc, const char *argv[]) {
+void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m){
+	clock_t tStart = clock();
+	Library myLib(path, percetageTrainned);	
+	outputfile << myLib.toString();
+	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
+
+	tStart = clock();
+	FaceModel model(m, myLib.people);
+	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+
+	model.testModel(myLib.people, outputfile);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+	
+};
+
+int faceDetector(int argc, const char *argv[]){
 	string path = "..\\etc\\at.txt";
 	string outputfilename = "..\\results\\default.txt";
 
-	/*
 	/// FaceDetector.exe
 	bool mask_image = false;
 	if (argc < 3){
 		cout << "Usage: path.txt outputDirName [-mask] " <<endl;
+		return -1;
 	}else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
@@ -51,31 +69,17 @@ int main(int argc, const char *argv[]) {
 		FaceDetector detector;
 		detector.detectAndCropDir(path, outputfilename, mask_image);
 	}
-	*/
-	
+	return 0;
+}
 
-	/*
-	/// FaceRecognizer.exe
-	if (argc > 1) {
-        path = string(argv[1]);
-    }
-
-    if (argc == 3) {
-		outputfilename = string(argv[2]);
-    }
-
-	ofstream outputfile;
-	outputfile.open(outputfilename);
-
-	testLibrary(path, 80, outputfile);
-
-	cout << "Results in " << outputfilename << endl;
-	outputfile.close();
-	*/
+int csvCreator(int argc, const char *argv[]){
+	string path = "..\\etc\\at.txt";
+	string outputfilename = "..\\results\\default.txt";
 	string statsFile = "..\\data\\stats\\default.txt";
 	if (argc < 5) {
 		cout << "Usage: path.txt outputfilename bottomLimit topLimit [statsFile] " <<endl;
-    }
+		return -1;
+	}
 	else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
@@ -90,6 +94,52 @@ int main(int argc, const char *argv[]) {
 		createCSV(outputfilename, labelsPerClass, names, bottomLimit, topLimit);
 	}
 
-	//waitKey(0);
 	return 0;
+}
+
+int faceRecognizer(int argc, const char *argv[]){
+	string path = "..\\etc\\at.txt";
+	string outputfilename = "..\\results\\default.txt";
+	int model = FISHERFACES;
+	if (argc < 3) {
+		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)]" <<endl;
+		return -1;
+	}
+	else{
+		path = string(argv[1]);
+		outputfilename = string(argv[2]);
+		ofstream outputfile;
+		outputfile.open(outputfilename);
+		if(argc == 4){
+			string m = string(argv[3]);
+			if(m == "-E"){
+				model = EIGENFACES;
+			}
+
+			if(m == "-L"){
+				model = LBPH;
+			}
+		}
+
+		testLibrary(path, 80, outputfile, model);
+
+		cout << "Results in " << outputfilename << endl;
+		outputfile.close();
+	}
+
+	return 0;
+}
+
+int main(int argc, const char *argv[]) {
+	/// FaceDetector.exe
+	//return faceDetector(argc, argv);
+
+	/// CsvCreator.exe
+	//return csvCreator(argc, argv);
+
+	/// FaceRecognizer.exe
+	return faceRecognizer(argc, argv);
+
+	//convertImage("C:\\Users\\Pedro\\Pictures\\teste.JPG");
+	//return 0;
 }

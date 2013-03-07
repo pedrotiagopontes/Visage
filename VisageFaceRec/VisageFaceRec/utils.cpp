@@ -19,6 +19,15 @@ float timespent(clock_t timeStart){
 	return (((float)tEnd - timeStart)/CLOCKS_PER_SEC);
 }
 
+void convertImage(string path, string extension){
+	stringstream ss(path);
+	string imageWithoutExtension;
+	Mat image = imread(path, CV_LOAD_IMAGE_COLOR);
+	getline(ss, imageWithoutExtension, '.');
+
+	imwrite(imageWithoutExtension+extension, image);
+}
+
 // random generator function:
 int myrandom (int i) { return std::rand()%i;}
 
@@ -103,8 +112,8 @@ void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes
 			while(picInt <= imgsPerClass[i] && picInt <= topLimit){
 				stringstream ss, pictureStr;
 				ss << picInt;
-				//outputfile << classes[i] << "\\" << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
-				pictureStr << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
+
+				pictureStr << classes[i] << "\\" << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
 				pics.push_back(pictureStr.str());
 				picInt++;
 			}

@@ -25,7 +25,7 @@ class FaceDetector
 
 	//RNG rng(12345);
 
-	void loadAndCloneDir(const string& filename, const string& outputname, vector<Mat>& images, vector<string>& dirs, vector<string>& names, char separator=';');
+	void loadAndCloneDir(const string& filename, const string& outputname, vector<string>& images, vector<string>& dirs, vector<string>& names, char separator=';');
 
 public:
 	FaceDetector(string dir = "..\\helpers\\", string face_cascade_name = "lbpcascade_frontalface.xml", string maskName = "mask.bmp");

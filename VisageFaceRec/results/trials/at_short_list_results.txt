@@ -1,0 +1,17 @@
+Loaded 30 images in 0 seconds
+Trainning 24 images.
+
+Trained FaceRecognizer.Eigenfaces in 0 seconds
+
+Testing 6 different images.
+
+                   Class     Pred           Conf
+            s13\8.pgm  12       -        740.762
+            s13\1.pgm  12       -        1454.78
+            s17\8.pgm  16       -        1886.73
+            s17\1.pgm  16       -        894.406
+            s32\8.pgm  31       -         2206.2
+            s32\1.pgm  31       -         1951.7
+Tested in 0 seconds
+
+Right predictions: 6, 100%

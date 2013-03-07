@@ -17,6 +17,7 @@ using namespace std;
 
 static string nomalize_number(string num);
 float timespent(clock_t timeStart);
+void convertImage(string path, string extension=".pgm");
 
 void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names);
 void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes, int bottomLimit, int topLimit, string fileExtension = ".jpg");

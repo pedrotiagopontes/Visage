@@ -19,7 +19,7 @@ void Library::addPerson(int classlabel, string name, string imageDir,  vector<st
 	double nImages = (double)tempImages.size() * (this->percentageTrainnedImages/100.0);
 
 	Person p1(classlabel, name, imageDir);
-	for(int i=0; i<nImages; i++){
+	for(int i=0; i<(int)nImages; i++){
 		p1.addTrainImage(tempImages[i]);
 	}
 	for(unsigned int i=(int)nImages; i<tempImages.size(); i++){
@@ -72,8 +72,10 @@ string Library::toString(){
 
 	ss << "Library: " << this->filename << endl;
 	ss << "\tImages Dir: " << this->dirPath << endl;
-	ss << "\tTotal Images: " << this->totalImages << ",   " << this->percentageTrainnedImages <<"% as train images"<< endl;
-	ss << "\tPer person MIN | MAX: " << this->minImagesPerson << " | "<< this->maxImagesPerson << endl;
+	ss << "\tTotal Images: " << this->totalImages << endl;
+	ss << "\tTotal People: "<< this->people.size() << endl;
+	ss << "\tImages per person MIN | MAX: " << this->minImagesPerson << " | "<< this->maxImagesPerson << endl;
+	ss << "\tPercentage of trainned images per person: " << this->percentageTrainnedImages << endl;
 
 	return ss.str();
 }
@@ -81,10 +83,7 @@ string Library::toString(){
 string Library::toStringWithImages(){
 	stringstream ss;
 
-	ss << "Library: " << this->filename << endl;
-	ss << "\tImages Dir: " << this->dirPath << endl;
-	ss << "\tTotal Images: " << this->totalImages << ",   " << this->percentageTrainnedImages <<"% as train images"<< endl;
-	ss << "\tPer person MIN | MAX: " << this->minImagesPerson << " | "<< this->maxImagesPerson << endl <<endl;
+	ss << toString();
 
 	for(unsigned int i=0; i < this->people.size(); i++){
 		ss << people[i].toStringWithImages() << endl;

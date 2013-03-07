@@ -1,6 +1,0 @@
-Source file: ..\etc\csv_lfw_10_20_short.txt
-Images path: C:\Users\Pedro\Pictures\lfw\lfw\
-
-Loaded 318 images in 3 seconds
-Trainning 152 images.
-

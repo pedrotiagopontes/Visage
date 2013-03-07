@@ -78,7 +78,7 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string dir, Size size,
 
 int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask) {
 	// DATA
-	vector<Mat> images;
+	vector<string> images;
 	vector<string> names;
 	vector<string> dirs;
 
@@ -86,16 +86,17 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mas
 	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 
 	loadAndCloneDir(path, outputdir, images, dirs, names);
-	Size imgSize = images[0].size();
+
 	cout <<endl << "Please check conflicts in files: " <<endl;
-	for(unsigned int i = 0; i < images.size(); i++){
-		detectAndCrop(images[i], names[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), apply_mask);
+	for(unsigned int i = 0; i < names.size(); i++){
+		Mat image = imread(images[i], CV_LOAD_IMAGE_COLOR);
+		detectAndCrop(image, names[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), apply_mask);
 	}
 
 	return 0;
 }
 
-void FaceDetector::loadAndCloneDir(const string& filename, const string& outputname, vector<Mat>& images, vector<string>& dirs, vector<string>& names, char separator) {
+void FaceDetector::loadAndCloneDir(const string& filename, const string& outputname, vector<string>& images, vector<string>& dirs, vector<string>& names, char separator) {
 	ifstream file(filename.c_str(), ifstream::in);
 	if (!file) {
 		string error_message = "No valid input file was given, please check the given filename.";
@@ -116,10 +117,12 @@ void FaceDetector::loadAndCloneDir(const string& filename, const string& outputn
 				string dirname ="mkdir "+ outputname +"\\"+ name;
 				system(dirname.c_str());
 			}
-			images.push_back(imread(path+name+"\\"+pic, CV_LOAD_IMAGE_COLOR));
+			images.push_back(path+name+"\\"+pic);
 			dirs.push_back(name);
 			names.push_back(pic);
 			lastname = name;
 		}
 	}
+
+	cout << "Fineshed cloning dir" << endl;
 }
