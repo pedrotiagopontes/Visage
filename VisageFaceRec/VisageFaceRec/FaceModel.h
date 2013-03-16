@@ -6,9 +6,7 @@
 #include <sstream>
 #include <time.h>
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/contrib/contrib.hpp"
-#include "opencv2/highgui/highgui.hpp"
+#include "facerec.hpp"
 
 #include "Person.h"
 #include "utils.h"
@@ -18,7 +16,7 @@ using namespace std;
 
 class FaceModel
 {
-	Ptr<FaceRecognizer> model;
+	Ptr<FaceRecognizerExtended> model;
 	double threshold;
 	int nComponents;
 	string name;
@@ -35,9 +33,9 @@ public:
 	vector<int> trainnedLabels;
 
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
-	FaceModel(int modelType, vector<Person> people, string storageFile="faceRecognizer.xml");
+	FaceModel(int modelType, vector<Person> people, string storageFile="FaceRecognizerExtended.xml");
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
-	FaceModel(int modelType, vector<Person> people, double threshold, int nComponents, string storageFile="faceRecognizer.xml");
+	FaceModel(int modelType, vector<Person> people, double threshold, int nComponents, string storageFile="FaceRecognizerExtended.xml");
 	~FaceModel(void);
 	string getName();
 
@@ -45,6 +43,8 @@ public:
 	int identityImage(Mat image);
 	///returns the predicted identity of an image, according to trainnned model, in @label and the prediction confidence in @confidence
 	void identityImage(Mat image, int& label, double& confidence);
+	///returns the top @n predictions for a given @image and their confidences in @labels adn  @confidences
+	void identityImage(Mat image, size_t n, vector<int> &labels, vector<double> &confidences);
 	///returns true if @labelOriginal and predictedLabel are the same and the confidence
 	bool isSamePerson(int labelOriginal, Mat image, int& predictedLabel, double& confidence);
 
@@ -52,5 +52,7 @@ public:
 	* @resultsLabels and @resultsConfidence are predicted results
 	*/
 	int testModel(vector<Person> people, ofstream& outputfile);
+
+	int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n);
 };
 

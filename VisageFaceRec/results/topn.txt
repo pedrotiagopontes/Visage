@@ -1,0 +1,41 @@
+Library: ..\data\teste.txt
+	Images Dir: C:\Users\Pedro\Pictures\lfw\lfw_aligned_BW\
+	Total Images: 60
+	Total People: 6
+	Images per person MIN | MAX: 10 | 10
+	Percentage of trainned images per person: 80
+Loaded in: 0.009 seconds
+
+Trainned model FISHERFACES with 48 images in 4.887 seconds 
+
+                              Image   Label |  1º Pred     Conf  |  2º Pred     Conf  |  3º Pred     Conf  |  4º Pred     Conf  |  5º Pred     Conf  |  6º Pred     Conf  |  7º Pred     Conf  |  8º Pred     Conf  | 
+Abdullah_Gul  8 | 2
+              Abdullah_Gul_0007.jpg      17 |      204    1513.7 |      121   3343.34 |      223   4160.82 |      272   4440.45 |        -   4573.84 |       50   5433.19 | 
+              Abdullah_Gul_0006.jpg      17 |      272   2558.06 |      121   4016.46 |      204   4170.12 |       50   4247.29 |        -   4735.98 |      223   6205.36 | 
+Adrien_Brody  8 | 2
+              Adrien_Brody_0002.jpg      50 |        -   2860.39 |      121   3769.77 |      204   3859.55 |       17   4289.73 |      272   5680.14 |      223   5755.55 | 
+              Adrien_Brody_0005.jpg      50 |      121   2254.58 |        -   3224.52 |      204   3976.42 |       17   4325.53 |      272   5261.89 |      223   5301.82 | 
+Alejandro_Toledo  8 | 2
+          Alejandro_Toledo_0007.jpg     121 |        -   1770.59 |      223   3225.54 |       50   3588.72 |       17   4261.22 |      204   4306.33 |      272   5551.23 | 
+          Alejandro_Toledo_0001.jpg     121 |        -   1289.84 |      204   2548.62 |      223    3080.2 |      272    3732.1 |       50    3892.3 |       17   4520.47 | 
+Alvaro_Uribe  8 | 2
+              Alvaro_Uribe_0006.jpg     204 |      223   1436.34 |      121   4072.66 |        -   5273.89 |      272   5772.69 |       50   6023.15 |       17   6085.54 | 
+              Alvaro_Uribe_0005.jpg     204 |      121   3260.26 |        -   3312.11 |       50   3397.43 |      272   4926.68 |      223   5642.16 |       17   7052.85 | 
+Amelie_Mauresmo  8 | 2
+           Amelie_Mauresmo_0004.jpg     223 |        -   3180.61 |      121   4813.68 |       50   6043.46 |      204   6259.36 |      272   7303.11 |       17   8736.89 | 
+           Amelie_Mauresmo_0007.jpg     223 |      121   2494.09 |       50   2595.77 |        -   3712.53 |      204   4299.96 |      272   5058.81 |       17   6205.37 | 
+Andre_Agassi  8 | 2
+              Andre_Agassi_0001.jpg     272 |      223   4391.34 |        -    5172.5 |      121   6515.83 |       50   6816.46 |      204   6983.42 |       17   7751.03 | 
+              Andre_Agassi_0007.jpg     272 |      204   2515.23 |        -   2806.72 |      121   3428.74 |       50   4655.87 |       17   4762.65 |      223    5657.2 | 
+
+Tested 12images in 0.111 seconds
+Right predictions in level 1: 4, 33.3333%  | totals: 4, 33.3333%
+Right predictions in level 2: 4, 33.3333%  | totals: 8, 66.6667%
+Right predictions in level 3: 2, 16.6667%  | totals: 10, 83.3333%
+Right predictions in level 4: 0, 0%  | totals: 10, 83.3333%
+Right predictions in level 5: 2, 16.6667%  | totals: 12, 100%
+Right predictions in level 6: 0, 0%  | totals: 12, 100%
+Right predictions in level 7: 0, 0%  | totals: 12, 100%
+Right predictions in level 8: 0, 0%  | totals: 12, 100%
+
+-------------------------------------------------------------------------------

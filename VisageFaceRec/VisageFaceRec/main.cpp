@@ -31,7 +31,7 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile){
 
 	modelLBPH.testModel(myLib.people, outputfile);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-	
+
 };
 
 void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m){
@@ -44,9 +44,24 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m
 	FaceModel model(m, myLib.people);
 	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
-	model.testModel(myLib.people, outputfile);
+	model.testModelNPredictions(myLib.people, outputfile, 2);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-	
+
+};
+
+void testLibraryN(string path, int percetageTrainned, ofstream& outputfile, int m, size_t n){
+	clock_t tStart = clock();
+	Library myLib(path, percetageTrainned);	
+	outputfile << myLib.toString();
+	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
+
+	tStart = clock();
+	FaceModel model(m, myLib.people);
+	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
+
+	model.testModelNPredictions(myLib.people, outputfile, n);
+	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+
 };
 
 int faceDetector(int argc, const char *argv[]){
@@ -100,7 +115,7 @@ int csvCreator(int argc, const char *argv[]){
 int faceRecognizer(int argc, const char *argv[]){
 	string path = "..\\etc\\at.txt";
 	string outputfilename = "..\\results\\default.txt";
-	int model = FISHERFACES;
+	int modelType = FISHERFACES;
 	if (argc < 3) {
 		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)]" <<endl;
 		return -1;
@@ -113,19 +128,21 @@ int faceRecognizer(int argc, const char *argv[]){
 		if(argc == 4){
 			string m = string(argv[3]);
 			if(m == "-E"){
-				model = EIGENFACES;
+				modelType = EIGENFACES;
 			}
 
 			if(m == "-L"){
-				model = LBPH;
+				modelType = LBPH;
 			}
 		}
 
-		testLibrary(path, 80, outputfile, model);
+		//testLibrary(path, 80, outputfile, modelType);
+		testLibraryN(path, 80, outputfile, modelType, 3);
 
 		cout << "Results in " << outputfilename << endl;
 		outputfile.close();
 	}
+	
 
 	return 0;
 }
