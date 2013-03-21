@@ -163,7 +163,8 @@ Ian_Thorpe  8 | 2
                 Ian_Thorpe_0006.jpg      50       -        287.264
                 Ian_Thorpe_0009.jpg      50      37        471.244
 Igor_Ivanov  8 | 2
-               Igor_Ivanov_0007.jpg      51               Igor_Ivanov_0008.jpg      51      37        314.951
+               Igor_Ivanov_0007.jpg      51               
+               Igor_Ivanov_0008.jpg      51      37        314.951
 
 Tested 103 in 1.833 seconds
 Right predictions: 51, 49.5146%

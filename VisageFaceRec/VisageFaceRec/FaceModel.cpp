@@ -43,7 +43,7 @@ FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int
 		break;
 
 	case LBPH:
-		this->model = createFisherFaceRecognizerExtended(); ///TO-DO review
+		this->model = createLBPHFaceRecognizerExtended(); ///TO-DO review
 		this->name = "LBPH";
 		break;
 

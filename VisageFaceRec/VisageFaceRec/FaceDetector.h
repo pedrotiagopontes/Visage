@@ -31,7 +31,7 @@ public:
 	FaceDetector(string dir = "..\\helpers\\", string face_cascade_name = "lbpcascade_frontalface.xml", string maskName = "mask.bmp");
 	~FaceDetector(void);
 	Mat applyMask(Mat maskImg, Mat image);
-	void detectAndCrop( Mat frame, string name, string dir, Size size, bool apply_mask);
-	int detectAndCropDir(string path = "..\\etc\\csv_lfw_10_10_short.txt", string outputdir = "croppedImages", bool apply_mask=true);
+	void detectAndCrop( Mat frame, string name, string dir, Size size, bool apply_mask, bool normalize_hist);
+	int detectAndCropDir(string path = "..\\etc\\csv_lfw_10_10_short.txt", string outputdir = "croppedImages", bool apply_mask=true, bool normalize_hist=false);
 };
 

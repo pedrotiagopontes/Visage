@@ -44,7 +44,7 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m
 	FaceModel model(m, myLib.people);
 	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
-	model.testModelNPredictions(myLib.people, outputfile, 2);
+	model.testModel(myLib.people, outputfile);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 
 };
@@ -70,19 +70,30 @@ int faceDetector(int argc, const char *argv[]){
 
 	/// FaceDetector.exe
 	bool mask_image = false;
+	bool normalize_hist = false;
 	if (argc < 3){
-		cout << "Usage: path.txt outputDirName [-mask] " <<endl;
+		cout << "Usage: path.txt outputDirName [-mask] [-norm] " <<endl;
 		return -1;
 	}else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
 
-		if(argc > 3){
-			mask_image = true;	
+		if(argc >= 4){
+			string m, n;
+			m = string(argv[3]);
+			if(argc >= 5){
+				n = string(argv[4]);
+			}
+			if(m == "-mask" || n == "-mask"){
+				mask_image = true;	
+			}
+			if(m == "-norm" || n == "-norm"){
+				normalize_hist = true;	
+			}
 		}
 
 		FaceDetector detector;
-		detector.detectAndCropDir(path, outputfilename, mask_image);
+		detector.detectAndCropDir(path, outputfilename, mask_image, normalize_hist);
 	}
 	return 0;
 }
@@ -117,7 +128,7 @@ int faceRecognizer(int argc, const char *argv[]){
 	string outputfilename = "..\\results\\default.txt";
 	int modelType = FISHERFACES;
 	if (argc < 3) {
-		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)]" <<endl;
+		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]" <<endl;
 		return -1;
 	}
 	else{
@@ -125,7 +136,7 @@ int faceRecognizer(int argc, const char *argv[]){
 		outputfilename = string(argv[2]);
 		ofstream outputfile;
 		outputfile.open(outputfilename);
-		if(argc == 4){
+		if(argc >= 4){
 			string m = string(argv[3]);
 			if(m == "-E"){
 				modelType = EIGENFACES;
@@ -136,8 +147,13 @@ int faceRecognizer(int argc, const char *argv[]){
 			}
 		}
 
-		//testLibrary(path, 80, outputfile, modelType);
-		testLibraryN(path, 80, outputfile, modelType, 3);
+		size_t nResults = 1;
+		if(argc >= 5){
+			nResults = atoi(argv[4]);
+			testLibraryN(path, 80, outputfile, modelType, nResults);
+		}else{
+			testLibrary(path, 80, outputfile, modelType);
+		}
 
 		cout << "Results in " << outputfilename << endl;
 		outputfile.close();
@@ -149,14 +165,13 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	//return faceDetector(argc, argv);
+	return faceDetector(argc, argv);
 
 	/// CsvCreator.exe
 	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
 
-	//convertImage("C:\\Users\\Pedro\\Pictures\\teste.JPG");
 	//return 0;
 }

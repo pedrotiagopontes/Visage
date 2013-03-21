@@ -24,7 +24,7 @@ Mat FaceDetector::applyMask(Mat maskImg, Mat image){
 	return maskedImage;
 }
 
-void FaceDetector::detectAndCrop( Mat frame, string name, string dir, Size size, bool apply_mask)
+void FaceDetector::detectAndCrop( Mat frame, string name, string dir, Size size, bool apply_mask, bool normalize_hist)
 {
 	std::vector<Rect> faces;
 	Mat frame_gray;
@@ -36,26 +36,20 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string dir, Size size,
 	}
 
 	cvtColor( frame, frame_gray, CV_BGR2GRAY );
-	equalizeHist( frame_gray, frame_gray );
 
 	//-- Detect faces
 	face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0, Size(80, 80) );
 	if(faces.size() == 0){
-		cout << "Couldn't find face in " << dir << name <<endl;
+		cout << "\t Couldn't find face in " << dir << name <<endl;
 	}
 	for( size_t i = 0; i < faces.size(); i++ )
 	{
-		Mat faceROI = frame_gray( faces[i] );
-		std::vector<Rect> eyes;
-		//cout << "face detected" << endl;
 
-		//-- Draw the face
-		//Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
-		//ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar( 255, 0, 0 ), 2, 8, 0 );
-		//rectangle(frame, faces[i],  CV_RGB(0, 255,0), 1);
-
-		Mat resizedImg;
-		resize(frame(faces[i]), resizedImg, size);
+		Mat resizedImg =  frame_gray(faces[i]);
+		if(normalize_hist){
+			equalizeHist( resizedImg, resizedImg);
+		}
+		resize(resizedImg, resizedImg, size);
 		//imshow( window_name, resizedImg);
 		if(i > 0){
 			stringstream ss;
@@ -76,7 +70,7 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string dir, Size size,
 	}
 }
 
-int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask) {
+int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask, bool normalize_hist) {
 	// DATA
 	vector<string> images;
 	vector<string> names;
@@ -90,7 +84,7 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mas
 	cout <<endl << "Please check conflicts in files: " <<endl;
 	for(unsigned int i = 0; i < names.size(); i++){
 		Mat image = imread(images[i], CV_LOAD_IMAGE_COLOR);
-		detectAndCrop(image, names[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), apply_mask);
+		detectAndCrop(image, names[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), apply_mask, normalize_hist);
 	}
 
 	return 0;

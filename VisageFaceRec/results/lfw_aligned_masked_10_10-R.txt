@@ -192,7 +192,9 @@ Andre_Agassi  8 | 2
               Andre_Agassi_0007.jpg     272       -        413.347
 Andy_Roddick  8 | 2
               Andy_Roddick_0009.jpg     290       -        528.371
-              Andy_Roddick_0010.jpg     290Angelina_Jolie  8 | 2
+              Andy_Roddick_0010.jpg     290
+
+Angelina_Jolie  8 | 2
             Angelina_Jolie_0003.jpg     302       -        386.698
             Angelina_Jolie_0005.jpg     302    1476        308.542
 Anna_Kournikova  8 | 2
@@ -355,7 +357,8 @@ Andre_Agassi  8 | 2
               Andre_Agassi_0007.jpg     272     302        37.6662
 Andy_Roddick  8 | 2
               Andy_Roddick_0009.jpg     290       -        41.7084
-              Andy_Roddick_0010.jpg     290Angelina_Jolie  8 | 2
+              Andy_Roddick_0010.jpg     290
+Angelina_Jolie  8 | 2
             Angelina_Jolie_0003.jpg     302     831        43.1609
             Angelina_Jolie_0005.jpg     302     831        37.2538
 Anna_Kournikova  8 | 2
