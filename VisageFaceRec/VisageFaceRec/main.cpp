@@ -72,17 +72,21 @@ int faceDetector(int argc, const char *argv[]){
 	bool mask_image = false;
 	bool normalize_hist = false;
 	if (argc < 3){
-		cout << "Usage: path.txt outputDirName [-mask] [-norm] " <<endl;
+		cout << "Usage: path.txt outputDirName [-mask] [-norm] -[-G:(gaussian filter) -B:(bilateral filter)]" <<endl;
 		return -1;
 	}else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
+		int filter = 0;
 
 		if(argc >= 4){
-			string m, n;
+			string m, n, f;
 			m = string(argv[3]);
 			if(argc >= 5){
 				n = string(argv[4]);
+			}
+			if(argc >=6){
+				f = string(argv[5]);
 			}
 			if(m == "-mask" || n == "-mask"){
 				mask_image = true;	
@@ -90,10 +94,30 @@ int faceDetector(int argc, const char *argv[]){
 			if(m == "-norm" || n == "-norm"){
 				normalize_hist = true;	
 			}
+			if(f == "-G"){
+				filter = GaussianFilter;
+			}
+			if(f == "-B"){
+				filter = BilateralFilter;
+			}
 		}
 
-		FaceDetector detector;
-		detector.detectAndCropDir(path, outputfilename, mask_image, normalize_hist);
+		/*FaceDetector detectorAlt("..\\helpers\\", "haarcascade_frontalface_alt.xml", "mask.bmp");
+		FaceDetector detectorAlt_tree("..\\helpers\\", "haarcascade_frontalface_alt_tree.xml", "mask.bmp");
+		FaceDetector detectorAlt2("..\\helpers\\", "haarcascade_frontalface_alt2.xml", "mask.bmp");
+		FaceDetector detectorDefault("..\\helpers\\", "haarcascade_frontalface_default.xml", "mask.bmp");
+		*/
+		FaceDetector detectorLPB("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
+		/*cout << "detectorAlt -------------------------------------------------------" << endl<< endl;
+		detectorAlt.detectAndCropDir(path, outputfilename + "-alt", mask_image, normalize_hist);
+		cout << "detectorAlt_Tree -------------------------------------------------------"<< endl<< endl;
+		detectorAlt_tree.detectAndCropDir(path, outputfilename + "-alt_tree", mask_image, normalize_hist);
+		cout << "detectorAlt2 -------------------------------------------------------"<< endl<< endl;
+		detectorAlt2.detectAndCropDir(path, outputfilename + "-alt_2", mask_image, normalize_hist);
+		cout << "detectorDefault -------------------------------------------------------"<< endl<< endl;
+		detectorDefault.detectAndCropDir(path, outputfilename + "-default", mask_image, normalize_hist);*/
+		cout << "detectorLPB -------------------------------------------------------"<< endl<< endl;
+		detectorLPB.detectAndCropDir(path, outputfilename, mask_image, normalize_hist, filter);
 	}
 	return 0;
 }
@@ -124,6 +148,7 @@ int csvCreator(int argc, const char *argv[]){
 }
 
 int faceRecognizer(int argc, const char *argv[]){
+//int faceRecognizer(int argc, const vector<string>argv){
 	string path = "..\\etc\\at.txt";
 	string outputfilename = "..\\results\\default.txt";
 	int modelType = FISHERFACES;
@@ -167,10 +192,18 @@ int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
 	return faceDetector(argc, argv);
 
+	/*
+	string path = string(argv[1]);
+	string outputfilename = string(argv[2]);
+	FaceDetector detectorAlt("..\\helpers\\", "haarcascade_frontalface_alt.xml", "mask.bmp");
+	detectorAlt.exportDir(path, outputfilename, ".png");
+	*/
+
 	/// CsvCreator.exe
 	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
+	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
 	//return faceRecognizer(argc, argv);
 
 	//return 0;

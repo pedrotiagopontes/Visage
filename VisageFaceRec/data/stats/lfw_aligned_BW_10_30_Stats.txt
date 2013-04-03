@@ -1,0 +1,72 @@
+Stats of file: ..\data\lfw_aligned_BW_10_30.txt
+Images dir: C:\Users\Pedro\Pictures\lfw\lfw_aligned_BW\
+                  Abdullah_Gul   19
+                  Adrien_Brody   12
+              Alejandro_Toledo   30
+                  Alvaro_Uribe   30
+               Amelie_Mauresmo   21
+                  Andre_Agassi   30
+                  Andy_Roddick   15
+                Angelina_Jolie   20
+               Anna_Kournikova   12
+                   Ann_Veneman   11
+                  Ariel_Sharon   30
+                 Ari_Fleischer   13
+         Arnold_Schwarzenegger   30
+          Atal_Bihari_Vajpayee   24
+                  Bill_Clinton   29
+                    Bill_Gates   17
+                  Bill_McBride   10
+                    Bill_Simon   15
+                Britney_Spears   14
+                  Carlos_Menem   21
+                   Carlos_Moya   19
+          Catherine_Zeta-Jones   11
+                 Charles_Moose   13
+                  Colin_Powell   30
+              Condoleezza_Rice   11
+                 David_Beckham   30
+              David_Nalbandian   14
+                   Dick_Cheney   14
+         Dominique_de_Villepin   15
+               Donald_Rumsfeld   30
+                Edmund_Stoiber   13
+               Eduardo_Duhalde   14
+                  Fidel_Castro   18
+                George_HW_Bush   13
+              George_Robertson   22
+                 George_W_Bush   30
+             Gerhard_Schroeder   30
+       Gloria_Macapagal_Arroyo   30
+     Gonzalo_Sanchez_de_Lozada   12
+                  Gordon_Brown   13
+                    Gray_Davis   26
+               Guillermo_Coria   30
+                   Halle_Berry   16
+                  Hamid_Karzai   22
+                     Hans_Blix   30
+                 Harrison_Ford   12
+               Hillary_Clinton   14
+                   Howard_Dean   12
+                   Hugo_Chavez   30
+                     Hu_Jintao   15
+                    Ian_Thorpe   10
+                   Igor_Ivanov   20
+
+Classes with 10 images: 2| >= 52
+Classes with 11 images: 3| >= 50
+Classes with 12 images: 5| >= 47
+Classes with 13 images: 5| >= 42
+Classes with 14 images: 5| >= 37
+Classes with 15 images: 4| >= 32
+Classes with 16 images: 1| >= 28
+Classes with 17 images: 1| >= 27
+Classes with 18 images: 1| >= 26
+Classes with 19 images: 2| >= 25
+Classes with 20 images: 2| >= 23
+Classes with 21 images: 2| >= 21
+Classes with 22 images: 2| >= 19
+Classes with 24 images: 1| >= 17
+Classes with 26 images: 1| >= 16
+Classes with 29 images: 1| >= 15
+Classes with 30 images: 14| >= 14

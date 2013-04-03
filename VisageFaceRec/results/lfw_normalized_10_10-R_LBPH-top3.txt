@@ -1,12 +1,12 @@
 Library: ..\data\lfw_normalized_10_10.txt
-	Images Dir: C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\normalized_10_10\
+	Images Dir: C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\normalized_10_50\
 	Total Images: 520
 	Total People: 52
 	Images per person MIN | MAX: 10 | 10
 	Percentage of trainned images per person: 80
 Loaded in: 0.071 seconds
 
-Trainned model LBPH with 409 images in 54.327 seconds 
+Trainned model LBPH with 408 images in 55.53 seconds 
 
                               Image   Label |  1º Pred     Conf  |  2º Pred     Conf  |  3º Pred     Conf  | 
 Abdullah_Gul  8 | 2
@@ -166,7 +166,7 @@ Igor_Ivanov  8 | 2
                Igor_Ivanov_0008.jpg    2210 |     1940   39.6462 |     2186   41.3947 |     2017   43.2805 | 
                Igor_Ivanov_0005.jpg    2210 |     1932   38.2217 |     1940   38.8006 |     1993   39.0889 | 
 
-Tested 103images in 23.234 seconds
+Tested 103images in 25.95 seconds
 Right predictions in level 1: 41, 39.8058%  | totals: 41, 39.8058%
 Right predictions in level 2: 11, 10.6796%  | totals: 52, 50.4854%
 Right predictions in level 3: 4, 3.8835%  | totals: 56, 54.3689%

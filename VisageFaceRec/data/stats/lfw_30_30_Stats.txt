@@ -1,0 +1,38 @@
+Stats of file: ..\data\lfw_30_30.txt
+Images dir: C:\Users\Pedro\Pictures\lfw\lfw\
+              Alejandro_Toledo   30
+                  Alvaro_Uribe   30
+                  Andre_Agassi   30
+                  Ariel_Sharon   30
+         Arnold_Schwarzenegger   30
+                  Colin_Powell   30
+                 David_Beckham   30
+               Donald_Rumsfeld   30
+                 George_W_Bush   30
+             Gerhard_Schroeder   30
+       Gloria_Macapagal_Arroyo   30
+               Guillermo_Coria   30
+                     Hans_Blix   30
+                   Hugo_Chavez   30
+                Jacques_Chirac   30
+                 Jean_Chretien   30
+             Jennifer_Capriati   30
+                 John_Ashcroft   30
+               John_Negroponte   30
+             Junichiro_Koizumi   30
+                    Kofi_Annan   30
+                    Laura_Bush   30
+                Lleyton_Hewitt   30
+     Luiz_Inacio_Lula_da_Silva   30
+         Megawati_Sukarnoputri   30
+               Nestor_Kirchner   30
+          Recep_Tayyip_Erdogan   30
+                  Roh_Moo-hyun   30
+               Serena_Williams   30
+             Silvio_Berlusconi   30
+                     Tom_Ridge   30
+                    Tony_Blair   30
+                   Vicente_Fox   30
+                Vladimir_Putin   30
+
+Classes with 30 images: 34| >= 34

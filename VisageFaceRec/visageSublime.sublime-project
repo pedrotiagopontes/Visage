@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "data"
+		},
+		{
+			"path": "results"
+		},
+		{
+			"path": "Debug"
+		}
+	]
+}

@@ -1,4 +1,4 @@
-C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\lfw_alinned_masked\
+C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\crooppedMasked_10_50\
 Abdullah_Gul\Abdullah_Gul_0006.jpg;17
 Abdullah_Gul\Abdullah_Gul_0014.jpg;17
 Abdullah_Gul\Abdullah_Gul_0005.jpg;17

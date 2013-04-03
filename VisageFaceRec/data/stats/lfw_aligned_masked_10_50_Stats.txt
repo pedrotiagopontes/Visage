@@ -1,0 +1,78 @@
+Stats of file: ..\data\lfw_aligned_masked_10_50.txt
+Images dir: C:\Users\Pedro\Dropbox\FEUP\PDIS\Visage\VisageFaceRec\Debug\lfw_alinned_masked\
+                  Abdullah_Gul   19
+                  Adrien_Brody   12
+              Alejandro_Toledo   39
+                  Alvaro_Uribe   35
+               Amelie_Mauresmo   21
+                  Andre_Agassi   36
+                  Andy_Roddick   15
+                Angelina_Jolie   20
+               Anna_Kournikova   12
+                   Ann_Veneman   11
+                  Ariel_Sharon   50
+                 Ari_Fleischer   13
+         Arnold_Schwarzenegger   42
+          Atal_Bihari_Vajpayee   24
+                  Bill_Clinton   29
+                    Bill_Gates   17
+                  Bill_McBride   10
+                    Bill_Simon   15
+                Britney_Spears   14
+                  Carlos_Menem   21
+                   Carlos_Moya   19
+          Catherine_Zeta-Jones   11
+                 Charles_Moose   13
+                  Colin_Powell   50
+              Condoleezza_Rice   11
+                 David_Beckham   31
+              David_Nalbandian   14
+                   Dick_Cheney   14
+         Dominique_de_Villepin   15
+               Donald_Rumsfeld   50
+                Edmund_Stoiber   13
+               Eduardo_Duhalde   14
+                  Fidel_Castro   18
+                George_HW_Bush   13
+              George_Robertson   22
+                 George_W_Bush   50
+             Gerhard_Schroeder   50
+       Gloria_Macapagal_Arroyo   44
+     Gonzalo_Sanchez_de_Lozada   12
+                  Gordon_Brown   13
+                    Gray_Davis   26
+               Guillermo_Coria   30
+                   Halle_Berry   16
+                  Hamid_Karzai   22
+                     Hans_Blix   39
+                 Harrison_Ford   12
+               Hillary_Clinton   14
+                   Howard_Dean   12
+                   Hugo_Chavez   50
+                     Hu_Jintao   15
+                    Ian_Thorpe   10
+
+Classes with 10 images: 2| >= 51
+Classes with 11 images: 3| >= 49
+Classes with 12 images: 5| >= 46
+Classes with 13 images: 5| >= 41
+Classes with 14 images: 5| >= 36
+Classes with 15 images: 4| >= 31
+Classes with 16 images: 1| >= 27
+Classes with 17 images: 1| >= 26
+Classes with 18 images: 1| >= 25
+Classes with 19 images: 2| >= 24
+Classes with 20 images: 1| >= 22
+Classes with 21 images: 2| >= 21
+Classes with 22 images: 2| >= 19
+Classes with 24 images: 1| >= 17
+Classes with 26 images: 1| >= 16
+Classes with 29 images: 1| >= 15
+Classes with 30 images: 1| >= 14
+Classes with 31 images: 1| >= 13
+Classes with 35 images: 1| >= 12
+Classes with 36 images: 1| >= 11
+Classes with 39 images: 2| >= 10
+Classes with 42 images: 1| >= 8
+Classes with 44 images: 1| >= 7
+Classes with 50 images: 6| >= 6

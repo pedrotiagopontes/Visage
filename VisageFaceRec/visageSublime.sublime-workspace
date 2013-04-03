@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"insert",
+				"insertPair"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"a",
+				"attr"
+			],
+			[
+				"inde",
+				"indextitle"
+			],
+			[
+				"load",
+				"loadSound"
+			],
+			[
+				"so",
+				"soundID"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "data/testeGaussian.txt",
+			"settings":
+			{
+				"buffer_size": 10199,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Debug/testeBilateral-R-Fisher.txt",
+			"settings":
+			{
+				"buffer_size": 6758,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Debug/testeBilateral-R-LBPH.txt",
+			"settings":
+			{
+				"buffer_size": 6754,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Debug/testeBilateral2-R-LBPH.txt",
+			"settings":
+			{
+				"buffer_size": 6753,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeGausssian-R-Fisher.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/gaussian_10_50.txt",
+		"/C/Users/Pedro/Documents/obli.pt/css/style.css",
+		"/C/Users/Pedro/Documents/jf-galegossantamaria.pt/css/style.css",
+		"/C/Users/Pedro/Documents/pedrotiagopontes.com/index.html",
+		"/C/Users/Pedro/Documents/jf-galegossantamaria.pt/index.html",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50_v2-R_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50_v2-R_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50_v2.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/croppedMasked_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/croppedMasked_10_50.txt",
+		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/style.css",
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/index.html",
+		"/C/xampp/htdocs/wordpress/wp-config-sample.php",
+		"/C/xampp/htdocs/wordpress/wp-config.php",
+		"/C/Users/Pedro/Documents/tedXBarcelos/httpdocs/index.html",
+		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/css/ie.css",
+		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/header.php",
+		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/footer.php",
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/js/script.js",
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/css/style.css",
+		"/C/Users/Pedro/Documents/tedXBarcelos/httpdocs/css/style.css",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/qwre/cleanList.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/normalized_10_50/conflicts.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/crooppedMasked_10_50/cleanList.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/qwre/withVerify.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/maskedCropped-R_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMaskedNorm.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/maskedCropped-R_Eigen.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/maskedCropped-R_Fisher.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeMasked-R_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMaskedCropped.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw-BW.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeMasked-R.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMaskedCropNorm.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeCropNorm.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeCropNorm-R.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeCrop.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMasked.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRecCopia/results/lfw_aligned_masked_10_10-R.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRecCopia/data/at.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRecCopia/data/stats/lfw_Stats.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRecCopia/results/trials/at_visage.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/arnould.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_10_10-R_LBPH-top3.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10-v2.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/teste.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/teste.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/teste.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw_10_subjects.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10-v3.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_10_50-R_EIGEN-top3.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_40_40-R_EIGEN-top3.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_LBPH-top3 - FINAL.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/-E",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_40_40.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_30_30.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_40_40_Stats.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_40_40.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_30_30.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_20_20_Stats.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_5_5_Stats.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_5_5.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_Stats.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/trials/at_80_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/trials/at_20_80.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/atCopia.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_10v2.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_30.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_eigen.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-10Eingen.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50-R_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_fisher.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-50Fisher.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-10Fisher.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnL.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnE.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topn.txt",
+		"/C/Users/Pedro/Documents/pedrotiagopontes.com/css/style.css",
+		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/index.html",
+		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/css/style.css",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/index.html",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/index.html",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/remotecontrol.html",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/thumbnails.html",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/stalkbuttons.html",
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/target.html",
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/background.html",
+		"/D/README.HTM",
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/paper/paper/readme.txt",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/include/facerec.hpp",
+		"/C/OpenCV243/build/include/opencv2/contrib/contrib.hpp",
+		"/C/OpenCV243/modules/contrib/include/opencv2/contrib/contrib.hpp",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_BW_10_10-R.txt",
+		"/C/OpenCV243/modules/contrib/src/facerec.cpp",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/src/facerec.cpp",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_BW_10_10-R-top3.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3.txt",
+		"/C/opencv/modules/contrib/src/facerec.cpp",
+		"/C/Users/Pedro/Documents/obli.pt/index.html",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/src/main.cpp",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/at.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW_10_10.txt",
+		"/C/opencv/modules/contrib/CMakeLists.txt",
+		"/C/opencv/modules/contrib/include/opencv2/contrib/contrib.hpp",
+		"/C/opencv/build/include/opencv2/contrib/contrib.hpp",
+		"/C/opencv/modules/CMakeLists.txt",
+		"/C/OpenCV243/CMakeLists.txt",
+		"/C/opencv/CMakeLists.txt",
+		"/C/opencv/include/CMakeLists.txt",
+		"/C/opencv/build/CMakeCache.txt",
+		"/C/Users/Pedro/Dropbox/livroInteractivo/oApanhaMoscas/config.lua",
+		"/C/Users/Pedro/Dropbox/livroInteractivo/oApanhaMoscas/main.lua",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW_10_10-v2.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"nav-menu",
+			"nav",
+			"a",
+			"site-info",
+			"site",
+			"SITE-INFO",
+			"solid",
+			"1px solid",
+			"#ededed",
+			"double",
+			"site-header",
+			"500px",
+			"scroll",
+			"scrol",
+			"img",
+			"slide2",
+			"crooppedMasked_10_50\\\\",
+			"verify",
+			"\\\n",
+			"4",
+			"\\tCouldn",
+			"\\t*",
+			"\\t",
+			"normalized_10_50\\",
+			"Couldn",
+			"img",
+			"px",
+			"1000",
+			"http://webdev.stephband.info/jparallax/images",
+			"http://stephband.info/images",
+			"http://stephband.info/",
+			"resize",
+			"predictN",
+			"resize",
+			"elbp",
+			"lbp",
+			"endl",
+			"cout",
+			"predictN",
+			"predict",
+			"predictN",
+			"vector<double",
+			"vector<double>",
+			"predictN",
+			"pair",
+			"list",
+			"vector<int> ",
+			"vector<int>",
+			"ll",
+			"vector<int>ll",
+			"vector<int>",
+			"predictN",
+			"opengl_buffer",
+			"predict(InputArray _src, int n, vector<int> &labels, vector<double> &confidences)",
+			"predict",
+			"added",
+			"Predict",
+			"predict",
+			"added",
+			"predict",
+			"added",
+			"/home/philipp/facerec/data/at",
+			"png",
+			"/home/philipp/facerec/data/at",
+			"17",
+			"\\\n",
+			"bill_",
+			"bill_cliton",
+			"jpg",
+			"C:\\Users\\Pedro\\Documents\\Visual Studio 2010\\Projects\\FaceRecTutorial\\att_faces\\",
+			"Adrien_Brody",
+			"Adrien_Brody_0001",
+			"george_w",
+			"530",
+			"77",
+			"37",
+			"C:\\Users\\Pedro\\Pictures\\lfw\\lfw\\",
+			"/",
+			"C:\\Users\\Pedro\\Pictures\\lfw\\lfw\\Edmund_Stoiber/Edmund_Stoiber_0010.jpg;1473",
+			"/",
+			"lfw_faces",
+			"open",
+			"(){\n",
+			"menu",
+			"hyb",
+			"olho_4",
+			"o",
+			"olho_4",
+			"shapedef",
+			"imgPath",
+			"olho_4",
+			"hy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"2px dotted",
+			"black",
+			"",
+			"\\tCouldn",
+			"../images",
+			"../",
+			"std::endl",
+			"std::cout",
+			"std::vector<double",
+			"std::pair",
+			"std::vector<int>",
+			"std::list",
+			"std::vector<int>",
+			"predictN(InputArray _src, int n, vector<int> &labels, vector<double> &confidences)",
+			"C:/Users/Pedro/Pictures/att_faces",
+			"jpg",
+			"C:/Users/Pedro/Pictures/att_faces",
+			"pgm",
+			"",
+			"\\",
+			"C:\\Users\\Pedro\\Documents\\Visual Studio 2010\\Projects\\FaceRecTutorial\\lfw_faces"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "data/testeGaussian.txt",
+					"settings":
+					{
+						"buffer_size": 10199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Debug/testeBilateral-R-Fisher.txt",
+					"settings":
+					{
+						"buffer_size": 6758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6758,
+								6758
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 950.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Debug/testeBilateral-R-LBPH.txt",
+					"settings":
+					{
+						"buffer_size": 6754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1106.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Debug/testeBilateral2-R-LBPH.txt",
+					"settings":
+					{
+						"buffer_size": 6753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5765,
+								5765
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1104.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
+	"status_bar_visible": true
+}

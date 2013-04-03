@@ -1,0 +1,23 @@
+Stats of file: ..\data\lfw_40_40.txt
+Images dir: C:\Users\Pedro\Pictures\lfw\lfw\
+                  Ariel_Sharon   40
+         Arnold_Schwarzenegger   40
+                  Colin_Powell   40
+               Donald_Rumsfeld   40
+                 George_W_Bush   40
+             Gerhard_Schroeder   40
+       Gloria_Macapagal_Arroyo   40
+                   Hugo_Chavez   40
+                Jacques_Chirac   40
+                 Jean_Chretien   40
+             Jennifer_Capriati   40
+                 John_Ashcroft   40
+             Junichiro_Koizumi   40
+                    Laura_Bush   40
+                Lleyton_Hewitt   40
+     Luiz_Inacio_Lula_da_Silva   40
+               Serena_Williams   40
+                    Tony_Blair   40
+                Vladimir_Putin   40
+
+Classes with 40 images: 19| >= 19
