@@ -3,11 +3,32 @@
 FaceDetector::FaceDetector(string dir, string face_cascade_name, string maskName){
 	this->dir = dir;
 	this->face_cascade_name = dir + face_cascade_name;
+	this->mouth_cascade_name = dir + "haarcascade_mcs_mouth.xml";
+	this->eyes_cascade_name = dir + "haarcascade_mcs_eyepair_small.xml";
+	this->nose_cascade_name = dir + "haarcascade_mcs_nose.xml";
 	this->maskName = dir + maskName;
 
-	//-- 1. Load the cascade
+	//-- 1. Load the FACE cascade
 	if( !face_cascade.load( face_cascade_name ) ){ 
 		string error_message = "(!)Error loading " + face_cascade_name;
+		CV_Error(CV_StsBadArg, error_message);
+	};
+
+	//-- 2. Load the  EYES cascade
+	if( !eyes_cascade.load( eyes_cascade_name ) ){ 
+		string error_message = "(!)Error loading " + eyes_cascade_name;
+		CV_Error(CV_StsBadArg, error_message);
+	};
+
+	//-- 3. Load the MOUTH cascade
+	if( !mouth_cascade.load( mouth_cascade_name ) ){ 
+		string error_message = "(!)Error loading " + mouth_cascade_name;
+		CV_Error(CV_StsBadArg, error_message);
+	};
+
+	//-- 4. Load the NOSE cascade
+	if( !nose_cascade.load( nose_cascade_name ) ){ 
+		string error_message = "(!)Error loading " + nose_cascade_name;
 		CV_Error(CV_StsBadArg, error_message);
 	};
 }
@@ -38,25 +59,28 @@ Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
 		}
 		if(filter == BilateralFilter){
 			Mat teste;
-			bilateralFilter ( original, teste, 5, 100, 100 );
+			bilateralFilter ( original, teste, 5, 50, 50 );
 			processedImg = teste;
 		}
 	}
 	return processedImg;
 }
 
-void FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, bool normalize_hist, int filter)
+int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, bool normalize_hist, int filter)
 {
-	std::vector<Rect> faces;
+	std::vector<Rect> faces, mouth, eyes, nose;
 	int verticalCrop = size.height *0.2;
 	int horizontalCrop = size.width *0.4;
-	Mat frame_gray;
+	int faceIndex = 0, maxFaceRate = 0;
+	Mat frame_gray, resizedImg;
+	vector<Mat> multipleFaces;
+	vector<int> ties, tiesRate;
 	Mat maskImg = imread(maskName, CV_LOAD_IMAGE_GRAYSCALE);
 	if(!(maskImg.rows>0)){
 		string error_message = "(!)Error loading " + maskName;
 		CV_Error(CV_StsBadArg, error_message);
 	}
-	
+
 	// How detailed should the search be.
 	float search_scale_factor = 1.1f;
 	// how many neighbors each candidate rectangle should have to retain it.
@@ -72,6 +96,7 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string label, string d
 	}
 	for( size_t i = 0; i < faces.size(); i++ )
 	{
+		//Create output files
 		if(i == 0){
 			if(faces.size() == 1){
 				outputfileClean <<name << ";" << label <<endl;
@@ -81,7 +106,8 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string label, string d
 			}
 		}
 
-		Mat resizedImg =  frame_gray(faces[i]);
+		//Resize image and crop area of interest
+		resizedImg =  frame_gray(faces[i]);
 		resize(resizedImg, resizedImg, size);
 		//cv::Rect myROI(24, 24, 64, 76);
 		int xn = 15;
@@ -89,26 +115,91 @@ void FaceDetector::detectAndCrop( Mat frame, string name, string label, string d
 		cv::Rect myROI(xn, yn, 112-2*xn-2, 112-2*yn-1);
 		resizedImg = resizedImg(myROI);
 
-		resizedImg = processImg(resizedImg, filter, normalize_hist);
-		//imshow( window_name, resizedImg);
-		if(i > 0){
-			stringstream ss;
-			ss << dir<<"\\"<<"VERIFY_"<<i << name;
-			cout << ss.str()<< endl;
-			if(apply_mask){
-				imwrite(ss.str(), applyMask(maskImg, resizedImg));
-			}else{
-				imwrite(ss.str(), resizedImg);
+		//in case of multiple faces detection in a sigle image let's investigate more
+		if(faces.size() > 1){
+			bool has_eyes = false, has_mouth = false;
+			int faceRate = 0;
+
+			//-- In each face, detect eyes
+			eyes_cascade.detectMultiScale( resizedImg, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE , Size(10, 10) );
+			for( size_t j = 0; j < eyes.size(); j++ ){
+				//cout << j << endl;
+				rectangle(resizedImg, eyes[j], CV_RGB(255, 0,0), 2);
+				has_eyes = true;
 			}
-			outputfileVerify << dir+"\\"+name <<endl;
-		}else{
-			if(apply_mask){
-				imwrite(dir+"\\"+name, applyMask(maskImg, resizedImg));
-			}else{
-				imwrite(dir+"\\"+name, resizedImg);
+
+			if(eyes.size() > 0){
+				faceRate+= 100;
 			}
+
+			mouth_cascade.detectMultiScale( resizedImg, mouth, 1.1, 2, 0, Size(20, 20) );
+			for( size_t k = 0; k < mouth.size(); k++ ){
+				if(has_eyes){
+					if(abs(eyes[0].y - mouth[k].y) > 20){
+						has_mouth = true;
+						rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
+					}
+				}else{
+					has_mouth = true;
+					rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
+				}
+			}
+
+			if(has_mouth){
+				faceRate+= 50;
+			}
+
+			nose_cascade.detectMultiScale( resizedImg, nose, 1.1, 2, 0, Size(20, 20) );
+			for( size_t l = 0; l < nose.size(); l++ ){
+				rectangle(resizedImg, nose[l], CV_RGB(255, 0,0), 3);
+				faceRate+=50;
+			}
+
+			if(faceRate > maxFaceRate){
+				maxFaceRate = faceRate;
+				faceIndex = i;
+			}else{
+				if(faceRate == maxFaceRate){
+					ties.push_back(i);
+					tiesRate.push_back(faceRate);
+				}
+			}
+			multipleFaces.push_back(resizedImg);
+		}
+		else{
+			multipleFaces.push_back(resizedImg);
 		}
 	}
+
+	if(ties.size() > 0){
+		for(size_t t=0; t < ties.size(); t++){
+			if(tiesRate[t] == maxFaceRate){
+				resizedImg = processImg(multipleFaces[ties[t]], filter, normalize_hist);
+				stringstream ss;
+				ss << dir<<"\\"<<"VERIFY_"<<t << name;
+				cout << ss.str()<< endl;
+
+				if(apply_mask){
+					imwrite(ss.str(), applyMask(maskImg, resizedImg));
+				}else{
+					imwrite(ss.str(), resizedImg);
+				}
+				outputfileVerify << dir+"\\"+name <<endl;
+			}//else just ignore that tie because a bigger match was found
+		}
+	}
+
+	if(faces.size() > 0){
+		//apply preprocessing
+		resizedImg = processImg(multipleFaces[faceIndex], filter, normalize_hist);
+		if(apply_mask){
+			imwrite(dir+"\\"+name, applyMask(maskImg, resizedImg));
+		}else{
+			imwrite(dir+"\\"+name, resizedImg);
+		}
+	}
+
+	return faces.size();
 }
 
 //Only optimized for lfw library
@@ -121,6 +212,8 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mas
 	string outputfilenameclean = outputdir +"\\"+"cleanList.txt";
 	string outputfilenameverify = outputdir +"\\"+"withVerify.txt";
 
+	int singleFaces = 0, multipleFaces = 0, noFace = 0;
+
 	//-- 1. Load the cascade
 	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 
@@ -132,9 +225,30 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mas
 	for(unsigned int i = 0; i < names.size(); i++){
 		Mat image = imread(images[i], CV_LOAD_IMAGE_COLOR);
 		// Smallest face size.
-		CvSize minFeatureSize = cvSize(100, 100);
-		detectAndCrop(image, names[i], labels[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), minFeatureSize, apply_mask, normalize_hist, filter);
+		CvSize minFeatureSize = cvSize(80, 80);
+		int n = detectAndCrop(image, names[i], labels[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), minFeatureSize, apply_mask, normalize_hist, filter);
+
+		switch(n){
+		case 1:
+			singleFaces++;
+			break;
+		case 0:
+			noFace++;
+			break;
+		default:
+			multipleFaces++;
+			break;
+		}
 	}
+
+	cout << "Sigle Faces: "<< singleFaces << endl;
+	cout << "No Face: "<< noFace << endl;
+	cout << "Multiple Faces: "<< multipleFaces << endl;
+
+	outputfileVerify << "Sigle Faces: "<< singleFaces << endl;
+	outputfileVerify << "No Face: "<< noFace << endl;
+	outputfileVerify << "Multiple Faces: "<< multipleFaces << endl;
+
 	outputfileClean.close();
 	outputfileVerify.close();
 
@@ -187,3 +301,4 @@ void FaceDetector::loadAndCloneDir(const string& filename, const string& outputn
 
 	cout << "Fineshed cloning dir" << endl;
 }
+

@@ -48,34 +48,34 @@
 	"buffers":
 	[
 		{
-			"file": "data/testeGaussian.txt",
+			"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
 			"settings":
 			{
-				"buffer_size": 10199,
+				"buffer_size": 13344,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Debug/testeBilateral-R-Fisher.txt",
+			"file": "results/bilateral_10_10_v4-R-FISHER.txt",
 			"settings":
 			{
-				"buffer_size": 6758,
+				"buffer_size": 13317,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Debug/testeBilateral-R-LBPH.txt",
+			"file": "results/bilateral_10_10_v4-R-LBPH.txt",
 			"settings":
 			{
-				"buffer_size": 6754,
+				"buffer_size": 13322,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Debug/testeBilateral2-R-LBPH.txt",
+			"file": "data/testeDIR - Cópia.txt",
 			"settings":
 			{
-				"buffer_size": 6753,
+				"buffer_size": 45105,
 				"line_ending": "Windows"
 			}
 		}
@@ -104,6 +104,31 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_mainwindow.cpp",
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_glview.cpp",
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/qrc_resources.cpp",
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_glslmgr.cpp",
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/libgcc_s_dw2-1.dll",
+		"/C/Users/Pedro/Links/Dropbox.lnk",
+		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/GLee.o",
+		"/C/xampp/htdocs/gsm/wp-config.php",
+		"/C/xampp/htdocs/gsm/wp-settings.php",
+		"/C/Users/Pedro/Desktop/127.0.0.1.sql",
+		"/C/Users/Pedro/Desktop/gsm.sql",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_masked_10_10_v4-R-EIGEN.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/cropped_normalized_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeGaussian.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/cropped_normalized_10_10_v4.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/bilateral_10_10_v4.txt",
+		"/C/Users/Pedro/Desktop/wp-config.php",
+		"/C/xampp/htdocs/wordpress/wp-config.php",
+		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/style.css",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeBilateral2-R-LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeBilateral-R-LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeBilateral-R-Fisher.txt",
+		"/C/Users/Pedro/AppData/Local/Temp/license.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeGausssian-R-Fisher.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/gaussian_10_50.txt",
 		"/C/Users/Pedro/Documents/obli.pt/css/style.css",
@@ -116,10 +141,8 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/croppedMasked_10_50.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/croppedMasked_10_50.txt",
-		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/style.css",
 		"/C/Users/Pedro/Documents/GitHub/obli Paralax/index.html",
 		"/C/xampp/htdocs/wordpress/wp-config-sample.php",
-		"/C/xampp/htdocs/wordpress/wp-config.php",
 		"/C/Users/Pedro/Documents/tedXBarcelos/httpdocs/index.html",
 		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/css/ie.css",
 		"/C/xampp/htdocs/wordpress/wp-content/themes/twentytwelve/header.php",
@@ -208,30 +231,7 @@
 		"/C/Users/Pedro/Documents/GitHub/obli Paralax/background.html",
 		"/D/README.HTM",
 		"/C/Users/Pedro/Documents/GitHub/obli Paralax/paper/paper/readme.txt",
-		"/C/Users/Pedro/Documents/GitHub/libfacerec/include/facerec.hpp",
-		"/C/OpenCV243/build/include/opencv2/contrib/contrib.hpp",
-		"/C/OpenCV243/modules/contrib/include/opencv2/contrib/contrib.hpp",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_BW_10_10-R.txt",
-		"/C/OpenCV243/modules/contrib/src/facerec.cpp",
-		"/C/Users/Pedro/Documents/GitHub/libfacerec/src/facerec.cpp",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_BW_10_10-R-top3.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3.txt",
-		"/C/opencv/modules/contrib/src/facerec.cpp",
-		"/C/Users/Pedro/Documents/obli.pt/index.html",
-		"/C/Users/Pedro/Documents/GitHub/libfacerec/src/main.cpp",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/at.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW_10_10.txt",
-		"/C/opencv/modules/contrib/CMakeLists.txt",
-		"/C/opencv/modules/contrib/include/opencv2/contrib/contrib.hpp",
-		"/C/opencv/build/include/opencv2/contrib/contrib.hpp",
-		"/C/opencv/modules/CMakeLists.txt",
-		"/C/OpenCV243/CMakeLists.txt",
-		"/C/opencv/CMakeLists.txt",
-		"/C/opencv/include/CMakeLists.txt",
-		"/C/opencv/build/CMakeCache.txt",
-		"/C/Users/Pedro/Dropbox/livroInteractivo/oApanhaMoscas/config.lua",
-		"/C/Users/Pedro/Dropbox/livroInteractivo/oApanhaMoscas/main.lua",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_BW_10_10-v2.txt"
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/include/facerec.hpp"
 	],
 	"find":
 	{
@@ -250,6 +250,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http://gsm.pedrotiagopontes.com",
+			"gsm",
+			"font-family",
 			"nav-menu",
 			"nav",
 			"a",
@@ -349,6 +352,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"http://localhost/gsm",
 			"2px dotted",
 			"black",
 			"",
@@ -380,68 +384,15 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "data/testeGaussian.txt",
+					"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
 					"settings":
 					{
-						"buffer_size": 10199,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								69,
-								69
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Debug/testeBilateral-R-Fisher.txt",
-					"settings":
-					{
-						"buffer_size": 6758,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6758,
-								6758
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 950.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Debug/testeBilateral-R-LBPH.txt",
-					"settings":
-					{
-						"buffer_size": 6754,
+						"buffer_size": 13344,
 						"regions":
 						{
 						},
@@ -459,25 +410,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1106.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Debug/testeBilateral2-R-LBPH.txt",
+					"buffer": 1,
+					"file": "results/bilateral_10_10_v4-R-FISHER.txt",
 					"settings":
 					{
-						"buffer_size": 6753,
+						"buffer_size": 13317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5765,
-								5765
+								13103,
+								13103
 							]
 						],
 						"settings":
@@ -487,7 +438,61 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1104.0,
+						"translation.y": 2352.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "results/bilateral_10_10_v4-R-LBPH.txt",
+					"settings":
+					{
+						"buffer_size": 13322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "data/testeDIR - Cópia.txt",
+					"settings":
+					{
+						"buffer_size": 45105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45105,
+								45105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 15185.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -551,6 +556,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 250.0,
 	"status_bar_visible": true
 }
