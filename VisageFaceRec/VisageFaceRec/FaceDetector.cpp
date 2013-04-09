@@ -6,6 +6,8 @@ FaceDetector::FaceDetector(string dir, string face_cascade_name, string maskName
 	this->mouth_cascade_name = dir + "haarcascade_mcs_mouth.xml";
 	this->eyes_cascade_name = dir + "haarcascade_mcs_eyepair_small.xml";
 	this->nose_cascade_name = dir + "haarcascade_mcs_nose.xml";
+	this->leftEye_cascade_name = dir + "haarcascade_mcs_lefteye.xml";
+	this->rightEye_cascade_name = dir + "haarcascade_mcs_righteye.xml";
 	this->maskName = dir + maskName;
 
 	//-- 1. Load the FACE cascade
@@ -17,6 +19,15 @@ FaceDetector::FaceDetector(string dir, string face_cascade_name, string maskName
 	//-- 2. Load the  EYES cascade
 	if( !eyes_cascade.load( eyes_cascade_name ) ){ 
 		string error_message = "(!)Error loading " + eyes_cascade_name;
+		CV_Error(CV_StsBadArg, error_message);
+	};
+
+	if( !leftEye_cascade.load( leftEye_cascade_name ) ){ 
+		string error_message = "(!)Error loading " + leftEye_cascade_name;
+		CV_Error(CV_StsBadArg, error_message);
+	};
+	if( !rightEye_cascade.load( rightEye_cascade_name ) ){ 
+		string error_message = "(!)Error loading " + rightEye_cascade_name;
 		CV_Error(CV_StsBadArg, error_message);
 	};
 
@@ -66,11 +77,52 @@ Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
 	return processedImg;
 }
 
+//Needs more work on this
+Mat FaceDetector::alignFace(Mat face, Rect myROI){
+	Mat original = face;
+	face = face(myROI);
+	std::vector<Rect> leftEyes, rightEyes;
+	////-- In each face, detect eyes
+	leftEye_cascade.detectMultiScale( face, leftEyes, 1.1, 2, 0 |CV_HAAR_FIND_BIGGEST_OBJECT , Size(10, 10) );
+	for( size_t j = 0; j < leftEyes.size(); j++ ){
+		rectangle(face, leftEyes[j], CV_RGB(255, 0,0), 2);
+	}
+	rightEye_cascade.detectMultiScale( face, rightEyes, 1.1, 2, 0 |CV_HAAR_FIND_BIGGEST_OBJECT, Size(10, 10) );
+	for( size_t j = 0; j < rightEyes.size(); j++ ){
+		rectangle(face, rightEyes[j], CV_RGB(255, 0,0), 2);
+	}
+
+	// thanks to http://answers.opencv.org/question/497/extract-a-rotatedrect-area/
+	Mat M, rotated, cropped;
+	if(leftEyes.size() > 0 && rightEyes.size() > 0){
+		float eye_directionX = float(rightEyes[0].x - leftEyes[0].x);
+		float eye_directionY = float(rightEyes[0].y - leftEyes[0].y);
+		
+		//# calc rotation angle in radians
+		float angle = atan2(eye_directionY,eye_directionX) * 180.0 / PI;
+
+		// rect is the RotatedRect (I got it from a contour...)
+        RotatedRect rect(Point2f(face.cols/2,face.rows/2), Size2f(face.cols,face.rows), angle);
+        
+        Size rect_size = rect.size;
+        // thanks to http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/
+        if (rect.angle < -45.) {
+            angle += 90.0;
+            swap(rect_size.width, rect_size.height);
+        }
+        // get the rotation matrix
+        M = getRotationMatrix2D(rect.center, angle, 1.0);
+        // perform the affine transformation
+        warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
+	}
+	return rotated;
+}
+
 int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, bool normalize_hist, int filter)
 {
 	std::vector<Rect> faces, mouth, eyes, nose;
-	int verticalCrop = size.height *0.2;
-	int horizontalCrop = size.width *0.4;
+	double verticalCrop = size.height *0.08;
+	double horizontalCrop = size.width *0.3;
 	int faceIndex = 0, maxFaceRate = 0;
 	Mat frame_gray, resizedImg;
 	vector<Mat> multipleFaces;
@@ -96,15 +148,8 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 	}
 	for( size_t i = 0; i < faces.size(); i++ )
 	{
-		//Create output files
-		if(i == 0){
-			if(faces.size() == 1){
-				outputfileClean <<name << ";" << label <<endl;
-				outputfileVerify <<name << ";" << label <<endl;
-			}else{
-				outputfileVerify <<"\t VERIFY -> \t" <<name << ";" << label <<endl;
-			}
-		}
+		bool has_eyes = false, has_mouth = false;
+		int faceRate = 0;
 
 		//Resize image and crop area of interest
 		resizedImg =  frame_gray(faces[i]);
@@ -113,18 +158,17 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 		int xn = 15;
 		int yn = 3;
 		cv::Rect myROI(xn, yn, 112-2*xn-2, 112-2*yn-1);
+		//resizedImg = alignFace(resizedImg, myROI);
 		resizedImg = resizedImg(myROI);
-
+		
 		//in case of multiple faces detection in a sigle image let's investigate more
 		if(faces.size() > 1){
-			bool has_eyes = false, has_mouth = false;
-			int faceRate = 0;
 
 			//-- In each face, detect eyes
 			eyes_cascade.detectMultiScale( resizedImg, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE , Size(10, 10) );
 			for( size_t j = 0; j < eyes.size(); j++ ){
 				//cout << j << endl;
-				rectangle(resizedImg, eyes[j], CV_RGB(255, 0,0), 2);
+				//rectangle(resizedImg, eyes[j], CV_RGB(255, 0,0), 2);
 				has_eyes = true;
 			}
 
@@ -137,11 +181,11 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 				if(has_eyes){
 					if(abs(eyes[0].y - mouth[k].y) > 20){
 						has_mouth = true;
-						rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
+						//rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
 					}
 				}else{
 					has_mouth = true;
-					rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
+					//rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
 				}
 			}
 
@@ -151,7 +195,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 
 			nose_cascade.detectMultiScale( resizedImg, nose, 1.1, 2, 0, Size(20, 20) );
 			for( size_t l = 0; l < nose.size(); l++ ){
-				rectangle(resizedImg, nose[l], CV_RGB(255, 0,0), 3);
+				//rectangle(resizedImg, nose[l], CV_RGB(255, 0,0), 3);
 				faceRate+=50;
 			}
 
@@ -171,6 +215,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 		}
 	}
 
+	bool has_tie = false;
 	if(ties.size() > 0){
 		for(size_t t=0; t < ties.size(); t++){
 			if(tiesRate[t] == maxFaceRate){
@@ -178,13 +223,14 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 				stringstream ss;
 				ss << dir<<"\\"<<"VERIFY_"<<t << name;
 				cout << ss.str()<< endl;
+				outputfileVerify <<"\t VERIFY -> \t" <<name << ";" << label <<endl;
+				has_tie = true;
 
 				if(apply_mask){
 					imwrite(ss.str(), applyMask(maskImg, resizedImg));
 				}else{
 					imwrite(ss.str(), resizedImg);
 				}
-				outputfileVerify << dir+"\\"+name <<endl;
 			}//else just ignore that tie because a bigger match was found
 		}
 	}
@@ -196,6 +242,10 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 			imwrite(dir+"\\"+name, applyMask(maskImg, resizedImg));
 		}else{
 			imwrite(dir+"\\"+name, resizedImg);
+		}
+		if(!has_tie){
+			outputfileClean <<name << ";" << label <<endl;
+			outputfileVerify <<name << ";" << label <<endl;
 		}
 	}
 
