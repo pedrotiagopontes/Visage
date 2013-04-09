@@ -58,10 +58,11 @@ Mat FaceDetector::applyMask(Mat maskImg, Mat image){
 
 Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
 	Mat processedImg = original;
-
 	if(normalize_hist){
-		equalizeHist( original, processedImg);
-		original = processedImg;
+		Mat normalizedImg;
+		normalize(original, normalizedImg, 0, 255, NORM_MINMAX);
+		//equalizeHist( original, normalizedImg);
+		processedImg = original = normalizedImg; // to force filters to be aplied in normalized img
 	}
 
 	if(filter > 0){

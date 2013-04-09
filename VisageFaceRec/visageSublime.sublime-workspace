@@ -51,7 +51,7 @@
 			"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 13344,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "results/bilateral_10_10_v4-R-FISHER.txt",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 13317,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,15 +67,15 @@
 			"file": "results/bilateral_10_10_v4-R-LBPH.txt",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 13322,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "data/testeDIR - Cópia.txt",
+			"file": "data/Originais/lfw_20_20.txt",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 54723,
 				"line_ending": "Windows"
 			}
 		}
@@ -104,6 +104,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR - Cópia.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeDir/cleanList.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeDir/withVerify.txt",
 		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_mainwindow.cpp",
 		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_glview.cpp",
 		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/qrc_resources.cpp",
@@ -228,10 +231,7 @@
 		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/thumbnails.html",
 		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/stalkbuttons.html",
 		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/target.html",
-		"/C/Users/Pedro/Documents/GitHub/obli Paralax/background.html",
-		"/D/README.HTM",
-		"/C/Users/Pedro/Documents/GitHub/obli Paralax/paper/paper/readme.txt",
-		"/C/Users/Pedro/Documents/GitHub/libfacerec/include/facerec.hpp"
+		"/C/Users/Pedro/Documents/GitHub/obli Paralax/background.html"
 	],
 	"find":
 	{
@@ -384,7 +384,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -392,7 +392,7 @@
 					"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 13344,
 						"regions":
 						{
 						},
@@ -420,7 +420,7 @@
 					"file": "results/bilateral_10_10_v4-R-FISHER.txt",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 13317,
 						"regions":
 						{
 						},
@@ -448,15 +448,15 @@
 					"file": "results/bilateral_10_10_v4-R-LBPH.txt",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 13322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								285,
+								289
 							]
 						],
 						"settings":
@@ -473,18 +473,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "data/testeDIR - Cópia.txt",
+					"file": "data/Originais/lfw_20_20.txt",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 54723,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								42,
+								42
 							]
 						],
 						"settings":
