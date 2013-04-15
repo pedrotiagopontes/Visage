@@ -1,0 +1,45 @@
+\select@language {portuges}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Estrutura do Relat\IeC {\'o}rio}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}Reconhecimento Facial em Imagens}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Evolu\IeC {\c c}\IeC {\~a}o}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Defini\IeC {\c c}\IeC {\~a}o do Problema}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Sub-Problemas}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Desafios}{8}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}\IeC {\'A}reas de Aplica\IeC {\c c}\IeC {\~a}o}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Controlo de Acesso e Seguran\IeC {\c c}a de Informa\IeC {\c c}\IeC {\~a}o}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Cart\IeC {\~o}es Inteligentes e Identifica\IeC {\c c}\IeC {\~a}o de Faces}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Entretenimento}{11}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Gest\IeC {\~a}o de Conte\IeC {\'u}dos Multim\IeC {\'e}dia e Bases de Dados}{11}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Seguran\IeC {\c c}a e Aplica\IeC {\c c}\IeC {\~a}o da Lei}{12}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Estrat\IeC {\'e}gias de Reconhecimento Facial}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Solu\IeC {\c c}\IeC {\~o}es Existentes}{15}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}An\IeC {\'a}lises de Desempenho Efetuadas}{16}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}FERET}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}FRVT}{18}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Estiliza\IeC {\c c}\IeC {\~a}o Art\IeC {\'\i }stica de Imagens}{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Filtro Bilateral}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Kuwahara}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\textit {Diffusion Shock Filter}}{25}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Filtros Morfol\IeC {\'o}gicos}{26}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}T\IeC {\'e}cnicas \textit {Gradient Domain}}{26}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Trabalho Relacionado}{26}{section.3.3}
+\contentsline {chapter}{\numberline {4}Perspectiva de Solu\IeC {\c c}\IeC {\~a}o}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Implementa\IeC {\c c}\IeC {\~a}o}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{29}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{32}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Cole\IeC {\c c}\IeC {\~o}es de dados}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\textit {Labeled Faces in the Wild}}{33}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sapo Fama}{33}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Avalia\IeC {\c c}\IeC {\~a}o Desempenho}{34}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Identifica\IeC {\c c}\IeC {\~a}o}{36}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Verifica\IeC {\c c}\IeC {\~a}o}{36}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Resultados Esperados}{38}{section.4.5}
+\contentsline {section}{\numberline {4.6}Plano de Trabalho}{39}{section.4.6}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{40}{chapter.5}
+\contentsline {chapter}{Refer\^{e}ncias}{42}{section*.25}

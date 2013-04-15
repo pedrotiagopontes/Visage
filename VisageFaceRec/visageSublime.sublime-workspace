@@ -48,34 +48,34 @@
 	"buffers":
 	[
 		{
-			"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
+			"file": "/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
 			"settings":
 			{
-				"buffer_size": 13344,
+				"buffer_size": 55017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/testeDIR.txt",
+			"settings":
+			{
+				"buffer_size": 10172,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "results/bilateral_10_10_v4-R-FISHER.txt",
+			"file": "results/bilateral_10_10_v4-R-EIGEN.txt",
 			"settings":
 			{
-				"buffer_size": 13317,
+				"buffer_size": 13319,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "results/bilateral_10_10_v4-R-LBPH.txt",
+			"file": "/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
 			"settings":
 			{
-				"buffer_size": 13322,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/Originais/lfw_20_20.txt",
-			"settings":
-			{
-				"buffer_size": 54723,
+				"buffer_size": 40,
 				"line_ending": "Windows"
 			}
 		}
@@ -104,7 +104,14 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Desktop/ilustracao_obli/ilustracao_obli/memoria/mem.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/credencias.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR - Cópia.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/helpers/haarcascade_frontalface_alt.xml",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_masked_10_10_v4-R-EIGEN.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeDir/cleanList.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeDir/withVerify.txt",
 		"/C/Users/Pedro/Desktop/jan kyprianidis/jkyprian batch v2/release/moc_mainwindow.cpp",
@@ -118,10 +125,7 @@
 		"/C/xampp/htdocs/gsm/wp-settings.php",
 		"/C/Users/Pedro/Desktop/127.0.0.1.sql",
 		"/C/Users/Pedro/Desktop/gsm.sql",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_masked_10_10_v4-R-EIGEN.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/cropped_normalized_10_50.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-LBPH.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-FISHER.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeGaussian.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/cropped_normalized_10_10_v4.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/bilateral_10_10_v4.txt",
@@ -227,11 +231,7 @@
 		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/css/style.css",
 		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/index.html",
 		"/C/Users/Pedro/Documents/GitHub/jparallax/index.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/remotecontrol.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/thumbnails.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/stalkbuttons.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/target.html",
-		"/C/Users/Pedro/Documents/GitHub/obli Paralax/background.html"
+		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/remotecontrol.html"
 	],
 	"find":
 	{
@@ -389,38 +389,38 @@
 			[
 				{
 					"buffer": 0,
-					"file": "results/cropped_masked_10_10_v4-R-EIGEN.txt",
+					"file": "/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
 					"settings":
 					{
-						"buffer_size": 13344,
+						"buffer_size": 55017,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								37901,
+								37904
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 11081.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "results/bilateral_10_10_v4-R-FISHER.txt",
+					"file": "data/testeDIR.txt",
 					"settings":
 					{
-						"buffer_size": 13317,
+						"buffer_size": 10172,
 						"regions":
 						{
 						},
@@ -433,9 +433,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -445,18 +443,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "results/bilateral_10_10_v4-R-LBPH.txt",
+					"file": "results/bilateral_10_10_v4-R-EIGEN.txt",
 					"settings":
 					{
-						"buffer_size": 13322,
+						"buffer_size": 13319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								285,
-								289
+								313,
+								313
 							]
 						],
 						"settings":
@@ -473,18 +471,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "data/Originais/lfw_20_20.txt",
+					"file": "/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
 					"settings":
 					{
-						"buffer_size": 54723,
+						"buffer_size": 40,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
+								40,
+								40
 							]
 						],
 						"settings":

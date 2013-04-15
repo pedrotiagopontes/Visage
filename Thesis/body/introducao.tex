@@ -1,0 +1,34 @@
+\chapter{Introdução} \label{chap:intro}
+
+A sociedade atual caracteriza-se pelo constante fluxo de informação a que os seus indivíduos estão expostos, assistindo-se a um crescimento acelerado na produção de conteúdos multimédia, principalmente tendo em conta os meios de transmissão de informação digital \citep{IntelCorporation}. O aparecimento de novas formas de comunicação, como por exemplo as redes sociais, e uso de um maior leque de dispositivos para a produção de conteúdos como por exemplo \textit{smarphones} e \textit{tablets}, intensificou ainda mais este crescimento, contribuindo também para o surgimento de conteúdos cada vez mais personalizados e variados. Neste contexto, torna-se importante o desenvolvimento de novas metodologias que possibilitem a categorização, organização e posterior pesquisa por porte dos utilizadores destes conteúdos, representando o reconhecimento facial automático em imagens um papel importante a esse nível.
+
+O reconhecimento facial é um componente importante da capacidade de perceção humana, sendo efetuado de uma forma rotineira e quase sem esforço por parte dos seres humanos. Contudo, a construção de sistemas computacionais capazes de efetuar este tipo de reconhecimento de uma forma semelhante aos humanos é ainda uma área de investigação em aberto \citep{Li2011}. Este é um problema de tal forma desafiante e interessante que tem despertado a atenção de investigadores das mais diversas áreas, ao longo dos últimos 40 anos, tais como: psicologia, reconhecimento de padrões, redes neuronais, visão por computador e computação gráfica \citep{Zhao2003}.
+
+Por outro lado, a abstração de imagens dota os artistas de novas ferramentas de transmissão de informação, tendo como objetivo, melhorar eficácia da comunicação visual. Os filtros de abstração permitem remover informação não essencial de uma imagem, dando apenas destaque à mensagem a transmitir. 
+
+No âmbito desta dissertação, é levantada a seguinte hipótese: O uso de abstração em imagens que vão ser posteriormente alvo de reconhecimento facial, pode melhorar o processo de reconhecimento. Este impacto deverá ser analisado do ponto de vista da eficácia do reconhecimento, mas também ao nível das necessidades de processamento e armazenamento das coleções de dados a reconhecer.
+
+\section{Motivação} \label{sec:motivation}
+O reconhecimento facial automático em imagens é uma área de investigação em aberto, principalmente quando considerados ambientes onde onde as condições de captura de imagens não são controladas, uma situação muito comum na grande maioria das bibliotecas de imagens existentes. Nessas situações, as grandes variações existentes ao nível da iluminação, pose e expressão dos indivíduos propõem grandes desafios à tarefa de reconhecimento facial automático para os quais existe ainda a necessidade de evoluir as soluções existentes.
+
+A pesquisa ao nível do reconhecimento facial é motivada não só pelos desafios inerentes ao processo de reconhecimento facial, mas também, pelas inúmeras aplicações onde a identificação de indivíduos é necessária \citep{Li2011}. A esse nível, a evolução tecnológica registada nos últimos vinte anos culminou com o surgimento de uma panóplia de dispositivos e áreas onde se verifica um aumento do interesse na aplicação desta tecnologia, desde a mais tradicional segurança e controlo de informação, a áreas como o entretenimento ou a gestão de conteúdos multimédia e bases de dados. Ao nível dos dispositivos, o surgimento de novas plataformas, e o aumento da capacidade de computação das já existentes, torna possível a aplicação destes sistemas, não só em máquinas dedicadas para o efeito, mas  também em computadores pessoais ou mesmo em dispositivos móveis como \textit{smartphones} ou \textit{tablets}.
+
+Por outro lado, o elevado valor comercial associado aos sistemas de reconhecimento facial existentes, tem como  consequência a existência de um número reduzido de soluções abertas, fazendo com que os resultados eventualmente obtidos no âmbito desta dissertação possam ter uma boa visibilidade.
+
+Finalmente, a aplicação de filtros de abstração de imagens para a ilustração automática de texto demonstrou melhorias ao  nível da informação retornada, assim como, na redução significativa das necessidades de processamento e armazenamento necessárias \citep{Coelho:2012:IAC:2260641.2260676}, tornando-se assim pertinente o estudo do impacto dos filtros de abstração no processo de reconhecimento facial no âmbito desta dissertação.
+
+\section{Objetivos} \label{sec:objetivosintro}
+O principal objetivo deste projeto visa o estudo do impacto de filtros de abstração visual de informação no processo de reconhecimento facial automático em imagens. Para isso, destacam-se o seguinte conjunto de objetivos parciais:
+
+\begin{enumerate}
+\item Desenvolvimento de um sistema de reconhecimento facial de personalidades;
+\item Integração da abstração de imagens no sistema desenvolvido;
+\item Avaliação dos resultados da abstração de imagens no processo de reconhecimento facial;
+\end{enumerate}
+
+O sistema desenvolvido deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.
+
+Da avaliação efetuada, para além da publicação desta dissertação, espera-se ainda a publicação de um artigo científico onde sejam descritos os resultados obtidos.
+
+\section{Estrutura do Relatório} \label{sec:struct}
+Este relatório encontra-se dividido em quatro capítulos. Após uma breve introdução, é efetuada, no segundo capítulo, uma revisão do problema de reconhecimento facial automático em imagens, analisando os desafios existentes, as suas diversas áreas de aplicação e as estratégias adotadas para os sistemas atualmente existentes. No terceiro capítulo deste relatório, é abordado o tema da abstração de imagens, ilustrando as soluções existentes, assim como o trabalho relacionado com esta dissertação efetuado com  recurso à abstração de imagens. Por último, no quarto capítulo, é apresentada a perspetiva de solução a desenvolver, nomeadamente os detalhes da sua implementação, a forma como temos em vista analisar o desempenho do sistema e o plano de trabalho previsto.
