@@ -183,7 +183,9 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		vector<string> images = people[i].getTestImages();
 		string imageDir = people[i].getImageDir();
 		string personName = people[i].getName();
-		
+		vector<int> rightPredictionsPerson;
+		rightPredictionsPerson.resize(n, 0);
+
 		outputfile << people[i].getName() << "  " << people[i].getTrainImages().size() << " | " << 
 			people[i].getTestImages().size() << endl;
 
@@ -204,6 +206,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 					if (people[i].getLabel() == labels[j]){
 						outputfile << setw(8) << "-" << setw(10) << confs[j] << " | ";
 						rightPredictions[j]++;
+						rightPredictionsPerson[j]++;
 					}else{
 						outputfile << setw(8) << labels[j] << setw(10) << confs[j] << " | ";
 					}
@@ -214,9 +217,20 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 			}else{
 				cout << "ERROR loading test " << images[k] << endl;
 				outputfile << endl;
-			}
+			}//end of image testing
+		}//end of person images testing
+		int totalRight = 0;
+		double totalPercentage = 0;
+		outputfile << setw(46) << "Person Totals | ";
+		for(size_t j = 0; j < n; j++){
+			double percentage = (double)rightPredictionsPerson[j]/(double)images.size() * 100.0;
+			totalRight += rightPredictionsPerson[j];
+			totalPercentage += percentage;
+			outputfile << "+"<<setw(3) << percentage <<"% +"<<setw(2)<<rightPredictionsPerson[j] <<":" <<setw(4) << totalPercentage << "%"<<setw(3) << totalRight << " | ";
 		}
-	}
+		outputfile << endl;
+
+	}//end of all the people testing
 	outputfile << endl;
 
 	outputfile << "Tested " << nImages <<"images in " << timespent(tStart) << " seconds" << endl;

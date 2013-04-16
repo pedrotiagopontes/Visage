@@ -10,11 +10,11 @@
       <AdditionalIncludeDirectories>$(OPENCV_BUILD)\include\opencv2;$(OPENCV_BUILD)\include\opencv;$(OPENCV_BUILD)\include;libfacerec\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>libfacerec;$(OPENCV_BUILD)\x86\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libfacerec\x86\Debug;$(OPENCV_BUILD)\x86\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_core245d.lib;opencv_imgproc245d.lib;opencv_highgui245d.lib;opencv_ml245d.lib;opencv_video245d.lib;opencv_features2d245d.lib;opencv_calib3d245d.lib;opencv_contrib245d.lib;opencv_objdetect245d.lib;libfacerec.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup />

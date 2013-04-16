@@ -78,6 +78,22 @@
 				"buffer_size": 40,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "Debug/porpessoa.txt",
+			"settings":
+			{
+				"buffer_size": 11167,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
+			"settings":
+			{
+				"buffer_size": 120,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -104,6 +120,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/.gitignore",
 		"/C/Users/Pedro/Desktop/ilustracao_obli/ilustracao_obli/memoria/mem.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/credencias.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR - Cópia.txt",
@@ -230,8 +247,7 @@
 		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/index.html",
 		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/css/style.css",
 		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/index.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/index.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/remotecontrol.html"
+		"/C/Users/Pedro/Documents/GitHub/jparallax/index.html"
 	],
 	"find":
 	{
@@ -384,7 +400,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -427,8 +443,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								10172,
+								10172
 							]
 						],
 						"settings":
@@ -436,7 +452,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 130.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -453,8 +469,8 @@
 						"selection":
 						[
 							[
-								313,
-								313
+								13074,
+								13083
 							]
 						],
 						"settings":
@@ -464,7 +480,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2274.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -483,6 +499,60 @@
 							[
 								40,
 								40
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Debug/porpessoa.txt",
+					"settings":
+					{
+						"buffer_size": 11167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								802,
+								802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 319.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
 							]
 						],
 						"settings":
@@ -554,6 +624,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
+	"side_bar_width": 116.0,
 	"status_bar_visible": true
 }

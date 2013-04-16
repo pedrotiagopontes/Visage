@@ -1,4 +1,4 @@
-C:\Users\Pedro\Pictures\lfw\lfw\
+C:\Users\Pedro\Pictures\lfw\lfw_aligned_BW\
 Abdullah_Gul\Abdullah_Gul_0008.jpg;17
 Abdullah_Gul\Abdullah_Gul_0003.jpg;17
 Abdullah_Gul\Abdullah_Gul_0002.jpg;17

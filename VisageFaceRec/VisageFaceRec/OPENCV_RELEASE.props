@@ -8,7 +8,7 @@
       <AdditionalIncludeDirectories>$(OPENCV_BUILD)\include\opencv2;$(OPENCV_BUILD)\include\opencv;$(OPENCV_BUILD)\include;..\libfacerec\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\libfacerec\Release;$(OPENCV_BUILD)\x86\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\libfacerec\x86\Release;$(OPENCV_BUILD)\x86\vc10\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_core245.lib;opencv_imgproc245.lib;opencv_highgui245.lib;opencv_ml245.lib;opencv_video245.lib;opencv_features2d245.lib;opencv_calib3d245.lib;opencv_contrib245.lib;opencv_objdetect245.lib;libfacerec.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
