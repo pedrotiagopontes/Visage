@@ -168,7 +168,9 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n){
 
 	vector<int> rightPredictions;
+	vector<double> avgPredictions;
 	rightPredictions.resize(n, 0);
+	avgPredictions.resize(n, 0.0);
 	int nImages= 0;
 
 	clock_t tStart = clock();
@@ -185,6 +187,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		string personName = people[i].getName();
 		vector<int> rightPredictionsPerson;
 		rightPredictionsPerson.resize(n, 0);
+		int imagesTested = 0;
 
 		outputfile << people[i].getName() << "  " << people[i].getTrainImages().size() << " | " << 
 			people[i].getTestImages().size() << endl;
@@ -213,6 +216,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 				}
 				outputfile << endl;
 				nImages++;
+				imagesTested++;
 				
 			}else{
 				cout << "ERROR loading test " << images[k] << endl;
@@ -221,28 +225,55 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		}//end of person images testing
 		int totalRight = 0;
 		double totalPercentage = 0;
-		outputfile << setw(46) << "Person Totals | ";
+		outputfile << setw(46) << "Total [level : accumu..] | ";
+		outputfile.precision(1);
 		for(size_t j = 0; j < n; j++){
-			double percentage = (double)rightPredictionsPerson[j]/(double)images.size() * 100.0;
+			double percentage = (double)rightPredictionsPerson[j]/(double)imagesTested * 100.0;
 			totalRight += rightPredictionsPerson[j];
 			totalPercentage += percentage;
-			outputfile << "+"<<setw(3) << percentage <<"% +"<<setw(2)<<rightPredictionsPerson[j] <<":" <<setw(4) << totalPercentage << "%"<<setw(3) << totalRight << " | ";
+
+			avgPredictions[j]+=percentage;
+			if(rightPredictionsPerson[j] > 0){
+				outputfile <<setw(3) << fixed << percentage <<"%("<<setw(2)<<rightPredictionsPerson[j] <<")";
+			}else{
+				outputfile <<setw(9) << " ";
+			}
+			outputfile <<":" <<setw(4) << fixed << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
+
 		}
 		outputfile << endl;
 
 	}//end of all the people testing
 	outputfile << endl;
 
-	outputfile << "Tested " << nImages <<"images in " << timespent(tStart) << " seconds" << endl;
-	int totalRight = 0;
 	double totalPercentage = 0;
+	outputfile <<string(21*n+46, '=') << endl;
+		outputfile << setw(46) << " AVG per Person | ";
+	totalPercentage = 0;
+	outputfile.precision(2);
+	for(size_t j = 0; j < n; j++){
+		double percentage = (double)avgPredictions[j]/(double)people.size();
+		totalPercentage += percentage;
+		outputfile <<setw(6) << fixed << percentage <<"%   ";
+		outputfile <<":" <<setw(5) << fixed << totalPercentage << "%  | ";
+	}
+	outputfile << endl;
+	outputfile <<string(21*n+46, '=') << endl;
+
+	outputfile.precision(0);
+	outputfile << setw(46) << " TOTAL (FLAT) | ";
+	int totalRight = 0;
+	totalPercentage = 0;
 	for(size_t j = 0; j < n; j++){
 		double percentage = (double)rightPredictions[j]/(double)nImages * 100.0;
 		totalRight += rightPredictions[j];
 		totalPercentage += percentage;
-
-		outputfile << "Right predictions in level "<< j+1 << ": " << rightPredictions[j] << ", " << percentage << "%  | totals: "<< totalRight << ", " << totalPercentage << "%"  << endl;
+		outputfile <<setw(3) << percentage <<"% ("<<setw(2)<<rightPredictions[j] <<")";
+		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
 	}
+	outputfile << endl;
+	outputfile <<string(21*n+46, '=') << endl;
+	outputfile << "Tested " << nImages <<" images in " << timespent(tStart) << " seconds" << endl;
 
 	return rightPredictions.size();
 }

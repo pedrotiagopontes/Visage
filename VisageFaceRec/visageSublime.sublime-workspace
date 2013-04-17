@@ -83,15 +83,15 @@
 			"file": "Debug/porpessoa.txt",
 			"settings":
 			{
-				"buffer_size": 11167,
+				"buffer_size": 7408,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
+			"file": "data/lfw_aligned_masked_10_50.txt",
 			"settings":
 			{
-				"buffer_size": 120,
+				"buffer_size": 5403,
 				"line_ending": "Windows"
 			}
 		}
@@ -120,6 +120,13 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw_10_10.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_10.txt",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/libfacerec/OPENCV_DEBUG.props",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/justForFun",
+		"/C/Users/Pedro/Documents/GitHub/libfacerec/libfacerec/Debug/at.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/.gitignore",
 		"/C/Users/Pedro/Desktop/ilustracao_obli/ilustracao_obli/memoria/mem.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/credencias.txt",
@@ -240,14 +247,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-50Fisher.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-10Fisher.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnL.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnE.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topn.txt",
-		"/C/Users/Pedro/Documents/pedrotiagopontes.com/css/style.css",
-		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/index.html",
-		"/C/Users/Pedro/Documents/GitHub/Parallax-Scrolling/css/style.css",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/demos/index.html",
-		"/C/Users/Pedro/Documents/GitHub/jparallax/index.html"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnL.txt"
 	],
 	"find":
 	{
@@ -400,7 +400,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -516,15 +516,15 @@
 					"file": "Debug/porpessoa.txt",
 					"settings":
 					{
-						"buffer_size": 11167,
+						"buffer_size": 7408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								802,
-								802
+								6308,
+								6310
 							]
 						],
 						"settings":
@@ -534,25 +534,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 319.0,
+						"translation.y": 302.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
+					"file": "data/lfw_aligned_masked_10_50.txt",
 					"settings":
 					{
-						"buffer_size": 120,
+						"buffer_size": 5403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								103,
-								103
+								5403,
+								5403
 							]
 						],
 						"settings":
@@ -560,7 +560,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1665.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -624,6 +624,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 116.0,
+	"side_bar_width": 308.0,
 	"status_bar_visible": true
 }
