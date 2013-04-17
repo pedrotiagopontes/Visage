@@ -59,7 +59,8 @@ void testLibraryN(string path, int percetageTrainned, ofstream& outputfile, int 
 	FaceModel model(m, myLib.people);
 	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
-	model.testModelNPredictions(myLib.people, outputfile, n);
+	//model.testModelNPredictions(myLib.people, outputfile, n);
+	model.testModelPrecision(myLib.people, outputfile, n);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 
 };

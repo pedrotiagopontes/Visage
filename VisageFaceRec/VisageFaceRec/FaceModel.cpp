@@ -58,7 +58,12 @@ FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int
 	loadImagesFromPeople(people);
 
 	model->train(this->trainnedImages, this->trainnedLabels);
-	
+
+}
+
+string FaceModel::getName()
+{
+	return this->name;
 }
 
 void FaceModel::loadImagesFromPeople(vector<Person> people)
@@ -92,7 +97,7 @@ int FaceModel::identityImage(Mat image)
 void FaceModel::identityImage(Mat image, int& label, double& confidence)
 {
 	this->model->predict(image, label, confidence);
-    
+
 }
 
 void FaceModel::identityImage(Mat image, size_t n, vector<int> &labels, vector<double> &confidences)
@@ -102,7 +107,7 @@ void FaceModel::identityImage(Mat image, size_t n, vector<int> &labels, vector<d
 
 bool FaceModel::isSamePerson(int labelOriginal, Mat image, int& predictedLabel, double& confidence){
 	identityImage(image, predictedLabel, confidence);
-	
+
 	return ((predictedLabel == labelOriginal) ? true : false);
 }
 
@@ -123,7 +128,7 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 		vector<string> images = people[i].getTestImages();
 		string imageDir = people[i].getImageDir();
 		string personName = people[i].getName();
-		
+
 		outputfile << people[i].getName() << "  " << people[i].getTrainImages().size() << " | " << 
 			people[i].getTestImages().size() << endl;
 
@@ -147,7 +152,7 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 				//resultsLabels.push_back(label);
 				//resultsConfidence.push_back(confidence);
 				nImages++;
-				
+
 			}else{
 				cout << "ERROR loading test " << images[k] << endl;
 				outputfile << endl;
@@ -166,6 +171,9 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 }
 
 int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n){
+
+	ofstream csvFile;
+	csvFile.open("output.csv");
 
 	vector<int> rightPredictions;
 	vector<double> avgPredictions;
@@ -217,12 +225,14 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 				outputfile << endl;
 				nImages++;
 				imagesTested++;
-				
+
 			}else{
 				cout << "ERROR loading test " << images[k] << endl;
 				outputfile << endl;
 			}//end of image testing
 		}//end of person images testing
+
+		//OUTPUT PERSON AVG
 		int totalRight = 0;
 		double totalPercentage = 0;
 		outputfile << setw(45) << "Total [level : accumu..] |";
@@ -250,6 +260,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	outputfile <<string(21*n+46, '=') << endl;
 	stringstream ss;
 	ss <<  " AVG per Person("<<people.size()<<" people) | ";
+	csvFile << "--AVG per Person--" << endl;
 	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	outputfile.precision(2);
@@ -258,9 +269,13 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		totalPercentage += percentage;
 		outputfile <<setw(6) << fixed << percentage <<"%   ";
 		outputfile <<":" <<setw(6) << fixed << totalPercentage << "% | ";
+		csvFile << totalPercentage << ";";
 	}
 	outputfile << endl;
+	csvFile << endl;
 	outputfile <<string(21*n+46, '=') << endl;
+
+	csvFile << "--TOTAL FLAT--" << endl;
 
 	outputfile.precision(0);
 	ss.str("");
@@ -274,8 +289,10 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		totalPercentage += percentage;
 		outputfile <<setw(3) << percentage <<"% ("<<setw(2)<<rightPredictions[j] <<")";
 		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
+		csvFile << totalPercentage << ";";
 	}
 	outputfile << endl;
+	csvFile << endl;
 	outputfile <<string(21*n+46, '=') << endl;
 
 	outputfile.precision(4);
@@ -284,7 +301,109 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	return rightPredictions.size();
 }
 
-string FaceModel::getName()
-{
-	return this->name;
+
+void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, size_t threshold){
+
+	vector<int> rightPredictions;
+	double avgPredictions = 0.0;
+	double avgTimes = 0.0;
+	rightPredictions.resize(threshold, 0);
+	int nImages= 0;
+
+	clock_t tStart = clock();
+	outputfile << endl;
+	outputfile << setw(35) << "Image" << setw(8) << "Label" << " | ";
+	outputfile << setw(10) << "Precision"<< " | " << setw(5) << "Level"<< " | " << setw(5) << "Time" << " | ";
+	outputfile << endl;
+
+	for(unsigned int i=0; i<people.size(); i++){
+		vector<string> images = people[i].getTestImages();
+		string imageDir = people[i].getImageDir();
+		string personName = people[i].getName();
+		double precisionRightPredictions = 0.0;
+		double times = 0.0;
+		int imagesTested = 0;
+
+		outputfile << people[i].getName() << "  " << people[i].getTrainImages().size() << " | " << 
+			people[i].getTestImages().size() << endl;
+
+		for(unsigned int k=0; k<images.size(); k++){
+			clock_t imageStartTime = clock();
+			int label = -1;
+			double confidence = -1.0;
+			Mat image = imread(imageDir+personName+"\\"+images[k], CV_LOAD_IMAGE_GRAYSCALE);
+
+			//ensure that image was loaded
+			if(image.rows > 0){
+				outputfile << setw(35) << images[k] << setw(8) << people[i].getLabel() << " | ";
+
+				vector<int> labels;
+				vector<double> confs;
+				bool foundMatch = false;
+				identityImage(image, threshold, labels, confs);
+				for(size_t j = 0, counter= 1; j < threshold && j < labels.size(); j++, counter++){
+					if (people[i].getLabel() == labels[j]){
+						double precision =(1/(double)counter) * 100;
+						double timeImage = timespent(imageStartTime);
+						outputfile << setw(9) <<precision<< "% | " << setw(5) << counter<<  " | "<< setw(10) << timeImage << " | ";
+						rightPredictions[j]++;
+						precisionRightPredictions+=precision;
+						times+=timeImage;
+						foundMatch = true;
+						break;
+					}
+				}
+
+				if(!foundMatch){
+					outputfile << setw(9) <<0<< "% | " << setw(5) << "INF"<<  " | "<< setw(10) << "INF" << " | ";
+				}
+				outputfile << endl;
+				nImages++;
+				imagesTested++;
+
+			}else{
+				cout << "ERROR loading test " << images[k] << endl;
+				outputfile << endl;
+			}//end of image testing
+		}//end of person images testing
+		outputfile << setw(45) << "AVG per Person |";
+		precisionRightPredictions /= imagesTested;
+		avgPredictions += precisionRightPredictions;
+		times /= imagesTested;
+		avgTimes += times;
+		outputfile << setw(10) << precisionRightPredictions << "% | "<<setw(18)<< times << " | " << endl;
+
+	}//end of all the people testing
+	outputfile << endl;
+
+	double totalPercentage = 0;
+	outputfile <<string(21*threshold+46, '=') << endl;
+	stringstream ss;
+	ss <<  " AVG per Person("<<people.size()<<" people) | ";
+	outputfile << setw(46) <<ss.str();
+	totalPercentage = 0;
+	avgPredictions /= people.size();
+	avgTimes /= people.size();
+	outputfile << setw(9) << avgPredictions << "% | "<<setw(18)<< avgTimes << " | " << endl;
+	outputfile << endl;
+	outputfile <<string(21*threshold+46, '=') << endl;
+
+	ss.str("");
+	ss << " TOTAL (FLAT-"<<nImages<<" images) | ";
+	outputfile << setw(46) << ss.str();
+	int totalRight = 0;
+	totalPercentage = 0;
+	for(size_t j = 0; j < threshold; j++){
+		double percentage = (double)rightPredictions[j]/(double)nImages * 100.0;
+		totalRight += rightPredictions[j];
+		totalPercentage += percentage;
+		outputfile <<setw(3) << percentage <<"% ("<<setw(2)<<rightPredictions[j] <<")";
+		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
+	}
+	outputfile << endl;
+	outputfile <<string(21*threshold+46, '=') << endl;
+
+	outputfile.precision(4);
+	outputfile << "Tested " << nImages <<" images in " << timespent(tStart) << " seconds" << endl;
+
 }

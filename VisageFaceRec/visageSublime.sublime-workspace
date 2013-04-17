@@ -83,7 +83,7 @@
 			"file": "Debug/porpessoa.txt",
 			"settings":
 			{
-				"buffer_size": 7408,
+				"buffer_size": 10277,
 				"line_ending": "Windows"
 			}
 		},
@@ -91,7 +91,7 @@
 			"file": "data/lfw_aligned_masked_10_50.txt",
 			"settings":
 			{
-				"buffer_size": 5403,
+				"buffer_size": 17511,
 				"line_ending": "Windows"
 			}
 		}
@@ -120,6 +120,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/output.csv",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/haarcascade_eye_tree_eyeglasses.xml",
+		"/C/Users/Pedro/Downloads/Whole Tomato Visual Assist X v10.7.1925.0 With Patch (A.Q)/Whole Tomato Visual Assist X v10.7.1925.0 With Patch (A.Q)/Installation Notes.txt",
 		"/C/Users/Pedro/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Pedro/Documents/GitHub/libfacerec/.gitignore",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw_10_10.txt",
@@ -244,10 +247,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50-R_LBPH.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_LBPH.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_fisher.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-50Fisher.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-10Fisher.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/topnL.txt"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-50Fisher.txt"
 	],
 	"find":
 	{
@@ -516,15 +516,15 @@
 					"file": "Debug/porpessoa.txt",
 					"settings":
 					{
-						"buffer_size": 7408,
+						"buffer_size": 10277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6308,
-								6310
+								659,
+								661
 							]
 						],
 						"settings":
@@ -534,7 +534,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 302.0,
+						"translation.y": 1532.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -544,15 +544,15 @@
 					"file": "data/lfw_aligned_masked_10_50.txt",
 					"settings":
 					{
-						"buffer_size": 5403,
+						"buffer_size": 17511,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5403,
-								5403
+								499,
+								499
 							]
 						],
 						"settings":
@@ -560,7 +560,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1665.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -624,6 +624,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 308.0,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true
 }

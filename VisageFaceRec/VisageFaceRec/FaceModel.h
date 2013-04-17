@@ -53,6 +53,8 @@ public:
 	*/
 	int testModel(vector<Person> people, ofstream& outputfile);
 
-	int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n);
+	int testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n);
+
+	void testModelPrecision(vector<Person> people, ofstream& outputfile, size_t threshold);
 };
 
