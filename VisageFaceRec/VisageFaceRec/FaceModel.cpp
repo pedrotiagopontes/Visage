@@ -225,7 +225,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		}//end of person images testing
 		int totalRight = 0;
 		double totalPercentage = 0;
-		outputfile << setw(46) << "Total [level : accumu..] | ";
+		outputfile << setw(45) << "Total [level : accumu..] |";
 		outputfile.precision(1);
 		for(size_t j = 0; j < n; j++){
 			double percentage = (double)rightPredictionsPerson[j]/(double)imagesTested * 100.0;
@@ -234,11 +234,11 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 
 			avgPredictions[j]+=percentage;
 			if(rightPredictionsPerson[j] > 0){
-				outputfile <<setw(3) << fixed << percentage <<"%("<<setw(2)<<rightPredictionsPerson[j] <<")";
+				outputfile <<setw(5) << fixed << percentage <<"%:"<<setw(2)<<rightPredictionsPerson[j];
 			}else{
 				outputfile <<setw(9) << " ";
 			}
-			outputfile <<":" <<setw(4) << fixed << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
+			outputfile <<" |" <<setw(5) << fixed << totalPercentage << "%:"<<setw(2) << totalRight << "|";
 
 		}
 		outputfile << endl;
@@ -248,20 +248,24 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 
 	double totalPercentage = 0;
 	outputfile <<string(21*n+46, '=') << endl;
-		outputfile << setw(46) << " AVG per Person | ";
+	stringstream ss;
+	ss <<  " AVG per Person("<<people.size()<<" people) | ";
+	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	outputfile.precision(2);
 	for(size_t j = 0; j < n; j++){
 		double percentage = (double)avgPredictions[j]/(double)people.size();
 		totalPercentage += percentage;
 		outputfile <<setw(6) << fixed << percentage <<"%   ";
-		outputfile <<":" <<setw(5) << fixed << totalPercentage << "%  | ";
+		outputfile <<":" <<setw(6) << fixed << totalPercentage << "% | ";
 	}
 	outputfile << endl;
 	outputfile <<string(21*n+46, '=') << endl;
 
 	outputfile.precision(0);
-	outputfile << setw(46) << " TOTAL (FLAT) | ";
+	ss.str("");
+	ss << " TOTAL (FLAT-"<<nImages<<" images) | ";
+	outputfile << setw(46) << ss.str();
 	int totalRight = 0;
 	totalPercentage = 0;
 	for(size_t j = 0; j < n; j++){
@@ -273,6 +277,8 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	}
 	outputfile << endl;
 	outputfile <<string(21*n+46, '=') << endl;
+
+	outputfile.precision(4);
 	outputfile << "Tested " << nImages <<" images in " << timespent(tStart) << " seconds" << endl;
 
 	return rightPredictions.size();
