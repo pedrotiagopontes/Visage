@@ -232,7 +232,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 				stringstream ss;
 				ss << dir<<"\\"<<"VERIFY_"<<t << name;
 				cout << ss.str()<< endl;
-				outputfileVerify <<"\t VERIFY -> \t" <<name << ";" << label <<endl;
+				outputfileVerify <<"\t VERIFY -> \t" << dir<<"\\" <<name << ";" << label <<endl;
 				has_tie = true;
 
 				if(apply_mask){
@@ -253,8 +253,8 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 			imwrite(dir+"\\"+name, resizedImg);
 		}
 		if(!has_tie){
-			outputfileClean <<name << ";" << label <<endl;
-			outputfileVerify <<name << ";" << label <<endl;
+			outputfileClean << dir<<"\\" << name << ";" << label <<endl;
+			outputfileVerify << dir<<"\\" << name << ";" << label <<endl;
 		}
 	}
 
