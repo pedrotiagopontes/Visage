@@ -205,7 +205,7 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	//return faceDetector(argc, argv);
+	return faceDetector(argc, argv);
 
 	/*
 	string path = string(argv[1]);
@@ -219,7 +219,7 @@ int main(int argc, const char *argv[]) {
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
 
 	//return 0;
 }

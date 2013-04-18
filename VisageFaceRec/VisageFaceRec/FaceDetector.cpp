@@ -61,15 +61,15 @@ Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
 	if(normalize_hist){
 		Mat normalizedImg, cla, histo;
 		normalize(original, normalizedImg, 0, 255, NORM_MINMAX);
-		equalizeHist( original, histo);
-		Ptr<CLAHE> cl = createCLAHE(2.0, Size(3,3));
-		cl->apply(original, cla);
+		//equalizeHist( original, histo);
+		//Ptr<CLAHE> cl = createCLAHE(2.0, Size(3,3));
+		//cl->apply(original, cla);
 
-		imshow("original", original);
-		imshow("normalized", normalizedImg);
-		imshow("CLAHE", cla);
-		imshow("histo", histo);
-		waitKey(0);
+		//imshow("original", original);
+		//imshow("normalized", normalizedImg);
+		//imshow("CLAHE", cla);
+		//imshow("histo", histo);
+		//waitKey(0);
 		original = processedImg = normalizedImg; // to force filters to be aplied in normalized img
 	}
 
@@ -111,18 +111,18 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		float angle = atan2(eye_directionY,eye_directionX) * 180.0 / PI;
 
 		// rect is the RotatedRect (I got it from a contour...)
-        RotatedRect rect(Point2f(face.cols/2,face.rows/2), Size2f(face.cols,face.rows), angle);
-        
-        Size rect_size = rect.size;
-        // thanks to http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/
-        if (rect.angle < -45.) {
-            angle += 90.0;
-            swap(rect_size.width, rect_size.height);
-        }
-        // get the rotation matrix
-        M = getRotationMatrix2D(rect.center, angle, 1.0);
-        // perform the affine transformation
-        warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
+		RotatedRect rect(Point2f(face.cols/2,face.rows/2), Size2f(face.cols,face.rows), angle);
+		
+		Size rect_size = rect.size;
+		// thanks to http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/
+		if (rect.angle < -45.) {
+			angle += 90.0;
+			swap(rect_size.width, rect_size.height);
+		}
+		// get the rotation matrix
+		M = getRotationMatrix2D(rect.center, angle, 1.0);
+		// perform the affine transformation
+		warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
 	}
 	return rotated;
 }
