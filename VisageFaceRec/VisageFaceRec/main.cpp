@@ -206,7 +206,7 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	return faceDetector(argc, argv);
+	//return faceDetector(argc, argv);
 
 	/*
 	string path = string(argv[1]);
