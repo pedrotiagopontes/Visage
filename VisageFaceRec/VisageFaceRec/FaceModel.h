@@ -53,8 +53,8 @@ public:
 	*/
 	int testModel(vector<Person> people, ofstream& outputfile);
 
-	int testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n);
+	int testModelNPredictions(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t n);
 
-	void testModelPrecision(vector<Person> people, ofstream& outputfile, size_t threshold);
+	void testModelPrecision(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t threshold);
 };
 

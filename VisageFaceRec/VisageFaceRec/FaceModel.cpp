@@ -170,11 +170,8 @@ int FaceModel::testModel(vector<Person> people, ofstream& outputfile){
 	return rightPredictions;
 }
 
-int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, size_t n){
-
-	ofstream csvFile;
-	csvFile.open("output.csv");
-
+int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t n){
+	
 	vector<int> rightPredictions;
 	vector<double> avgPredictions;
 	rightPredictions.resize(n, 0);
@@ -256,38 +253,56 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	}//end of all the people testing
 	outputfile << endl;
 
+	outputfile << setw(35) << " " << setw(8) << " " << " | ";
+	for(size_t j = 0; j < n; j++){
+		outputfile << setw(2) << j+1 <<"º "<< setw(4) << "Level" << setw(9) << " "<< " | ";
+	}
+	outputfile << endl;
+
 	double totalPercentage = 0;
 	outputfile <<string(21*n+46, '=') << endl;
 	stringstream ss;
-	ss <<  " AVG per Person("<<people.size()<<" people) | ";
-	csvFile << "--AVG per Person--" << endl;
+	ss <<  " RECOGNITION % AVG per Person("<<people.size()<<" people) | ";
 	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	outputfile.precision(2);
+	vector<double> percentages;
 	for(size_t j = 0; j < n; j++){
 		double percentage = (double)avgPredictions[j]/(double)people.size();
-		totalPercentage += percentage;
-		outputfile <<setw(6) << fixed << percentage <<"%   ";
+		percentages.push_back(percentage);
+		csvFile << percentage << ";";
+	}
+	csvFile << endl;
+
+	for(size_t j = 0; j < n; j++){
+		totalPercentage += percentages[j];
+		outputfile <<setw(6) << fixed << percentages[j] <<"%   ";
 		outputfile <<":" <<setw(6) << fixed << totalPercentage << "% | ";
 		csvFile << totalPercentage << ";";
 	}
+
 	outputfile << endl;
 	csvFile << endl;
 	outputfile <<string(21*n+46, '=') << endl;
 
-	csvFile << "--TOTAL FLAT--" << endl;
-
 	outputfile.precision(0);
 	ss.str("");
-	ss << " TOTAL (FLAT-"<<nImages<<" images) | ";
+	ss << " RECOGNITION % FLAT ("<<nImages<<" images) | ";
 	outputfile << setw(46) << ss.str();
 	int totalRight = 0;
 	totalPercentage = 0;
+	vector<double> percentagesFlat;
 	for(size_t j = 0; j < n; j++){
 		double percentage = (double)rightPredictions[j]/(double)nImages * 100.0;
+		percentagesFlat.push_back(percentage);
+		csvFile << percentage << ";";
+	}
+	csvFile << endl;
+
+	for(size_t j = 0; j < n; j++){		
 		totalRight += rightPredictions[j];
-		totalPercentage += percentage;
-		outputfile <<setw(3) << percentage <<"% ("<<setw(2)<<rightPredictions[j] <<")";
+		totalPercentage += percentagesFlat[j];
+		outputfile <<setw(3) << percentagesFlat[j] <<"% ("<<setw(2)<<rightPredictions[j] <<")";
 		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
 		csvFile << totalPercentage << ";";
 	}
@@ -302,10 +317,12 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 }
 
 
-void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, size_t threshold){
+void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t threshold){
 
 	vector<int> rightPredictions;
 	double avgPredictions = 0.0;
+	double avgPredictionsFlat = 0.0;
+	double avgTimesFlat = 0.0;
 	double avgTimes = 0.0;
 	rightPredictions.resize(threshold, 0);
 	int nImages= 0;
@@ -313,7 +330,7 @@ void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, 
 	clock_t tStart = clock();
 	outputfile << endl;
 	outputfile << setw(35) << "Image" << setw(8) << "Label" << " | ";
-	outputfile << setw(10) << "Precision"<< " | " << setw(5) << "Level"<< " | " << setw(5) << "Time" << " | ";
+	outputfile << setw(10) << "Precision"<< " | " << setw(5) << "Level"<< " | " << setw(10) << "Time(s)" << " | ";
 	outputfile << endl;
 
 	for(unsigned int i=0; i<people.size(); i++){
@@ -349,6 +366,8 @@ void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, 
 						rightPredictions[j]++;
 						precisionRightPredictions+=precision;
 						times+=timeImage;
+						avgPredictionsFlat+=precision;
+						avgTimesFlat+=timeImage;
 						foundMatch = true;
 						break;
 					}
@@ -375,34 +394,47 @@ void FaceModel::testModelPrecision(vector<Person> people, ofstream& outputfile, 
 
 	}//end of all the people testing
 	outputfile << endl;
+	outputfile.precision(4);
 
 	double totalPercentage = 0;
-	outputfile <<string(21*threshold+46, '=') << endl;
+	outputfile <<string(80, '=') << endl;
 	stringstream ss;
-	ss <<  " AVG per Person("<<people.size()<<" people) | ";
+	ss <<  " RETRIEVAL AVG per Person("<<people.size()<<" people) | ";
 	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	avgPredictions /= people.size();
 	avgTimes /= people.size();
-	outputfile << setw(9) << avgPredictions << "% | "<<setw(18)<< avgTimes << " | " << endl;
-	outputfile << endl;
-	outputfile <<string(21*threshold+46, '=') << endl;
+	outputfile << setw(9) << avgPredictions << "% | " << setw(5) << 1/(avgPredictions/100)<<  " | "<< setw(10) << avgTimes << " | " << endl;
+	csvFile << avgPredictions << ";" << 1/(avgPredictions/100) << ";" <<  avgTimes << endl;
 
+	totalPercentage = 0;
+	outputfile <<string(80, '=') << endl;
+	ss.str("");
+	ss <<  " RETRIEVAL AVG FLAT("<<nImages<<" images) | ";
+	outputfile << setw(46) <<ss.str();
+	totalPercentage = 0;
+	avgPredictionsFlat /= nImages;
+	avgTimesFlat /= nImages;
+	outputfile << setw(9) << avgPredictionsFlat << "% | " << setw(5) << 1/(avgPredictionsFlat/100)<<  " | "<< setw(10) << avgTimesFlat << " | " << endl;
+	csvFile << avgPredictionsFlat << ";" << 1/(avgPredictionsFlat/100) << ";" <<  avgTimesFlat << endl;
+	outputfile <<string(80, '=') << endl;
+
+	/*
 	ss.str("");
 	ss << " TOTAL (FLAT-"<<nImages<<" images) | ";
-	outputfile << setw(46) << ss.str();
+	outputfile << setw(46) << ss.str() << "level%  levelUnit : levelAccu% levelAccu|" << endl;
 	int totalRight = 0;
 	totalPercentage = 0;
+	outputfile.precision(3);
 	for(size_t j = 0; j < threshold; j++){
 		double percentage = (double)rightPredictions[j]/(double)nImages * 100.0;
 		totalRight += rightPredictions[j];
 		totalPercentage += percentage;
-		outputfile <<setw(3) << percentage <<"% ("<<setw(2)<<rightPredictions[j] <<")";
-		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
+		outputfile << setw(42) <<"level " <<j+1 << " | " << setw(6) << percentage <<"% "<<setw(9)<<rightPredictions[j] <<" ";
+		outputfile <<": " <<setw(8) << totalPercentage << "% "<<setw(9) << totalRight << " | " << endl;
 	}
-	outputfile << endl;
-	outputfile <<string(21*threshold+46, '=') << endl;
-
+	outputfile <<string(87, '=') << endl;
+	*/
 	outputfile.precision(4);
 	outputfile << "Tested " << nImages <<" images in " << timespent(tStart) << " seconds" << endl;
 

@@ -34,9 +34,12 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile){
 
 };
 
-void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m){
+void testLibrary(string path, int percetageTrainned, string outputfilename, int m){
 	clock_t tStart = clock();
 	Library myLib(path, percetageTrainned);	
+	ofstream outputfile;
+	outputfile.open(outputfilename);
+
 	outputfile << myLib.toString();
 	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
 
@@ -47,11 +50,18 @@ void testLibrary(string path, int percetageTrainned, ofstream& outputfile, int m
 	model.testModel(myLib.people, outputfile);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
 
+	outputfile.close();
+
 };
 
-void testLibraryN(string path, int percetageTrainned, ofstream& outputfile, int m, size_t n){
+void testLibraryN(string path, int percetageTrainned, string outputfilename, int m, size_t n){
 	clock_t tStart = clock();
 	Library myLib(path, percetageTrainned);	
+	ofstream outputfile, outputfileP, outputfileR;
+	outputfile.open(outputfilename);
+	outputfileP.open("RecognitionCSV\\" + outputfilename);
+	outputfileR.open("RetrievalCSV\\" + outputfilename);
+
 	outputfile << myLib.toString();
 	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
 
@@ -59,9 +69,13 @@ void testLibraryN(string path, int percetageTrainned, ofstream& outputfile, int 
 	FaceModel model(m, myLib.people);
 	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
 
-	//model.testModelNPredictions(myLib.people, outputfile, n);
-	model.testModelPrecision(myLib.people, outputfile, n);
+	model.testModelNPredictions(myLib.people, outputfile, outputfileP, n );
+	model.testModelPrecision(myLib.people, outputfile, outputfileR, n);
 	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
+
+	outputfile.close();
+	outputfileP.close();
+	outputfileR.close();
 
 };
 
@@ -160,8 +174,8 @@ int faceRecognizer(int argc, const char *argv[]){
 	else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
-		ofstream outputfile;
-		outputfile.open(outputfilename);
+		//ofstream outputfile;
+		//outputfile.open(outputfilename);
 		if(argc >= 4){
 			string m = string(argv[3]);
 			if(m == "-E"){
@@ -176,13 +190,13 @@ int faceRecognizer(int argc, const char *argv[]){
 		size_t nResults = 1;
 		if(argc >= 5){
 			nResults = atoi(argv[4]);
-			testLibraryN(path, 80, outputfile, modelType, nResults);
+			testLibraryN(path, 80, outputfilename, modelType, nResults);
 		}else{
-			testLibrary(path, 80, outputfile, modelType);
+			testLibrary(path, 80, outputfilename, modelType);
 		}
 
 		cout << "Results in " << outputfilename << endl;
-		outputfile.close();
+		//outputfile.close();
 	}
 	
 
