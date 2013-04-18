@@ -138,6 +138,7 @@ int faceDetector(int argc, const char *argv[]){
 }
 
 int csvCreator(int argc, const char *argv[]){
+
 	string path = "..\\etc\\at.txt";
 	string outputfilename = "..\\results\\default.txt";
 	string statsFile = "..\\data\\stats\\default.txt";
