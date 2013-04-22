@@ -1,8 +1,0 @@
-Library: ..\data\lfw_aligned_BW_10_30.txt
-	Images Dir: C:\Users\Pedro\Pictures\lfw\lfw_aligned_BW\
-	Total Images: 1022
-	Total People: 52
-	Images per person MIN | MAX: 10 | 30
-	Percentage of trainned images per person: 80
-Loaded in: 0.135 seconds
-
