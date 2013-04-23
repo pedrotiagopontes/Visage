@@ -1,0 +1,16 @@
+C:\VisageCollections\lfw_aligned_BW\
+Aaron_Peirsol\Aaron_Peirsol_0003.jpg;3
+Aaron_Peirsol\Aaron_Peirsol_0004.jpg;3
+Aaron_Peirsol\Aaron_Peirsol_0002.jpg;3
+Aaron_Peirsol\Aaron_Peirsol_0001.jpg;3
+Aaron_Sorkin\Aaron_Sorkin_0001.jpg;5
+Aaron_Sorkin\Aaron_Sorkin_0002.jpg;5
+Abdel_Nasser_Assidi\Abdel_Nasser_Assidi_0001.jpg;11
+Abdel_Nasser_Assidi\Abdel_Nasser_Assidi_0002.jpg;11
+Abdoulaye_Wade\Abdoulaye_Wade_0001.jpg;12
+Abdoulaye_Wade\Abdoulaye_Wade_0002.jpg;12
+Abdoulaye_Wade\Abdoulaye_Wade_0003.jpg;12
+Abdoulaye_Wade\Abdoulaye_Wade_0004.jpg;12
+Abdullah\Abdullah_0003.jpg;14
+Abdullah\Abdullah_0002.jpg;14
+Abdullah\Abdullah_0001.jpg;14
