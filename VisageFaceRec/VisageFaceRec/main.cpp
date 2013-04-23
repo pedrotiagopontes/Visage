@@ -58,7 +58,8 @@ void testLibraryN(string path, int percetageTrainned, string outputfilename, int
 	clock_t tStart = clock();
 	Library myLib(path, percetageTrainned);	
 	ofstream outputfile, outputfileP, outputfileR;
-	outputfile.open(outputfilename);
+	outputfile.open("..\\results\\" + outputfilename);
+
 	outputfileP.open("..\\results\\RecognitionCSV\\" + outputfilename);
 	outputfileR.open("..\\results\\RetrievalCSV\\" + outputfilename);
 
