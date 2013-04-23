@@ -116,10 +116,11 @@ void createCSV(string filename, Library lib, size_t bottomLimit, size_t topLimit
 			random_shuffle (images.begin(), images.end(), myrandom);
 
 			for(size_t j=0; j<images.size() && j<topLimit; j++){
-				outputfile << lib.people[i].getName() <<"\\"<< images[j] << endl;
+				outputfile << lib.people[i].getName() <<"\\"<< images[j] << ";" <<lib.people[i].getLabel() << endl;
 			}
 		}
 	}
+	outputfile.close();
 	cout << "Created CSV file " << filename <<endl;
 }
 

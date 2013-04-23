@@ -155,11 +155,12 @@ int csvCreator(int argc, const char *argv[]){
 		vector<int> labelsPerClass;
 		vector<string> names;
 		if(argc > 5){
-			statsFile = "..\\data\\stats\\" + string(argv[6]);
+			statsFile = "..\\data\\stats\\" + string(argv[5]);
 		}
 		Library myLib(path, 100);
+		cout << myLib.people.size() << endl;
 		createCSV(outputfilename, myLib, bottomLimit, topLimit);
-		readLfwStats(path, statsFile, labelsPerClass, names);
+		readLfwStats("..\\data\\"+outputfilename, statsFile, labelsPerClass, names);
 	}
 
 	return 0;
@@ -218,11 +219,11 @@ int main(int argc, const char *argv[]) {
 	*/
 
 	/// CsvCreator.exe
-	//return csvCreator(argc, argv);
+	return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
 
 	//return 0;
 }
