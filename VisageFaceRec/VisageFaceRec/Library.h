@@ -34,5 +34,6 @@ public:
 
 	string toString();
 	string toStringWithImages();
+	string getDirPath();
 };
 

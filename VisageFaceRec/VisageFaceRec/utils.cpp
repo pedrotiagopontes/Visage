@@ -36,13 +36,13 @@ void readLfwStats(const string& filename, string outputfilename, vector<int>& la
 	ofstream outputfile;
 	outputfile.open(outputfilename);
 
-    if (!file) {
-        string error_message = "No valid input file was given, please check the given filename.";
-        CV_Error(CV_StsBadArg, error_message);
-    }
+	if (!file) {
+		string error_message = "No valid input file was given, please check the given filename.";
+		CV_Error(CV_StsBadArg, error_message);
+	}
 	string path;
 	getline(file, path);
-    string line, lastname, name, img, classlabel;
+	string line, lastname, name, img, classlabel;
 	string lastclasslabel = "-1";
 	int count = 0;
 	int max = 0;
@@ -50,14 +50,14 @@ void readLfwStats(const string& filename, string outputfilename, vector<int>& la
 	outputfile << "Stats of file: " << filename <<endl;
 	outputfile << "Images dir: " << path << endl;
 
-    while (getline(file, line)) {
+	while (getline(file, line)) {
 
-        stringstream liness(line);
-        getline(liness, name, '\\');
-        getline(liness, img, ';');
+		stringstream liness(line);
+		getline(liness, name, '\\');
+		getline(liness, img, ';');
 		getline(liness, classlabel);
 
-        if(!path.empty() && !classlabel.empty() && !name.empty()) {
+		if(!path.empty() && !classlabel.empty() && !name.empty()) {
 			if(lastclasslabel == classlabel){
 				count++;
 			}
@@ -74,8 +74,8 @@ void readLfwStats(const string& filename, string outputfilename, vector<int>& la
 			}
 			lastclasslabel = classlabel;
 			lastname = name;
-        }
-    }
+		}
+	}
 	labelsPerClass.push_back(count);
 	names.push_back(lastname);
 	outputfile << setw(30) << lastname << setw(5) << count << endl;
@@ -100,27 +100,23 @@ void readLfwStats(const string& filename, string outputfilename, vector<int>& la
 	cout << "Created stats file " << outputfilename <<endl;
 }
 
-void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes, int bottomLimit, int topLimit, string fileExtension){
+///Creates a filtered CSVfile of the lib provided
+void createCSV(string filename, Library lib, size_t bottomLimit, size_t topLimit, string fileExtension){
 	ofstream outputfile;
 	outputfile.open("..\\data\\" + filename);
 	srand ( unsigned ( std::time(0) ) );
+	
+	outputfile << lib.getDirPath() << endl;
+	
+	for(size_t i=0; i < lib.people.size(); i++){
+		vector<string> images = lib.people[i].getTrainImages();
 
-	for(unsigned int i=0; i < imgsPerClass.size(); i++){
-		if(imgsPerClass[i] >= bottomLimit){
+		if(images.size() >= bottomLimit){
 			int picInt = 1;
-			vector<string> pics;
-			while(picInt <= imgsPerClass[i] && picInt <= topLimit){
-				stringstream ss, pictureStr;
-				ss << picInt;
+			random_shuffle (images.begin(), images.end(), myrandom);
 
-				pictureStr << classes[i] << "\\" << classes[i] << "_"<<nomalize_number(ss.str()) << fileExtension <<";" <<i << endl;
-				pics.push_back(pictureStr.str());
-				picInt++;
-			}
-			
-			random_shuffle ( pics.begin(), pics.end(), myrandom);
-			for(unsigned int j=0; j < pics.size(); j++){
-				outputfile << pics[j];
+			for(size_t j=0; j<images.size() && j<topLimit; j++){
+				outputfile << lib.people[i].getName() <<"\\"<< images[j] << endl;
 			}
 		}
 	}
@@ -129,22 +125,22 @@ void createCSV(string filename, vector<int> imgsPerClass, vector<string> classes
 
 //deprecated
 string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator) {
-    std::ifstream file(filename.c_str(), ifstream::in);
-    if (!file) {
-        string error_message = "No valid input file was given, please check the given filename.";
-        CV_Error(CV_StsBadArg, error_message);
-    }
+	std::ifstream file(filename.c_str(), ifstream::in);
+	if (!file) {
+		string error_message = "No valid input file was given, please check the given filename.";
+		CV_Error(CV_StsBadArg, error_message);
+	}
 	
 	string path;
 	getline(file, path);
 
-    string line, name, classlabel, lastLabel="-1";
+	string line, name, classlabel, lastLabel="-1";
 	int i=0;
-    while (getline(file, line)) {
-        stringstream liness(line);
-        getline(liness, name, separator);
-        getline(liness, classlabel);
-        if(!path.empty() && !classlabel.empty()) {
+	while (getline(file, line)) {
+		stringstream liness(line);
+		getline(liness, name, separator);
+		getline(liness, classlabel);
+		if(!path.empty() && !classlabel.empty()) {
 			if(classlabel != lastLabel){
 				i=0;
 				lastLabel = classlabel;
@@ -170,28 +166,28 @@ string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& im
 					cout << "ERROR loading " << path+name <<endl;
 				}
 			}
-        }
+		}
 		i++;
-    }
+	}
 	return path;
 }
 
 //outdated!
 void read_csv_pairs(const string& filename, vector<string> &names, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labels, char separator, string ext) {
-    std::ifstream file(filename.c_str(), ifstream::in);
-    if (!file) {
-        string error_message = "No valid input file was given, please check the given filename.";
-        CV_Error(CV_StsBadArg, error_message);
-    }
+	std::ifstream file(filename.c_str(), ifstream::in);
+	if (!file) {
+		string error_message = "No valid input file was given, please check the given filename.";
+		CV_Error(CV_StsBadArg, error_message);
+	}
 	int label = 0;
 	//First line must be path
 	string path;
 	getline(file, path);
 
-    string lastname, line, name, fig1, fig2;
-    while (getline(file, line)) {
-        stringstream liness(line);
-        getline(liness, name, separator);
+	string lastname, line, name, fig1, fig2;
+	while (getline(file, line)) {
+		stringstream liness(line);
+		getline(liness, name, separator);
 		if(lastname != name){
 			label++;
 		}
@@ -213,8 +209,8 @@ void read_csv_pairs(const string& filename, vector<string> &names, vector<Mat>& 
 			//cout << im1 << " - " << mat1.rows <<"x"<< mat1.cols<<endl;
 			//cout << im2 << " - " << mat2.rows <<"x"<< mat2.cols<<endl;
 			
-            labels.push_back(label);
+			labels.push_back(label);
 			names.push_back(name);
-        }
-    }
+		}
+	}
 }

@@ -90,3 +90,7 @@ string Library::toStringWithImages(){
 	}
 	return ss.str();
 }
+
+string Library::getDirPath(){
+	return this->dirPath;
+}
