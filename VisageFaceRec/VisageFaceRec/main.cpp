@@ -59,8 +59,8 @@ void testLibraryN(string path, int percetageTrainned, string outputfilename, int
 	Library myLib(path, percetageTrainned);	
 	ofstream outputfile, outputfileP, outputfileR;
 	outputfile.open(outputfilename);
-	outputfileP.open("..\results\RecognitionCSV\\" + outputfilename);
-	outputfileR.open("..\results\RetrievalCSV\\" + outputfilename);
+	outputfileP.open("..\\results\\RecognitionCSV\\" + outputfilename);
+	outputfileR.open("..\\results\\RetrievalCSV\\" + outputfilename);
 
 	outputfile << myLib.toString();
 	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
