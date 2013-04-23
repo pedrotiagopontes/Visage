@@ -218,11 +218,11 @@ int main(int argc, const char *argv[]) {
 	*/
 
 	/// CsvCreator.exe
-	return csvCreator(argc, argv);
+	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	//return faceRecognizer(argc, argv);
+	return faceRecognizer(argc, argv);
 
 	//return 0;
 }
