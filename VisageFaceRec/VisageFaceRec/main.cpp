@@ -3,37 +3,6 @@
 #include "FaceModel.h"
 #include "FaceDetector.h"
 
-void testLibrary(string path, int percetageTrainned, ofstream& outputfile){
-	clock_t tStart = clock();
-	Library myLib(path, percetageTrainned);	
-	outputfile << myLib.toString();
-	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
-	/*
-	tStart = clock();
-	FaceModel modelEIGEN(EIGENFACES, myLib.people);
-	outputfile << "Trainned model " << modelEIGEN.getName() << " with "<< modelEIGEN.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
-
-	modelEIGEN.testModel(myLib.people, outputfile);
-	*/
-	/*
-	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-	tStart = clock();
-	FaceModel modelFisher(FISHERFACES, myLib.people);
-	outputfile << "Trainned model " << modelFisher.getName() << " with "<< modelFisher.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
-
-	modelFisher.testModel(myLib.people, outputfile);
-	*/
-
-	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-	tStart = clock();
-	FaceModel modelLBPH(LBPH, myLib.people);
-	outputfile << "Trainned model " << modelLBPH.getName() << " with "<< modelLBPH.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
-
-	modelLBPH.testModel(myLib.people, outputfile);
-	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-
-};
-
 void testLibrary(string path, int percetageTrainned, string outputfilename, int m){
 	clock_t tStart = clock();
 	Library myLib(path, percetageTrainned);	
@@ -219,11 +188,11 @@ int main(int argc, const char *argv[]) {
 	*/
 
 	/// CsvCreator.exe
-	return csvCreator(argc, argv);
+	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	//return faceRecognizer(argc, argv);
+	return faceRecognizer(argc, argv);
 
 	//return 0;
 }

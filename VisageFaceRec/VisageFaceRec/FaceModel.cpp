@@ -295,7 +295,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	for(size_t j = 0; j < n; j++){
 		double percentage = (double)rightPredictions[j]/(double)nImages * 100.0;
 		percentagesFlat.push_back(percentage);
-		csvFile << percentage << ";";
+		csvFile << "=" << rightPredictions[j] <<"/" << nImages << ";";
 	}
 	csvFile << endl;
 
@@ -304,7 +304,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 		totalPercentage += percentagesFlat[j];
 		outputfile <<setw(3) << percentagesFlat[j] <<"% ("<<setw(2)<<rightPredictions[j] <<")";
 		outputfile <<":" <<setw(4) << totalPercentage << "%("<<setw(2) << totalRight << ")| ";
-		csvFile << totalPercentage << ";";
+		csvFile << "=" << totalRight <<"/" << nImages << ";";
 	}
 	outputfile << endl;
 	csvFile << endl;
