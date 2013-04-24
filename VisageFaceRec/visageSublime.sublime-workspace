@@ -47,62 +47,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
-			"settings":
-			{
-				"buffer_size": 55017,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "results/bilateral_10_10_v4-R-EIGEN.txt",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
-			"settings":
-			{
-				"buffer_size": 40,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/lfw_aligned_masked_10_50.txt",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Debug/RecognitionCSV/porpessoa.txt",
-			"settings":
-			{
-				"buffer_size": 149,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/Dev/testeDIR.txt",
-			"settings":
-			{
-				"buffer_size": 7689,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Debug/teste.bat",
-			"settings":
-			{
-				"buffer_size": 84,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -128,8 +72,24 @@
 	},
 	"file_history":
 	[
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw-BW.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/RecognitionCSV/cropped_20_20_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/original_20_20_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_20_20_LBPH.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/masked_20_20_EIGEN.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-EIGEN.txt",
+		"/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/original_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/tewste.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/teste",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/teste.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/teste55.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/RecognitionCSV/porpessoa.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Dev/testeDIR.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/teste.bat",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeDIR.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/porpessoa.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/output.csv",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/haarcascade_eye_tree_eyeglasses.xml",
@@ -183,7 +143,6 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50_v2-R_FISHER.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50_v2-R_LBPH.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50_v2.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_10_50.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/croppedMasked_10_50.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/croppedMasked_10_50.txt",
 		"/C/Users/Pedro/Documents/GitHub/obli Paralax/index.html",
@@ -206,7 +165,6 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/maskedCropped-R_Fisher.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeMasked-R_LBPH.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMaskedCropped.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw-BW.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeMasked-R.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeMaskedCropNorm.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/testeCropNorm.txt",
@@ -222,7 +180,6 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_10_10-R_LBPH-top3.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10-v2.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/teste.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/teste.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/teste.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw_10_subjects.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10-v3.txt",
@@ -242,20 +199,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_20_20.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_5_5_Stats.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_5_5.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_50.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_Stats.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/trials/at_80_20.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/trials/at_20_80.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/atCopia.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_aligned_masked_20_20.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_10v2.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_30.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_eigen.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_10-R-top3-10Eingen.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_10.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_50-R_LBPH.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_aligned_masked_10_30-R_LBPH.txt"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_50.txt"
 	],
 	"find":
 	{
@@ -408,195 +352,8 @@
 	"groups":
 	[
 		{
-			"selected": 6,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
-					"settings":
-					{
-						"buffer_size": 55017,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								37901,
-								37904
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 11081.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "results/bilateral_10_10_v4-R-EIGEN.txt",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2274.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
-					"settings":
-					{
-						"buffer_size": 40,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "data/lfw_aligned_masked_10_50.txt",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Debug/RecognitionCSV/porpessoa.txt",
-					"settings":
-					{
-						"buffer_size": 149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								66,
-								66
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "data/Dev/testeDIR.txt",
-					"settings":
-					{
-						"buffer_size": 7689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7689,
-								7689
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Debug/teste.bat",
-					"settings":
-					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
