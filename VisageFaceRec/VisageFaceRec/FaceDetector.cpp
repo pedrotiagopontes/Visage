@@ -61,16 +61,16 @@ Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
 	if(normalize_hist){
 		Mat normalizedImg, cla, histo;
 		//normalize(original, normalizedImg, 0, 255, NORM_MINMAX);
-		equalizeHist( original, histo);
-		//Ptr<CLAHE> cl = createCLAHE(2.0, Size(3,3));
-		//cl->apply(original, cla);
+		//equalizeHist( original, histo);
+		Ptr<CLAHE> cl = createCLAHE(2.0, Size(3,3));
+		cl->apply(original, cla);
 
 		//imshow("original", original);
 		//imshow("normalized", normalizedImg);
 		//imshow("CLAHE", cla);
 		//imshow("histo", histo);
 		//waitKey(0);
-		original = processedImg = histo; // to force filters to be aplied in normalized img
+		original = processedImg = cla; // to force filters to be aplied in normalized img
 	}
 
 	if(filter > 0){
