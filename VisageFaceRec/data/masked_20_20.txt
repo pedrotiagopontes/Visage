@@ -899,7 +899,7 @@ Pete_Sampras\Pete_Sampras_0002.jpg;4372
 Pete_Sampras\Pete_Sampras_0012.jpg;4372
 Pete_Sampras\Pete_Sampras_0006.jpg;4372
 Pete_Sampras\Pete_Sampras_0001.jpg;4372
-Recep_Tayyip_Erdogan\Recep_Tayyip_Erdogan_0023.jpg;4551
+Recep_Tayyip_Erdogan\Recep_Tayyip_Erdogan_0001.jpg;4551
 Recep_Tayyip_Erdogan\Recep_Tayyip_Erdogan_0030.jpg;4551
 Recep_Tayyip_Erdogan\Recep_Tayyip_Erdogan_0017.jpg;4551
 Recep_Tayyip_Erdogan\Recep_Tayyip_Erdogan_0016.jpg;4551
