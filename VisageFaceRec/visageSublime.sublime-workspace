@@ -47,6 +47,78 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "results/original_20_20_FISHER.txt",
+			"settings":
+			{
+				"buffer_size": 231997,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "results/cropped_20_20_FISHER.txt",
+			"settings":
+			{
+				"buffer_size": 231993,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "results/masked_20_20_FISHER.txt",
+			"settings":
+			{
+				"buffer_size": 231991,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/original_20_20.txt",
+			"settings":
+			{
+				"buffer_size": 52196,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/masked_20_20.txt",
+			"settings":
+			{
+				"buffer_size": 52190,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/cropped_20_20.txt",
+			"settings":
+			{
+				"buffer_size": 52191,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/original.txt",
+			"settings":
+			{
+				"buffer_size": 383166,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/Dev/lfw_aligned_BW_10_10.txt",
+			"settings":
+			{
+				"buffer_size": 22373,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/original_20_20 - Cópia.txt",
+			"settings":
+			{
+				"buffer_size": 903,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -72,6 +144,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/RecognitionCSV/lfw_short.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/lfw_short.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/t0eiwmdc.203.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw-BW.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/RecognitionCSV/cropped_20_20_FISHER.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/original_20_20_FISHER.txt",
@@ -196,10 +271,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_40_40.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_30_30.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_20_20_Stats.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_20_20.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_5_5_Stats.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_5_5.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_10_50.txt"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_20_20.txt"
 	],
 	"find":
 	{
@@ -218,6 +290,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"verify",
+			"ify",
+			"verify",
+			"gray_davis_0012",
+			"gray_davis_001",
+			"gray_davis_0012",
 			"http://gsm.pedrotiagopontes.com",
 			"gsm",
 			"font-family",
@@ -352,8 +430,249 @@
 	"groups":
 	[
 		{
+			"selected": 8,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "results/original_20_20_FISHER.txt",
+					"settings":
+					{
+						"buffer_size": 231997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "results/cropped_20_20_FISHER.txt",
+					"settings":
+					{
+						"buffer_size": 231993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "results/masked_20_20_FISHER.txt",
+					"settings":
+					{
+						"buffer_size": 231991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5278.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "data/original_20_20.txt",
+					"settings":
+					{
+						"buffer_size": 52196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40372,
+								40372
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13298.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "data/masked_20_20.txt",
+					"settings":
+					{
+						"buffer_size": 52190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40366,
+								40366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13219.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "data/cropped_20_20.txt",
+					"settings":
+					{
+						"buffer_size": 52191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40191,
+								40191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13219.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "data/original.txt",
+					"settings":
+					{
+						"buffer_size": 383166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306107,
+								306052
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 105495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "data/Dev/lfw_aligned_BW_10_10.txt",
+					"settings":
+					{
+						"buffer_size": 22373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22373,
+								2894
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 519.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "data/original_20_20 - Cópia.txt",
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
