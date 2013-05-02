@@ -66,6 +66,18 @@ Tendo em conta os fatores apresentados consideramos que este filtro é o mais ad
 	descrição dos módulos
 	
 \section{Detalhes Implementação}
+...
+
+\begin{figure}[ht]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.7\textwidth]{PreProcessamentoVisage}
+    \caption{Cadeia de pré-processamento a que as imagens podem ser sujeitas.}
+    \label{fig:preprocessamento}
+  \end{center}
+\end{figure}
+
+O passo 1 é responsável pela deteção da localização da face na imagem e efetuar a respectiva segmentação da mesma, de acordo com descrito em \ref{chap:detector}. Após a obtenção da face extraída da imagem é então possível proceder à sua normalização em termos de contraste. Para isso foram analisadas três possibilidades: \textit{contrast streching}, \textit{histogram equalization} e ainda \textit{CLAHE}. Posteriormente a imagem po....
 
 
 \section{Funcionalidades}

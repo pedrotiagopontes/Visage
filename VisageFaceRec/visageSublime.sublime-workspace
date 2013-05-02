@@ -55,15 +55,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "data/stats/tabela.tex",
-			"settings":
-			{
-				"buffer_size": 1455,
-				"line_ending": "Windows",
-				"name": "\\begin{table}"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -89,6 +80,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/tabela.tex",
 		"/C/Users/Pedro/Documents/obli.pt/js/script.js",
 		"/C/Users/Pedro/Documents/obli.pt/css/style.css",
 		"/C/Users/Pedro/Documents/obli.pt/index.html",
@@ -215,8 +207,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_10_50-R_EIGEN-top3.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_40_40-R_EIGEN-top3.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_FISHER.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_LBPH-top3 - FINAL.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/-E"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_LBPH-top3 - FINAL.txt"
 	],
 	"find":
 	{
@@ -401,33 +392,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "data/stats/tabela.tex",
-					"settings":
-					{
-						"buffer_size": 1455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								144,
-								148
-							]
-						],
-						"settings":
-						{
-							"auto_name": "\\begin{table}",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
