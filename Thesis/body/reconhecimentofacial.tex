@@ -15,16 +15,19 @@ Paralelamente, o surgimento de programas como o Face Recognition Technology (FER
 No final da década de 90, surgiram as primeiras aplicações comerciais de reconhecimento facial automático, tal como pode ser comprovado  pela participação de 5 soluções comerciais na primeira edição dos \textit{Facial Recognition Vendor Test (FRVT)}, no ano 2000 \cite{BlackburnDuaneM.;BoneMike;Phillips2001}. Nesta avaliação, as soluções eram testadas nas componentes de usabilidade e performance do reconhecimento efetuado, de modo fornecer uma avaliação objetiva e independente dos sistemas de reconhecimento facial presentes no mercado. Estas avaliações foram repetidas nos anos de 2002, 2006, 2010 e 2012.
 
 \section{Definição do Problema} \label{sec:problema}
-De uma forma geral, o problema de reconhecimento facial pode ser formulado da seguinte forma: dada uma imagem (prova), pretende-se identificar ou verificar a presença de uma ou mais pessoas na prova, comparando-a com uma base de dados de faces previamente guardada (galeria) \cite{Yang2002, Zhao2003}. Este problema, pode ainda ser dividido em dois sub-problemas específicos: verificação de faces (ou autenticação) e identificação de faces \cite{Li2011}:
+De uma forma geral, o problema de reconhecimento facial pode ser formulado da seguinte forma: dada uma imagem (prova), pretende-se identificar ou verificar a presença de uma ou mais pessoas na prova, comparando-a com uma base de dados de faces previamente guardada (galeria) \cite{Yang2002, Zhao2003}. Este problema, é ainda geralmente dividido em três subproblemas específicos: verificação de faces (ou autenticação), \textit{pair matching} e identificação de faces \cite{Li2011, Huang2007}:
 
 \begin{description}
 \item[Verificação] Uma prova é apresentada ao sistema, assim como a respetiva identidade da pessoa presente na imagem. Cabe ao sistema verificar se existe uma correspondência entre a pessoa representada na imagem e a identidade fornecida. Assim, é efetuada uma comparação 1:1, que responde à pergunta: "Esta pessoa é quem realmente afirma ser?".
+
+\item[\textit{Pair Matching}] São apresentadas duas provas ao sistema, cada uma contendo uma face. O sistema deve decidir se as duas imagens correspondem, ou não, a representações da mesma pessoa. Tal como no sub-problema de verificação é efetuada uma comparação 1:1, a qual responde à pergunta: "Estas imagens pertencem à mesma pessoa?".
 
 \item[Identificação] Uma prova é apresentada ao sistema, e pretende-se que este devolva a identidade da pessoa presente na imagem, assim como o nível de confiança associado à correspondência efetuada entre a imagem e a identidade devolvida. A identificação de faces pode ainda ser dividida em dois sub-problemas: 
 
 No primeiro problema designado \textit{watch list} ou \textit{open-set identification}\cite{Chellappa2010}, não é garantido que o sistema conheça a pessoa a ser identificada, pelo que em primeiro lugar é necessário identificar se a pessoa existe na galeria e, caso exista, determinar a identidade da pessoa. Este sub-problema responde às perguntas: "Esta pessoa está presente na galeria? Se sim, de quem é esta face?". 
 
 O segundo caso, é aquele que é geralmente avaliado em sistemas de reconhecimento facial, onde é garantido que a pessoa é conhecida pelo sistema, respondendo-se apenas à pergunta: "De quem é esta face?". Nesta situação, designada de \textit{closed-set identification}, podem ainda ser pedidas todas as correspondências efetuadas com um nível de confiança superior a um valor pré-definido. 
+
 Em qualquer um dos subproblemas de identificação, é efetuada uma comparação 1:N.
 \end{description}
 

@@ -32,22 +32,24 @@
 \BOOKMARK [2][-]{subsection.3.2.5}{3.2.5 T\351cnicas Gradient Domain}{section.3.2}% 32
 \BOOKMARK [1][-]{section.3.3}{3.3 Trabalho Relacionado}{chapter.3}% 33
 \BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 34
-\BOOKMARK [1][-]{subsection.4.0.1}{4.0.1 Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.0.2}{4.0.2 Filtros de Abstra\347\343o - Filtro Kuwahara Anisotr\363pico}{subsection.4.0.1}% 36
-\BOOKMARK [1][-]{section.4.1}{4.1 Arquitectura}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.2}{4.2 Detalhes Implementa\347\343o}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.3}{4.3 Funcionalidades}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{5 Testes e Resultados}{}% 40
-\BOOKMARK [1][-]{section.5.1}{5.1 Cole\347\365es de dados}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Labeled Faces in the Wild}{section.5.1}% 42
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Conjuntos de Teste}{section.5.1}% 43
-\BOOKMARK [1][-]{section.5.2}{5.2 Avalia\347\343o do desempenho em Identifica\347\343o Ranking N}{chapter.5}% 44
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Metodologias Avalia\347\343o}{section.5.2}% 45
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Resultados}{section.5.2}% 46
-\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o do desempenho em Retrieval}{chapter.5}% 47
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologias Avalia\347\343o}{section.5.3}% 48
-\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados}{section.5.3}% 49
-\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 50
-\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 52
-\BOOKMARK [0][-]{section*.18}{Refer\352ncias}{}% 53
+\BOOKMARK [1][-]{section.4.1}{4.1 Implementa\347\343o}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Filtros de Abstra\347\343o - Filtro Kuwahara Anisotr\363pico}{section.4.1}% 37
+\BOOKMARK [1][-]{section.4.2}{4.2 Arquitectura}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{4.3 Detalhes Implementa\347\343o}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.4}{4.4 Funcionalidades}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{5 Avalia\347\343o}{}% 41
+\BOOKMARK [1][-]{section.5.1}{5.1 Cole\347\365es de dados}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Labeled Faces in the Wild}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Pr\351-processamento}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Conjuntos de Teste}{section.5.1}% 45
+\BOOKMARK [1][-]{section.5.2}{5.2 Avalia\347\343o do desempenho em Identifica\347\343o Ranking N}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Metodologias Avalia\347\343o}{section.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Resultados}{section.5.2}% 48
+\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o do desempenho em Retrieval}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologias Avalia\347\343o}{section.5.3}% 50
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados}{section.5.3}% 51
+\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 52
+\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 54
+\BOOKMARK [0][-]{section*.22}{Refer\352ncias}{}% 55
