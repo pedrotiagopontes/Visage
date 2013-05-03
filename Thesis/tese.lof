@@ -1,7 +1,7 @@
 \select@language {portuges}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema Gen\IeC {\'e}rico de Reconhecimento Facial\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema Gen\IeC {\'e}rico de Reconhecimento Facial\relax }}{8}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces A redu\IeC {\c c}\IeC {\~a}o da taxa de erro para os algoritmos estados da arte tal como documentado nas avalia\IeC {\c c}\IeC {\~o}es FERET, FRVT 2002, FRVT 2006 e MBE 2010 \cite {Phillips2007, Grother2010}\relax }}{20}{figure.caption.10}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{23}{figure.caption.11}
@@ -9,5 +9,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{26}{figure.caption.13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{30}{figure.caption.17}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Cadeia de pr\IeC {\'e}-processamento a que as imagens podem ser sujeitas.\relax }}{31}{figure.caption.18}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{34}{figure.caption.19}
 \addvspace {10\p@ }

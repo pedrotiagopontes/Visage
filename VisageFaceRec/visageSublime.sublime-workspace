@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"min-",
+				"min-width"
+			],
+			[
+				"at",
+				"attr"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -47,78 +55,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "results/original_20_20_FISHER.txt",
-			"settings":
-			{
-				"buffer_size": 231997,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "results/cropped_20_20_FISHER.txt",
-			"settings":
-			{
-				"buffer_size": 231993,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "results/masked_20_20_FISHER.txt",
-			"settings":
-			{
-				"buffer_size": 231991,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/original_20_20.txt",
-			"settings":
-			{
-				"buffer_size": 52196,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/masked_20_20.txt",
-			"settings":
-			{
-				"buffer_size": 52190,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/cropped_20_20.txt",
-			"settings":
-			{
-				"buffer_size": 52191,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/original.txt",
-			"settings":
-			{
-				"buffer_size": 383166,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/Dev/lfw_aligned_BW_10_10.txt",
-			"settings":
-			{
-				"buffer_size": 22373,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data/original_20_20 - Cópia.txt",
-			"settings":
-			{
-				"buffer_size": 903,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -144,18 +80,29 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/tabela.tex",
+		"/C/Users/Pedro/Documents/obli.pt/js/script.js",
+		"/C/Users/Pedro/Documents/obli.pt/css/style.css",
+		"/C/Users/Pedro/Documents/obli.pt/index.html",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/original_20_20 - Cópia.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Dev/lfw_aligned_BW_10_10.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/original.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/cropped_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/masked_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/original_20_20.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/masked_20_20_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_20_20_FISHER.txt",
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/original_20_20_FISHER.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/RecognitionCSV/lfw_short.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/lfw_short.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/t0eiwmdc.203.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/lfw-BW.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/RecognitionCSV/cropped_20_20_FISHER.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/original_20_20_FISHER.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/cropped_20_20_LBPH.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/masked_20_20_EIGEN.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/zenith.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/bilateral_10_10_v4-R-EIGEN.txt",
 		"/C/OpenCV243/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/original_20_20.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/tewste.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/teste",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/Originais/teste.txt",
@@ -211,7 +158,6 @@
 		"/C/Users/Pedro/AppData/Local/Temp/license.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/testeGausssian-R-Fisher.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/gaussian_10_50.txt",
-		"/C/Users/Pedro/Documents/obli.pt/css/style.css",
 		"/C/Users/Pedro/Documents/jf-galegossantamaria.pt/css/style.css",
 		"/C/Users/Pedro/Documents/pedrotiagopontes.com/index.html",
 		"/C/Users/Pedro/Documents/jf-galegossantamaria.pt/index.html",
@@ -261,17 +207,7 @@
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_10_50-R_EIGEN-top3.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_40_40-R_EIGEN-top3.txt",
 		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_FISHER.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_LBPH-top3 - FINAL.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/Debug/-E",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_40_40.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_30_30.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_20_20.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_normalized_10_50.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_40_40_Stats.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_40_40.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_30_30.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/stats/lfw_20_20_Stats.txt",
-		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/data/lfw_20_20.txt"
+		"/C/Users/Pedro/Dropbox/FEUP/PDIS/Visage/VisageFaceRec/results/lfw_normalized_20_20-R_LBPH-top3 - FINAL.txt"
 	],
 	"find":
 	{
@@ -290,6 +226,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\t",
+			"| >=",
+			"\\\\",
+			"\\",
+			"\\n",
+			" images:",
+			"Classes with ",
+			">= ",
+			">=",
+			"images:",
+			"Classes with ",
 			"verify",
 			"ify",
 			"verify",
@@ -398,6 +345,19 @@
 		"regex": true,
 		"replace_history":
 		[
+			"    ",
+			" &",
+			"\\\\\\\\",
+			" \\\\\\ \\n",
+			" '\\\\' \\n",
+			" \\\\ \\n",
+			" \\\\",
+			"\\t &",
+			"\\t",
+			"'\\t'",
+			"",
+			"|",
+			"",
 			"http://localhost/gsm",
 			"2px dotted",
 			"black",
@@ -430,249 +390,8 @@
 	"groups":
 	[
 		{
-			"selected": 8,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "results/original_20_20_FISHER.txt",
-					"settings":
-					{
-						"buffer_size": 231997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "results/cropped_20_20_FISHER.txt",
-					"settings":
-					{
-						"buffer_size": 231993,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227,
-								227
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "results/masked_20_20_FISHER.txt",
-					"settings":
-					{
-						"buffer_size": 231991,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5278.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "data/original_20_20.txt",
-					"settings":
-					{
-						"buffer_size": 52196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40372,
-								40372
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 13298.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "data/masked_20_20.txt",
-					"settings":
-					{
-						"buffer_size": 52190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40366,
-								40366
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 13219.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "data/cropped_20_20.txt",
-					"settings":
-					{
-						"buffer_size": 52191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40191,
-								40191
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 13219.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "data/original.txt",
-					"settings":
-					{
-						"buffer_size": 383166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								306107,
-								306052
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 105495.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "data/Dev/lfw_aligned_BW_10_10.txt",
-					"settings":
-					{
-						"buffer_size": 22373,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22373,
-								2894
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 519.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "data/original_20_20 - Cópia.txt",
-					"settings":
-					{
-						"buffer_size": 903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								43,
-								43
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
