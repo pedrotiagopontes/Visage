@@ -1,5 +1,69 @@
 \chapter{Sistema de Reconhecimento Facial Visage} \label{chap:visage}
 
+\section{Filtros de Abstração de Imagens no Reconhecimento Facial}
+O reconhecimento facial em imagens sofreu uma evolução notável nos últimos 20 anos, tal como documentado no capítulo \ref{chap:reco} deste relatório. 
+
+Em cenários cooperativos com condições de captura de imagens controladas, nomeadamente ao nível da pose, iluminação e expressões faciais, considera-se mesmo que o problema de verificação 1:1 se encontra praticamente resolvido, uma vez que as taxas de reconhecimento atingidas são satisfatórias para a grande maioria das aplicações \cite{Li2011}. Existem também várias aplicações em situações reais com um bom nível de satisfação por parte dos seus utilizadores, como é o caso do sistema de fronteira automático dos aeroportos portugueses (ver \ref{CartoesInteligentes}), ou o controlo de entradas nas cerimónias inaugurais dos jogos olímpicos de Pequim (ver \ref{sec:SegurancaAplicaçãoLei}). Em condições específicas e favoráveis, é então possível considerar que os sistemas de reconhecimento facial automático atuais conseguem mesmo ultrapassar a capacidade de reconhecimento humana, uma vez que conseguem identificar com precisão um maior número de faces do que aquelas que um humano consegue.
+
+Contudo, o problema de reconhecimento facial automático ainda se encontra longe de ser um problema totalmente resolvido. Em cenários onde é registada uma grande variação ao nível da pose, iluminação ou outros fatores identificados na secção \ref{desafios} deste relatório, a identificação das entidades capturadas é ainda uma tarefa desafiante  \cite{Li2011}. Para além disso, a performance e satisfação obtida por parte dos utilizadores dos sistemas atuais demonstra uma grande variação tendo em conta as situações onde estes sistemas são utilizados. 
+
+Por outro lado, a crescente ubiquidade tecnológica e poder computacional presente nos diversos dispositivos utilizados no nosso dia a dia, aumenta o leque de aplicações possíveis do reconhecimento facial automático, apresentando novos desafios às soluções de atualmente existentes.(ver \ref{sec:areasAplicacao})
+
+Assim sendo, torna-se pertinente a continuação da investigação na área do reconhecimento facial em imagens. Para além disso, o elevado valor comercial das soluções existentes e consequente falta soluções abertas permite alcançar uma boa visibilidade dos resultados obtidos.
+
+Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicação destes filtros na recuperação de informação multimédia, nomeadamente no âmbito da da ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento das imagens \cite{Coelho:2012:IAC:2260641.2260676}. 
+
+Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso da abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar o processo de reconhecimento facial automático em imagens.
+
+\section{Coleção de dados} \label{sec:colecoes}
+
+A evolução do estado da arte do reconhecimento facial automático em imagens tem beneficiado em larga escala do aumento constante dos recursos disponíveis para o seu estudo, nomeadamente através da criação de novas e mais completas coleções de dados \cite{Huang2007}. A grande maioria destas coleções, caracteriza-se por ter condições de captura controladas com o intuito de efetuar o estudo de fatores específicos que afetam a qualidade do reconhecimento, tais como a variação da pose, iluminação, expressão e outros fatores mencionados no capítulo \ref{desafios}. O objeto de estudo desta dissertação não é, no entanto, a análise específica de alguns desses fatores, mas sim a criação de um sistema de reconhecimento facial automático em imagens a partir de recursos de código aberto disponíveis, assim como a análise posterior do impacto do uso de abstração de imagens no sistema desenvolvido. Desta forma, a escolha de uma biblioteca apropriada e que represente as grandes variações associadas aos diferentes desafios que afetam o reconhecimento facial em imagens torna-se crucial.
+
+Tendo em conta as preocupações acima mencionadas, para a análise dos resultados obtidos no âmbito nesta dissertação foi escolhida a coleção de imagens \textit{Labeled Faces in the Wild}. Esta coleção é constituída por um conjunto de imagens faciais e respetivas anotações textuais e encontra-se descrita em maior pormenor na secção seguinte deste documento.
+
+Para um estudo científico e rigoroso do desempenho do sistema criado e análise do impacto dos filtros de abstração no reconhecimento facial, para além da escolha de um conjunto de dados a analisar, torna-se também importante a construção de sub-conjuntos de teste, assim como a definição de uma metodologia de avaliação adequada. Na secção \ref{sec:conjuntos} encontram-se detalhados os conjuntos de teste criados e nas secções \ref{falta} e \ref{falta} as metodologias de avaliação adotadas.
+
+\subsection{\textit{Labeled Faces in the Wild}}  \label{sec:lfw}
+A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Nesse sentido, as imagens que constituem a galeria caracterizam-se por possuir uma grande variabilidade, nomeadamente ao nível da pose, expressão, iluminação, etnia, idade, género, vestuário e qualidade da câmara, por exemplo \cite{Huang2007}.
+
+Nesta coleção encontram-se representados um conjunto de 5749 indivíduos, ilustrados por 13233 imagens. O número de imagens por pessoa apresenta no entanto uma grande variação, desde um mínimo de 1 imagem por pessoa para 4069 indivíduos, até um máximo de 530 imagens que representam o antigo presidente dos Estados Unidos da América George W. Bush. O gráfico \ref{fig:distribuicaoLFW} ilustra a grande variação da distribuição do número de imagens por pessoa.
+
+\begin{figure}[ht]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=1\textwidth]{Distribuicao}
+    \caption{Distribuição do número de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o número de pessoas em escala logarítmica e no eixo horizontal o número de imagens correspondente.}
+    \label{fig:distribuicaoLFW}
+  \end{center}
+\end{figure}
+
+As imagens desta coleção são maioritariamente a cores, com diferentes graus de saturação, existindo também um número reduzido de imagens a preto e branco. Devido à inexistência de restrições na captura de imagens, cada fotografia pode possuir mais do que uma face representada, sendo que a face que contem o pixel central deve ser considerada como a entidade representada na imagem. A cada imagem encontra-se também associada uma anotação textual, relativa ao nome da pessoa representada. A tabela \ref{tab:lfw} sintetiza algumas das características mais significativas da biblioteca.
+
+\begin{center}
+\begin{table}
+	\caption{Caracterização da Biblioteca LFW}
+	\begin{center}
+    \begin{tabular}{ll}
+    \hline
+    Característica                            & Valor            \\ \hline
+    Imagens                                   & 13233 imagens    \\
+    Pessoas representadas                     & 5749 pessoas     \\
+    Tamanho total / Formato                   & 179 MB / JPEG    \\
+    Tamanho de cada imagem: min / médio / max & ~                \\
+    Dimensões imagem                          & 250 $x$ 250 pixeis \\
+    \hline
+    \end{tabular}
+	\label{tab:lfw}
+	\end{center}
+\end{table}
+\end{center}
+
+Para além da coleção LFW original, encontram-se também disponíveis para fins de investigação duas outras coleções derivadas da coleção original, LFW funneled e LFW-a, onde as imagens originais foram sujeitas a um pré-processamento com vista a efetuar o alinhamento da posição da face na imagem, cada uma correspondendo a uma técnica diferente de alinhamento da imagem, respetivamente. Um exemplo dos resultados obtidos nas diferentes bibliotecas pode ser visto na figura \ref{fig:lfwversoes}.
+
+- figura com três caras cada uma de um LFW diferente.
+
+A coleção LFW é particularmente interessante para o estudo do desempenho do sistema desenvolvido e consequentemente do impacto do uso da abstração de imagens no reconhecimento facial uma vez que a variabilidade presente nas suas imagens, representa uma amostra fiável das variações encontradas no dia-a-dia de uma pessoa. Por outro lado, o facto de as suas imagens não terem sido capturadas com o intuito específico da análise do problema do reconhecimento facial, aproxima este conjunto de dados das imagens utilizadas por um utilizador final de um sistema de reconhecimento facial automático na grande maioria das situações. Finalmente, e uma vez que a tarefa de alinhamento da face na imagem não é um objeto de estudo primordial desta dissertação, a existência de versões já alinhadas da coleção permitiu agilizar os testes realizados, retirando um fator importante de variação dos resultados obtidos. Assim sendo, no âmbito desta dissertação optamos pela utilização da versão alinhada LFW-a \citep{autor} para fins de avaliação do desempenho do sistema de reconhecimento facial criado e do impacto do uso de filtros de abstração sobre essas imagens.
+
 \section{Implementação}
 
 \subsection{Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}

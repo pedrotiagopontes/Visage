@@ -8,8 +8,9 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{24}{figure.caption.12}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{26}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Cadeia de pr\IeC {\'e}-processamento a que as imagens podem ser sujeitas.\relax }}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{30}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Cadeia de pr\IeC {\'e}-processamento a que as imagens podem ser sujeitas.\relax }}{35}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Original, Cropped e Masked\relax }}{42}{figure.caption.22}
 \addvspace {10\p@ }

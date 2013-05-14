@@ -29,24 +29,31 @@
 \contentsline {subsection}{\numberline {3.2.5}T\IeC {\'e}cnicas \textit {Gradient Domain}}{26}{subsection.3.2.5}
 \contentsline {section}{\numberline {3.3}Trabalho Relacionado}{26}{section.3.3}
 \contentsline {chapter}{\numberline {4}Sistema de Reconhecimento Facial Visage}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}Implementa\IeC {\c c}\IeC {\~a}o}{28}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{28}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{30}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Arquitectura}{31}{section.4.2}
-\contentsline {section}{\numberline {4.3}Detalhes Implementa\IeC {\c c}\IeC {\~a}o}{31}{section.4.3}
-\contentsline {section}{\numberline {4.4}Funcionalidades}{32}{section.4.4}
-\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Cole\IeC {\c c}\IeC {\~o}es de dados}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}\textit {Labeled Faces in the Wild}}{34}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Conjuntos de Teste}{35}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Experi\IeC {\^e}ncias Realizadas}{36}{section.5.2}
-\contentsline {section}{\numberline {5.3}Resultados \textit {Closed Set-Identification}}{37}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Metodologias Avalia\IeC {\c c}\IeC {\~a}o}{37}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Resultados}{37}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Resultados em Retrieval}{37}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologias Avalia\IeC {\c c}\IeC {\~a}o}{37}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{37}{subsection.5.4.2}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{38}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{39}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{40}{section*.22}
+\contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Cole\IeC {\c c}\IeC {\~a}o de dados}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}\textit {Labeled Faces in the Wild}}{29}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Implementa\IeC {\c c}\IeC {\~a}o}{31}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{33}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Arquitectura}{34}{section.4.4}
+\contentsline {section}{\numberline {4.5}Detalhes Implementa\IeC {\c c}\IeC {\~a}o}{34}{section.4.5}
+\contentsline {section}{\numberline {4.6}Funcionalidades}{35}{section.4.6}
+\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conjuntos de Teste}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experi\IeC {\^e}ncias Realizadas}{37}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Experi\IeC {\^e}ncia 1 - Dete\IeC {\c c}\IeC {\~a}o e segmenta\IeC {\c c}\IeC {\~a}o da face}{38}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Experi\IeC {\^e}ncia 2 - Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{38}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Experi\IeC {\^e}ncia 3 - Impacto Filtros de Abstra\IeC {\c c}\IeC {\~a}o}{38}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Resultados}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Resultados \textit {Closed-Set Identification}}{39}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{40}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Resultados Experi\IeC {\^e}ncia 1}{40}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}Resultados Experi\IeC {\^e}ncia 2}{41}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}Resultados Experi\IeC {\^e}ncia 3}{41}{subsubsection.5.3.1.4}
+\contentsline {subsection}{\numberline {5.3.2}Resultados em Retrieval}{41}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Metodologias Avalia\IeC {\c c}\IeC {\~a}o}{41}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Resultados}{41}{subsubsection.5.3.2.2}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{44}{section.6.2}
+\contentsline {chapter}{Refer\^{e}ncias}{45}{section*.23}
