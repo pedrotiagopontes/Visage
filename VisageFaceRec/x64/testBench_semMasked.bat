@@ -1,21 +1,21 @@
-REM ORIGINAL
-FaceRecognizer.exe ..\data\original_20_20_B.txt original_20_20_EIGEN_B.txt -E 30
+REM normalized
+FaceRecognizer.exe ..\data\whiteBalance\normalized_20_20_B.txt normalized_20_20_EIGEN_B.txt -E 30
 
-FaceRecognizer.exe ..\data\original_20_20_B.txt original_20_20_FISHER_B.txt -F 30
+FaceRecognizer.exe ..\data\whiteBalance\normalized_20_20_B.txt normalized_20_20_FISHER_B.txt -F 30
 
-FaceRecognizer.exe ..\data\original_20_20_B.txt original_20_20_LBPH_B.txt -L 30
+FaceRecognizer.exe ..\data\whiteBalance\normalized_20_20_B.txt normalized_20_20_LBPH_B.txt -L 30
 
-REM CROPPED
-FaceRecognizer.exe ..\data\cropped_20_20_B.txt cropped_20_20_EIGEN_B.txt -E 30
+REM equalized
+FaceRecognizer.exe ..\data\whiteBalance\equalized_20_20_B.txt equalized_20_20_EIGEN_B.txt -E 30
 
-FaceRecognizer.exe ..\data\cropped_20_20_B.txt cropped_20_20_FISHER_B.txt -F 30
+FaceRecognizer.exe ..\data\whiteBalance\equalized_20_20_B.txt equalized_20_20_FISHER_B.txt -F 30
 
-FaceRecognizer.exe ..\data\cropped_20_20_B.txt cropped_20_20_LBPH_B.txt -L 30
+FaceRecognizer.exe ..\data\whiteBalance\equalized_20_20_B.txt equalized_20_20_LBPH_B.txt -L 30
 
-REM MASKED
-FaceRecognizer.exe ..\data\masked_20_20_B.txt masked_20_20_EIGEN_B.txt -E 30
+REM CLAHE
+FaceRecognizer.exe ..\data\whiteBalance\CLAHE_20_20_B.txt CLAHE_20_20_EIGEN_B.txt -E 30
 
-FaceRecognizer.exe ..\data\masked_20_20_B.txt masked_20_20_FISHER_B.txt -F 30
+FaceRecognizer.exe ..\data\whiteBalance\CLAHE_20_20_B.txt CLAHE_20_20_FISHER_B.txt -F 30
 
-FaceRecognizer.exe ..\data\masked_20_20_B.txt masked_20_20_LBPH_B.txt -L 30
+FaceRecognizer.exe ..\data\whiteBalance\CLAHE_20_20_B.txt CLAHE_20_20_LBPH_B.txt -L 30
 PAUSE
