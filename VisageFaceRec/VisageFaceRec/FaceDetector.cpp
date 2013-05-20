@@ -63,7 +63,7 @@ Mat FaceDetector::applyMask(Mat maskImg, Mat image){
 }
 
 Mat FaceDetector::normalizeConstrast(Mat original, int normalize_hist){
-	Mat processedImg = original;
+	Mat processedImg;
 	Ptr<CLAHE> cl_0;
 
 	switch (normalize_hist){
@@ -79,6 +79,8 @@ Mat FaceDetector::normalizeConstrast(Mat original, int normalize_hist){
 	case EqualizeHistogram:
 		equalizeHist( original, processedImg);
 		break;
+	default:
+		processedImg = original;
 	}
 
 	return processedImg;
@@ -103,9 +105,9 @@ Mat FaceDetector::applyFilter(Mat original, int filter){
 Mat FaceDetector::processImg(Mat original, int filter, int normalize_hist){
 	Mat processedImg = original;
 
-	if(normalize_hist > 0){
-		processedImg =  normalizeConstrast(original, normalize_hist);
-	}
+	processedImg =  normalizeConstrast(original, normalize_hist);
+
+	original = processedImg;
 
 	if(filter > 0){
 		processedImg =  applyFilter(original, filter);

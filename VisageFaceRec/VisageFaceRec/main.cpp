@@ -55,7 +55,7 @@ int faceDetector(int argc, const char *argv[]){
 
 	/// FaceDetector.exe
 	bool mask_image = false;
-	int normalize_hist = false;
+	int normalize_hist = 0;
 	if (argc < 3){
 		cout << "Usage: path.txt outputDirName [-mask] [-N:(contrast stretching) -E(equalize histogram) -C(CLAHE)] -[-G:(gaussian filter) -B:(bilateral filter)]" <<endl;
 		return -1;
@@ -76,13 +76,13 @@ int faceDetector(int argc, const char *argv[]){
 			if(m == "-mask" || n == "-mask"){
 				mask_image = true;	
 			}
-			if(m == "-N" || n == "-n"){
+			if(m == "-N" || n == "-N"){
 				normalize_hist = ContrastStreatching;	
 			}
-			if(m == "-E" || n == "-e"){
+			if(m == "-E" || n == "-E"){
 				normalize_hist = EqualizeHistogram;	
 			}
-			if(m == "-C" || n == "-c"){
+			if(m == "-C" || n == "-C"){
 				normalize_hist = CLAHE_Histogram;	
 			}
 			if(f == "-G"){
