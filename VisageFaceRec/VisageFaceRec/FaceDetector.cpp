@@ -43,9 +43,9 @@ FaceDetector::FaceDetector(string dir, string face_cascade_name, string maskName
 		CV_Error(CV_StsBadArg, error_message);
 	};
 
-	this->maskImg = imread(maskName, CV_LOAD_IMAGE_GRAYSCALE);
+	this->maskImg = imread(this->maskName, CV_LOAD_IMAGE_GRAYSCALE);
 	if(!(maskImg.rows>0)){
-		string error_message = "(!)Error loading " + maskName;
+		string error_message = "(!)Error loading " + this->maskName;
 		CV_Error(CV_StsBadArg, error_message);
 	}
 }
