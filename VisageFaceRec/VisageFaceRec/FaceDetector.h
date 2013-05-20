@@ -25,6 +25,7 @@ class FaceDetector
 	string rightEye_cascade_name; // = "haarcascade_mcs_righteye.xml";
 	string leftEye_cascade_name; // = "haarcascade_mcs_lefteye.xml";
 	string maskName;
+	Mat maskImg;
 	CascadeClassifier face_cascade;
 	CascadeClassifier eyes_cascade;
 	CascadeClassifier mouth_cascade;
@@ -40,13 +41,18 @@ class FaceDetector
 public:
 #define GaussianFilter 1
 #define BilateralFilter 2
+#define ContrastStreatching 1
+#define EqualizeHistogram 2
+#define CLAHE_Histogram 3
 
 	FaceDetector(string dir = "..\\helpers\\", string face_cascade_name = "lbpcascade_frontalface.xml", string maskName = "mask.bmp");
 	~FaceDetector(void);
 	Mat applyMask(Mat maskImg, Mat image);
-	Mat processImg(Mat original, int filter=0, bool normalize_hist=true);
-	int detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, bool normalize_hist, int filter);
-	int detectAndCropDir(string path, string outputdir = "croppedImages", bool apply_mask=true, bool normalize_hist=false, int filter=0);
+	Mat applyFilter(Mat original, int filter);
+	Mat normalizeConstrast(Mat original, int normalize_hist);
+	Mat processImg(Mat original, int filter=0, int normalize_hist = EqualizeHistogram);
+	int detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, int normalize_hist, int filter);
+	int detectAndCropDir(string path, string outputdir = "croppedImages", bool apply_mask=true, int normalize_hist=EqualizeHistogram, int filter=0);
 	Mat alignFace(Mat face, Rect myROI);
 
 	void exportDir(string path, string outputdir,string extension);

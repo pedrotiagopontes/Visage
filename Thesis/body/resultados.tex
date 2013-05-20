@@ -16,10 +16,9 @@ O desempenho de sistemas de reconhecimento facial pode ser analisado através de
 
 No âmbito desta dissertação temos em vista a realização de um conjunto de experiências descritas em \ref{sec:experiencias} e análise dos seus resultados através de duas perspetivas descritas nos pontos \ref{sec:avaliacao1} e \ref{sec:avaliacao2} a seguir. Uma vez que estas avaliações não se encontram enquadradas no paradigma de avaliação de \textit{pair matching}, para o qual a biblioteca LFW foi originalmente criada tornou-se necessário a criação de novos conjuntos de teste, os quais passamos a apresentar de seguida.
 
-
-
 \section{Conjuntos de Teste}  \label{sec:conjuntos}
-Na avaliação de sistemas de reconhecimento facial automáticos designam-se de \textit{amostras biométricas} as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema essas amostras biométricas podem ser apenas uma imagem, um conjunto de imagens ou um vídeo. No projeto Visage as amostras biométricas de um indivíduo são constituídas por um conjunto de imagens, um exemplo de amostras biométricas de um indivíduo para a biblioteca LFW-a pode encontra-se representado nas figuras \ref{fig:galeria}  e \ref{fig:provas}. Designam-se ainda de \textit{provas} as amostras biométricas apresentadas ao sistema para serem reconhecidas.
+
+Na avaliação de sistemas de reconhecimento facial automáticos designam-se de \textit{amostras biométricas} as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema, as amostras biométricas podem ser apenas uma imagem, um conjunto de imagens, ou um vídeo. No projeto Visage as amostras biométricas de um indivíduo são constituídas por um conjunto de imagens, um exemplo de amostras biométricas de um indivíduo para a biblioteca LFW-a pode encontra-se representado nas figuras \ref{fig:galeria}  e \ref{fig:provas}. Designam-se ainda de \textit{provas} as amostras biométricas apresentadas ao sistema para serem reconhecidas.
 
 Para a avaliação efetuada foram criados 4 conjuntos de teste. Todos os conjuntos possuem um total de 1180 imagens, correspondentes a amostras biométricas de 59 pessoas diferentes, existindo 20 imagens por cada pessoa presente em cada conjunto. Dessas imagens foram ainda criados dois conjuntos de dados: conjunto $\mathscr{G}$, designado de galeria de treino e conjunto $\mathscr{P}$, designado de provas.
 
@@ -138,7 +137,7 @@ A galeria de treino, $\mathscr{G}$, é constituída por 80\% das imagens de cada
 
 O conjunto $\mathscr{P}$ contem os restantes 20\% das imagens de cada pessoa (4 imagens por pessoa) e, tal como o seu nome indica, as suas imagens são utilizadas para a avaliação do sistema desenvolvido. Um exemplo das imagens presentes nas provas para o sujeito Angelina Jolie pode ser visto na figura \ref{fig:provas}.
 
-A diferença existente entre os quatro conjuntos criados encontras-se relacionada com as imagens incluídas na galeria de treino e nas provas, sendo que estas diferem de forma aleatória entre os quatro conjuntos. A criação de 4 conjuntos com igual tamanho mas diferentes imagens de treino e teste tem em vista analisar o desempenho do sistema com diferentes galerias de forma a determinar se existe uma variação significativa dos resultados obtidos em cada galeria.
+A diferença existente entre os quatro conjuntos criados encontras-se relacionada com as imagens incluídas na galeria de treino e nas provas, sendo que estas diferem de forma aleatória entre os quatro conjuntos. A criação de 4 conjuntos com igual tamanho mas diferentes imagens de treino e teste tem em vista analisar o desempenho do sistema com diferentes galerias, de forma a determinar se existe uma variação significativa dos resultados obtidos em cada galeria.
 
 \section{Pré-processamento} \label{sec:experiencias}
 O módulo de reconhecimento facial, \textit{Face Recognizer}, disponibilizado pela plataforma \textit{OpenCV}, constituiu uma base sólida para o desenvolvimento do sistema de reconhecimento facial \textit{Visage}, contudo, de modo a tornar este sistema mais completo e versátil, revelou-se necessário adapta-lo e expandir as suas capacidades, nomeadamente através da aplicação de uma cadeia de pré-processamento às imagens existentes \footnote{a qual se encontra ilustrada na figura \ref{fig:preprocessamento}}. A evolução do sistema desenvolvido foi efetuada de forma gradual e iterativa, e culminou na construção de um conjunto de galerias de imagens, analisadas através de um grupo de experiências que permitem tirar conclusões acerca dos efeitos das diversas etapas de pré-processamento realizadas e da contribuição de cada uma delas para a melhoria do desempenho do sistema criado. 
@@ -257,7 +256,7 @@ Anisotropic Kuwahara
 \section{Resultados}
 As imagens dos conjuntos de testes descritos em \ref{sec:conjuntos} foram sujeitas a um conjunto de tarefas de pré-processamento, descritas em \ref{sec:experiencias}, resultado na criação de um conjunto de galerias de imagens pré-processadas, as quais se encontram resumidas na tabela \ref{tab:colecoes}. Todas as galerias resultantes possuem as mesmas imagens, diferenciando-se apenas pelas tarefas de pré-processamento a que foram sujeitas.
 
-Nesta secção é efetuada a avaliação do desempenho do sistema de reconhecimento facial criado. A avaliação é efetuada através da análise do desempenho dos três algoritmos disponíveis em cada uma das galerias de imagens pré-processadas, encontrando-se os resultados obtidos agrupados num conjunto de três experiências, cada uma dedicada a analisar a variação do comportamento do sistema dado um problema específico. A divisão entre imagens de treino e teste de cada galeria é efetuada segundo os quatro conjuntos de testes criados, sendo cada galeria avaliada em cada um dos quatro conjuntos de teste existentes. Os resultados finais para uma dada galeria são obtidos através da média dos resultados obtidos para cada um dos quatro conjuntos de teste.
+Nesta secção encontram-se reportados os resultados da avaliação efetuada ao desempenho do sistema de reconhecimento facial Visage. A avaliação é efetuada através da análise do desempenho dos três algoritmos disponíveis em cada uma das galerias de imagens pré-processadas, encontrando-se os resultados obtidos agrupados num conjunto de três experiências, cada uma dedicada a analisar a variação do comportamento do sistema dado um problema específico. A divisão entre imagens de treino e teste de cada galeria é efetuada segundo os quatro conjuntos de testes criados, sendo cada galeria avaliada em cada um dos quatro conjuntos de teste existentes. Os resultados finais para uma dada galeria são obtidos através da média dos resultados obtidos para cada um dos quatro conjuntos de teste.
 
 Para cada conjunto de teste descrito em \ref{sec:conjuntos}, seja $\mathscr{G}$ a sua galeria de treino, em que $\mathscr{G} = \{g_1, ..., g_N\}$ e seja $\mathscr{P}$ o conjunto das suas provas, em que $\mathscr{P} = \{p_1, ..., p_N\}$. Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada a cada amostra biométrica $g_i$ da galeria, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$. Este índice é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$. Quanto menor o índice de similaridade, maior é a probabilidade das imagens comparadas pertencerem à mesma pessoa, sendo que o melhor valor possível para o índice de similaridade de um $match$ $score$ é zero.
 
@@ -277,7 +276,7 @@ Em que $|C(n)|$ é número de provas com ranking $n$, ou menor do que $n$, e $|\
  
 Os resultados da identificação são posteriormente representados num gráfico do tipo \textit{Cumulative match score} (CMS). Um gráfico do tipo CMS representa $T_{I}(n)$ como uma função de ranking $n$. No eixo horizontal encontra-se representado o ranking e no eixo vertical encontra-se representada a respetiva taxa de identificação, um exemplo de um gráfico CMS pode ser visto em \ref{fig:exp1_comaparacao}.
 
-$T_{I}(n)$ é calculada para todos os rankings entre 1 e 30, uma vez que este revelou ser o intervalo com informação mais significativa para os conjuntos de teste utilizados. Os primeiros níveis de ranking apresentam, naturalmente, uma maior variação na percentagem de pessoas identificadas, revelando-se assim como mais significativos para a análise do desempenho do sistema.
+A $T_{I}(n)$ é calculada para todos os rankings entre 1 e 30. Dentro desse intervalo, os primeiros níveis de ranking apresentam uma maior variação na percentagem de pessoas identificadas, revelando-se assim mais significativos para a análise do desempenho do sistema.
 
 Para cada conjunto de teste, utilizando as imagens de uma determinada galeria, são calculadas as $T_{I}(n)$, entre 1 e 30, para cada algoritmo disponível. No final é efetuada a média dos resultados obtidos nos quatro conjuntos de teste existentes e reportado o desempenho do respetivo algoritmo para a galeria utilizada, representado a respetiva taxa de identificação em um gráfico CMS. O processo é repetido para cada uma das galerias utilizadas em cada experiência.
 
@@ -418,8 +417,8 @@ P_M = \frac{ \sum\limits_{i=0}^{n} P_{p_i} }{|\mathscr{P}|}
     ~ \\
     Cropped    & 37.7158\%          & 54.6740\%           & \textbf{58.1718\%}    \\
     Masked     & 40.0104\%          & 54.0008\%           & \textbf{58.2673\%}    \\
-    Normalized & 42.4088\%          & 53.5150\%           & \textbf{57.1838\%}    \\
     ~ \\
+    Normalized & 42.4088\%          & 53.5150\%           & \textbf{57.1838\%}    \\
     Equalized  & 55.2355\%          & 57.3427\%           & \textbf{59.6318\%}    \\
     CLAHE      & 53.5767\%          & 55.9015\%           & \textbf{56.4638\%}    \\
     \hline\hline

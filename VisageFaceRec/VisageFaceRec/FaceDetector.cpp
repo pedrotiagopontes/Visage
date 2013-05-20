@@ -42,6 +42,12 @@ FaceDetector::FaceDetector(string dir, string face_cascade_name, string maskName
 		string error_message = "(!)Error loading " + nose_cascade_name;
 		CV_Error(CV_StsBadArg, error_message);
 	};
+
+	this->maskImg = imread(maskName, CV_LOAD_IMAGE_GRAYSCALE);
+	if(!(maskImg.rows>0)){
+		string error_message = "(!)Error loading " + maskName;
+		CV_Error(CV_StsBadArg, error_message);
+	}
 }
 
 
@@ -56,27 +62,53 @@ Mat FaceDetector::applyMask(Mat maskImg, Mat image){
 	return maskedImage;
 }
 
-Mat FaceDetector::processImg(Mat original, int filter, bool normalize_hist){
+Mat FaceDetector::normalizeConstrast(Mat original, int normalize_hist){
 	Mat processedImg = original;
-	if(normalize_hist){
-		Mat histo, normalizedImg, cla;
-		Mat cl1, cl2, cl3, cl4, cl5;
-		//normalize(original, normalizedImg, 0, 255, NORM_MINMAX);
-		//equalizeHist( original, histo);
-		Ptr<CLAHE> cl_0 = createCLAHE(2.0, Size(3,3));
-		cl_0->apply(original, cla);
-		original = processedImg = cla; // to force filters to be aplied in normalized img
+	Ptr<CLAHE> cl_0;
+
+	switch (normalize_hist){
+	case ContrastStreatching:
+		normalize(original, processedImg, 0, 255, NORM_MINMAX);
+		break;
+
+	case CLAHE_Histogram:
+		cl_0 = createCLAHE(2.0, Size(3,3));
+		cl_0->apply(original, processedImg);
+		break;
+
+	case EqualizeHistogram:
+		equalizeHist( original, processedImg);
+		break;
+	}
+
+	return processedImg;
+}
+
+Mat FaceDetector::applyFilter(Mat original, int filter){
+	Mat processedImg = original;
+
+	if(filter == GaussianFilter){
+		GaussianBlur( original, processedImg, Size( 3, 3 ), 0, 0 );
+	}
+
+	if(filter == BilateralFilter){
+		Mat bilateralImg;
+		bilateralFilter ( original, bilateralImg, 5, 50, 50 );
+		processedImg = bilateralImg;
+	}
+
+	return processedImg;
+}
+
+Mat FaceDetector::processImg(Mat original, int filter, int normalize_hist){
+	Mat processedImg = original;
+
+	if(normalize_hist > 0){
+		processedImg =  normalizeConstrast(original, normalize_hist);
 	}
 
 	if(filter > 0){
-		if(filter == GaussianFilter){
-			GaussianBlur( original, processedImg, Size( 3, 3 ), 0, 0 );
-		}
-		if(filter == BilateralFilter){
-			Mat teste;
-			bilateralFilter ( original, teste, 5, 50, 50 );
-			processedImg = teste;
-		}
+		processedImg =  applyFilter(original, filter);
 	}
 	return processedImg;
 }
@@ -106,7 +138,7 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		float angle = atan2(eye_directionY,eye_directionX) * 180.0 / PI;
 
 		// rect is the RotatedRect (I got it from a contour...)
-		RotatedRect rect(Point2f(face.cols/2,face.rows/2), Size2f(face.cols,face.rows), angle);
+		RotatedRect rect(Point2f(((float)face.cols)/2.0,((float)face.rows)/2.0), Size2f((float)face.cols, (float)face.rows), angle);
 		
 		Size rect_size = rect.size;
 		// thanks to http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/
@@ -122,7 +154,7 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 	return rotated;
 }
 
-int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, bool normalize_hist, int filter)
+int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, int normalize_hist, int filter)
 {
 	std::vector<Rect> faces, mouth, eyes, nose;
 	double verticalCrop = size.height *0.08;
@@ -131,11 +163,6 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 	Mat frame_gray, resizedImg;
 	vector<Mat> multipleFaces;
 	vector<int> ties, tiesRate;
-	Mat maskImg = imread(maskName, CV_LOAD_IMAGE_GRAYSCALE);
-	if(!(maskImg.rows>0)){
-		string error_message = "(!)Error loading " + maskName;
-		CV_Error(CV_StsBadArg, error_message);
-	}
 
 	// How detailed should the search be.
 	float search_scale_factor = 1.1f;
@@ -171,15 +198,12 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 			//-- In each face, detect eyes
 			eyes_cascade.detectMultiScale( resizedImg, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE , Size(10, 10) );
 			for( size_t j = 0; j < eyes.size(); j++ ){
-				//cout << j << endl;
-				//rectangle(resizedImg, eyes[j], CV_RGB(255, 0,0), 2);
 				has_eyes = true;
 			}
-
-			if(eyes.size() > 0){
+			if(eyes.size() > 0){ 
 				faceRate+= 100;
 			}
-
+			//-- In each face, detect mouth
 			mouth_cascade.detectMultiScale( resizedImg, mouth, 1.1, 2, 0, Size(20, 20) );
 			for( size_t k = 0; k < mouth.size(); k++ ){
 				if(has_eyes){
@@ -192,11 +216,10 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 					//rectangle(resizedImg, mouth[k], CV_RGB(0, 255,0), 1);
 				}
 			}
-
 			if(has_mouth){
 				faceRate+= 50;
 			}
-
+			//-- In each face, detect nose
 			nose_cascade.detectMultiScale( resizedImg, nose, 1.1, 2, 0, Size(20, 20) );
 			for( size_t l = 0; l < nose.size(); l++ ){
 				//rectangle(resizedImg, nose[l], CV_RGB(255, 0,0), 3);
@@ -257,7 +280,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 }
 
 //Only optimized for lfw library
-int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask, bool normalize_hist, int filter) {
+int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask, int normalize_hist, int filter) {
 	// DATA
 	vector<string> images;
 	vector<string> names;

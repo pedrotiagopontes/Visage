@@ -55,9 +55,9 @@ int faceDetector(int argc, const char *argv[]){
 
 	/// FaceDetector.exe
 	bool mask_image = false;
-	bool normalize_hist = false;
+	int normalize_hist = false;
 	if (argc < 3){
-		cout << "Usage: path.txt outputDirName [-mask] [-norm] -[-G:(gaussian filter) -B:(bilateral filter)]" <<endl;
+		cout << "Usage: path.txt outputDirName [-mask] [-N:(contrast stretching) -E(equalize histogram) -C(CLAHE)] -[-G:(gaussian filter) -B:(bilateral filter)]" <<endl;
 		return -1;
 	}else{
 		path = string(argv[1]);
@@ -76,8 +76,14 @@ int faceDetector(int argc, const char *argv[]){
 			if(m == "-mask" || n == "-mask"){
 				mask_image = true;	
 			}
-			if(m == "-norm" || n == "-norm"){
-				normalize_hist = true;	
+			if(m == "-N" || n == "-n"){
+				normalize_hist = ContrastStreatching;	
+			}
+			if(m == "-E" || n == "-e"){
+				normalize_hist = EqualizeHistogram;	
+			}
+			if(m == "-C" || n == "-c"){
+				normalize_hist = CLAHE_Histogram;	
 			}
 			if(f == "-G"){
 				filter = GaussianFilter;
@@ -87,20 +93,7 @@ int faceDetector(int argc, const char *argv[]){
 			}
 		}
 
-		/*FaceDetector detectorAlt("..\\helpers\\", "haarcascade_frontalface_alt.xml", "mask.bmp");
-		FaceDetector detectorAlt_tree("..\\helpers\\", "haarcascade_frontalface_alt_tree.xml", "mask.bmp");
-		FaceDetector detectorAlt2("..\\helpers\\", "haarcascade_frontalface_alt2.xml", "mask.bmp");
-		FaceDetector detectorDefault("..\\helpers\\", "haarcascade_frontalface_default.xml", "mask.bmp");
-		*/
 		FaceDetector detectorLPB("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
-		/*cout << "detectorAlt -------------------------------------------------------" << endl<< endl;
-		detectorAlt.detectAndCropDir(path, outputfilename + "-alt", mask_image, normalize_hist);
-		cout << "detectorAlt_Tree -------------------------------------------------------"<< endl<< endl;
-		detectorAlt_tree.detectAndCropDir(path, outputfilename + "-alt_tree", mask_image, normalize_hist);
-		cout << "detectorAlt2 -------------------------------------------------------"<< endl<< endl;
-		detectorAlt2.detectAndCropDir(path, outputfilename + "-alt_2", mask_image, normalize_hist);
-		cout << "detectorDefault -------------------------------------------------------"<< endl<< endl;
-		detectorDefault.detectAndCropDir(path, outputfilename + "-default", mask_image, normalize_hist);*/
 		cout << "detectorLPB -------------------------------------------------------"<< endl<< endl;
 		detectorLPB.detectAndCropDir(path, outputfilename, mask_image, normalize_hist, filter);
 	}
