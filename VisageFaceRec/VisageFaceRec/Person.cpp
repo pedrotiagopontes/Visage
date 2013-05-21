@@ -1,5 +1,7 @@
 #include "Person.h"
 
+Person::Person(){
+};
 
 Person::Person(int label, string name, string imageDir)
 {

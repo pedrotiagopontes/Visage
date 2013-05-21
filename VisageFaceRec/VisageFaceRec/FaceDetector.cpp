@@ -115,7 +115,7 @@ Mat FaceDetector::processImg(Mat original, int filter, int normalize_hist){
 	return processedImg;
 }
 
-//Needs more work on this
+
 Mat FaceDetector::alignFace(Mat face, Rect myROI){
 	Mat original = face;
 	face = face(myROI);

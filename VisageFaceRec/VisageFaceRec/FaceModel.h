@@ -20,7 +20,6 @@ class FaceModel
 	double threshold;
 	int nComponents;
 	string name;
-	string storageFile;
 
 	void loadImagesFromPeople(vector<Person> people);
 
@@ -33,9 +32,11 @@ public:
 	vector<int> trainnedLabels;
 
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
-	FaceModel(int modelType, vector<Person> people, string storageFile="FaceRecognizerExtended.xml");
+	FaceModel(int modelType, vector<Person> people);
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
-	FaceModel(int modelType, vector<Person> people, double threshold, int nComponents, string storageFile="FaceRecognizerExtended.xml");
+	FaceModel(int modelType, vector<Person> people, double threshold, int nComponents);
+	///Building a model from previous existing model;
+	FaceModel(int modelType, const string& filename);
 	~FaceModel(void);
 	string getName();
 
@@ -48,6 +49,11 @@ public:
 	///returns true if @labelOriginal and predictedLabel are the same and the confidence
 	bool isSamePerson(int labelOriginal, Mat image, int& predictedLabel, double& confidence);
 
+	// Serializes this object to a given filename.
+	void save(const string& filename) const;
+	// Deserializes this object from a given filename.
+	void load(const string& filename);
+
 	/**Tests a group of peple testing images to verify model accuracy. @return number of correct matches
 	* @resultsLabels and @resultsConfidence are predicted results
 	*/
@@ -56,5 +62,6 @@ public:
 	int testModelNPredictions(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t n);
 
 	void testModelPrecision(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t threshold);
+
 };
 

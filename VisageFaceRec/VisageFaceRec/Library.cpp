@@ -31,6 +31,11 @@ void Library::addPerson(int classlabel, string name, string imageDir,  vector<st
 
 	people.push_back(p1);
 
+	mapPeople.insert(pair<int,Person>(classlabel, p1));
+}
+
+Person Library::getPerson(int classlabel){
+	return mapPeople[classlabel];
 }
 
 void Library::load_csv(const string filename, char separator){

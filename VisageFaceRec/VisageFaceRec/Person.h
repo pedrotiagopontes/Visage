@@ -16,6 +16,7 @@ class Person
 	vector<string> testImages;
 
 public:
+	Person();
 	Person(int label, string name, string imageDir);
 	Person(int label, string name, string imageDir, vector<string> trainImages, vector<string> testImages);
 	string toString();

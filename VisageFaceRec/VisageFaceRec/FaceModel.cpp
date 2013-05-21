@@ -1,6 +1,6 @@
 #include "FaceModel.h"
 
-FaceModel::FaceModel(int modelType, vector<Person> people, string storageFile)
+FaceModel::FaceModel(int modelType, vector<Person> people)
 {
 	this->nComponents = -1;
 	this->threshold = -1;
@@ -23,14 +23,12 @@ FaceModel::FaceModel(int modelType, vector<Person> people, string storageFile)
 		break;
 	}
 
-	this->storageFile = storageFile;
-
 	loadImagesFromPeople(people);
 
 	model->train(this->trainnedImages, this->trainnedLabels);
 }
 
-FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int nComponents, string storageFile)
+FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int nComponents)
 {
 	this->nComponents = nComponents;
 	this->threshold = threshold;
@@ -53,18 +51,50 @@ FaceModel::FaceModel(int modelType, vector<Person> people, double threshold, int
 		break;
 	}
 
-	this->storageFile = storageFile;
-
 	loadImagesFromPeople(people);
 
 	model->train(this->trainnedImages, this->trainnedLabels);
 
 }
 
+FaceModel::FaceModel(int modelType, const string& filename){
+	this->nComponents = -1;
+	this->threshold = -1;
+
+	switch (modelType)
+	{
+	case EIGENFACES:
+		this->model = createEigenFaceRecognizerExtended();
+		this->name = "EIGENFACES";
+		break;
+
+	case LBPH:
+		this->model = createLBPHFaceRecognizerExtended();
+		this->name = "LBPH";
+		break;
+
+	default:
+		this->model = createFisherFaceRecognizerExtended();
+		this->name = "FISHERFACES";
+		break;
+	}
+
+	load(filename);
+};
+
 string FaceModel::getName()
 {
 	return this->name;
 }
+
+void FaceModel::save(const string& filename) const{
+	this->model->save("..//saved//" + filename);
+};
+
+
+void FaceModel::load(const string& filename){
+	this->model->load("..//saved//" + filename);
+};
 
 void FaceModel::loadImagesFromPeople(vector<Person> people)
 {
@@ -88,6 +118,7 @@ void FaceModel::loadImagesFromPeople(vector<Person> people)
 FaceModel::~FaceModel(void)
 {
 }
+
 
 int FaceModel::identityImage(Mat image)
 {
@@ -313,6 +344,7 @@ int FaceModel::testModelNPredictions(vector<Person> people, ofstream& outputfile
 	outputfile.precision(4);
 	outputfile << "Tested " << nImages <<" images in " << timespent(tStart) << " seconds" << endl;
 
+	
 	return rightPredictions.size();
 }
 

@@ -23,9 +23,9 @@ void testLibrary(string path, int percetageTrainned, string outputfilename, int 
 
 };
 
-void testLibraryN(string path, int percetageTrainned, string outputfilename, int m, size_t n){
+void testLibraryN(string path, int percentageTrainned, string outputfilename, int m, size_t n){
 	clock_t tStart = clock();
-	Library myLib(path, percetageTrainned);	
+	Library myLib(path, percentageTrainned);	
 	ofstream outputfile, outputfileP, outputfileR;
 	outputfile.open("..\\results\\" + outputfilename);
 
@@ -48,6 +48,28 @@ void testLibraryN(string path, int percetageTrainned, string outputfilename, int
 	outputfileR.close();
 
 };
+
+void testLoadAndGetTop10(string libPath, int percentageTrainned, int m, string modelFileName, string sample){
+	Library myLib(libPath, percentageTrainned);
+	FaceModel model(m, modelFileName);
+
+	Mat image = imread(sample, CV_LOAD_IMAGE_GRAYSCALE);
+	if(image.rows > 0){
+		vector<int> labels;
+		vector<double> confidences;
+		model.identityImage(image, 10, labels, confidences);
+
+		vector<Person> pp;
+		for(size_t i=0; i<labels.size(); i++){
+			pp.push_back(myLib.getPerson(labels[i]));
+
+			cout << pp[i].getName() << endl;
+		}
+	}else{
+		cout << "error loading sample" << endl;
+	}
+}
+
 
 int faceDetector(int argc, const char *argv[]){
 	string path = "..\\etc\\at.txt";
@@ -156,7 +178,9 @@ int faceRecognizer(int argc, const char *argv[]){
 		size_t nResults = 1;
 		if(argc >= 5){
 			nResults = atoi(argv[4]);
-			testLibraryN(path, 80, outputfilename, modelType, nResults);
+			//testLibraryN(path, 80, outputfilename, modelType, nResults);
+			testLoadAndGetTop10(path, 80, modelType, "modelo.xml", 
+				"C://Users//Pedro//Pictures//lfw//lfw_aligned_BW//Angelina_Jolie//Angelina_Jolie_0005.jpg");
 		}else{
 			testLibrary(path, 80, outputfilename, modelType);
 		}
@@ -171,7 +195,7 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	return faceDetector(argc, argv);
+	//return faceDetector(argc, argv);
 
 	/*
 	string path = string(argv[1]);
@@ -185,7 +209,7 @@ int main(int argc, const char *argv[]) {
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	//return faceRecognizer(argc, argv);
+	return faceRecognizer(argc, argv);
 
 	//return 0;
 }
