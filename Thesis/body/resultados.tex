@@ -1,4 +1,5 @@
 \chapter{Avaliação e Resultados} \label{chap:resultados}
+\textbf{FALTA FAZER ESTE TEXTO}
 
 A hipótese levantada no âmbito desta dissertação é que o uso de abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar o processo de reconhecimento facial automático em imagens. Para a análise desta hipótese foi criado um sistema de reconhecimento facial automático em imagens, assim  como, escolhida uma biblioteca de imagens a analisar, tal como descrito em \ref{chap:visage}. Neste capítulo, é apresentada a metodologia de avaliação adotada para a análise da hipótese levantada, assim como do sistema de reconhecimento facial Visage e são também apresentados os resultados obtidos.
 
@@ -15,6 +16,13 @@ A hipótese levantada no âmbito desta dissertação é que o uso de abstração
 O desempenho de sistemas de reconhecimento facial pode ser analisado através de diferentes perspetivas, tal como introduzido na secção \ref{sec:problema} desta dissertação. A biblioteca LFW foi criada com o propósito inicial da análise do sub-problema de reconhecimento facial \textit{pair matching}, no qual o sistema deve decidir se duas faces representam ou não o mesmo indivíduo. No entanto, as características desta biblioteca, nomeadamente no que diz respeito à existência da anotação textual das pessoas presentes em cada imagem, à existência de apenas uma pessoa representada (de forma relevante) em cada imagem e ainda da normalização do formato das imagens, permitem que esta biblioteca possa ser utilizada com um esforço reduzido para o analise dos restantes sub-problemas de reconhecimento facial automático.
 
 No âmbito desta dissertação temos em vista a realização de um conjunto de experiências descritas em \ref{sec:experiencias} e análise dos seus resultados através de duas perspetivas descritas nos pontos \ref{sec:avaliacao1} e \ref{sec:avaliacao2} a seguir. Uma vez que estas avaliações não se encontram enquadradas no paradigma de avaliação de \textit{pair matching}, para o qual a biblioteca LFW foi originalmente criada tornou-se necessário a criação de novos conjuntos de teste, os quais passamos a apresentar de seguida.
+
+As imagens dos conjuntos de testes descritos em \ref{sec:conjuntos} foram sujeitas a um conjunto de tarefas de pré-processamento, descritas em \ref{sec:experiencias}, resultado na criação de um conjunto de galerias de imagens pré-processadas, as quais se encontram resumidas na tabela \ref{tab:colecoes}. Todas as galerias resultantes possuem as mesmas imagens, diferenciando-se apenas pelas tarefas de pré-processamento a que foram sujeitas.
+
+Nesta secção encontram-se reportados os resultados da avaliação efetuada ao desempenho do sistema de reconhecimento facial Visage.
+
+A qualidade do desempenho de um sistema de reconhecimento facial automático, assim como a satisfação dos seus utilizadores está intimamente relacionada com o fim para o qual o sistema foi criado. No âmbito desta dissertação, a avaliação do desempenho foi efetuada segundo duas perspetivas distintas, \textit{Closed-set Identification} e \textit{Image Retrieval}, as quais são apresentadas de seguida. A primeira constitui uma medida padrão de avaliação do desempenho de sistemas de reconhecimento facial automático, a segunda, pretende analisar o desempenho do sistema de um ponto de vista mais próximo de um provável caso de uso, neste caso, \textit{Image Retrieval}.
+
 
 \section{Conjuntos de Teste}  \label{sec:conjuntos}
 
@@ -186,14 +194,14 @@ Anisotropic Kuwahara
         \end{subfigure}%
 %
 
-        \begin{subfigure}[b]{0.1\textwidth}
+        \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_cropped}
                 \caption{Cropped}
                 \label{fig:cropped} 
         \end{subfigure}
         ~ ~
-        \begin{subfigure}[b]{0.1\textwidth}
+        \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_masked}
                 \caption{Masked}
@@ -201,27 +209,27 @@ Anisotropic Kuwahara
         \end{subfigure}%
 %
 
-        \begin{subfigure}[b]{0.1\textwidth}
+        \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_normalized}
                 \caption{Normalized}
                 \label{fig:normalized} 
         \end{subfigure}
         ~ ~
-        \begin{subfigure}[b]{0.1\textwidth}
+        \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_equalized}
                 \caption{Equalized}
                 \label{fig:equalized}
         \end{subfigure}
         ~ ~
-        \begin{subfigure}[b]{0.1\textwidth}
+        \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_CLAHE}
                 \caption{CLAHE}
                 \label{fig:clahe}
         \end{subfigure}
-        \caption{Angelina Jolie}
+        \caption{Exemplo dos vários pré-processamentos disponíveis.}
         \label{fig:galeriaspreprocessadas}   
 \end{figure}
 
@@ -253,73 +261,63 @@ Anisotropic Kuwahara
 \end{center}
 
 
-\section{Resultados}
-As imagens dos conjuntos de testes descritos em \ref{sec:conjuntos} foram sujeitas a um conjunto de tarefas de pré-processamento, descritas em \ref{sec:experiencias}, resultado na criação de um conjunto de galerias de imagens pré-processadas, as quais se encontram resumidas na tabela \ref{tab:colecoes}. Todas as galerias resultantes possuem as mesmas imagens, diferenciando-se apenas pelas tarefas de pré-processamento a que foram sujeitas.
-
-Nesta secção encontram-se reportados os resultados da avaliação efetuada ao desempenho do sistema de reconhecimento facial Visage. A avaliação é efetuada através da análise do desempenho dos três algoritmos disponíveis em cada uma das galerias de imagens pré-processadas, encontrando-se os resultados obtidos agrupados num conjunto de três experiências, cada uma dedicada a analisar a variação do comportamento do sistema dado um problema específico. A divisão entre imagens de treino e teste de cada galeria é efetuada segundo os quatro conjuntos de testes criados, sendo cada galeria avaliada em cada um dos quatro conjuntos de teste existentes. Os resultados finais para uma dada galeria são obtidos através da média dos resultados obtidos para cada um dos quatro conjuntos de teste.
-
-Para cada conjunto de teste descrito em \ref{sec:conjuntos}, seja $\mathscr{G}$ a sua galeria de treino, em que $\mathscr{G} = \{g_1, ..., g_N\}$ e seja $\mathscr{P}$ o conjunto das suas provas, em que $\mathscr{P} = \{p_1, ..., p_N\}$. Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada a cada amostra biométrica $g_i$ da galeria, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$. Este índice é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$. Quanto menor o índice de similaridade, maior é a probabilidade das imagens comparadas pertencerem à mesma pessoa, sendo que o melhor valor possível para o índice de similaridade de um $match$ $score$ é zero.
-
-A qualidade do desempenho de um sistema de reconhecimento facial automático, assim como a satisfação dos seus utilizadores está intimamente relacionada com o fim para o qual o sistema foi criado. No âmbito desta dissertação, a avaliação do desempenho foi efetuada segundo duas perspetivas distintas, \textit{Closed-set Identification} e \textit{Image Retrieval}, as quais são apresentadas de seguida. A primeira constitui uma medida padrão de avaliação do desempenho de sistemas de reconhecimento facial automático, a segunda, pretende analisar o desempenho do sistema de um ponto de vista mais próximo de um provável caso de uso, neste caso, \textit{Image Retrieval}.
-
-\subsection{Avaliação \textit{Closed-Set Identification}} \label{sec:avaliacao1}
+\section{Avaliação \textit{Closed-Set Identification}} \label{sec:avaliacao1}
 Tal como introduzido na secção \ref{sec:problema}, o paradigma de \textit{closed-set identification}, constitui um sub-problema de identificação em que uma prova é apresentada ao sistema e pretende-se que este devolva a identidade da pessoa presente na imagem. Neste caso particular do problema de identificação, todas as provas apresentadas possuem uma correspondência na galeria, em oposição ao caso geral de identificação, no qual pode ou não haver uma correspondência.
 
 A avaliação \textit{closed-set} é uma medida padrão de avaliação do desempenho em sistemas de reconhecimento facial automático, tendo sido utilizada em diversas avaliações efetuadas, nomeadamente nas avaliações FERET e FRVT apresentadas na revisão do estado da arte desta dissertação (ver \ref{chap:reco}). A utilização de um conjunto fechado de imagens permite uma análise detalhada do desempenho de um algoritmo permitindo responder à pergunta "a identificação correta encontra-se nos primeiros $n$ resultados?" em vez de apenas " o primeiro resultado é o correto?".
 
-\subsubsection{Metodologia Avaliação}
-Seja $p_j$, uma prova do conjunto de provas $\mathscr{P}$. Na identificação de $p_j$, em primeiro lugar são calculados os índices de similaridade para todas as amostras na galeria $\mathscr{G}$, sendo posteriormente ordenados os seus resultados. Uma prova $p_j$ tem ranking $n$ se o seu $match$ $score$ corresponde ao enésimo menor índice de similaridade. A taxa de identificação para o ranking $n$, $T_{I}(n)$, corresponde à fração de provas com ranking $n$ ou menor do que $n$, ou seja:
+\subsection{Metodologia Avaliação}
+Para cada conjunto de teste descrito em \ref{sec:conjuntos}, seja $\mathscr{G}$ a sua galeria de treino, em que $\mathscr{G} = \{g_1, ..., g_N\}$ e seja $\mathscr{P}$ o conjunto das suas provas, em que $\mathscr{P} = \{p_1, ..., p_N\}$. Quando uma prova $p_j$ é apresentada ao sistema, essa prova é então comparada a cada amostra biométrica $g_i$ da galeria, resultando dessa comparação o respetivo índice de similaridade (\textit{similarity score}), $s_{ij}$. Este índice é designado de $match$ $score$, caso $g_i$ e $p_j$ sejam amostras da mesma pessoa, caso não o sejam é designado de $nonmatch$ $score$. Quanto menor o índice de similaridade, maior é a probabilidade das imagens comparadas pertencerem à mesma pessoa, sendo que o melhor valor possível para o índice de similaridade de um $match$ $score$ é zero.
+
+Na identificação de $p_j \in \mathscr{P}$, em primeiro lugar são calculados os índices de similaridade para todas as amostras na galeria $\mathscr{G}$, sendo posteriormente ordenados os seus resultados. O ranking de $p_j$, $r_{p_j}$, é igual a $n$, se o seu $match$ $score$ corresponde ao enésimo menor índice de similaridade. A taxa de identificação para o ranking $n$, $T_{I}(n)$, corresponde à fração de provas com ranking $n$ ou menor do que $n$, ou seja:
 \begin{equation}
 T_{I}(n) = \frac{|C(n)|}{|\mathscr{P}|} \times 100
 \end{equation}
 Em que $|C(n)|$ é número de provas com ranking $n$, ou menor do que $n$, e $|\mathscr{P}|$ o número de provas existentes em $\mathscr{P}$.
- 
-Os resultados da identificação são posteriormente representados num gráfico do tipo \textit{Cumulative match score} (CMS). Um gráfico do tipo CMS representa $T_{I}(n)$ como uma função de ranking $n$. No eixo horizontal encontra-se representado o ranking e no eixo vertical encontra-se representada a respetiva taxa de identificação, um exemplo de um gráfico CMS pode ser visto em \ref{fig:exp1_comaparacao}.
 
 A $T_{I}(n)$ é calculada para todos os rankings entre 1 e 30. Dentro desse intervalo, os primeiros níveis de ranking apresentam uma maior variação na percentagem de pessoas identificadas, revelando-se assim mais significativos para a análise do desempenho do sistema.
 
-Para cada conjunto de teste, utilizando as imagens de uma determinada galeria, são calculadas as $T_{I}(n)$, entre 1 e 30, para cada algoritmo disponível. No final é efetuada a média dos resultados obtidos nos quatro conjuntos de teste existentes e reportado o desempenho do respetivo algoritmo para a galeria utilizada, representado a respetiva taxa de identificação em um gráfico CMS. O processo é repetido para cada uma das galerias utilizadas em cada experiência.
+A avaliação é efetuada através da análise do desempenho dos três algoritmos disponíveis em cada uma das galerias de imagens pré-processadas, encontrando-se os resultados obtidos agrupados num conjunto de três experiências, cada uma dedicada a analisar a variação do comportamento do sistema dado um problema específico. A divisão entre imagens de treino e teste de cada galeria é efetuada segundo os quatro conjuntos de testes criados, sendo cada galeria avaliada em cada um dos quatro conjuntos de teste existentes e posteriormente calculada a média dos resultados obtidos.
 
-\subsubsection{Resultados Experiência 1 : Análise do impacto da segmentação das faces}
+A média dos resultados obtidos encontra-se representada em um gráfico do tipo \textit{Cumulative match score} (CMS). Um gráfico do tipo CMS representa $T_{I}(n)$ como uma função de ranking $n$. No eixo horizontal encontra-se representado o ranking e no eixo vertical encontra-se representada a respetiva taxa de identificação, um exemplo de um gráfico CMS pode ser visto em \ref{fig:exp1_comaparacao}.
 
-\begin{figure}[h]
-	\makebox[\textwidth][c]{
+\subsection{Resultados Experiência 1 : Análise do impacto da segmentação das faces}
+
+\begin{figure}[p]
         \centering
-        \begin{subfigure}[b]{0.6\textwidth}
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/original_cropped_masked_eigen}
                 \caption{Eigenfaces}
                 \label{fig:original_cropped_masked_eigen}
         \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.6\textwidth}
+
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/original_cropped_masked_fisher}
                 \caption{Fisherfaces}
                 \label{fig:original_cropped_masked_fisher}
-        \end{subfigure}}%
+        \end{subfigure}
 
-       	\makebox[\textwidth][c]{
-        \begin{subfigure}[b]{0.6\textwidth}
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/original_cropped_masked_lbph}
                 \caption{LBPH}
                 \label{fig:original_cropped_masked_lbph}
-        \end{subfigure}}%
+        \end{subfigure}
         \caption{Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Original, Cropped e Masked}
         \label{fig:original_cropped_masked}
 \end{figure}
 
-Esta experiência visa analisar o impacto da segmentação das faces presentes na imagem do fundo existente nas mesmas, assim como determinar qual, de entre duas alternativas, a melhor forma de segmentar essa mesma face. Os resultados obtidos podem ser visualizados na figura \ref{fig:original_cropped_masked}, onde se encontram ilustrada a performance dos algoritmos, \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{LBPH}, nos três conjuntos criados especialmente para esta experiência, original, cropped e masked, os quais se encontram descritos mais pormenorizadamente em \ref{sec:experiencias}.
+Esta experiência visa analisar o impacto da segmentação das faces presentes na imagem do fundo existente nas mesmas, assim como determinar qual, de entre duas alternativas, a melhor forma de segmentar essa mesma face. Os resultados obtidos podem ser visualizados na figura \ref{fig:original_cropped_masked}, onde se encontram ilustrada a performance dos algoritmos, \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{LBPH}, nos três conjuntos criados especialmente para esta experiência, os quais se encontram descritos mais pormenorizadamente em \ref{sec:experiencias}.
 
-Após a analise dos resultados obtidos na experiência 1, nomeadamente através da comparação das $T_{I}(1)$ dos conjuntos Cropped e Masked com o conjunto Original, verifica-se que a segmentação das faces presentes nas imagens originais produz uma melhoria efetiva dos resultados obtidos, traduzindo-se num aumento de cerca de 12\%, 14\% e 40\% para a taxa de identificação de ranking 1 dos algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{LBPH}, respetivamente.
+Após a analise dos resultados obtidos na experiência 1, nomeadamente através da comparação das taxa de identificação de ranking 1 dos conjuntos Cropped e Masked com o conjunto Original, verifica-se que a segmentação das faces presentes nas imagens originais produz uma melhoria efetiva dos resultados obtidos, traduzindo-se num aumento de cerca de 12\%, 14\% e 40\% para os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{LBPH}, respetivamente.
 
 Uma análise mais aprofundada desses resultados, demonstra ainda que, no caso dos algoritmos \textit{Eigenfaces} e \textit{LBPH}, a diferença na taxa de identificação entre as imagens originais (conjunto Original) e as imagens segmentadas (conjuntos Cropped e Masked) é significativa e relativamente constante nos vários níveis para os quais a taxa de deteção se encontra reportada. Por outro lado, no caso do algoritmo \textit{Fisherfaces}, apesar da diferença significativa no número de imagens corretamente identificadas nos primeiros níveis, a partir do ranking 15, todos os conjuntos de imagens obtém uma taxa de identificação similar, e com uma progressão semelhante. Esta aproximação no número de caras corretamente identificadas nos rankings mais elevados pode ser explicada pela existência de informação no fundo das imagens, a qual poderá ser utilizada pelo próprio algoritmo para a identificação das mesmas, ao invés da utilização da face contida na imagem, reforçando assim a importância da extração do fundo contido nas imagens originais.
 
 Por outro lado, note-se ainda que, apesar do impacto positivo da segmentação das imagens nos três algoritmos testados, o impacto desta segmentação varia significativamente conforme o algoritmo utilizado, sendo que o \textit{Fisherfaces} é o que revela resultados mais constantes independentemente da manipulação efetuada nas imagens e o algoritmo \textit{LBPH} o que regista uma maior melhoria desses mesmos resultados.
 
-Ao nível da diferença entre as imagens apenas segmentadas (conjunto Cropped) e as imagens com máscara (conjunto Masked), é possível verificar que ambas possuem resultados semelhantes, sendo que a maior diferença foi detetada no algoritmo \textit{Eigenfaces}, onde as imagens com máscara demonstraram um desempenho ligeiramente superior, como é possível verificar pelas $T_{I}(2)$ de 43,4\% e 40,1\% para as imagens com máscara e recortadas, respetivamente. Apesar de a diferença não poder ser considerada muito significativa, a existência de uma máscara garante, no entanto, uma extração de uma maior quantidade de fundo das imagens, permitindo assim uma maior confiança dos resultados obtidos no sentido em que se reduz o perigo de identificação pelas características do próprio fundo e não das caraterísticas faciais presentes na imagem. 
+Ao nível da diferença entre as imagens apenas segmentadas (conjunto Cropped) e as imagens com máscara (conjunto Masked), é possível verificar que ambas possuem resultados semelhantes, sendo que a maior diferença foi detetada no algoritmo \textit{Eigenfaces}, onde as imagens com máscara demonstraram um desempenho ligeiramente superior, como é possível verificar pelas $T_{I}(2)$ de 43,4\% e 40,1\% para as imagens com máscara e recortadas, respetivamente. Apesar da diferença registada ser muito significativa, a existência de uma máscara garante uma extração de uma maior quantidade de fundo das imagens, permitindo assim uma maior confiança dos resultados obtidos, no sentido em que se reduz o perigo de identificação pelas características do fundo da imagem e não das caraterísticas faciais presentes na mesma. 
 
 \begin{figure}[ht]
   \begin{center}
@@ -330,34 +328,31 @@ Ao nível da diferença entre as imagens apenas segmentadas (conjunto Cropped) e
   \end{center}
 \end{figure}
 
-Finalmente, através da análise do gráfico \ref{fig:exp1_comaparacao} é possível concluir que ao nível dos algoritmos utilizados o algoritmo \textit{LBPH} obtém resultados globalmente melhores, ao passo que o algoritmo \textit{Eingefaces} obtém os piores resultados. Esta diferença verifica-se quer nos rankings inferiores, quer nos superiores, sendo menor quanto maior é o ranking utilizado, como é possível verificar pelas taxas de identificação de ranking 1 de 46,8\% e 28,1\%, no conjunto Masked, para os algoritmos \textit{LBPH} e \textit{Eigenfaces}, respectivamente e pelas taxas de identificação de ranking 30 de 94,9\% e 89,3\%, para os mesmos algoritmos no mesmo conjunto.
+Finalmente, através da análise do gráfico \ref{fig:exp1_comaparacao}, é possível concluir que ao nível dos algoritmos utilizados o algoritmo \textit{LBPH} obtém resultados globalmente melhores, ao passo que o algoritmo \textit{Eingefaces} obtém os piores resultados. Esta diferença verifica-se quer nos rankings inferiores, quer nos superiores, sendo menor quanto maior é o ranking utilizado, como é possível verificar pelas taxas de identificação de ranking 1 de 46,8\% e 28,1\%, no conjunto Masked, para os algoritmos \textit{LBPH} e \textit{Eigenfaces}, respetivamente, e pelas taxas de identificação de ranking 30 de 94,9\% e 89,3\%, para os mesmos algoritmos no mesmo conjunto.
 
-\subsubsection{Resultados Experiência 2: Impacto da Normalização do Contraste}
-\begin{figure}[h]
-	\makebox[\textwidth][c]{
+\subsection{Resultados Experiência 2: Impacto da Normalização do Contraste}
+\begin{figure}[p]
         \centering
-        \begin{subfigure}[b]{0.6\textwidth}
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/Exp_2_eigen}
                 \caption{Eigenfaces}
-                \label{fig:original_cropped_masked_eigen}
+                \label{fig:masked_normalized_equalized_clahe_eigen}
         \end{subfigure}%
-        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-          %(or a blank line to force the subfigure onto a new line)
-        \begin{subfigure}[b]{0.6\textwidth}
+
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/Exp_2_fisher}
                 \caption{Fisherfaces}
-                \label{fig:original_cropped_masked_fisher}
-        \end{subfigure}}%
+                \label{fig:masked_normalized_equalized_clahe_fisher}
+        \end{subfigure}
 
-       	\makebox[\textwidth][c]{
-        \begin{subfigure}[b]{0.6\textwidth}
+        \begin{subfigure}[b]{0.58\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{resultados/Exp_2_lbph}
                 \caption{LBPH}
-                \label{fig:original_cropped_masked_lbph}
-        \end{subfigure}}%
+                \label{fig:masked_normalized_equalized_clahe_lbph}
+        \end{subfigure}
         \caption{Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Normalized, Equalized e CLAHE}
         \label{fig:exp2}
 \end{figure}
@@ -381,49 +376,69 @@ Ao nível das três técnicas utilizadas é possível concluir que as duas varia
 
 Finalmente, a análise comparativa dos resultados obtidos para os três algoritmos implementados, ilustrada pelo gráfico \ref{fig:exp2_comaparacao}, permite concluir que após a normalização do histograma das imagens o desempenho dos algoritmos apresenta uma diferença muito menor do que a registada anteriormente e ilustrada pelo gráfico \ref{fig:exp1_comaparacao}. Nesta experiência o algoritmo LBPH continua a ser o algoritmo com melhor desempenho, registando no entanto uma diferença de apenas 1.8\% e 6.0\% para os algoritmos \textit{Fisherfaces} e \textit{Eigenfaces}, respetivamente, na taxa de identificação de ranking 1 no conjunto Equalized. De notar ainda que, a partir do segundo nível do ranking, o algoritmo  \textit{Eigenfaces} possui uma taxa de identificação idêntica ao valores obtidos pela algoritmo \textit{Fisherfaces}, ultrapassando o desempenho do segundo, a partir do ranking 11. Esta grange evolução no desempenho, notada para o algoritmo \textit{Eigenfaces}, em contraste com a ligeira melhoria obtida pelos restantes denota a complexidade associada ao problema de reconhecimento facial automático, nomeadamente no que diz respeito à forma como diferentes fatores afetam de forma diferenciada diferentes algoritmos e diferentes conjuntos de dados.
 
-\subsubsection{Resultados Experiência 3}
+\subsection{Resultados Experiência 3}
 
+\section{Avaliação \textit{Image Retrieval}} \label{sec:avaliacao2}
+A metodologia de avaliação proposta na secção \ref{sec:avaliacao1} desta dissertação permite-nos efetuar uma avaliação qualitativa do desempenho do sistema de reconhecimento facial criado, assim como dos diferentes algoritmos implementados, através de uma medida padrão para a avaliação de sistemas de reconhecimento facial automáticos. Nesta segunda avaliação propomos a avaliação do desempenho do sistema de um ponto de vista centrado num possível caso de uso do mesmo: \textit{Image Retrieval}.
 
-\subsection{Resultados em Retrieval} \label{sec:avaliacao2}
-A metodologia de avaliação proposta na secção \ref{sec:avaliacao1} desta dissertação permite-nos efetuar uma avaliação qualitativa do desempenho do sistema de reconhecimento facial criado, assim como dos diferentes algoritmos implementados, através de uma medida padrão para a avaliação de sistemas de reconhecimento facial automáticos. Nesta segunda avaliação propomos a avaliação do desempenho do sistema através da precisão média do mesmo. 
+A área de recuperação de informação multimédia regista atualmente uma importância crescente, resultado do elevado número de conteúdos produzidos, assim como do elevado número de dispositivos de partilha disponíveis, tal como destacado no estado da arte desta dissertação. Desta forma, a recuperação de informação multimédia e em particular a área de \textit{Image Retrieval} representa uma das áreas com maior potencial para a utilização do sistema de reconhecimento facial criado.
 
-A precisão calculada resulta da adaptação de uma medida de recuperação de informação multimédia baseada em conteúdos ao caso particular do reconhecimento facial automático. Sendo a área de recuperação de informação multimédia uma das áreas com maior potencial para a utilização do sistema de reconhecimento facial criado, a avaliação deste sistema tendo em conta essa perspetiva torna-se pertinente.
+Para uma dada imagem contendo uma face, o sistema Visage é capaz de detetar a face presente na imagem e apresentar uma lista ordenada de possíveis entidades que se encontram representadas nessa imagem. Com base neste sistema é possível desenvolver aplicações de \textit{image retrieval} capazes de encontrar fotos de uma personalidade específica ou apresentar, para uma foto de rosto fornecida pelo utilizador, a celebridade ou figura pública mais parecida.
 
-\subsubsection{Metodologias Avaliação}
-Seja $\mathscr{P}$ o conjunto de provas e $|\mathscr{P}|$ o seu tamanho, em que $\mathscr{P} = \{p_1, ..., p_N\}$. Na identificação de $p_i \in \mathscr{P}$, em primeiro lugar são calculados os índices de similaridade para todas as amostras na galeria $\mathscr{G}$, sendo posteriormente ordenados os seus resultados. O ranking de $p_i$, $r_{p_i}$, é igual a $n$ se o seu $match$ $score$ corresponde ao enésimo menor índice de similaridade.
+\subsection{Metodologia Avaliação}
+Em recuperação de informação multimédia designa-se de \textit{precisão} a fração de documentos relevantes do total de documentos retornados por uma pesquisa. Ao analisar a precisão podem ser analisados todos os documentos relevantes ou apenas os $n$ documentos mais relevantes, designado-se nessa situação de \textit{precisão a n}.
 
-A precisão de $p_i$, $P_{p_i}$, corresponde ao inverso do seu ranking, ou seja:
+No sistema de reconhecimento facial criado, para uma dada imagem é apresentada uma lista de possíveis entidades que se encontram representadas nessa imagem, em que o primeiro resultado representa a entidade com maior probabilidade de estar presente na imagem e em que cada entidade aparece uma única vez na lista de resultados possíveis. Caso se pretenda efetuar a identificação de uma personalidade existe apenas um resultado verdadeiramente relevante na lista de resultados obtida, pelo que a medida de \textit{precisão a n} utilizada em recuperação de informação multimédia não é válida para a avaliação efetuada nesta secção.
+
+Para avaliação do desempenho do sistema do ponto de vista de \textit{image retrieval} foi então criada a medida \textit{precisão na galeria} (PG). A \textit{precisão na galeria} resulta da adaptação da precisão de recuperação de informação multimédia ao caso particular do sistema de reconhecimento facial automático desenvolvido. Considerando a definição de ranking de uma prova apresentada em \ref{sec:avaliacao1}, a \textit{precisão na galeria} de $p_j$, $PG_{p_j}$, corresponde a:
 
 \begin{equation}
-P_{p_i} = \frac{1}{r_{p_i}} \times 100
+PG_{p_j} = \frac{1}{r_{p_j}} \times 100
 \end{equation}
 
-A precisão de uma prova progride então de 100\% para ranking1, 50\% para ranking 2, 33\% ranking 3 e assim sucessivamente. As provas com um menor ranking têm então uma maior precisão, assim como uma maior distância entre si em termos de precisão. Ora, no caso recuperação de informação baseada em conteúdo é importante que o resultado mais relevante, a identificação correta de uma pessoa, surja com o menor ranking possível, pelo que a distância na precisão obtida entre o primeiro e segundo resultados deve ser maior do que a obtida entre os restantes. Na métrica calculada é possível analisar a precisão do resultado obtido com ênfase resultados de topo para um determinada prova.
+Em que $\mathscr{P}$ é o conjunto de provas da galeria, $p_j \in \mathscr{P}$ e $r_{p_j}$ corresponde ao ranking da prova $p_j$.
 
-A precisão média de um algoritmo é calculada através da média da precisão obtida para cada prova, ou seja:
+A \textit{precisão na galeria} de uma prova progride então de 100\% para ranking 1, 50\% para ranking 2, 33\% ranking 3 e assim sucessivamente. As provas com um menor ranking têm então uma maior precisão, assim como uma maior distância entre si em termos de precisão (50 unidades entre 1 e 2, 22 unidades entre 2 e 3, etc). Ora, no caso de \textit{image retrieval} é importante que o resultado mais relevante, a identificação correta de uma pessoa, surja com o menor ranking possível, pelo que a distância nas \textit{precisões na galeria} obtidas nos primeiros resultados deve ser maior do que a obtida para os resultados que surgem posteriormente na lista de entidades possíveis, tal como verificado na métrica adotada. Desta forma, é possível analisar a desempenho do sistema com ênfase nos resultados de topo para uma determinada prova, beneficiando os valores de \textit{precisão na galeria} quando o nome correto aparece cedo na lista de resultado possíveis, ao mesmo tempo que se diferencia significativamente os resultados de topo.
+
+Dada a \textit{precisão na galeria} a \textit{média da precisão na galeria} (MPG) de um algoritmo é calculada através da média da \textit{precisão na galeria} obtida para cada prova, ou seja:
 \begin{equation}
-P_M = \frac{ \sum\limits_{i=0}^{n} P_{p_i} }{|\mathscr{P}|}
+MPG_{algoritmo} = \frac{ \sum\limits_{i=0}^{n} PG_{p_i} }{n}
 \end{equation}
 
-\subsubsection{Resultados}
+Em que $n$ corresponde ao número de provas existentes em $\mathscr{P}$.
+
+\subsection{Resultados}
+Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos resultados obtidos nos quatro conjuntos de teste existentes para a\textit{média da precisão na galeria} dos três algoritmos implementados em cada uma das galerias introduzidas em \ref{sec:experiencias}.
+
+-LBPH tem maior precisão em todos os conjuntos à excepção das imagens não manipuladas.
+-Conjuntos Cropped e Masked tem resultados semelhantes.
+-Má manipulação pode reduzir eficácia, exemplo Normalized.
+-Equalized é o que apresenta melhores resultados para os três algoritmos
+-Corte e Equalização reduzem as diferenças de desempenho entre os algoritmos.
+
 \begin{center}
 \begin{table}
-	\begin{center}
+    \begin{center}
     \caption{Resultados Precisão Média (melhores a negrito)}
     \begin{tabular}{l|ccc}
-    Galeria    & $P_{M_{Eigenfaces}}$ & $P_{M_{Fisherfaces}}$ & $P_{M_{LBPH}}$ \\ 
+    Galeria    & $MPG_{Eigenfaces}$ & $MPG_{Fisherfaces}$ & $MPG_{LBPH}$ \\ 
     \hline\hline
-    Original   & 23.0754\%          & \textbf{43.4653\%}           & 16.0354\%    \\
+    Original   & 23.1\%          & \textbf{43.4\%}  & 16.0\%             \\
     ~ \\
-    Cropped    & 37.7158\%          & 54.6740\%           & \textbf{58.1718\%}    \\
-    Masked     & 40.0104\%          & 54.0008\%           & \textbf{58.2673\%}    \\
+    Cropped    & 37.7\%          & 54.8\%           & \textbf{58.2\%}    \\
+    Masked     & 40.0\%          & 54.0\%           & \textbf{58.3\%}    \\
     ~ \\
-    Normalized & 42.4088\%          & 53.5150\%           & \textbf{57.1838\%}    \\
-    Equalized  & 55.2355\%          & 57.3427\%           & \textbf{59.6318\%}    \\
-    CLAHE      & 53.5767\%          & 55.9015\%           & \textbf{56.4638\%}    \\
+    Normalized & 42.4\%          & 53.5\%           & \textbf{57.2\%}    \\
+    Equalized  & 55.2\%          & 57.3\%           & \textbf{59.6\%}    \\
+    CLAHE      & 53.6\%          & 55.9\%           & \textbf{56.5\%}    \\
     \hline\hline
     \end{tabular}
-   	\label{tab:resultadosprecicao}
-   	\end{center}
+    \label{tab:resultadosprecicao}
+    \end{center}
 \end{table}
 \end{center}
+
+
+\section{Variação Desempenho} \label{sec:variacaodesempenho}
+
+\section{Discussão Resultados Obtidos} \label{sec:discussao}

@@ -47,10 +47,17 @@
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Dete\347\343o e segmenta\347\343o da face}{section.5.2}% 47
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 48
 \BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o Imagens}{section.5.2}% 49
-\BOOKMARK [1][-]{section.5.3}{5.3 Resultados}{chapter.5}% 50
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Avalia\347\343o Closed-Set Identification}{section.5.3}% 51
-\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados em Retrieval}{section.5.3}% 52
-\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 53
-\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 54
-\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 55
-\BOOKMARK [0][-]{section*.30}{Refer\352ncias}{}% 56
+\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 51
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1 : An\341lise do impacto da segmenta\347\343o das faces}{section.5.3}% 52
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 53
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3}{section.5.3}% 54
+\BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 56
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 57
+\BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 58
+\BOOKMARK [1][-]{section.5.6}{5.6 Discuss\343o Resultados Obtidos}{chapter.5}% 59
+\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 60
+\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 61
+\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 62
+\BOOKMARK [0][-]{section*.30}{Refer\352ncias}{}% 63

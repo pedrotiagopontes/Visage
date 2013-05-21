@@ -178,9 +178,9 @@ int faceRecognizer(int argc, const char *argv[]){
 		size_t nResults = 1;
 		if(argc >= 5){
 			nResults = atoi(argv[4]);
-			//testLibraryN(path, 80, outputfilename, modelType, nResults);
-			testLoadAndGetTop10(path, 80, modelType, "modelo.xml", 
-				"C://Users//Pedro//Pictures//lfw//lfw_aligned_BW//Angelina_Jolie//Angelina_Jolie_0005.jpg");
+			testLibraryN(path, 80, outputfilename, modelType, nResults);
+			//testLoadAndGetTop10(path, 80, modelType, "modelo.xml", 
+			//	"C://Users//Pedro//Pictures//lfw//lfw_aligned_BW//Angelina_Jolie//Angelina_Jolie_0005.jpg");
 		}else{
 			testLibrary(path, 80, outputfilename, modelType);
 		}

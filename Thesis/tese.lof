@@ -12,9 +12,9 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem n\IeC {\~a}o abstra\IeC {\'\i }da (esquerda) e imagem abstra\IeC {\'\i }da (direita) \cite {Kyprianidis2009}.\relax }}{34}{figure.caption.19}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Cadeia de pr\IeC {\'e}-processamento a que as imagens podem ser sujeitas.\relax }}{35}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {G}$ para o sujeito Angelina Jolie\relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {G}$ para o sujeito Angelina Jolie\relax }}{38}{figure.caption.21}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {P}$ para o sujeito Angelina Jolie\relax }}{38}{figure.caption.22}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Angelina Jolie\relax }}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Exemplo dos v\IeC {\'a}rios pr\IeC {\'e}-processamentos dispon\IeC {\'\i }veis.\relax }}{41}{figure.caption.23}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Original, Cropped e Masked\relax }}{44}{figure.caption.25}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para o conjunto Masked\relax }}{45}{figure.caption.26}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Normalized, Equalized e CLAHE\relax }}{46}{figure.caption.27}
