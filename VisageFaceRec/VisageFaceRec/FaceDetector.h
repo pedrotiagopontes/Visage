@@ -51,8 +51,8 @@ public:
 	Mat applyFilter(Mat original, int filter);
 	Mat normalizeConstrast(Mat original, int normalize_hist);
 	Mat processImg(Mat original, int filter=0, int normalize_hist = EqualizeHistogram);
-	int detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, int normalize_hist, int filter);
-	int detectAndCropDir(string path, string outputdir = "croppedImages", bool apply_mask=true, int normalize_hist=EqualizeHistogram, int filter=0);
+	int detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool align, bool apply_mask, int normalize_hist, int filter);
+	int detectAndCropDir(string path, string outputdir = "croppedImages", bool align = false, bool apply_mask=true, int normalize_hist=EqualizeHistogram, int filter=0);
 	Mat alignFace(Mat face, Rect myROI);
 
 	void exportDir(string path, string outputdir,string extension);

@@ -79,15 +79,16 @@ int faceDetector(int argc, const char *argv[]){
 	bool mask_image = false;
 	int normalize_hist = 0;
 	if (argc < 3){
-		cout << "Usage: path.txt outputDirName [-mask] [-N:(contrast stretching) -E(equalize histogram) -C(CLAHE)] -[-G:(gaussian filter) -B:(bilateral filter)]" <<endl;
+		cout << "Usage: path.txt outputDirName [-mask] [-N:(contrast stretching) -E(equalize histogram) -C(CLAHE)] -[-G:(gaussian filter) -B:(bilateral filter)] [-align]" <<endl;
 		return -1;
 	}else{
 		path = string(argv[1]);
 		outputfilename = string(argv[2]);
 		int filter = 0;
+		bool align = false;
 
 		if(argc >= 4){
-			string m, n, f;
+			string m, n, f, a;
 			m = string(argv[3]);
 			if(argc >= 5){
 				n = string(argv[4]);
@@ -95,29 +96,35 @@ int faceDetector(int argc, const char *argv[]){
 			if(argc >=6){
 				f = string(argv[5]);
 			}
-			if(m == "-mask" || n == "-mask"){
+			if(argc >=7){
+				a = string(argv[6]);
+			}
+			if(m == "-mask" || n == "-mask" || f == "-mask"|| a == "-mask"){
 				mask_image = true;	
 			}
-			if(m == "-N" || n == "-N"){
+			if(m == "-N" || n == "-N" || f == "-N"|| a == "-N"){
 				normalize_hist = ContrastStreatching;	
 			}
-			if(m == "-E" || n == "-E"){
+			if(m == "-E" || n == "-E" || f == "-E"|| a == "-E"){
 				normalize_hist = EqualizeHistogram;	
 			}
-			if(m == "-C" || n == "-C"){
+			if(m == "-C" || n == "-C" || f == "-C"|| a == "-C"){
 				normalize_hist = CLAHE_Histogram;	
 			}
-			if(f == "-G"){
+			if(m == "-G" || n == "-G" || f == "-G"|| a == "-G"){
 				filter = GaussianFilter;
 			}
-			if(f == "-B"){
+			if(m == "-B" || n == "-B" || f == "-B" || a == "-B"){
 				filter = BilateralFilter;
+			}
+			if(m == "-align" || n == "-align" || f == "-align" || a == "-align"){
+				align = true;
 			}
 		}
 
 		FaceDetector detectorLPB("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
 		cout << "detectorLPB -------------------------------------------------------"<< endl<< endl;
-		detectorLPB.detectAndCropDir(path, outputfilename, mask_image, normalize_hist, filter);
+		detectorLPB.detectAndCropDir(path, outputfilename, align, mask_image, normalize_hist, filter);
 	}
 	return 0;
 }
@@ -195,7 +202,7 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	//return faceDetector(argc, argv);
+	return faceDetector(argc, argv);
 
 	/*
 	string path = string(argv[1]);
@@ -209,7 +216,7 @@ int main(int argc, const char *argv[]) {
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
 
 	//return 0;
 }

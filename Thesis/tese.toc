@@ -54,7 +54,7 @@
 \contentsline {subsection}{\numberline {5.4.2}Resultados}{49}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{50}{section.5.5}
 \contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{50}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{51}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{51}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{52}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{53}{section*.30}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{52}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{52}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{53}{section.6.2}
+\contentsline {chapter}{Refer\^{e}ncias}{54}{section*.32}

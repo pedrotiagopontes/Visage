@@ -411,15 +411,19 @@ Em que $n$ corresponde ao número de provas existentes em $\mathscr{P}$.
 Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos resultados obtidos nos quatro conjuntos de teste existentes para a\textit{média da precisão na galeria} dos três algoritmos implementados em cada uma das galerias introduzidas em \ref{sec:experiencias}.
 
 -LBPH tem maior precisão em todos os conjuntos à excepção das imagens não manipuladas.
+
 -Conjuntos Cropped e Masked tem resultados semelhantes.
+
 -Má manipulação pode reduzir eficácia, exemplo Normalized.
+
 -Equalized é o que apresenta melhores resultados para os três algoritmos
+
 -Corte e Equalização reduzem as diferenças de desempenho entre os algoritmos.
 
 \begin{center}
 \begin{table}
     \begin{center}
-    \caption{Resultados Precisão Média (melhores a negrito)}
+    \caption{Resultados Média Precisão na Galeria (melhores a negrito)}
     \begin{tabular}{l|ccc}
     Galeria    & $MPG_{Eigenfaces}$ & $MPG_{Fisherfaces}$ & $MPG_{LBPH}$ \\ 
     \hline\hline
@@ -440,5 +444,60 @@ Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos re
 
 
 \section{Variação Desempenho} \label{sec:variacaodesempenho}
+Considerando que de um ponto de vista estatístico um algoritmo de reconhecimento facial estima a identidade de uma face, é então possível interrogarmos-nos se, para uma dada categoria de imagens, se verifica uma variação no desempenho de um algoritmo quando são utilizadas galerias de treino e provas diferentes \cite{Phillips2000}.
+
+Para o estudo do desempenho do sistema de reconhecimento facial Visage foram criados quatro conjuntos de teste, que designamos aqui de A, B, C, D, onde a diferença entre os quatro conjuntos se encontra nas imagens utilizadas como galeria de treino e provas, tal com descrito em \ref{sec:conjuntos}. As imagens de cada conjunto podem ser sujeitas a um conjunto de operações de pré-processamento diferentes, resultantes na criação das galerias original, cropped, masked, normalized, equalized e CLAHE, onde cada galeria contem todas as imagens dos quatro conjuntos de teste, tal como descrito em \ref{sec:experiencias}.
+
+Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjuntos de teste criados em cada uma das galerias existente.
+
+-Conjunto B obtém melhor desempenho em todos os algoritmos e todas as galerias.
+
+-No conjunto B Fisherfaces obtem melhores resultados
+
+-LBPH é o que apresenta melhor desempenho e menor desvio padrão
+
+\begin{center}
+\begin{table}
+    \begin{center}
+    \caption{Algoritmos ordenados por desempenho nos diversos conjuntos de teste, em cada galeria (L = LBPH, F = Fisherfaces, E = Eigenfaces).}
+    \begin{tabular}{l|cccc}
+    Galeria    & A & B & C & D \\ 
+    \hline\hline
+    Original   & F, E, L          &\textbf{ F, E, L }         & F, E, L           & F, E, L    \\
+    ~ \\
+    Cropped    & L, F, E          & L, F, E          & L, F, E           & L, F, E    \\
+    Masked     & L, F, E          & L, F, E          & L, F, E           & L, F, E    \\
+    ~ \\
+    Normalized & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
+    Equalized  & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
+    CLAHE      & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
+    \hline\hline
+    \end{tabular}
+    \label{tab:ordem_algoritmos}
+    \end{center}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}
+    \begin{center}
+    \caption{Desvio padrão ($\sigma$) entre os valores de MPG obtidos para os 4 conjuntos de teste.}
+    \begin{tabular}{l|ccc}
+    Galeria    & $\sigma_{Eigenfaces}$ & $\sigma_{Fisherfaces}$ & $\sigma_{LBPH}$ \\ 
+    \hline\hline
+    Original   & 1.21\%          & 1.12\%           & \textbf{0.39\%}    \\
+    ~ \\
+    Cropped    & 2.44\%          & 2.41\%           & \textbf{1.91\%}    \\
+    Masked     & 2.83\%          & 3.29\%           & \textbf{1.46\%}    \\
+    ~ \\
+    Normalized & 2.09\%          & 3.85\%           & \textbf{1.36\%}    \\
+    Equalized  &\textbf{ 1.13\%} & 2.26\%           & \textbf{1.13\%}    \\
+    CLAHE      & 2.38\%          & 4.03\%           & \textbf{1.17\%}    \\
+    \hline\hline
+    \end{tabular}
+    \label{tab:desviopadrao}
+    \end{center}
+\end{table}
+\end{center}
 
 \section{Discussão Resultados Obtidos} \label{sec:discussao}

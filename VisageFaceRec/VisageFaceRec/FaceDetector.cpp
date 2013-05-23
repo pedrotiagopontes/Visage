@@ -118,23 +118,58 @@ Mat FaceDetector::processImg(Mat original, int filter, int normalize_hist){
 
 Mat FaceDetector::alignFace(Mat face, Rect myROI){
 	Mat original = face;
+
 	face = face(myROI);
-	std::vector<Rect> leftEyes, rightEyes;
+	int half_x, half_y, quad_x, qi_quad;
+	half_x = face.cols /2;
+	quad_x = half_x/2;
+	half_y = face.rows /2;
+	qi_quad = quad_x/2;
+
+	vector<Rect> leftEyes, rightEyes;
 	////-- In each face, detect eyes
-	leftEye_cascade.detectMultiScale( face, leftEyes, 1.1, 2, 0 |CV_HAAR_FIND_BIGGEST_OBJECT , Size(10, 10) );
+	leftEye_cascade.detectMultiScale( face, leftEyes, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(12, 12) );
+	int chosenLeft = -1;
 	for( size_t j = 0; j < leftEyes.size(); j++ ){
-		rectangle(face, leftEyes[j], CV_RGB(255, 0,0), 2);
-	}
-	rightEye_cascade.detectMultiScale( face, rightEyes, 1.1, 2, 0 |CV_HAAR_FIND_BIGGEST_OBJECT, Size(10, 10) );
-	for( size_t j = 0; j < rightEyes.size(); j++ ){
-		rectangle(face, rightEyes[j], CV_RGB(255, 0,0), 2);
+		if(leftEyes[j].x < quad_x && leftEyes[j].y < half_y && leftEyes[j].width < (half_x+qi_quad) && leftEyes[j].height < half_y){
+			if(chosenLeft == -1 || (leftEyes[chosenLeft].width < leftEyes[j].width && leftEyes[j].width < half_x)){
+					chosenLeft = j;
+			}
+		}
 	}
 
+	rightEye_cascade.detectMultiScale( face, rightEyes, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE , Size(12, 12));
+	int chosenRight = -1;
+	for( size_t j = 0; j < rightEyes.size(); j++ ){
+		if(rightEyes[j].x > quad_x && rightEyes[j].x < (half_x+quad_x)  && rightEyes[j].y < half_y && 
+			rightEyes[j].width < (half_x+quad_x) && rightEyes[j].height < half_y){
+			if(chosenRight == -1 || rightEyes[chosenRight].width < rightEyes[j].width){
+					chosenRight = j;
+			}
+		}
+	}
+	/*
+	if(chosenLeft != -1){
+		rectangle(face, leftEyes[chosenLeft], CV_RGB(255, 0,0), 2);
+	}
+
+	if(chosenRight != -1){
+		rectangle(face, rightEyes[chosenRight], CV_RGB(255, 0,0), 2);
+	}
+	*/
+
 	// thanks to http://answers.opencv.org/question/497/extract-a-rotatedrect-area/
-	Mat M, rotated, cropped;
-	if(leftEyes.size() > 0 && rightEyes.size() > 0){
-		float eye_directionX = float(rightEyes[0].x - leftEyes[0].x);
-		float eye_directionY = float(rightEyes[0].y - leftEyes[0].y);
+	Mat M, cropped;
+	Mat rotated = face;
+	if(chosenLeft != -1 && chosenRight != -1){
+		int cx_left,cy_left, cx_right,cy_right;
+		cx_left = leftEyes[chosenLeft].x/2;
+		cy_left = leftEyes[chosenLeft].y/2;
+		cx_right = rightEyes[chosenRight].x/2;
+		cy_right = rightEyes[chosenRight].y/2;
+
+		float eye_directionX = float(cx_right - cx_left);
+		float eye_directionY = float(cy_right - cy_left);
 		
 		//# calc rotation angle in radians
 		float angle = atan2(eye_directionY,eye_directionX) * 180.0 / PI;
@@ -151,12 +186,19 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		// get the rotation matrix
 		M = getRotationMatrix2D(rect.center, angle, 1.0);
 		// perform the affine transformation
-		warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
+		warpAffine(face, rotated, M, face.size(), INTER_CUBIC);
 	}
+	/*
+	imshow("original", original);
+	imshow("rotated", rotated);
+	imshow("face", face);
+	waitKey(0);
+	cout << "---" << endl;
+	*/
 	return rotated;
 }
 
-int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool apply_mask, int normalize_hist, int filter)
+int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool align, bool apply_mask, int normalize_hist, int filter)
 {
 	std::vector<Rect> faces, mouth, eyes, nose;
 	double verticalCrop = size.height *0.08;
@@ -191,8 +233,11 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 		int xn = 15;
 		int yn = 3;
 		cv::Rect myROI(xn, yn, 112-2*xn-2, 112-2*yn-1);
-		//resizedImg = alignFace(resizedImg, myROI);
-		resizedImg = resizedImg(myROI);
+		if(align){
+			resizedImg = alignFace(resizedImg, myROI);
+		}else{
+			resizedImg = resizedImg(myROI);
+		}
 		
 		//in case of multiple faces detection in a sigle image let's investigate more
 		if(faces.size() > 1){
@@ -282,7 +327,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 }
 
 //Only optimized for lfw library
-int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mask, int normalize_hist, int filter) {
+int FaceDetector::detectAndCropDir(string path, string outputdir, bool align, bool apply_mask, int normalize_hist, int filter) {
 	// DATA
 	vector<string> images;
 	vector<string> names;
@@ -305,7 +350,7 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool apply_mas
 		Mat image = imread(images[i], CV_LOAD_IMAGE_COLOR);
 		// Smallest face size.
 		CvSize minFeatureSize = cvSize(80, 80);
-		int n = detectAndCrop(image, names[i], labels[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), minFeatureSize, apply_mask, normalize_hist, filter);
+		int n = detectAndCrop(image, names[i], labels[i], outputdir + "\\" + dirs[i] + "\\", Size(112, 112), minFeatureSize, align, apply_mask, normalize_hist, filter);
 
 		switch(n){
 		case 1:
