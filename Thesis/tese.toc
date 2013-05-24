@@ -32,29 +32,33 @@
 \contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{28}{section.4.1}
 \contentsline {section}{\numberline {4.2}Cole\IeC {\c c}\IeC {\~a}o de dados}{29}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}\textit {Labeled Faces in the Wild}}{29}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Implementa\IeC {\c c}\IeC {\~a}o}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{31}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{33}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Arquitectura}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Detalhes Implementa\IeC {\c c}\IeC {\~a}o}{34}{section.4.5}
-\contentsline {section}{\numberline {4.6}Funcionalidades}{35}{section.4.6}
-\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conjuntos de Teste}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}-processamento}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Dete\IeC {\c c}\IeC {\~a}o e segmenta\IeC {\c c}\IeC {\~a}o da face}{39}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{40}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o Imagens}{41}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{42}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{42}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1 : An\IeC {\'a}lise do impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{43}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{45}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3}{48}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{48}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{48}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{49}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{50}{section.5.5}
-\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{50}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{52}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{52}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{53}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{54}{section*.32}
+\contentsline {section}{\numberline {4.3}Sistema de Reconhecimento Facial Visage - Vis\IeC {\~a}o Geral}{31}{section.4.3}
+\contentsline {section}{\numberline {4.4}M\IeC {\'o}dulo \textit {FaceDetector}}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Dete\IeC {\c c}\IeC {\~a}o Face}{32}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Alinhamento e Corte da Face}{35}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Normaliza\IeC {\c c}\IeC {\~a}o}{35}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Aplica\IeC {\c c}\IeC {\~a}o Filtro Abstra\IeC {\c c}\IeC {\~a}o}{35}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Filtros de Abstra\IeC {\c c}\IeC {\~a}o - Filtro Kuwahara Anisotr\IeC {\'o}pico}{35}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}Aplica\IeC {\c c}\IeC {\~a}o M\IeC {\'a}scara}{36}{subsection.4.4.6}
+\contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceModel}}{36}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{36}{subsection.4.5.1}
+\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conjuntos de Teste}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}-processamento}{42}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Dete\IeC {\c c}\IeC {\~a}o e segmenta\IeC {\c c}\IeC {\~a}o da face}{42}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{43}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o Imagens}{44}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{45}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{45}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1 : An\IeC {\'a}lise do impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{46}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{48}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3}{51}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{51}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Resultados}{52}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{53}{section.5.5}
+\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{53}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{55}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{56}{section.6.2}
+\contentsline {chapter}{Refer\^{e}ncias}{57}{section*.35}

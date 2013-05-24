@@ -244,10 +244,8 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 
 			//-- In each face, detect eyes
 			eyes_cascade.detectMultiScale( resizedImg, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE , Size(10, 10) );
-			for( size_t j = 0; j < eyes.size(); j++ ){
+			if(eyes.size() > 0){
 				has_eyes = true;
-			}
-			if(eyes.size() > 0){ 
 				faceRate+= 100;
 			}
 			//-- In each face, detect mouth
@@ -268,8 +266,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 			}
 			//-- In each face, detect nose
 			nose_cascade.detectMultiScale( resizedImg, nose, 1.1, 2, 0, Size(20, 20) );
-			for( size_t l = 0; l < nose.size(); l++ ){
-				//rectangle(resizedImg, nose[l], CV_RGB(255, 0,0), 3);
+			if(nose.size() > 0){
 				faceRate+=50;
 			}
 
@@ -337,9 +334,6 @@ int FaceDetector::detectAndCropDir(string path, string outputdir, bool align, bo
 	string outputfilenameverify = outputdir +"\\"+"withVerify.txt";
 
 	int singleFaces = 0, multipleFaces = 0, noFace = 0;
-
-	//-- 1. Load the cascade
-	if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading\n"); return -1; };
 
 	loadAndCloneDir(path, outputdir, images, dirs, names, labels);
 	outputfileClean.open(outputfilenameclean);

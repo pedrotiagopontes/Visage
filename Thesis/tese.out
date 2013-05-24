@@ -35,29 +35,33 @@
 \BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 35
 \BOOKMARK [1][-]{section.4.2}{4.2 Cole\347\343o de dados}{chapter.4}% 36
 \BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Labeled Faces in the Wild}{section.4.2}% 37
-\BOOKMARK [1][-]{section.4.3}{4.3 Implementa\347\343o}{chapter.4}% 38
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{section.4.3}% 39
-\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Filtros de Abstra\347\343o - Filtro Kuwahara Anisotr\363pico}{section.4.3}% 40
-\BOOKMARK [1][-]{section.4.4}{4.4 Arquitectura}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.5}{4.5 Detalhes Implementa\347\343o}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.6}{4.6 Funcionalidades}{chapter.4}% 43
-\BOOKMARK [0][-]{chapter.5}{5 Avalia\347\343o e Resultados}{}% 44
-\BOOKMARK [1][-]{section.5.1}{5.1 Conjuntos de Teste}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.2}{5.2 Pr\351-processamento}{chapter.5}% 46
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Dete\347\343o e segmenta\347\343o da face}{section.5.2}% 47
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 48
-\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o Imagens}{section.5.2}% 49
-\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 50
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 51
-\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1 : An\341lise do impacto da segmenta\347\343o das faces}{section.5.3}% 52
-\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 53
-\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3}{section.5.3}% 54
-\BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 56
-\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 57
-\BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 58
-\BOOKMARK [1][-]{section.5.6}{5.6 Discuss\343o Resultados Obtidos}{chapter.5}% 59
-\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 60
-\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 61
-\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 62
-\BOOKMARK [0][-]{section*.32}{Refer\352ncias}{}% 63
+\BOOKMARK [1][-]{section.4.3}{4.3 Sistema de Reconhecimento Facial Visage - Vis\343o Geral}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.4}{4.4 M\363dulo FaceDetector}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Dete\347\343o Face}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Alinhamento e Corte da Face}{section.4.4}% 41
+\BOOKMARK [2][-]{subsection.4.4.3}{4.4.3 Normaliza\347\343o}{section.4.4}% 42
+\BOOKMARK [2][-]{subsection.4.4.4}{4.4.4 Aplica\347\343o Filtro Abstra\347\343o}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.5}{4.4.5 Filtros de Abstra\347\343o - Filtro Kuwahara Anisotr\363pico}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.6}{4.4.6 Aplica\347\343o M\341scara}{section.4.4}% 45
+\BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceModel}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}{section.4.5}% 47
+\BOOKMARK [0][-]{chapter.5}{5 Avalia\347\343o e Resultados}{}% 48
+\BOOKMARK [1][-]{section.5.1}{5.1 Conjuntos de Teste}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{5.2 Pr\351-processamento}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Dete\347\343o e segmenta\347\343o da face}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o Imagens}{section.5.2}% 53
+\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 54
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1 : An\341lise do impacto da segmenta\347\343o das faces}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 57
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3}{section.5.3}% 58
+\BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 61
+\BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.6}{5.6 Discuss\343o Resultados Obtidos}{chapter.5}% 63
+\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 64
+\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 66
+\BOOKMARK [0][-]{section*.35}{Refer\352ncias}{}% 67
