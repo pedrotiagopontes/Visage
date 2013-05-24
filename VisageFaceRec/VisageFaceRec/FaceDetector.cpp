@@ -175,7 +175,8 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		float angle = atan2(eye_directionY,eye_directionX) * 180.0 / PI;
 
 		// rect is the RotatedRect (I got it from a contour...)
-		RotatedRect rect(Point2f(((float)face.cols)/2.0,((float)face.rows)/2.0), Size2f((float)face.cols, (float)face.rows), angle);
+		RotatedRect rect(Point2f(((float)original.cols)/2.0,((float)original.rows)/2.0), 
+			Size2f((float)original.cols, (float)original.rows), angle);
 		
 		Size rect_size = rect.size;
 		// thanks to http://felix.abecassis.me/2011/10/opencv-rotation-deskewing/
@@ -186,8 +187,9 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		// get the rotation matrix
 		M = getRotationMatrix2D(rect.center, angle, 1.0);
 		// perform the affine transformation
-		warpAffine(face, rotated, M, face.size(), INTER_CUBIC);
+		warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
 	}
+	rotated = rotated(myROI);
 	/*
 	imshow("original", original);
 	imshow("rotated", rotated);

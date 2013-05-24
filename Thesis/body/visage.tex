@@ -170,9 +170,55 @@ O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com
 
 \subsection{Alinhamento e Corte da Face}
 Tal como referido anteriormente, a tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face que se pretende fornecer às etapas de treino ou teste do sistema Visage.
-Essa região é constituída por uma área rectangular devolvida após a 
-Explicar como funciona alinhamento, voltando a mencionar o cascade classifier
-Explicar critério escolha olho direito e esquerdo
+Para proceder ao alinhamento da imagem antes do seu corte foi adotada a seguinte estratégia:
+\begin{enumerate}
+\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na imagem;
+\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na direito na imagem;
+\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito, determinando as duas posições mais prováveis para cada um dos olhos, das diversas posições obtidas nos passos 1 e 2;
+\item É calculado o ponto central das regiões determinadas como mais prováveis para o olho esquerdo e direito, em que $p_esquerdo(x_1,y_1)$ corresponde ao ponto central da região detetada para o olho esquerdo.e  $p_direito(x_2,y_2)$ corresponde ao ponto central da região detetada para o olho direito.
+\item É calculado o ângulo de rotação da imagem, a partir da posição determinada para os olhos:
+\begin{equation}
+\angle rotação = \frac{\arctan(x_1 - x_2, y_1 - y_2) * 180.0}{\Pi}
+\end{equation}
+\item
+\item A imagem é rodada;
+\end{enumerate}
+
+\begin{figure}[t]
+        \centering
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{alinhamentos/original}
+                \caption{Original}
+                \label{fig:alinha_original}
+        \end{subfigure}%
+        ~ 
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{alinhamentos/nao-alinhada}
+                \caption{Recortada}
+                \label{fig:alinha_nao-alinhada}
+        \end{subfigure}
+        ~ 
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{alinhamentos/alinhada}
+                \caption{Alinhada}
+                \label{fig:alinha_alinhada}
+        \end{subfigure}
+        ~ 
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{alinhamentos/lfw-a}
+                \caption{LFW-a}
+                \label{fig:alinha_lfw-a}
+        \end{subfigure}
+        \caption{Imagem recortada e alinhada segundo implementação própria e segundo LFW-a.}\label{fig:alinhamentos}
+\end{figure}
+
+\subsubsection*{Remoção Conflitos e Falsos Positivos}
+Tal como anteriormente a utilização de um classificador em cascata origina o aparecimento de alguns falsos positivos e conflitos nas regiões obtidas como posição do olho esquerdo, pelo que se revelou necessária a adoção de uma estratégia de remoção dos mesmo para um alinhamento eficaz da face.
+
 Ilustrar
 
 \subsection{Normalização}
