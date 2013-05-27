@@ -6,10 +6,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Caracteriza\IeC {\c c}\IeC {\~a}o da Biblioteca LFW\relax }}{31}{table.caption.15}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Resultados etapa de de dete\IeC {\c c}\IeC {\~a}o facial para todas as pessoas com pelo menos 2 imagens na biblioteca LFW-a.\relax }}{34}{table.caption.19}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Resultados etapa de de dete\IeC {\c c}\IeC {\~a}o facial para todas as pessoas com pelo menos 2 imagens na biblioteca LFW-a.\relax }}{35}{table.caption.19}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Galerias criadas ap\IeC {\'o}s pr\IeC {\'e}-processamento.\relax }}{45}{table.caption.29}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados M\IeC {\'e}dia Precis\IeC {\~a}o na Galeria (melhores a negrito)\relax }}{54}{table.caption.34}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste, em cada galeria (L = LBPH, F = Fisherfaces, E = Eigenfaces).\relax }}{55}{table.caption.35}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Desvio padr\IeC {\~a}o ($\sigma $) entre os valores de MPG obtidos para os 4 conjuntos de teste.\relax }}{55}{table.caption.36}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Galerias criadas ap\IeC {\'o}s pr\IeC {\'e}-processamento.\relax }}{47}{table.caption.28}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados M\IeC {\'e}dia Precis\IeC {\~a}o na Galeria (melhores a negrito)\relax }}{55}{table.caption.33}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste, em cada galeria (L = LBPH, F = Fisherfaces, E = Eigenfaces).\relax }}{56}{table.caption.34}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Desvio padr\IeC {\~a}o ($\sigma $) entre os valores de MPG obtidos para os 4 conjuntos de teste.\relax }}{56}{table.caption.35}
 \addvspace {10\p@ }

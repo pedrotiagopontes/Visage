@@ -159,22 +159,9 @@ Na revisão efetuada ao estado da arte do reconhecimento facial em imagens desta
 Após uma análise das diferente alternativas existentes, e através de alguns teste intermédios realizados durante o período de desenvolvimento, foram então criadas as galerias de imagens Original, figura \ref{fig:original}; Cropped, figura \ref{fig:cropped}; e Masked, figura \ref{fig:masked}. A primeira, é constituída pelas imagens originais da biblioteca LFW-a e permite estabelecer uma base de comparação entre as imagens segmentadas e as imagens originais. A galeria cropped é composta por um conjunto de imagens onde as faces foram detetadas e segmentadas pelo detetor facial implementado e descrito no capítulo \ref{chap:facedetector}. A terceira e última galeria criada possui as mesmas imagens da galeria Cropped, sobre as quais foi posteriormente aplicada uma máscara elíptica de modo a diminuir a presença de fundo nas imagens recortadas.
 
 \subsection{Normalização do Contraste}
-A normalização das imagens em termos de contraste é passo comum e essencial à maioria dos sistemas de reconhecimento facial automático modernos, tal como destacado no capítulo \ref{chap:reco} desta dissertação. Assim sendo, no decorrer do desenvolvimento do sistema de reconhecimento facial Visage, revelou-se também importante analisar o qual o impacto da normalização do contraste nas imagens utilizadas, assim como qual a melhor forma de efetuar a sua normalização. Foram então estudadas três formas distintas de efetuar a normalização do contraste, as quais são apresentadas de seguida:
+A normalização das imagens em termos de contraste é passo comum e essencial à maioria dos sistemas de reconhecimento facial automático modernos, tal como destacado no capítulo \ref{chap:reco} desta dissertação. Assim sendo, no decorrer do desenvolvimento do sistema de reconhecimento facial Visage, revelou-se também importante analisar o qual o impacto da normalização do contraste nas imagens utilizadas, assim como qual a melhor forma de efetuar a sua normalização. Foram então estudadas três formas distintas de efetuar a normalização do contraste, \textit{Contrast Streching}, Equalização Histograma e \textit{CLAHE}, descritas em \ref{sec:normalizacao}.
 
-\begin{description}
-\item[\textit{Contrast Streching}]
-A técnica de \textit{Contrast Streching}, também designada por alguns autores simplesmente de normalização, consiste numa tentativa de alargar a gama de valores utilizados para codificar a intensidade de uma imagem de forma a que seja utilizada toda a gama de valores possíveis. Nesta avaliação as imagens utilizadas encontram-se convertidas para tons de cinzento, pelo que a normalização efetuada consiste num mapeamento linear dos valores originais para uma gama de intensidade entre 0 e 255. Da aplicação da técnica de contrast streching às imagens presentes nos conjuntos de teste descritos anteriormente resultou a criação da galeria Normalized. Um exemplo de uma imagem dessa galeria pode ser visualizado na imagem \ref{fig:normalized}.
-\end{description}
-
-\begin{description}
-\item[Equalização Histograma]
-O histograma de uma imagem descreve a distribuição estatística dos níveis de intensidade de uma imagem, neste caso concreto dos níveis de cinzento, em função do seu número de pixeis. A equalização do histograma de uma imagem consiste no mapeamento das variações da escala de cinzentos de forma a que o histograma resultante se aproxime de uma outra distribuição, mais alargada e idealmente uniforme na distribuição dos valores de intensidade da imagem. Este procedimento parte do princípio de que a qualidade da imagem é uniforme em toda a imagem, aplicando um mapeamento similar a toda a imagem \cite{Bradski2008}. As imagens normalizadas através da equalização simples do histograma encontram-se representadas na galeria Equalized e um exemplo das mesmas pode ser visto na figura \ref{fig:equalized}.
-\end{description}
-
-\begin{description}
-\item[\textit{CLAHE}]
-\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim a o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na imagem \ref{fig:clahe} encontra-se representada uma imagem da galeria CLAHE, resultante da normalização das imagens dos conjuntos de teste através da técnica CLAHE.
-\end{description}
+Da aplicação da técnica de contrast streching às imagens presentes nos conjuntos de teste descritos anteriormente resultou a criação da galeria Normalized, as imagens normalizadas através da equalização simples do histograma encontram-se representadas na galeria Equalized e as normalizadas pela técnica \textit{CLAHE} encontram-se representadas na galeria com o mesmo nome. As figuras \ref{fig:normalized}, \ref{fig:equalized} e \ref{fig:clahe} representam exemplos da aplicação das três técnicas avaliadas sobre a mesma imagem.
 
 \subsection{Abstração Imagens}
 A terceira experiência visa analisar o impacto da abstração de imagens no reconhecimento.
@@ -282,7 +269,7 @@ A avaliação é efetuada através da análise do desempenho dos três algoritmo
 
 A média dos resultados obtidos encontra-se representada em um gráfico do tipo \textit{Cumulative match score} (CMS). Um gráfico do tipo CMS representa $T_{I}(n)$ como uma função de ranking $n$. No eixo horizontal encontra-se representado o ranking e no eixo vertical encontra-se representada a respetiva taxa de identificação, um exemplo de um gráfico CMS pode ser visto em \ref{fig:exp1_comaparacao}.
 
-\subsection{Resultados Experiência 1 : Análise do impacto da segmentação das faces}
+\subsection{Resultados Experiência 1: Impacto da segmentação das faces}
 
 \begin{figure}[p]
         \centering

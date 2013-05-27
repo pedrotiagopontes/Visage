@@ -98,6 +98,14 @@ Voltar a falar no sistema de reconhecimento facial genérico.
 Dizer que o Visage tem dois módulos fundamentais: face detector e face model.
 Falar do terceiro cenas só para criar ficheiros de avaliação
 
+Falar das dependencias
+\subsection{\textit{Open Source Computer Vision Library- OpenCV}}
+O \textit{OpenCV} é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontra disponível a implementação de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. 
+
+Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}.
+
+Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. 
+
 
 \section{Módulo \textit{FaceDetector}} \label{sec:facedetector}
 O módulo \textit{FaceDetector} é um dos componentes principais do sistema de reconhecimento facial criado, sendo responsável por efetuar um conjunto de tarefas de pré-processamento sobre as imagens fornecidas ao sistema. Estas imagens podem ser fornecidas em duas fases distintas. A primeira é designada de treino do sistema, nesta fase, fornecem-se um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita de futuro proceder à identificação de novas imagens de acordo com a informação obtida na fase de treino. A segunda fase corresponde à utilização do sistema como intuito de identificar novas imagens não anotadas, esta fase é designada de fase de identificação.
@@ -132,9 +140,9 @@ Para uma dada imagem, a tarefa de deteção face é responsável pela determina�
 
 Apesar do bom desempenho do classificador utilizado na deteção das faces presentes nas imagens existem algumas situações onde se verificou a existência de erros ou conflitos nos resultados obtidos, tal como ilustrado em \ref{fig:detecao_erros}. As três situações de erro encontradas podem ser agrupadas em:
 \begin{itemize}
-\item Falsos Positivos. Zonas da imagem que contém faces podem ser assinaladas como área de interesse, tal como ilustrado em \ref{fig:detecao_erro1};
+\item Falsos Positivos. Zonas da imagem que não contém faces podem ser assinaladas como área de interesse, tal como ilustrado em \ref{fig:detecao_erro1};
 \item Múltiplas Áreas de Interesse. Para a mesma face, na análise de uma imagem são devolvidas várias regiões de interesse, tal como pode ser visto em \ref{fig:detecao_erro2};
-\item Múltiplas Faces. na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:detecao_erro3}
+\item Múltiplas Faces. Na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:detecao_erro3}, pelo que apenas essa face deve ser extraída da imagem.
 \end{itemize}
 
 \begin{table}
@@ -156,32 +164,31 @@ Apesar do bom desempenho do classificador utilizado na deteção das faces prese
 
 Para a remoção dos casos de conflito observados na deteção das faces presentes na biblioteca LFW-a e ilustrados em \ref{fig:detecao_erros}, foi então adoptada a seguinte estratégia:
 
-Para uma dada imagem é verificada a existência de uma cara usando o classificador em cascata treinado para o reconhecimento de caras frontais. Caso se verifique a deteção de mais do que uma região de interesse nessa imagem é necessário proceder à re-avaliação de cada uma dessas regiões de forma a determinar em qual se encontra a face que se pretender utilizar. 
+Para uma dada imagem é verificada a existência de uma cara usando o classificador em cascata treinado para o reconhecimento de caras frontais. Caso se verifique a deteção de um conflito, nessa imagem é necessário proceder à re-avaliação de cada uma das regiões assinaladas como área de interesse, de forma a determinar em qual se encontra a face que se pretender utilizar.
 
 Na avaliação das várias regiões de interesse é procurada a existência de olhos, boca e nariz nas mesmas, com recurso a três classificadores em cascata treinados para o reconhecimento de cada um destes componentes em específico. Posteriormente é calculada uma pontuação para cada uma das regiões de interesse conforme os elementos encontrados:
 \begin{itemize}
-\item +100 Pontos caso sejam encontrados o par de olhos(olho esquerdo e direito) na face;
-\item +50 Pontos caso seja encontrada a boca, e no caso de terem sido encontrado olhos, caso a sua posição vertical se encontre a uma distância de pelo menos 20 pixeis dos olhos, de modo a garantir que um olho não é classificado como boca e vice-versa.
-\item + 50 Pontos caso seja encontrado o nariz na face;
+\item +100 Pontos caso sejam encontrados o par de olhos (olho esquerdo e direito) na face;
+\item +50 Pontos caso seja encontrada a boca. No caso de terem sido encontrados previamente os olhos, é também verficado se distância entre a boca e os olhos é de de pelo menos 20 pixeis, de modo a garantir que um olho não é classificado como boca e vice-versa;
+\item + 50 Pontos caso seja encontrado o nariz na face.
 \end{itemize}
-A pontuação de uma região de interesse varia assim entre 0 e 200 pontos. No final é guardada apenas a região de interesse com maior pontuação. No caso de empate, são guardadas ambas as regiões de interesse, e o utilizador do sistema é avisado do conflito, o qual deverá ser resolvido manualmente posteriormente.
+A pontuação de uma região de interesse varia assim entre 0 e 200 pontos. No final é guardada apenas a região de interesse com maior pontuação. No caso de empate, são guardadas ambas as regiões de interesse, e o utilizador do sistema é avisado do conflito, o qual deverá ser resolvido posteriormente de forma manual.
 
-O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com e sem remoção de conflitos pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra estão incluídas as imagens das pessoas com pelos menos 2 imagens, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste.
+O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com e sem remoção de conflitos pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra foram incluídas apenas as fotografias de pessoas que tenham pelos menos 2 imagens na biblioteca LFW-a, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste.
 
-\subsection{Alinhamento e Corte da Face}
+\subsection{Alinhamento e Corte} \label{alinhamentoEcorte}
 Tal como referido anteriormente, a tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face que se pretende fornecer às etapas de treino ou teste do sistema Visage.
 Para proceder ao alinhamento da imagem antes do seu corte foi adotada a seguinte estratégia:
 \begin{enumerate}
 \item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na imagem;
-\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na direito na imagem;
-\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito, determinando as duas posições mais prováveis para cada um dos olhos, das diversas posições obtidas nos passos 1 e 2;
-\item É calculado o ponto central das regiões determinadas como mais prováveis para o olho esquerdo e direito, em que $p_esquerdo(x_1,y_1)$ corresponde ao ponto central da região detetada para o olho esquerdo.e  $p_direito(x_2,y_2)$ corresponde ao ponto central da região detetada para o olho direito.
-\item É calculado o ângulo de rotação da imagem, a partir da posição determinada para os olhos:
+\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho direito na imagem;
+\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito, obtendo-se assim as duas posições mais prováveis para cada um dos olhos;
+\item É calculado o ponto central das regiões determinadas como mais prováveis para o olho esquerdo e direito, em que $p_{esquerdo}(x_1,y_1)$ corresponde ao ponto central da região detetada para o olho esquerdo, e  $p_{direito}(x_2,y_2)$ corresponde ao ponto central da região detetada para o olho direito.
+\item É calculado o ângulo de rotação da imagem ($\theta$), a partir da posição determinada para os olhos:
 \begin{equation}
-\angle rotação = \frac{\arctan(x_1 - x_2, y_1 - y_2) * 180.0}{\Pi}
+\theta = \frac{\arctan(x_1 - x_2, y_1 - y_2) * 180.0}{\Pi}
 \end{equation}
-\item
-\item A imagem é rodada;
+\item A imagem é, finalmente, rodada de acordo com o ângulo de rotação $\theta$ calculado.
 \end{enumerate}
 
 \begin{figure}[t]
@@ -213,58 +220,71 @@ Para proceder ao alinhamento da imagem antes do seu corte foi adotada a seguinte
                 \caption{LFW-a}
                 \label{fig:alinha_lfw-a}
         \end{subfigure}
-        \caption{Imagem recortada e alinhada segundo implementação própria e segundo LFW-a.}\label{fig:alinhamentos}
+        \caption{Comparação entre versões original, recortada, alinhada e LFW-a.}\label{fig:alinhamentos}
 \end{figure}
 
 \subsubsection*{Remoção Conflitos e Falsos Positivos}
-Tal como anteriormente a utilização de um classificador em cascata origina o aparecimento de alguns falsos positivos e conflitos nas regiões obtidas como posição do olho esquerdo, pelo que se revelou necessária a adoção de uma estratégia de remoção dos mesmo para um alinhamento eficaz da face.
+Tal como explicado anteriormente, a necessidade de alinhamento de uma face previamente detetada é calculada com base na localização estimada para o seu olho esquerdo e direito e a inclinação da reta formada pela intersecção dos dois pontos centrais de cada um dos olhos. Para detetar um olho, à semelhança da estratégia adotada para detetar uma face, é utilizado um classificador em cascata que devolve uma região rectangular onde é provável a existência desse mesmo olho. 
 
-Ilustrar
+A morfologia de um olho é um caso particularmente difícil de deteção, tendo-se registado a existência de um grande número de falsos positivos para os classificador utilizados (olho esquerdo e direito), assim como uma má diferenciação entre o olho esquerdo, direito e a boca em algumas das imagens, pelo que a adoção de uma estratégia de remoção de conflitos se revelou essencial para a conclusão desta tarefa de pré-processamento com sucesso. Seja ($w$) a largura de uma imagem de face a alinhar e $h$ a sua altura. Sejam $c_{esquerdo}(x_1,y_1)$ e  $c_{direito}(x_2,y_2)$  os pontos correspondentes aos cantos superiores esquerdos das regiões de interesse detetadas para o olho esquerdo e direito, respetivamente, e $w_{esquerdo}$, $w_{direito}$ e $h_{esquerdo}$ e $h_{direito}$ a altura e larguras dessas mesmas regiões. Os conflitos entre as diversas regiões de interesse devolvidas pelos classificadores utilizados são então removidos pela seguinte estratégia:
 
-\subsection{Normalização}
-Falar das três alternativas (talvez mover para aqui texto do chap avaliacao)
+\begin{itemize}
+\item $x_1 < \frac{w}{4}$;
+\item $y_1 < \frac{h}{2}$;
+\item $w_{esquerdo} < \frac{5\times w}{8}$;
+\item $h_{esquerdo} < \frac{h}{2}$;
+
+\item $x_2 > \frac{w}{4}$;
+\item $x_2 < \frac{3\times w}{4}$;
+\item $y_2 < \frac{h}{2}$;
+\item $w_{esquerdo} < \frac{5\times w}{8}$;
+\item $h_{esquerdo} < \frac{h}{2}$;
+\end{itemize}
+
+\subsection{Normalização Contraste} \label{sec:normalizacao}
+\textbf{ver imagens e histogramas}
+
+Tal como destacado na secção \ref{sec:sub-problemas} a tarefa de normalização encontra-se presente em alguns sistemas de reconhecimento facial automático com o objetivo de melhorar os resultados obtidos nos mesmos independentemente de fatores como a iluminação ou pose das faces nas imagens. A tarefa de normalização do contraste de imagem tem como objetivo normalizar a face no que diz respeito à sua iluminação e aumentar o contraste existente na mesma. De forma a tornar o sistema versátil e analisar o impacto de diferentes estratégias foram implementadas as seguintes alternativas para a normalização do contraste:
+
+\begin{description}
+\item[\textit{Contrast Streching}]
+A técnica de \textit{Contrast Streching}, também designada por alguns autores simplesmente de normalização, consiste numa tentativa de alargar a gama de valores utilizados para codificar a intensidade de uma imagem de forma a que seja utilizada toda a gama de valores possíveis. No sistema desenvolvido as imagens utilizadas encontram-se convertidas para tons de cinzento, pelo que a normalização efetuada consiste num mapeamento linear dos valores originais para uma gama de intensidade entre 0 e 255. Um exemplo de uma face normalizado seguindo esta estratégia pode ser visualizado na imagem \ref{fig:normalized}.
+\end{description}
+
+\begin{description}
+\item[Equalização Histograma]
+O histograma de uma imagem descreve a distribuição estatística dos níveis de intensidade de uma imagem, neste caso concreto dos níveis de cinzento, em função do seu número de pixeis. A equalização do histograma de uma imagem consiste no mapeamento das variações da escala de cinzentos de forma a que o histograma resultante se aproxime de uma outra distribuição, mais alargada e idealmente uniforme na distribuição dos valores de intensidade da imagem. Este procedimento parte do princípio de que a qualidade da imagem é uniforme em toda a imagem, aplicando um mapeamento similar a toda a imagem \cite{Bradski2008}. Um exemplo de uma imagem cujo histograma foi equalizado pode ser visto na figura \ref{fig:equalized}.
+\end{description}
+
+\begin{description}
+\item[\textit{CLAHE}]
+\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na imagem \ref{fig:clahe} encontra-se representada resultante da normalização através da técnica CLAHE.
+\end{description}
 
 \subsection{Aplicação Filtro Abstração}
 Falar dos três filtros
 Mencionar que dois estão implementados no opencv e kuwahara não
 
-\subsection{Filtros de Abstração - Filtro Kuwahara Anisotrópico}
-\begin{figure}[ht]
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=0.7\textwidth]{filterskid}
-    \caption{Comparação entre imagem não abstraída (esquerda) e imagem abstraída (direita) \cite{Kyprianidis2009}.}	
-    \label{fig:filterskid}
-  \end{center}
-\end{figure}
+\subsubsection*{Filtro Gaussiano}
 
-Ao nível dos filtros de abstração o estudo será efetuado utilizado o filtro Kuwahara Anisotrópico (FKA).
+\subsubsection*{Filtro Bilateral}
 
-Este filtro consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+\subsubsection*{Filtro Kuwahara Anisotrópico}
+O filtro Kuwahara Anisotrópico (FKA)consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
 
 O filtro em questão foi também utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia. 
 
-Tendo em conta os fatores apresentados consideramos que este filtro é o mais adequado para a utilização no âmbito deste projeto.
-
 \subsection{Aplicação Máscara}
-mostrar antes e depois
-Dizer que é importante por remover background.
-Mostrar exemplos de paper onde tb é usada.
+Tal como referido anteriormente a existência de fundo e elementos externos à face numa imagem pode afetar significativamente os resultados obtidos no seu reconhecimento ao permitir que um conjunto de imagens com fundos semelhantes possam ser identificadas como pertencendo à mesma pessoa não pela face representada na imagem, mas pelos elementos presentes no fundo da mesma. A aplicação de uma máscara elíptica sobre face visa a remoção do fundo ainda existente na imagem após a deteção e segmentação da face e eventuais tarefas de pré-processamento realizadas.
 
+Um exemplo de uma imagem antes e depois da aplicação da máscara pode ser visto em \ref{fig:mask}. A estratégia de aplicação de uma máscara para melhoria dos resultados obtidos no reconhecimento facial já foi aplicada com sucesso anteriormente em diversas situações, como são exemplo a avaliação FERET \cite{Phillips2000} ou o trabalho realizado por Ahonen \textit{et al.} \cite{ahonen2004face}.
 
 \section{Módulo \textit{FaceModel}}
+O módulo \textit{FaceModel} constitui uma camada de nível superior implementada para encapsular a comunicação com módulo de reconhecimento facial disponível na biblioteca \textit{OpenCV}, designado \textit{FaceRecognizer}, assim como estender algumas das funcionalidades do mesmo. As principais responsabilidades do módulo \textit{FaceModel} consistem em efetuar o treino de um modelo de reconhecimento facial, assim como determinar para uma dada imagem qual a sua identificação mais provável, ou qual o conjunto ordenado de identificações mais prováveis. Uma vez treinado um modelo é também possível armazenar o mesmo num ficheiro e carrega-lo posteriormente, evitando assim um novo treino, o qual dependendo do número de imagens a treinar pode ser computacionalmente custoso.
 
-Falar dos três algoritmos
-Falar da alteracao efetuada para devolver n caras
+De seguida encontram-se brevemente descritas as principais diferenças entre os três algoritmos implementados no módulo \textit{Face Recognizer}.
 
-\subsection{Sistema de Reconhecimento Facial Base - OpenCV Face Recognizer}
-O \textit{OpenCV} é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontra disponível a implementação de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. 
-
-Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}.
-
-Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. De seguida encontram-se brevemente descritas as principais diferenças entre os três algoritmos implementados no módulo \textit{Face Recognizer:}
-
-\subsubsection*{\textit{Eigenfaces}}
+\subsection{\textit{Eigenfaces}}
 O método \textit{Eigenfaces} foi introduzido por Turk e Pentland em 1991 \cite{Turk1991}, e tira partido da Análise dos Componentes Principais (ACP) para efetuar o reconhecimento facial automático.
 
 A análise de componentes principais tem como objetivo determinar as relações existentes entre diferentes conjuntos de dados, nomeadamente ao nível das suas diferenças e semelhanças, tirando partido da redundância existente para criar uma representação reduzida dos dados sem que a perda de informação ocorrida seja significativa. As imagens faciais possuem uma grande redundância natural, o algoritmo \textit{Eigenfaces}, através da análise dos componentes principais dessas imagens, efetua uma projeção das imagens faciais num sub-espaço onde se evidenciam apenas as variações entre as diversas caras conhecidas pelo sistema.
@@ -283,13 +303,13 @@ O processo de reconhecimento facial com recurso ao algoritmo \textit{Eigenfaces}
 
 Este método efetua assim uma abordagem holística ao problema de reconhecimento facial em imagens, uma vez que tem em consideração a representação facial como um todo, não fazendo a distinção entre pontos específicos da face como olhos, orelhas ou nariz para efetuar o reconhecimento facial. Uma vantagem deste tipo de representação é a reduzida sensibilidade ao ruído presente nas imagens \cite{Zhao2003}.
 
-\subsubsection*{\textit{Fisherfaces}}
+\subsection{\textit{Fisherfaces}}
 A análise dos componentes principais visa determinar o sub-espaço onde se verifica uma maior variação entre um conjunto de imagens. No entanto, a variação na representação facial de uma pessoa encontra-se muitas vezes relacionada com mudanças de expressões faciais ou iluminação dos indivíduos, pelo que, o sub-espaço criado pelo algoritmo \textit{Eigenfaces} não traduz muitas vezes apenas as diferenças de identidade entre os diversos indivíduos, mas também as diferenças verificadas entre as várias representações de um indivíduo devido à variação nas condições de captura das imagens. O algoritmo \textit{Fisherfaces} \cite{Belhumeur1997, Etemad1997, Zhao1998}, tenta resolver este problema, através da aplicação de um passo de Análise Linear Discriminante (ALD) \textit{(Linear Discriminant analysis)} após a análise dos componentes principais, de forma a determinar mais corretamente as variações intra-classe existentes no conjunto de imagens a avaliar.
 
 A ALD, inicialmente introduzida por Fisher em 1936 \cite{FISHER1936}, tenta maximizar as diferenças existentes entre diferentes indivíduos(inter-classe) e minimizar as variações entre imagens da mesma pessoa(intra-classe) de modo a obter uma representação mais robusta em termos de variação ao nível da iluminação. Após a aplicação dos passos de ACP e ALD, o processo de reconhecimento do método \textit{Fisherfaces} é semelhante ao efetuado pelo método \textit{Eigenfaces}, sendo também efetuada uma abordagem holística ao reconhecimento facial.
 
 
-\subsubsection*	{\textit{Local Binary Patterns Histograms (LBPH)}}
+\subsection{\textit{Local Binary Patterns Histograms (LBPH)}}
 Ao contrário dos algoritmos descritos anteriormente, o LBPH efetua uma abordagem local ao problema de reconhecimento facial, efetuando uma extração das características locais de uma imagem. Este tipo de abordagem possuí a vantagem de possuir uma baixa dimensionalidade implícita, pelo que não existe a necessidade de efetuar a projeção das imagens num sub-espaço.
 
 A ideia base das \textit{Local Binary Patterns (LBP)}, consiste em resumir a estrutura local de imagem através de uma comparação de um pixel com os seus vizinhos. Dado um pixel central é analisada a diferença entre esse pixel e cada um dos seus vizinhos. Se a intensidade do pixel for maior ou igual do que a do seu vizinho é atribuído o valor 1, caso contrário é atribuído o valor 0. Cada pixel pode então ser traduzido por um número binário do género $11001111$. Dados $8$ pixeis é então possível efetuar $2^8$ combinações, cada uma designada de LBP.
