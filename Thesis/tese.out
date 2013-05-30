@@ -33,10 +33,10 @@
 \BOOKMARK [1][-]{section.3.3}{3.3 Trabalho Relacionado}{chapter.3}% 33
 \BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 34
 \BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.2}{4.2 Cole\347\343o de dados}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Labeled Faces in the Wild}{section.4.2}% 37
-\BOOKMARK [1][-]{section.4.3}{4.3 Sistema de Reconhecimento Facial Visage - Vis\343o Geral}{chapter.4}% 38
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Arquitetura}{section.4.3}% 39
+\BOOKMARK [1][-]{section.4.2}{4.2 Cole\347\343o de dados - Labeled Faces in the Wild}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{4.3 Sistema de Reconhecimento Facial Visage - Vis\343o Geral}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Especifica\347\343o e Funcionalidades}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Arquitetura}{section.4.3}% 39
 \BOOKMARK [1][-]{section.4.4}{4.4 M\363dulo FaceDetector}{chapter.4}% 40
 \BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Dete\347\343o Face}{section.4.4}% 41
 \BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Alinhamento e Corte}{section.4.4}% 42

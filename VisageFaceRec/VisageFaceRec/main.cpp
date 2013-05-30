@@ -1,53 +1,8 @@
 #include "utils.h"
 #include "Library.h"
 #include "FaceModel.h"
+#include "Evaluator.h"
 #include "FaceDetector.h"
-
-void testLibrary(string path, int percetageTrainned, string outputfilename, int m){
-	clock_t tStart = clock();
-	Library myLib(path, percetageTrainned);	
-	ofstream outputfile;
-	outputfile.open(outputfilename);
-
-	outputfile << myLib.toString();
-	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
-
-	tStart = clock();
-	FaceModel model(m, myLib.people);
-	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
-
-	model.testModel(myLib.people, outputfile);
-	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-
-	outputfile.close();
-
-};
-
-void testLibraryN(string path, int percentageTrainned, string outputfilename, int m, size_t n){
-	clock_t tStart = clock();
-	Library myLib(path, percentageTrainned);	
-	ofstream outputfile, outputfileP, outputfileR;
-	outputfile.open("..\\results\\" + outputfilename);
-
-	outputfileP.open("..\\results\\RecognitionCSV\\" + outputfilename);
-	outputfileR.open("..\\results\\RetrievalCSV\\" + outputfilename);
-
-	outputfile << myLib.toString();
-	outputfile << "Loaded in: " << timespent(tStart) << " seconds" << endl <<endl;
-
-	tStart = clock();
-	FaceModel model(m, myLib.people);
-	outputfile << "Trainned model " << model.getName() << " with "<< model.trainnedImages.size() <<" images in "  << timespent(tStart) << " seconds " << endl;
-
-	model.testModelNPredictions(myLib.people, outputfile, outputfileP, n );
-	model.testModelPrecision(myLib.people, outputfile, outputfileR, n);
-	outputfile << endl << "-------------------------------------------------------------------------------" << endl;
-
-	outputfile.close();
-	outputfileP.close();
-	outputfileR.close();
-
-};
 
 void testLoadAndGetTop10(string libPath, int percentageTrainned, int m, string modelFileName, string sample){
 	Library myLib(libPath, percentageTrainned);
@@ -69,7 +24,6 @@ void testLoadAndGetTop10(string libPath, int percentageTrainned, int m, string m
 		cout << "error loading sample" << endl;
 	}
 }
-
 
 int faceDetector(int argc, const char *argv[]){
 	string path = "..\\etc\\at.txt";
@@ -181,19 +135,18 @@ int faceRecognizer(int argc, const char *argv[]){
 				modelType = LBPH;
 			}
 		}
-
+		Evaluator ev = Evaluator(path, 80, outputfilename, modelType);
 		size_t nResults = 1;
 		if(argc >= 5){
 			nResults = atoi(argv[4]);
-			testLibraryN(path, 80, outputfilename, modelType, nResults);
+			ev.evaluateLibraryN(nResults);
 			//testLoadAndGetTop10(path, 80, modelType, "modelo.xml", 
 			//	"C://Users//Pedro//Pictures//lfw//lfw_aligned_BW//Angelina_Jolie//Angelina_Jolie_0005.jpg");
 		}else{
-			testLibrary(path, 80, outputfilename, modelType);
+			ev.evaluateModel();
 		}
 
 		cout << "Results in " << outputfilename << endl;
-		//outputfile.close();
 	}
 	
 
@@ -202,7 +155,7 @@ int faceRecognizer(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	return faceDetector(argc, argv);
+	///return faceDetector(argc, argv);
 
 	/*
 	string path = string(argv[1]);
@@ -216,7 +169,7 @@ int main(int argc, const char *argv[]) {
 
 	/// FaceRecognizer.exe
 	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	//return faceRecognizer(argc, argv);
+	return faceRecognizer(argc, argv);
 
 	//return 0;
 }

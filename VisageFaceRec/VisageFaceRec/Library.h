@@ -30,6 +30,7 @@ class Library
 public:
 	vector<Person> people;
 
+	Library();
 	Library(string filename, double percentageTrainnedImages = 80.0);
 	~Library(void);
 

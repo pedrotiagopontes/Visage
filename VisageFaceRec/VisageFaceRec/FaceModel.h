@@ -21,16 +21,18 @@ class FaceModel
 	int nComponents;
 	string name;
 
+	/// @trainnedImages and @trainnedLabels must be keep always in the same order
+	vector<Mat> trainnedImages;
+	vector<int> trainnedLabels;
+
 	void loadImagesFromPeople(vector<Person> people);
 
 public:
 #define EIGENFACES 0
 #define FISHERFACES 1
 #define LBPH 2
-	/// @trainnedImages and @trainnedLabels must be keep always in the same order
-	vector<Mat> trainnedImages;
-	vector<int> trainnedLabels;
 
+	FaceModel();
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
 	FaceModel(int modelType, vector<Person> people);
 	///@modelType must be 0:EINGEFACES, 1:FISHERFACES, 2:LBPH
@@ -39,6 +41,7 @@ public:
 	FaceModel(int modelType, const string& filename);
 	~FaceModel(void);
 	string getName();
+	int getSizeTrainnedImages();
 
 	///returns the predicted identity of an image, according to trainnned model
 	int identityImage(Mat image);
@@ -53,15 +56,6 @@ public:
 	void save(const string& filename) const;
 	// Deserializes this object from a given filename.
 	void load(const string& filename);
-
-	/**Tests a group of peple testing images to verify model accuracy. @return number of correct matches
-	* @resultsLabels and @resultsConfidence are predicted results
-	*/
-	int testModel(vector<Person> people, ofstream& outputfile);
-
-	int testModelNPredictions(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t n);
-
-	void testModelPrecision(vector<Person> people, ofstream& outputfile, ofstream& csvFile, size_t threshold);
 
 };
 

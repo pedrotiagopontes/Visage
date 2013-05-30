@@ -18,13 +18,12 @@ Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicaç
 
 Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso da abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar o processo de reconhecimento facial automático em imagens.
 
-\section{Coleção de dados} \label{sec:colecoes}
+\section{Coleção de dados - \textit{Labeled Faces in the Wild}} \label{sec:lfw}
 
 A evolução do estado da arte do reconhecimento facial automático em imagens tem beneficiado em larga escala do aumento constante dos recursos disponíveis para o seu estudo, nomeadamente através da criação de novas e mais completas coleções de dados \cite{Huang2007}. A grande maioria destas coleções, caracteriza-se por ter condições de captura controladas com o intuito de efetuar o estudo de fatores específicos que afetam a qualidade do reconhecimento, tais como a variação da pose, iluminação, expressão e outros fatores mencionados no capítulo \ref{desafios}. O objeto de estudo desta dissertação não é, no entanto, a análise específica de alguns desses fatores, mas sim a criação de um sistema de reconhecimento facial automático em imagens a partir de recursos de código aberto disponíveis, assim como a análise posterior do impacto do uso de abstração de imagens no sistema desenvolvido. Desta forma, a escolha de uma biblioteca apropriada e que represente as grandes variações associadas aos diferentes desafios que afetam o reconhecimento facial em imagens torna-se crucial.
 
-Tendo em conta as preocupações acima mencionadas, para o desenvolvimento do sistema de reconhecimento facial  Visage e posterior análise dos resultados obtidos no âmbito nesta dissertação foi escolhida a coleção de imagens \textit{Labeled Faces in the Wild}. Esta coleção é constituída por um conjunto de imagens faciais e respetivas anotações textuais e encontra-se descrita em maior pormenor na secção seguinte deste documento.
+Tendo em conta as preocupações acima mencionadas, para o desenvolvimento do sistema de reconhecimento facial  Visage e posterior análise dos resultados obtidos no âmbito nesta dissertação foi escolhida a coleção de imagens \textit{Labeled Faces in the Wild}.
 
-\subsection{\textit{Labeled Faces in the Wild}}  \label{sec:lfw}
 A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Nesse sentido, as imagens que constituem a galeria caracterizam-se por possuir uma grande variabilidade, nomeadamente ao nível da pose, expressão, iluminação, etnia, idade, género, vestuário e qualidade da câmara, por exemplo \cite{Huang2007}.
 
 Nesta coleção encontram-se representados um conjunto de 5749 indivíduos, ilustrados por 13233 imagens. O número de imagens por pessoa apresenta no entanto uma grande variação, desde um mínimo de 1 imagem por pessoa para 4069 indivíduos, até um máximo de 530 imagens que representam o antigo presidente dos Estados Unidos da América George W. Bush. O gráfico \ref{fig:distribuicaoLFW} ilustra a grande variação da distribuição do número de imagens por pessoa.
@@ -93,7 +92,12 @@ A criação do sistema Visage teve como principal objetivo o desenvolvimento de 
 
 Uma vez que foco desta dissertação não visa o desenvolvimento de algoritmos de reconhecimento facial, mas sim a análise do impacto da manipulação efetuada sobre as imagens a reconhecer, foram utilizadas bibliotecas de código aberto que permitem agilizar o desenvolvimento do sistema. Por outro lado, a utilização destas bibliotecas permite também a contribuição para uma área onde as soluções abertas existentes são ainda poucas.
 
+Para a manipulação das imagens e implementação do sistema de reconhecimento facial foi então utilizada a biblioteca \textit{Open Source Computer Vision Library} (\textit{OpenCV}), a qual é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontram implementados de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}. Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. 
+
 Finalmente, com o sistema desenvolvido pretendia-se ainda a criação de uma base sólida que permita o desenvolvimento de futuras aplicações que tirem partido do reconhecimento facial automático no seu funcionamento, como por exemplo aplicações na área de \textit{image retrieval}.
+
+\subsection{Especificação e Funcionalidades}
+?
 
 O sistema de reconhecimento facial desenvolvido é composto por duas fases fundamentais:
 \begin{description}
@@ -111,16 +115,6 @@ O sistema de reconhecimento facial desenvolvido é composto por duas fases funda
 O módulo \textit{FaceModel} Constitui uma camada de nível superior implementada para encapsular a comunicação com módulo de reconhecimento facial disponível na biblioteca \textit{OpenCV}, designado \textit{FaceRecognizer}, assim como estender algumas das funcionalidades do mesmo. Este módulo encontra-se descrito com maior detalhe na secção \ref{sec:facemodel}.
 \item[\textit{Utils}] Engloba algumas funções úteis utilizadas para o desenvolvimento e avaliação do sistema Visage.
 \end{description}
-
-Falar das dependencias
-
-\subsection*{\textit{Open Source Computer Vision Library - OpenCV}}
-O \textit{OpenCV} é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontram implementados de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. 
-
-Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}.
-
-Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. 
-
 
 \section{Módulo \textit{FaceDetector}} \label{sec:facedetector}
 O módulo \textit{FaceDetector} é um dos componentes principais do sistema de reconhecimento facial criado, sendo responsável por efetuar um conjunto de tarefas de pré-processamento sobre as imagens fornecidas ao sistema.
@@ -192,7 +186,7 @@ Apesar do bom desempenho do classificador utilizado na deteção das faces prese
 \begin{itemize}
 \item Falsos Positivos. Zonas da imagem que não contém faces podem ser assinaladas como área de interesse, tal como ilustrado em \ref{fig:conflitos-falsos_positivos};
 \item Múltiplas Áreas de Interesse. Para a mesma face, na análise de uma imagem são devolvidas várias regiões de interesse, tal como pode ser visto em \ref{fig:conflitos-multiplas_areas};
-\item Múltiplas Faces. Na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:conflitos-multiplas_faces}, pelo que apenas essa face deve ser extraída da imagem.
+\item Múltiplas Faces. Na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:conflitos-multiplas_faces}, onde apenas a face maior possuí uma anotação textual associada, pelo que apenas essa face deve ser extraída da imagem.
 \end{itemize}
 
 \begin{table}
@@ -227,19 +221,22 @@ A pontuação de uma região de interesse varia assim entre 0 e 200 pontos. No f
 O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com e sem remoção de conflitos pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra foram incluídas apenas as fotografias de pessoas que tenham pelos menos 2 imagens na biblioteca LFW-a, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste.
 
 \subsection{Alinhamento e Corte} \label{alinhamentoEcorte}
-Tal como referido anteriormente, a tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face que se pretende fornecer às etapas de treino ou teste do sistema Visage.
-Para proceder ao alinhamento da imagem antes do seu corte foi adotada a seguinte estratégia:
+A tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face, sendo essa região correspondente a um retângulo tal como ilustrado na figura \ref{fig:conflitos-correcta}. Após a deteção da região de interesse onde se encontra a face, é então possível proceder ao seu alinhamento e corte para os quais foi adotada a seguinte estratégia:
+
 \begin{enumerate}
-\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na imagem;
-\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho direito na imagem;
-\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito, obtendo-se assim as duas posições mais prováveis para cada um dos olhos;
+\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na região de interesse determinada para a face;
+\item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho direito na região de interesse determinada para a face;
+\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito (ver secção seguinte), obtendo-se assim as duas posições mais prováveis para cada um dos olhos;
 \item É calculado o ponto central das regiões determinadas como mais prováveis para o olho esquerdo e direito, em que $p_{esquerdo}(x_1,y_1)$ corresponde ao ponto central da região detetada para o olho esquerdo, e  $p_{direito}(x_2,y_2)$ corresponde ao ponto central da região detetada para o olho direito.
 \item É calculado o ângulo de rotação da imagem ($\theta$), a partir da posição determinada para os olhos:
 \begin{equation}
 \theta = \frac{\arctan(x_1 - x_2, y_1 - y_2) * 180.0}{\Pi}
 \end{equation}
-\item A imagem é, finalmente, rodada de acordo com o ângulo de rotação $\theta$ calculado.
+\item A imagem é rodada de acordo com o ângulo de rotação $\theta$ calculado.
+\item A imagem é cortada de acordo com a região de interesse determinada na tarefa de deteção face.
 \end{enumerate}
+
+Caso não se pretenda efetuar o alinhamento da face, mas apenas a sua segmentação da restante imagem, como se verifica na utilização da galeria já alinhada, LFW-a, na avaliação do desempenho do sistema, os passos 1 a 6 são ignorados, sendo apenas segmentada a imagem de acordo com a região de interesse determinada na tarefa de deteção face.
 
 \begin{figure}[t]
         \centering
@@ -276,19 +273,15 @@ Para proceder ao alinhamento da imagem antes do seu corte foi adotada a seguinte
 \subsubsection*{Remoção Conflitos e Falsos Positivos}
 Tal como explicado anteriormente, a necessidade de alinhamento de uma face previamente detetada é calculada com base na localização estimada para o seu olho esquerdo e direito e a inclinação da reta formada pela intersecção dos dois pontos centrais de cada um dos olhos. Para detetar um olho, à semelhança da estratégia adotada para detetar uma face, é utilizado um classificador em cascata que devolve uma região rectangular onde é provável a existência desse mesmo olho. 
 
-A morfologia de um olho é um caso particularmente difícil de deteção, tendo-se registado a existência de um grande número de falsos positivos para os classificador utilizados (olho esquerdo e direito), assim como uma má diferenciação entre o olho esquerdo, direito e a boca em algumas das imagens, pelo que a adoção de uma estratégia de remoção de conflitos se revelou essencial para a conclusão desta tarefa de pré-processamento com sucesso. Seja $w$ a largura de uma imagem de face a alinhar e $h$ a sua altura. Sejam $c_{esquerdo}(x_1,y_1)$ e  $c_{direito}(x_2,y_2)$  os pontos correspondentes aos cantos superiores esquerdos das regiões de interesse detetadas para o olho esquerdo e direito, respetivamente, e $w_{esquerdo}$, $w_{direito}$, $h_{esquerdo}$ e $h_{direito}$ a altura e larguras dessas mesmas regiões. Os conflitos entre as diversas regiões de interesse devolvidas pelos classificadores utilizados são então removidos pela seguinte estratégia:
+A morfologia de um olho é um caso particularmente difícil de deteção, tendo-se registado a existência de um grande número de falsos positivos para os classificador utilizados (olho esquerdo e direito), assim como uma má diferenciação entre o olho esquerdo, direito e a boca em algumas das imagens, pelo que a adoção de uma estratégia de remoção de conflitos se revelou essencial para a conclusão desta tarefa de pré-processamento com sucesso. A estratégia adoptada foi então a seguinte:
+
+Considerando $w$ a largura de uma imagem de face a alinhar e $h$ a sua altura. Sejam $c_{esquerdo}(x_1,y_1)$ e  $c_{direito}(x_2,y_2)$  os pontos correspondentes aos cantos superiores esquerdos das regiões de interesse detetadas para o olho esquerdo e direito, respetivamente, e $w_{esquerdo}$, $w_{direito}$, $h_{esquerdo}$ e $h_{direito}$ a largura e altura dessas mesmas regiões. Os conflitos entre as diversas regiões de interesse devolvidas pelos classificadores utilizados são removidos através da utilização das seguintes restrições:
 
 \begin{itemize}
-\item $x_1 < \frac{w}{4}$;
-\item $y_1 < \frac{h}{2}$;
-\item $w_{esquerdo} < \frac{5\times w}{8}$;
-\item $h_{esquerdo} < \frac{h}{2}$;
-
-\item $x_2 > \frac{w}{4}$;
-\item $x_2 < \frac{3\times w}{4}$;
-\item $y_2 < \frac{h}{2}$;
-\item $w_{esquerdo} < \frac{5\times w}{8}$;
-\item $h_{esquerdo} < \frac{h}{2}$;
+\item $x_1 < \frac{w}{4}$ e $\frac{w}{4} < x_2 < \frac{3\times w}{4}$;
+\item $y_1 < \frac{h}{2}$ e $y_2 < \frac{h}{2}$;
+\item $w_{esquerdo} < \frac{5\times w}{8}$ e $w_{direito} < \frac{5\times w}{8}$;
+\item $h_{esquerdo} < \frac{h}{2}$ e $h_{direito} < \frac{h}{2}$;
 \end{itemize}
 
 \subsection{Normalização Contraste} \label{sec:normalizacao}
@@ -325,9 +318,29 @@ O filtro Kuwahara Anisotrópico (FKA)consiste numa generalização do filtro Kuw
 O filtro em questão foi também utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia. 
 
 \subsection{Aplicação Máscara}
+
+\begin{figure}[t]
+        \centering
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{mascara/sem_mascara}
+                \caption{Original}
+                \label{fig:sem-mascara}
+        \end{subfigure}%
+        ~ ~ ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{mascara/com_mascara}
+                \caption{Recortada}
+                \label{fig:com-mascara}
+        \end{subfigure}
+        ~ 
+        \caption{Exemplo de face já segmentada, com e sem máscara.}\label{fig:mascara}
+\end{figure}
+
 Tal como referido anteriormente a existência de fundo e elementos externos à face numa imagem pode afetar significativamente os resultados obtidos no seu reconhecimento ao permitir que um conjunto de imagens com fundos semelhantes possam ser identificadas como pertencendo à mesma pessoa não pela face representada na imagem, mas pelos elementos presentes no fundo da mesma. A aplicação de uma máscara elíptica sobre face visa a remoção do fundo ainda existente na imagem após a deteção e segmentação da face e eventuais tarefas de pré-processamento realizadas.
 
-Um exemplo de uma imagem antes e depois da aplicação da máscara pode ser visto em \ref{fig:mask}. A estratégia de aplicação de uma máscara para melhoria dos resultados obtidos no reconhecimento facial já foi aplicada com sucesso anteriormente em diversas situações, como são exemplo a avaliação FERET \cite{Phillips2000} ou o trabalho realizado por Ahonen \textit{et al.} \cite{ahonen2004face}.
+Um exemplo de uma imagem antes e depois da aplicação da máscara pode ser visto em \ref{fig:mascara}. A estratégia de aplicação de uma máscara para melhoria dos resultados obtidos no reconhecimento facial já foi aplicada com sucesso anteriormente em diversas situações, como são exemplo a avaliação FERET \cite{Phillips2000} ou o trabalho realizado por Ahonen \textit{et al.} \cite{ahonen2004face}.
 
 \section{Módulo \textit{FaceModel}} \label{sec:facemodel}
 O módulo \textit{FaceModel} constitui uma camada de nível superior implementada para encapsular a comunicação com módulo de reconhecimento facial disponível na biblioteca \textit{OpenCV}, designado \textit{FaceRecognizer}, assim como estender algumas das funcionalidades do mesmo. 

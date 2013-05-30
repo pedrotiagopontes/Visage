@@ -151,6 +151,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Evaluator.cpp" />
     <ClCompile Include="FaceDetector.cpp" />
     <ClCompile Include="FaceModel.cpp" />
     <ClCompile Include="Library.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Evaluator.h" />
     <ClInclude Include="FaceDetector.h" />
     <ClInclude Include="FaceModel.h" />
     <ClInclude Include="Library.h" />

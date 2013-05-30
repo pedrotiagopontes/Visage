@@ -10,9 +10,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{30}{figure.caption.14}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diferentes vers\IeC {\~o}es da biblioteca LFW\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diferentes tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{34}{figure.caption.18}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre face correctamente detectada e situa\IeC {\c c}\IeC {\~o}es de erro na deta\IeC {\c c}\IeC {\~a}o\relax }}{35}{figure.caption.20}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{37}{figure.caption.22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diferentes tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre face correctamente detectada e situa\IeC {\c c}\IeC {\~o}es de erro na deta\IeC {\c c}\IeC {\~a}o\relax }}{35}{figure.caption.19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Exemplo de face j\IeC {\'a} segmentada, com e sem m\IeC {\'a}scara.\relax }}{40}{figure.caption.26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {G}$ para o sujeito Angelina Jolie\relax }}{46}{figure.caption.27}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {P}$ para o sujeito Angelina Jolie\relax }}{46}{figure.caption.28}

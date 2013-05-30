@@ -1,5 +1,7 @@
 #include "Library.h"
 
+
+
 Library::Library(string filename, double percentageTrainnedImages)
 {
 	this->filename = filename;
@@ -9,6 +11,9 @@ Library::Library(string filename, double percentageTrainnedImages)
 	this->totalImages = 0;
 
 	load_csv(filename);
+}
+
+Library::Library(){
 }
 
 Library::~Library(void)

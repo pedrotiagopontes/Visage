@@ -30,19 +30,19 @@
 \contentsline {section}{\numberline {3.3}Trabalho Relacionado}{26}{section.3.3}
 \contentsline {chapter}{\numberline {4}Sistema de Reconhecimento Facial Visage}{28}{chapter.4}
 \contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Cole\IeC {\c c}\IeC {\~a}o de dados}{29}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}\textit {Labeled Faces in the Wild}}{29}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.2}Cole\IeC {\c c}\IeC {\~a}o de dados - \textit {Labeled Faces in the Wild}}{29}{section.4.2}
 \contentsline {section}{\numberline {4.3}Sistema de Reconhecimento Facial Visage - Vis\IeC {\~a}o Geral}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Arquitetura}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Especifica\IeC {\c c}\IeC {\~a}o e Funcionalidades}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Arquitetura}{32}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}M\IeC {\'o}dulo \textit {FaceDetector}}{33}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Dete\IeC {\c c}\IeC {\~a}o Face}{33}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.1}Dete\IeC {\c c}\IeC {\~a}o Face}{34}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Alinhamento e Corte}{36}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Normaliza\IeC {\c c}\IeC {\~a}o Contraste}{38}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}Aplica\IeC {\c c}\IeC {\~a}o Filtro Abstra\IeC {\c c}\IeC {\~a}o}{39}{subsection.4.4.4}
 \contentsline {subsection}{\numberline {4.4.5}Aplica\IeC {\c c}\IeC {\~a}o M\IeC {\'a}scara}{40}{subsection.4.4.5}
 \contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceModel}}{40}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}\textit {Eigenfaces}}{40}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}\textit {Fisherfaces}}{41}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.1}\textit {Eigenfaces}}{41}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}\textit {Fisherfaces}}{42}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}\textit {Local Binary Patterns Histograms (LBPH)}}{42}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Top $N$ Resultados}{42}{subsection.4.5.4}
 \contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{44}{chapter.5}
