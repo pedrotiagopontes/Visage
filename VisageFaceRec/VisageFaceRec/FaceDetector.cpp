@@ -148,19 +148,10 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 			}
 		}
 	}
-	/*
-	if(chosenLeft != -1){
-		rectangle(face, leftEyes[chosenLeft], CV_RGB(255, 0,0), 2);
-	}
-
-	if(chosenRight != -1){
-		rectangle(face, rightEyes[chosenRight], CV_RGB(255, 0,0), 2);
-	}
-	*/
 
 	// thanks to http://answers.opencv.org/question/497/extract-a-rotatedrect-area/
 	Mat M, cropped;
-	Mat rotated = face;
+	Mat rotated = original;
 	if(chosenLeft != -1 && chosenRight != -1){
 		int cx_left,cy_left, cx_right,cy_right;
 		cx_left = leftEyes[chosenLeft].x/2;
@@ -188,20 +179,17 @@ Mat FaceDetector::alignFace(Mat face, Rect myROI){
 		M = getRotationMatrix2D(rect.center, angle, 1.0);
 		// perform the affine transformation
 		warpAffine(original, rotated, M, original.size(), INTER_CUBIC);
+	}else{
+		cout << "ATENTION: Alignment failed" << endl;
 	}
+
 	rotated = rotated(myROI);
-	/*
-	imshow("original", original);
-	imshow("rotated", rotated);
-	imshow("face", face);
-	waitKey(0);
-	cout << "---" << endl;
-	*/
 	return rotated;
 }
 
-int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, bool align, bool apply_mask, int normalize_hist, int filter)
-{
+int FaceDetector::detectAndCrop( Mat frame, string name, string label, string dir, Size size, Size minFeatureSize, 
+								bool align, bool apply_mask, int normalize_hist, int filter){
+
 	std::vector<Rect> faces, mouth, eyes, nose;
 	double verticalCrop = size.height *0.08;
 	double horizontalCrop = size.width *0.3;
@@ -214,7 +202,7 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 	float search_scale_factor = 1.1f;
 	// how many neighbors each candidate rectangle should have to retain it.
 	int minNeighbors = 3;
-
+	
 	cvtColor( frame, frame_gray, CV_BGR2GRAY );
 
 	//-- Detect faces
@@ -323,6 +311,27 @@ int FaceDetector::detectAndCrop( Mat frame, string name, string label, string di
 	}
 
 	return faces.size();
+}
+
+Mat FaceDetector::detectAndCropDefault(Mat image){
+	bool align = true, apply_mask = true;
+	int normalize_hist = EqualizeHistogram;
+	int filter = 0;
+	int n = detectAndCrop(image, "tempImage.jpg", "-1", "temp", Size(112, 112), cvSize(80, 80), align, apply_mask, normalize_hist, filter);
+
+	if(n == 1){
+	}else{
+		string error_message = "teste";
+		if(n == 0){
+			error_message = "Can't detect a face in input image";
+			CV_Error(CV_StsBadArg, error_message);
+		}else{
+			cout << "ATENTION: Multiple faces detected in input image";
+		}
+	}
+
+	Mat processedImage = imread("temp\\tempImage.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	return processedImage;
 }
 
 //Only optimized for lfw library

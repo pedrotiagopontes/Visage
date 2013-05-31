@@ -52,10 +52,12 @@ public:
 	///returns true if @labelOriginal and predictedLabel are the same and the confidence
 	bool isSamePerson(int labelOriginal, Mat image, int& predictedLabel, double& confidence);
 
+	///returns a string array with the top @n persons for a given @image
+	vector<Person> topNMatches(string image, size_t n);
+
 	// Serializes this object to a given filename.
 	void save(const string& filename) const;
 	// Deserializes this object from a given filename.
 	void load(const string& filename);
-
 };
 

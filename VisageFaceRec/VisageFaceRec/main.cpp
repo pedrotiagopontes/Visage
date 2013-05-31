@@ -4,25 +4,31 @@
 #include "Evaluator.h"
 #include "FaceDetector.h"
 
-void testLoadAndGetTop10(string libPath, int percentageTrainned, int m, string modelFileName, string sample){
+void loadAndGetTop(string libPath, int percentageTrainned, int m, string modelFileName, string sample, int n){
 	Library myLib(libPath, percentageTrainned);
 	FaceModel model(m, modelFileName);
-
-	Mat image = imread(sample, CV_LOAD_IMAGE_GRAYSCALE);
+	FaceDetector detector("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
+	
+	Mat image = imread(sample, CV_LOAD_IMAGE_COLOR);
 	if(image.rows > 0){
+		Mat faceDetected = detector.detectAndCropDefault(image);
+		
 		vector<int> labels;
 		vector<double> confidences;
-		model.identityImage(image, 10, labels, confidences);
-
+		model.identityImage(faceDetected, n, labels, confidences);
+		
+		cout << endl << "Imagem: " << sample << endl << endl;
 		vector<Person> pp;
 		for(size_t i=0; i<labels.size(); i++){
 			pp.push_back(myLib.getPerson(labels[i]));
-
-			cout << pp[i].getName() << endl;
+			cout << "  " << i+1 << ": " << pp[i].getName() << endl;
 		}
+		cout <<endl;
+		
 	}else{
 		cout << "error loading sample" << endl;
 	}
+	
 }
 
 int faceDetector(int argc, const char *argv[]){
@@ -83,6 +89,47 @@ int faceDetector(int argc, const char *argv[]){
 	return 0;
 }
 
+int faceRecognizer(int argc, const char *argv[]){
+//int faceRecognizer(int argc, const vector<string>argv){
+	string path = "..\\etc\\at.txt";
+	string outputfilename = "..\\results\\default.txt";
+	string m = "";
+	int modelType = FISHERFACES;
+	if (argc < 3) {
+		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]" <<endl;
+		return -1;
+	}
+	else{
+		path = string(argv[1]);
+		outputfilename = string(argv[2]);
+		//ofstream outputfile;
+		//outputfile.open(outputfilename);
+		if(argc >= 4){
+			string m = string(argv[3]);
+			if(m == "-E"){
+				modelType = EIGENFACES;
+			}
+
+			if(m == "-L"){
+				modelType = LBPH;
+			}
+		}
+		Evaluator ev = Evaluator(path, 80, outputfilename, modelType);
+		size_t nResults = 1;
+		if(argc >= 5){
+			nResults = atoi(argv[4]);
+			ev.evaluateN(nResults);
+		}else{
+			ev.evaluate();
+		}
+
+		if(argc >= 6)
+		cout << "Results in " << outputfilename << endl;
+	}
+	
+	return 0;
+}
+
 int csvCreator(int argc, const char *argv[]){
 
 	string path = "..\\etc\\at.txt";
@@ -111,65 +158,90 @@ int csvCreator(int argc, const char *argv[]){
 	return 0;
 }
 
-int faceRecognizer(int argc, const char *argv[]){
-//int faceRecognizer(int argc, const vector<string>argv){
-	string path = "..\\etc\\at.txt";
-	string outputfilename = "..\\results\\default.txt";
-	int modelType = FISHERFACES;
-	if (argc < 3) {
-		cout << "Usage: path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]" <<endl;
+int trainAndSaveModel(int argc, const char *argv[]){
+	string path = "..\\etc\\original.txt";
+	string percent = "100";
+	string m = "-L";
+	string outputfilename = "modelo.xml";
+
+	int modelType = LBPH;
+	int percent_i = 100;
+
+	if (argc < 5) {
+		cout << "Usage: libraryPath.txt percentageToTrain [-E(Eingefaces) || -F(FisherFaces-default) || -L(LBPH)] output.xml" <<endl;
 		return -1;
 	}
 	else{
 		path = string(argv[1]);
-		outputfilename = string(argv[2]);
-		//ofstream outputfile;
-		//outputfile.open(outputfilename);
-		if(argc >= 4){
-			string m = string(argv[3]);
-			if(m == "-E"){
-				modelType = EIGENFACES;
-			}
+		percent = string(argv[2]);
+		m = string(argv[3]);
+		outputfilename = string(argv[4]);
 
-			if(m == "-L"){
-				modelType = LBPH;
-			}
+		if(m == "-E"){
+			modelType = EIGENFACES;
 		}
-		Evaluator ev = Evaluator(path, 80, outputfilename, modelType);
-		size_t nResults = 1;
-		if(argc >= 5){
-			nResults = atoi(argv[4]);
-			ev.evaluateLibraryN(nResults);
-			//testLoadAndGetTop10(path, 80, modelType, "modelo.xml", 
-			//	"C://Users//Pedro//Pictures//lfw//lfw_aligned_BW//Angelina_Jolie//Angelina_Jolie_0005.jpg");
-		}else{
-			ev.evaluateModel();
+		if(m == "-F"){
+			modelType = FISHERFACES;
 		}
-
-		cout << "Results in " << outputfilename << endl;
+		
+		percent_i = atoi(percent.c_str());
 	}
-	
+	Library lib = Library(path, percent_i);
+	FaceModel model = FaceModel(modelType, lib.people);
+	model.save(outputfilename);
 
+	cout <<"Trainned model for library: " << path << " using " << percent_i << "% of the lib images" << endl;
+	cout <<"Saved library face model in: saved\\" << outputfilename << endl;
+
+	createLoadFile(outputfilename, path, percent_i, modelType); 
+
+	return 0;
+}
+
+int topN(int argc, const char *argv[]){
+	string libPath = "";
+	string imagePath = "";
+	string model = "model.xml";
+	string nResults = "10";
+	string modelType = "2";
+	string percent = "80";
+	if (argc < 4) {
+		cout << "Usage: imagePath model.xml nResults" <<endl;
+		return -1;
+	}
+	else{
+		imagePath = string(argv[1]);
+		model = string(argv[2]);
+		nResults = string(argv[3]);
+
+		ifstream loadFile;
+		loadFile.open("..\\saved\\" + model + ".visage");
+
+		loadFile >> libPath;
+		loadFile >> percent;
+		loadFile >> modelType;
+		loadFile >> model;
+
+		loadAndGetTop(libPath, atoi(percent.c_str()), atoi(modelType.c_str()), model, imagePath, atoi(nResults.c_str()) );
+	}
 	return 0;
 }
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	///return faceDetector(argc, argv);
-
-	/*
-	string path = string(argv[1]);
-	string outputfilename = string(argv[2]);
-	FaceDetector detectorAlt("..\\helpers\\", "haarcascade_frontalface_alt.xml", "mask.bmp");
-	detectorAlt.exportDir(path, outputfilename, ".png");
-	*/
+	//return faceDetector(argc, argv);
 
 	/// CsvCreator.exe
 	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
-	//path.txt results.txt [-E(Eingefaces) -F(FisherFaces-default) -L(LBPH)] [nResults]
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
+
+	/// trainAndSaveModel.exe
+	//return trainAndSaveModel(argc, argv);
+
+	/// topN.exe
+	return topN(argc, argv);
 
 	//return 0;
 }

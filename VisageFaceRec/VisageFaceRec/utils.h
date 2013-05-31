@@ -22,6 +22,7 @@ void convertImage(string path, string extension=".pgm");
 
 void readLfwStats(const string& filename, string outputfilename, vector<int>& labelsPerClass, vector<string>& names);
 void createCSV(string filename, Library lib, size_t bottomLimit, size_t topLimit, string fileExtension = ".jpg");
+void createLoadFile(string outputfilename, string path, int percent_i, int modelType);
 
 //deprecated
 string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator = ';');

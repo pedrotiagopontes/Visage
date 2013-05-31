@@ -148,4 +148,3 @@ bool FaceModel::isSamePerson(int labelOriginal, Mat image, int& predictedLabel, 
 
 	return ((predictedLabel == labelOriginal) ? true : false);
 }
-

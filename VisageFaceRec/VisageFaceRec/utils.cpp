@@ -124,6 +124,15 @@ void createCSV(string filename, Library lib, size_t bottomLimit, size_t topLimit
 	cout << "Created CSV file " << filename <<endl;
 }
 
+void createLoadFile(string outputfilename, string path, int percent_i, int modelType){
+	ofstream descriptionFile;
+	descriptionFile.open("..\\saved\\" + outputfilename + ".visage");
+	descriptionFile << path << endl;
+	descriptionFile << percent_i << endl;
+	descriptionFile << modelType << endl;
+	descriptionFile << outputfilename <<endl;
+}
+
 //deprecated
 string read_csv(const string& filename, int trainedImgsPerClass, vector<Mat>& imagesTrain, vector<Mat>& imagesTest, vector<int>& labelsTrain, vector<int>& labelsTest, vector<string>& names, char separator) {
 	std::ifstream file(filename.c_str(), ifstream::in);

@@ -23,7 +23,7 @@ Evaluator::~Evaluator(void)
 {
 }
 
-void Evaluator::evaluateLibraryN(size_t n){
+void Evaluator::evaluateN(size_t n){
 	ofstream outputfile;
 
 	outputfile.open(this->outputfilename, ofstream::app);
@@ -36,7 +36,7 @@ void Evaluator::evaluateLibraryN(size_t n){
 }
 
 
-int Evaluator::evaluateModel(){
+int Evaluator::evaluate(){
 	ofstream outputfile;
 	outputfile.open(this->outputfilename, ofstream::app);
 
