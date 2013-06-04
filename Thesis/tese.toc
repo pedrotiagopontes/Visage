@@ -21,47 +21,47 @@
 \contentsline {subsection}{\numberline {2.5.2}FRVT}{18}{subsection.2.5.2}
 \contentsline {chapter}{\numberline {3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{22}{chapter.3}
 \contentsline {section}{\numberline {3.1}Estiliza\IeC {\c c}\IeC {\~a}o Art\IeC {\'\i }stica de Imagens}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{23}{section.3.2}
+\contentsline {section}{\numberline {3.2}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{24}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Filtro Bilateral}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Kuwahara}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Kuwahara}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}\textit {Diffusion Shock Filter}}{25}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Filtros Morfol\IeC {\'o}gicos}{25}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Filtros Morfol\IeC {\'o}gicos}{26}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}T\IeC {\'e}cnicas \textit {Gradient Domain}}{26}{subsection.3.2.5}
 \contentsline {section}{\numberline {3.3}Trabalho Relacionado}{26}{section.3.3}
 \contentsline {chapter}{\numberline {4}Sistema de Reconhecimento Facial Visage}{28}{chapter.4}
 \contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}Cole\IeC {\c c}\IeC {\~a}o de dados - \textit {Labeled Faces in the Wild}}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}Sistema de Reconhecimento Facial Visage - Vis\IeC {\~a}o Geral}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Especifica\IeC {\c c}\IeC {\~a}o e Funcionalidades}{32}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Arquitetura}{32}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}M\IeC {\'o}dulo \textit {FaceDetector}}{33}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Dete\IeC {\c c}\IeC {\~a}o Face}{34}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Alinhamento e Corte}{36}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Normaliza\IeC {\c c}\IeC {\~a}o Contraste}{38}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Aplica\IeC {\c c}\IeC {\~a}o Filtro Abstra\IeC {\c c}\IeC {\~a}o}{39}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Aplica\IeC {\c c}\IeC {\~a}o M\IeC {\'a}scara}{40}{subsection.4.4.5}
-\contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceModel}}{40}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}\textit {Eigenfaces}}{41}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}\textit {Fisherfaces}}{42}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}\textit {Local Binary Patterns Histograms (LBPH)}}{42}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Top $N$ Resultados}{42}{subsection.4.5.4}
-\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conjuntos de Teste}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}-processamento}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Dete\IeC {\c c}\IeC {\~a}o e segmenta\IeC {\c c}\IeC {\~a}o da face}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{48}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o Imagens}{48}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{49}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{49}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1: Impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{50}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{53}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3}{55}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{55}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{56}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{57}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{57}{section.5.5}
-\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{58}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{59}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{60}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{61}{section*.38}
+\contentsline {section}{\numberline {4.2}Visage - Vis\IeC {\~a}o geral}{29}{section.4.2}
+\contentsline {section}{\numberline {4.3}Cole\IeC {\c c}\IeC {\~a}o de dados - \textit {Labeled Faces in the Wild}}{30}{section.4.3}
+\contentsline {section}{\numberline {4.4}Arquitetura}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceDetector}}{33}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Dete\IeC {\c c}\IeC {\~a}o Face}{34}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Alinhamento e Corte}{37}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Normaliza\IeC {\c c}\IeC {\~a}o Contraste}{38}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Aplica\IeC {\c c}\IeC {\~a}o Filtro Abstra\IeC {\c c}\IeC {\~a}o}{39}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.5}Aplica\IeC {\c c}\IeC {\~a}o M\IeC {\'a}scara}{41}{subsection.4.5.5}
+\contentsline {section}{\numberline {4.6}M\IeC {\'o}dulo \textit {FaceModel}}{41}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}\textit {Eigenfaces}}{42}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}\textit {Fisherfaces}}{43}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}\textit {Local Binary Patterns Histograms (LBPH)}}{43}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Top $N$ Resultados}{44}{subsection.4.6.4}
+\contentsline {section}{\numberline {4.7}Funcionalidades}{44}{section.4.7}
+\contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conjuntos de Teste}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'e}-processamento}{48}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Dete\IeC {\c c}\IeC {\~a}o e segmenta\IeC {\c c}\IeC {\~a}o da face}{50}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{50}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o Imagens}{51}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{52}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{52}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1: Impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{53}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{56}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{58}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{58}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{59}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Resultados}{60}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{60}{section.5.5}
+\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{61}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{62}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{62}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{63}{section.6.2}
+\contentsline {chapter}{Refer\^{e}ncias}{64}{section*.37}

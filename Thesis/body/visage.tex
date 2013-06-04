@@ -18,6 +18,25 @@ Ao nível da abstração de imagens, estudos efetuados demonstraram que aplicaç
 
 Tendo em conta a importância e a necessidade de investigação na área do reconhecimento facial automático, e uma vez que não existem estudos relativos à utilização de filtros de abstração no processo de reconhecimento facial, torna-se pertinente o estudo do seu impacto, no âmbito desta dissertação. Desta forma, a hipótese levantada no âmbito desta dissertação é então que o uso da abstração em imagens que vão ser ser alvo de reconhecimento facial pode melhorar o processo de reconhecimento facial automático em imagens.
 
+\section{Visage - Visão geral} \label{sec:visage}
+A criação do sistema Visage teve como principal objetivo o desenvolvimento de um sistema de reconhecimento facial automático que permita analisar qual o impacto da abstração de imagens e outras tarefas de pré-processamento no reconhecimento facial automático. Por outro lado, com o sistema desenvolvido pretende-se ainda a criação de uma base sólida que permita o desenvolvimento de futuras aplicações que tirem partido do reconhecimento facial automático no seu funcionamento, como por exemplo, aplicações na área de \textit{image retrieval}.
+
+De uma forma genérica, o funcionamento do sistema Visage pode ser agrupado nas seguintes fases fundamentais:
+\begin{description}
+\item[Pré-processamento] Corresponde à primeira etapa executa pelo sistema, na qual é fornecida uma galeria de imagens a pré-processar que irão ser posteriormente utilizadas na fases de treino e identificação. O pré-processamento engloba tarefas como deteção das faces na imagem, normalização do contraste e iluminação, aplicação de filtros de abstração ou alinhamento das imagens.
+\item[Treino] Nesta fase, são fornecidas um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita de futuro proceder à identificação de novas imagens de acordo com a informação obtida treinada.
+\item[Identificação] Corresponde à utilização do sistema como intuito de identificar novas imagens não anotadas. Para uma dada imagem fornecida ao sistema, este deve devolver no nome da pessoa que se encontra na imagem tendo em conta a informação obtida na fase de treino. Nesta fase é também possível obter uma lista de entidades, ordenada de forma crescente pela similaridade em relação à pessoa representada na imagem.
+\end{description}
+
+Uma vez que foco desta dissertação não visa o desenvolvimento de algoritmos de reconhecimento facial, mas sim a análise do impacto da manipulação efetuada sobre as imagens a reconhecer, foram utilizadas bibliotecas de código aberto que permitem agilizar o desenvolvimento do sistema. Por outro lado, a utilização destas bibliotecas permite também a contribuição para uma área onde as soluções abertas existentes são ainda poucas.
+
+Para a manipulação das imagens e implementação do sistema de reconhecimento facial foi então utilizada a biblioteca \textit{Open Source Computer Vision Library} (\textit{OpenCV}), a qual é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontram implementados de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}. Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar.
+
+Ao nível dos filtros de abstração foram utilizados os filtros gaussiano e bilateral, implementados na biblioteca \textit{OpenCV}, e ainda o filtro anisotrópico kuwahara, recorrendo para a sua utilização à implementação efetuada por Kyprianidis \textit{et al.} \cite{Kyprianidis2009} do mesmo filtro.
+
+Finalmente, ao nível das galerias de imagens, foi utilizada a coleção \textit{Labeled Faces in the Wild} descrita na secção seguinte deste relatório.
+
+
 \section{Coleção de dados - \textit{Labeled Faces in the Wild}} \label{sec:lfw}
 
 A evolução do estado da arte do reconhecimento facial automático em imagens tem beneficiado em larga escala do aumento constante dos recursos disponíveis para o seu estudo, nomeadamente através da criação de novas e mais completas coleções de dados \cite{Huang2007}. A grande maioria destas coleções, caracteriza-se por ter condições de captura controladas com o intuito de efetuar o estudo de fatores específicos que afetam a qualidade do reconhecimento, tais como a variação da pose, iluminação, expressão e outros fatores mencionados no capítulo \ref{desafios}. O objeto de estudo desta dissertação não é, no entanto, a análise específica de alguns desses fatores, mas sim a criação de um sistema de reconhecimento facial automático em imagens a partir de recursos de código aberto disponíveis, assim como a análise posterior do impacto do uso de abstração de imagens no sistema desenvolvido. Desta forma, a escolha de uma biblioteca apropriada e que represente as grandes variações associadas aos diferentes desafios que afetam o reconhecimento facial em imagens torna-se crucial.
@@ -60,7 +79,7 @@ As imagens desta coleção são maioritariamente a cores, com diferentes graus d
 
 Para além da coleção LFW original, encontram-se também disponíveis para fins de investigação duas outras coleções derivadas da coleção original, LFW funneled e LFW-a, onde as imagens originais foram sujeitas a um pré-processamento com vista a efetuar o alinhamento da posição da face na imagem, cada uma correspondendo a uma técnica diferente de alinhamento da imagem, respetivamente. Um exemplo dos resultados obtidos nas diferentes bibliotecas pode ser visto na figura \ref{fig:lfwversoes}.
 
-\begin{figure}[t]
+\begin{figure}[h]
         \centering
         \begin{subfigure}[b]{0.25\textwidth}
                 \centering
@@ -87,33 +106,17 @@ Para além da coleção LFW original, encontram-se também disponíveis para fin
 
 A coleção LFW é particularmente interessante para o estudo do desempenho do sistema desenvolvido e consequentemente do impacto do uso da abstração de imagens no reconhecimento facial uma vez que a variabilidade presente nas suas imagens, representa uma amostra fiável das variações encontradas no dia-a-dia de uma pessoa. Por outro lado, o facto de as suas imagens não terem sido capturadas com o intuito específico da análise do problema do reconhecimento facial, aproxima este conjunto de dados das imagens utilizadas por um utilizador final de um sistema de reconhecimento facial automático na grande maioria das situações. Finalmente, e uma vez que a tarefa de alinhamento da face na imagem não é um objeto de estudo primordial desta dissertação, a existência de versões já alinhadas da coleção permitiu agilizar os testes realizados, retirando um fator importante de variação dos resultados obtidos. Assim sendo, no âmbito desta dissertação optamos pela utilização da versão alinhada LFW-a \citep{autor} para fins de avaliação do desempenho do sistema de reconhecimento facial criado e do impacto do uso de filtros de abstração sobre essas imagens.
 
-\section{Sistema de Reconhecimento Facial Visage - Visão Geral} \label{sec:visage}
-A criação do sistema Visage teve como principal objetivo o desenvolvimento de um sistema de reconhecimento facial que permita analisar qual o impacto da abstração de imagens e outras tarefas de pré-processamento no reconhecimento facial automático.
-
-Uma vez que foco desta dissertação não visa o desenvolvimento de algoritmos de reconhecimento facial, mas sim a análise do impacto da manipulação efetuada sobre as imagens a reconhecer, foram utilizadas bibliotecas de código aberto que permitem agilizar o desenvolvimento do sistema. Por outro lado, a utilização destas bibliotecas permite também a contribuição para uma área onde as soluções abertas existentes são ainda poucas.
-
-Para a manipulação das imagens e implementação do sistema de reconhecimento facial foi então utilizada a biblioteca \textit{Open Source Computer Vision Library} (\textit{OpenCV}), a qual é uma biblioteca de código aberto nas áreas de visão por computador e \textit{machine learning}, onde se encontram implementados de mais de 2500 algoritmos relacionados com as áreas de computação gráfica e visão por computador. Esta biblioteca possui uma comunidade de mais de 47 mil pessoas, já registou mais de 5 milhões de downloads e é utilizada globalmente por empresas como a Google, Yahoo, Microsoft, Intel, IBM, Sony, Honda, Toyota \cite{Team}. Ao nível do reconhecimento facial, esta biblioteca disponibiliza um módulo denominado \textit{Face Recognizer}, onde se encontram implementados os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}. Tendo em conta a ampla utilização da biblioteca OpenCV e a sua constante atualização pela comunidade, assim como as facilidades providenciadas pelo módulo de reconhecimento facial, esta foi considerada a biblioteca ideal para utilizar como base de implementação do sistema de reconhecimento facial a criar. 
-
-Finalmente, com o sistema desenvolvido pretendia-se ainda a criação de uma base sólida que permita o desenvolvimento de futuras aplicações que tirem partido do reconhecimento facial automático no seu funcionamento, como por exemplo aplicações na área de \textit{image retrieval}.
-
-\subsection{Especificação e Funcionalidades}
-?
-
-O sistema de reconhecimento facial desenvolvido é composto por duas fases fundamentais:
-\begin{description}
-\item[Treino] Nesta fase, são fornecidas um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita de futuro proceder à identificação de novas imagens de acordo com a informação obtida nesta fase.
-\item[Identificação] Corresponde à utilização do sistema como intuito de identificar novas imagens não anotadas. Para uma dada imagem fornecida ao sistema este deve devolver no nome da pessoa que se encontra na imagem tendo em conta a informação obtida na fase de treino. Nesta fase é também possível obter uma lista de entidades, ordenada de forma crescente pela similaridade em relação à pessoa representada na imagem.
-\end{description}
-
-\subsection{Arquitetura}
+\section{Arquitetura}
+O sistema de reconhecimento facial criado é constituído pelos seguintes 6 módulos:
 
 \begin{description}
-\item[\textit{Person}] Módulo responsável por efetuar o encapsulamento da informação relativa a uma pessoa, nomeadamente o seu nome, código de identificação e imagens associadas. Com o intuito de facilitar a avaliação do sistema criado com várias galerias de treino é ainda possível armazenar de forma diferenciada imagens de treino e teste de cada pessoa.
-\item[\textit{Library}]Módulo responsável por encapsular a informação de uma galeria de imagens utilizada pelo sistema, nomeadamente o seu diretório, as pessoas representadas nessa biblioteca (agrupadas num \textit{array} de objetos do tipo \textit{Person}) e alguns dados estatísticos como o número mínimo e máximo de imagens existentes por pessoa e o número total de imagens da galeria. Apesar de poder ser utilizado com diferentes funcionalidade este módulo foi desenvolvido com o intuito de facilitar a avaliação do sistema Visage com diferentes galerias de imagens, pelo que na criação de uma \textit{Library} é possível definir qual a percentagem das imagens, de cada pessoa, que devem ser utilizadas como conjunto de teste e conjunto de treino do sistema (Ver capítulo \ref{chap:resultados} para mais detalhes).
+\item[\textit{Person}] Módulo responsável por efetuar o encapsulamento da informação relativa a uma pessoa, nomeadamente o seu nome, código de identificação e imagens a esta associadas. De modo a facilitar a avaliação do sistema criado é ainda possível armazenar de forma diferenciada imagens de treino e teste de cada pessoa.
+\item[\textit{Library}]Módulo responsável por encapsular a informação de uma galeria de imagens utilizada para treinar o sistema, nomeadamente o seu diretório, as pessoas representadas nessa biblioteca (agrupadas num \textit{array} de objetos do tipo \textit{Person}) e alguns dados estatísticos como o número mínimo e máximo de imagens existentes por pessoa e o número total de imagens da galeria. Apesar de poder ser utilizado com diferentes funcionalidades este módulo foi desenvolvido com o intuito de facilitar a avaliação do sistema Visage com diferentes galerias de imagens, pelo que na criação de uma \textit{Library} é possível definir qual a percentagem das imagens, de cada pessoa, que devem ser utilizadas como conjunto de teste e conjunto de treino do sistema (Ver capítulo \ref{chap:resultados} para mais detalhes).
 \item[\textit{FaceDetector}] A par do módulo \textit{FaceModel} é um dos componentes principais do sistema, sendo responsável por efetuar um conjunto de tarefas de pré-processamento sobre as imagens utilizadas. Este módulo encontra-se descrito detalhadamente na secção \ref{sec:facedetector}.
 \item[\textit{FaceModel}] 
-O módulo \textit{FaceModel} Constitui uma camada de nível superior implementada para encapsular a comunicação com módulo de reconhecimento facial disponível na biblioteca \textit{OpenCV}, designado \textit{FaceRecognizer}, assim como estender algumas das funcionalidades do mesmo. Este módulo encontra-se descrito com maior detalhe na secção \ref{sec:facemodel}.
-\item[\textit{Utils}] Engloba algumas funções úteis utilizadas para o desenvolvimento e avaliação do sistema Visage.
+O módulo \textit{FaceModel} constitui uma camada de nível superior implementada para encapsular a comunicação com módulo de reconhecimento facial disponível na biblioteca \textit{OpenCV}, designado \textit{FaceRecognizer}, assim como estender algumas das funcionalidades do mesmo. Este módulo encontra-se descrito com maior detalhe na secção \ref{sec:facemodel}.
+\item[\textit{Evaluator}] Módulo responsável por agrupar os métodos e objetos utilizados para efetuar a avaliação do sistema.
+\item[\textit{Utils}] Engloba algumas funções úteis utilizadas para o desenvolvimento e avaliação do sistema Visage que não se enquadram no âmbito dos restantes módulos.
 \end{description}
 
 \section{Módulo \textit{FaceDetector}} \label{sec:facedetector}
@@ -131,9 +134,7 @@ O módulo \textit{FaceDetector} é um dos componentes principais do sistema de r
 
 Na figura \ref{fig:preprocessamento} encontram-se representadas as diferentes tarefas de pré-processamento disponíveis no sistema de reconhecimento facial Visage, assim como a ordem pela qual as mesmas são aplicadas. As etapas de normalização, aplicação do filtro de abstração e aplicação da máscara constituem tarefas de pré-processamento opcionais pelo que se encontram representadas por uma linha a tracejado. \footnote{Tal como mencionado em \ref{sec:lfw}, na avaliação do sistema foi utilizada a versão alinhada da biblioteca LFW, designada de LFW-a, pelo que a tarefa de alinhamento das imagens não foi realizada na avaliação de desempenho reportada nesta dissertação.}
 
-As tarefas de pré-processamento podem ser aplicadas sobre as imagens utilizadas quer na fase de treino, quer na fase de identificação, descritas em \ref{sec:visage}.
-
-\subsection{Deteção Face}
+\subsection{Deteção Face} \label{sec:detecao_face}
 A existência de elementos de fundo numa imagem produz um impacto significativo nos resultados obtidos por sistemas de reconhecimento facial automático, pelo que a deteção da zona de uma imagem onde se encontra representada a face a identificar é fundamental para um bom desempenho do sistema criado. A fase de pré-processamento designada de "deteção face" implementada no sistema Visage tem então como objetivo, para uma dada imagem fornecida ao sistema, determinar qual a zona da imagem onde se encontra a face a identificar.
 
 A deteção facial é efetuada com recurso um classificador em cascata, designado de \textit{boosted cascade classifier},  treinado especificamente para a deteção de faces, utilizando para isso a implementação existente na \textit{Open Source Computer Vision Library}, a qual é baseada na nos trabalhos de Viola e Jones \cite{Viola2001} e posteriores melhorias introduzidas por Lienhart, Kuranov e Pisarevsky \cite{Lienhart2003}.
@@ -220,7 +221,7 @@ A pontuação de uma região de interesse varia assim entre 0 e 200 pontos. No f
 
 O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com e sem remoção de conflitos pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra foram incluídas apenas as fotografias de pessoas que tenham pelos menos 2 imagens na biblioteca LFW-a, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste.
 
-\subsection{Alinhamento e Corte} \label{alinhamentoEcorte}
+\subsection{Alinhamento e Corte} \label{sec:alinhamentoEcorte}
 A tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face, sendo essa região correspondente a um retângulo tal como ilustrado na figura \ref{fig:conflitos-correcta}. Após a deteção da região de interesse onde se encontra a face, é então possível proceder ao seu alinhamento e corte para os quais foi adotada a seguinte estratégia:
 
 \begin{enumerate}
@@ -285,39 +286,113 @@ Considerando $w$ a largura de uma imagem de face a alinhar e $h$ a sua altura. S
 \end{itemize}
 
 \subsection{Normalização Contraste} \label{sec:normalizacao}
-\textbf{ver imagens e histogramas}
 
-Tal como destacado na secção \ref{sec:sub-problemas} a tarefa de normalização encontra-se presente em alguns sistemas de reconhecimento facial automático com o objetivo de melhorar os resultados obtidos nos mesmos independentemente de fatores como a iluminação ou pose das faces nas imagens. A tarefa de normalização do contraste de imagem tem como objetivo normalizar a face no que diz respeito à sua iluminação e aumentar o contraste existente na mesma. De forma a tornar o sistema versátil e analisar o impacto de diferentes estratégias foram implementadas as seguintes alternativas para a normalização do contraste:
+Tal como destacado na secção \ref{sec:sub-problemas} a tarefa de normalização encontra-se presente em alguns sistemas de reconhecimento facial automático com o objetivo de melhorar os resultados obtidos independentemente de fatores como a iluminação ou pose das faces nas imagens. A tarefa de normalização do contraste de imagem tem como objetivo normalizar a face no que diz respeito à sua iluminação e aumentar o contraste existente na mesma. De forma a tornar o sistema versátil e analisar o impacto de diferentes estratégias foram implementadas as seguintes alternativas para a normalização do contraste, ilustradas na figura \ref{fig:normalizacao}:
+
+\begin{figure}[t]
+        \centering
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{normalizacao/original}
+                \caption{Original               }
+                \label{fig:normalizacao-original}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{normalizacao/normalized}
+                \caption{\textit{C. Streching}}
+                \label{fig:normalizacao-normalized}
+        \end{subfigure}
+        ~ 
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{normalizacao/equalized}
+                \caption{Equalização H.}
+                \label{fig:normalizacao-equalized}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{normalizacao/clahe}
+                \caption{\textit{CLAHE}}
+                \label{fig:normalizacao-clahe}
+        \end{subfigure}
+        ~ 
+        \caption{Comparação entre imagem original e as várias técnicas de normalização disponíveis.}\label{fig:normalizacao}
+\end{figure}
 
 \begin{description}
 \item[\textit{Contrast Streching}]
-A técnica de \textit{Contrast Streching}, também designada por alguns autores simplesmente de normalização, consiste numa tentativa de alargar a gama de valores utilizados para codificar a intensidade de uma imagem de forma a que seja utilizada toda a gama de valores possíveis. No sistema desenvolvido as imagens utilizadas encontram-se convertidas para tons de cinzento, pelo que a normalização efetuada consiste num mapeamento linear dos valores originais para uma gama de intensidade entre 0 e 255. Um exemplo de uma face normalizado seguindo esta estratégia pode ser visualizado na imagem \ref{fig:normalized}.
+A técnica de \textit{Contrast Streching}, também designada por alguns autores simplesmente de normalização, consiste numa tentativa de alargar a gama de valores utilizados para codificar a intensidade de uma imagem de forma a que seja utilizada toda a gama de valores possíveis. No sistema desenvolvido as imagens utilizadas encontram-se convertidas para tons de cinzento, pelo que a normalização efetuada consiste num mapeamento linear dos valores originais para uma gama de intensidade entre 0 e 255. Um exemplo de uma face normalizada segundo esta estratégia pode ser visualizado na imagem \ref{fig:normalizacao-normalized}.
 \end{description}
 
 \begin{description}
 \item[Equalização Histograma]
-O histograma de uma imagem descreve a distribuição estatística dos níveis de intensidade de uma imagem, neste caso concreto dos níveis de cinzento, em função do seu número de pixeis. A equalização do histograma de uma imagem consiste no mapeamento das variações da escala de cinzentos de forma a que o histograma resultante se aproxime de uma outra distribuição, mais alargada e idealmente uniforme na distribuição dos valores de intensidade da imagem. Este procedimento parte do princípio de que a qualidade da imagem é uniforme em toda a imagem, aplicando um mapeamento similar a toda a imagem \cite{Bradski2008}. Um exemplo de uma imagem cujo histograma foi equalizado pode ser visto na figura \ref{fig:equalized}.
+O histograma de uma imagem descreve a distribuição estatística dos níveis de intensidade de uma imagem, neste caso concreto dos níveis de cinzento, em função do seu número de pixeis. A equalização do histograma de uma imagem consiste no mapeamento das variações da escala de cinzentos de forma a que o histograma resultante se aproxime de uma outra distribuição, mais alargada e idealmente uniforme na distribuição dos valores de intensidade da imagem. Este procedimento parte do princípio de que a qualidade da imagem é uniforme em toda a imagem, aplicando um mapeamento similar a toda a imagem \cite{Bradski2008}. Um exemplo de uma imagem cujo histograma foi equalizado pode ser visto na figura \ref{fig:normalizacao-equalized}.
 \end{description}
 
 \begin{description}
 \item[\textit{CLAHE}]
-\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na imagem \ref{fig:clahe} encontra-se representada resultante da normalização através da técnica CLAHE.
+\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na imagem \ref{fig:normalizacao-clahe} encontra-se representada resultante da normalização através da técnica CLAHE.
 \end{description}
 
-\subsection{Aplicação Filtro Abstração}
-Falar dos três filtros
-Mencionar que dois estão implementados no opencv e kuwahara não
+\subsection{Aplicação Filtro Abstração} \label{sec:filtros}
+A quarta etapa de pré-processamento efetuada no sistema Visage corresponde à aplicação de um filtro de abstração sobre uma imagem. Os filtros de abstração constituem uma forma moderna de abstração de conteúdo visual, com a sua utilização no âmbito do sistema Visage, pretendemos analisar se o seu uso potencia o desempenho do sistema ao simplificar o conteúdo visual, destacando apenas a informação essencial presente numa imagem.
 
-\subsubsection*{Filtro Gaussiano}
+Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwahara Anisotrópico, os quais constituem três níveis de abstração sucessivamente mais complexos. A abstração efetuada para cada filtro encontra  ilustrada na figura \ref{fig:filters}, apresentado-se de seguida uma breve descrição de cada um dos filtros utilizados de seguida:
 
-\subsubsection*{Filtro Bilateral}
+\begin{figure}[t]
+        \centering
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{filters/original}
+                \caption{Original}
+                \label{fig:filters-original}
+        \end{subfigure}%
+        ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{filters/gaussian}
+                \caption{Gaussiano}
+                \label{fig:filters-gaussian}
+        \end{subfigure}
+        ~ 
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{filters/bilateral}
+                \caption{Bilateral}
+                \label{fig:filters-bilateral}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{filters/original}
+                \caption{Kuwahara A.}
+                \label{fig:filters-kuwahara}
+        \end{subfigure}
+        ~ 
+        \caption{Comparação entre imagem original e os vários filtros de abstração utilizados.}\label{fig:filters}
+\end{figure}
 
-\subsubsection*{Filtro Kuwahara Anisotrópico}
-O filtro Kuwahara Anisotrópico (FKA)consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+\begin{description}
+\item[Filtro Gaussiano]
+A aplicação de um filtro gaussiano para a suavização de uma imagem é uma técnica amplamente utilizada com o objetivo de reduzir o ruído e detalhe de uma imagem. Um filtro gaussiano calcula um média pesada dos valores dos pixeis vizinhos, na qual o peso de um pixel na média diminuí conforme a sua distância ao centro aumenta.
 
-O filtro em questão foi também utilizado anteriormente, e com resultados positivos, em abstração de imagens para a recuperação de informação multimédia. 
+No âmbito do sistema Visage a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{GaussianBlur}, tendo sido utilizada uma vizinhança de raio 3 pixeis.
 
-\subsection{Aplicação Máscara}
+\item[Filtro Bilateral]
+Tal como introduzido na revisão do estado da arte efetuada em \ref{subsec:bilateral}, o filtro bilateral tem como objetivo suavizar as zonas com menor contraste na imagem sem afetar os limites de maior contraste, permitindo assim reduzir o ruído presente em uma imagem enquanto os seu contornos são preservados.
+
+Á semelhança do filtro gaussiano a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{bilateralFilter}, tendo sido utilizado um raio de cinco pixeis vizinhos na aplicação do filtro.
+
+\item[Filtro Kuwahara Anisotrópico]
+O filtro Kuwahara Anisotrópico (FKA) consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+
+Para a utilização deste filtro foi utilizada a implementação de Jan Kyprianidis disponível em [] \footnote{https://code.google.com/p/gpuakf/}.
+
+\end{description}
+\subsection{Aplicação Máscara} \label{sec:mascara}
 
 \begin{figure}[t]
         \centering
@@ -376,7 +451,7 @@ A análise dos componentes principais visa determinar o sub-espaço onde se veri
 A ALD, inicialmente introduzida por Fisher em 1936 \cite{FISHER1936}, tenta maximizar as diferenças existentes entre diferentes indivíduos(inter-classe) e minimizar as variações entre imagens da mesma pessoa(intra-classe) de modo a obter uma representação mais robusta em termos de variação ao nível da iluminação. Após a aplicação dos passos de ACP e ALD, o processo de reconhecimento do método \textit{Fisherfaces} é semelhante ao efetuado pelo método \textit{Eigenfaces}, sendo também efetuada uma abordagem holística ao reconhecimento facial.
 
 
-\subsection{\textit{Local Binary Patterns Histograms (LBPH)}} \label{sec:lbphs}
+\subsection{\textit{Local Binary Patterns Histograms (LBPH)}} \label{sec:lbph}
 Ao contrário dos algoritmos descritos anteriormente, o LBPH efetua uma abordagem local ao problema de reconhecimento facial, efetuando uma extração das características locais de uma imagem. Este tipo de abordagem possuí a vantagem de possuir uma baixa dimensionalidade implícita, pelo que não existe a necessidade de efetuar a projeção das imagens num sub-espaço.
 
 A ideia base das \textit{Local Binary Patterns (LBP)}, consiste em resumir a estrutura local de imagem através de uma comparação de um pixel com os seus vizinhos. Dado um pixel central é analisada a diferença entre esse pixel e cada um dos seus vizinhos. Se a intensidade do pixel for maior ou igual do que a do seu vizinho é atribuído o valor 1, caso contrário é atribuído o valor 0. Cada pixel pode então ser traduzido por um número binário do género $11001111$. Dados $8$ pixeis é então possível efetuar $2^8$ combinações, cada uma designada de LBP.
@@ -396,3 +471,56 @@ Para os algoritmos \textit{Eigenfaces} e \textit{Fisherfaces} a representação 
 Para o algoritmo \textit{LBPH} a representação de baixo nível criada corresponde ao histograma representativo das \textit{local binary patterns} de uma imagem. A comparação entre a prova e as representações de baixo nível criadas durante o treino é efetuada através da comparação da distância entre os seus histogramas.
 
 A extensão efetuada à implementação existente na biblioteca \textit{OpenCV}, incide sobre o ponto 3 dos passos acima citados. Em vez de apenas ser devolvido o código identificativo da pessoa cuja representação apresenta menor distância às representações de baixo nível existentes, é devolvida uma lista de $n$ elementos, ordenada de forma crescente pelas distâncias calculadas. Esta lista encontra-se agrupada pelas diferentes entidades, significando assim que cada pessoa apenas aparece uma única vez na lista, independentemente, ou não da existência de várias representações de baixo nível referentes a essa pessoa. Desta forma torna-se possível o desenvolvimento de aplicações que, da uma imagem, respondam às perguntas "Qual é nome das 10 pessoas mais parecidas com a imagem fornecida?" em vez de apenas "Qual é a pessoa mais parecida com a imagem fornecida?".
+
+\section{Funcionalidades}
+O trabalho realizado no âmbito desta dissertação resultou na criação de cinco executáveis com diferentes funcionalidades e responsabilidades no âmbito do sistema Visage. Os primeiros três \textit{FaceDetector.exe}, \textit{FaceRecognizer.exe} e \textit{CSVCreator.exe} foram utilizados para efetuar a avaliação reportada no capítulo \ref{chap:resultados}. Já os programas \textit{TrainAndSaveModel.exe} e \textit{TopN.exe} permitem a utilização do sistema Visage como base de outros programas que tirem partido do reconhecimento facial de imagens no seu funcionamento.
+
+\begin{description}
+\item[FaceDetector.exe] Efetua o pré-processamento de uma galeria de imagens de acordo com os seguintes argumentos:
+
+\begin{itemize}
+\item \textbf{\textit{libraryPath.txt}}: O ficheiro txt com a descrição das imagens da galeria a processar.
+\item \textbf{\textit{outputDirName}}: O caminho do novo diretório a criar.
+\item \textbf{-mask}: Define se deve ser colocada uma máscara sobre a imagem (ver \ref{sec:mascara}). Parâmetro opcional.
+\item \textbf{\textit{-N, -E ou -C}}: Define qual o tipo de normalização que deve ser efetuada sobre a imagem, \textit{-N}, \textit{-E} ou \textit{-C} para as técnicas \textit{Contrast Streching}, Equalização Histograma e CLAHE, respetivamente (ver \ref{sec:normalizacao}). Parâmetro opcional.
+\item \textbf{\textit{-G ou -B}}: Define qual o filtro de abstração a aplicar sobre a imagem, -G ou -B, para os filtros gaussiano ou bilateral, respetivamente. Para efetuar o pré-processamento com recurso ao filtro kuwahara anisotrópico é necessário recorrer a um programa externo (ver \ref{sec:filtros}). Parâmetro opcional.
+\item \textbf{\textit{-align}}: Define se deve ser efetuado alinhamento das faces detetadas nas imagens (ver \ref{sec:alinhamentoEcorte}). Parâmetro opcional.
+\end{itemize}
+
+\item[FaceRecognizer.exe] Efetua a avaliação do desempenho do sistema de reconhecimento facial para uma determinada galeria, de acordo com os seguintes parâmentros:
+
+\begin{itemize}
+\item \textbf{\textit{libraryPath.txt}}: O ficheiro txt com a descrição das imagens da galeria a processar.
+\item \textbf{\textit{results.txt}}: O ficheito txt com os resultados da avaliação efetuada num formato legível para humanos.
+\item \textbf{\textit{-E, -F ou -L}}: Define qual o algoritmo de reconhecimento facial a utilizar -E, -F ou -L para \textit{Eigenfaces}, \textit{Fisherfaces} ou \textit{LBPH} (ver \ref{sec:facemodel}).
+\item \textbf{\textit{nResults }}: Define o número de rankings máximo a avaliar.
+\end{itemize}
+
+\item[CSVCreator.exe] Permite criar novas sub-galerias a partir de outras pré-existentes, assim como computar as estatísticas de uma galeria, de acordo com os seguinte parâmetros:
+
+\begin{itemize}
+\item \textbf{\textit{libraryPath.txt}}: O ficheiro txt com a descrição das imagens da galeria original.
+\item \textbf{\textit{outputfilename}}: O nome do ficheiro com a descrição da sub-galeria criada.
+\item \textbf{\textit{bottomLimit}}: O número de mínimo de imagens por pessoa.
+\item \textbf{\textit{topLimit}}: O número de máximo de imagens por pessoa.
+\item \textbf{\textit{statsFile}}: Nome do ficheiro onde ficam armazenadas as estatísticas de uma galeria.
+\end{itemize}
+
+\item[TrainAndSaveModel.exe] Permite treinar um modelo de reconhecimento facial de uma galeria passada como argumento e grava-lo para um ficheiro para posterior utilização.
+
+\begin{itemize}
+\item \textbf{\textit{libraryPath.txt}}: O ficheiro txt com a descrição das imagens da galeria a processar.
+\item \textbf{\textit{percentageToTrain}}: A percentagem de imagens de cada pessoa a usar como imagem de treino e teste.
+\item \textbf{\textit{-E, -F ou -L}}: Define qual o algoritmo de reconhecimento facial a utilizar -E, -F ou -L para \textit{Eigenfaces}, \textit{Fisherfaces} ou \textit{LBPH} (ver \ref{sec:facemodel}).
+\item \textbf{\textit{output.xml}}: O ficheiro onde deve ser gravado o modelo treinado.
+\end{itemize}
+
+\item[topN.exe] Devolve o nomes das \textit{n} personalidades mais parecidas com a personalidade representada na imagem. Efetua o pré-processamento da imagem passada como argumentos, com aplicação de máscara, normalização através de equalização do histograma e alinhamento da face.
+
+\begin{itemize}
+\item \textbf{\textit{imagePath}}: O caminho da imagem a reconhecer.
+\item \textbf{\textit{model.xml}}: O modelo de reconhecimento facial previamente treinado a utilizar.
+\item \textbf{\textit{nResults}}: O número de elementos máximo a incluir no top de resultados devolvido.
+\end{itemize}
+
+\end{description}
