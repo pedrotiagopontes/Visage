@@ -8,18 +8,20 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{24}{figure.caption.12}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{26}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{30}{figure.caption.14}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o n\IeC {\'u}mero de pessoas em escala logar\IeC {\'\i }tmica e no eixo horizontal o n\IeC {\'u}mero de imagens correspondente.\relax }}{31}{figure.caption.14}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diferentes vers\IeC {\~o}es da biblioteca LFW\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diferentes tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diferentes tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{34}{figure.caption.17}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre face correctamente detectada e situa\IeC {\c c}\IeC {\~o}es de erro na deta\IeC {\c c}\IeC {\~a}o\relax }}{35}{figure.caption.19}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{37}{figure.caption.21}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Exemplo de face j\IeC {\'a} segmentada, com e sem m\IeC {\'a}scara.\relax }}{40}{figure.caption.26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{38}{figure.caption.21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e as v\IeC {\'a}rias t\IeC {\'e}cnicas de normaliza\IeC {\c c}\IeC {\~a}o dispon\IeC {\'\i }veis.\relax }}{39}{figure.caption.23}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e os v\IeC {\'a}rios filtros de abstra\IeC {\c c}\IeC {\~a}o utilizados.\relax }}{40}{figure.caption.24}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Exemplo de face j\IeC {\'a} segmentada, com e sem m\IeC {\'a}scara.\relax }}{41}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {G}$ para o sujeito Angelina Jolie\relax }}{46}{figure.caption.27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {P}$ para o sujeito Angelina Jolie\relax }}{46}{figure.caption.28}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Exemplo dos v\IeC {\'a}rios pr\IeC {\'e}-processamentos dispon\IeC {\'\i }veis.\relax }}{48}{figure.caption.29}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Original, Cropped e Masked\relax }}{51}{figure.caption.31}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para o conjunto Masked\relax }}{52}{figure.caption.32}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Normalized, Equalized e CLAHE\relax }}{54}{figure.caption.33}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para o conjunto Equalized\relax }}{55}{figure.caption.34}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {G}$ para o sujeito Angelina Jolie\relax }}{49}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Exemplo de imagens do conjunto $\mathscr {P}$ para o sujeito Angelina Jolie\relax }}{49}{figure.caption.27}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Exemplo dos v\IeC {\'a}rios pr\IeC {\'e}-processamentos dispon\IeC {\'\i }veis.\relax }}{51}{figure.caption.28}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Original, Cropped e Masked\relax }}{54}{figure.caption.30}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para o conjunto Masked\relax }}{55}{figure.caption.31}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Normalized, Equalized e CLAHE\relax }}{57}{figure.caption.32}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para o conjunto Equalized\relax }}{58}{figure.caption.33}
 \addvspace {10\p@ }

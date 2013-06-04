@@ -1,12 +1,11 @@
 \chapter{Abstração de Imagens} \label{chap:abstracao}
 
 *********
+
 - Falar sobre o filtro gaussiano, image blur;
 
 - Expandir trabalho relacionado;
 
-
-- Talvez juntar aqui: Filtros de Abstração de imagem no rec. facial;
 *********
 
 Neste capítulo é efetuada uma análise das diversas abordagens existentes para a abstração de imagens. Inicialmente, é apresentada uma contextualização da abstração de imagens, no âmbito da estilização artística de imagens, onde são abordadas de forma sumária as diferentes técnicas existentes para o efeito. De seguida, encontram-se descritos alguns dos filtros de abstração de imagens mais comuns. Por último, é ainda apresentado um trabalho relacionado com esta dissertação na área de abstração de imagens.
@@ -76,7 +75,7 @@ Os filtros de abstração de imagens permitem simplificar o conteúdo visual, de
         \caption{Diferentes filtros de abstração aplicados sobre a mesma imagem \cite{Kyprianidis2009}.}\label{fig:filtrosabtracao}
 \end{figure}
 
-\subsection{Filtro Bilateral}
+\subsection{Filtro Bilateral} \label{subsec:bilateral}
 Uma abordagem baseada num filtro bilateral foi proposta em primeira mão por Tomasi e Manduchi em 1998 \cite{Tomasi1998} e encontra-se representada na imagem \ref{fig:bilateral}. Já em 2006, Winnemöller propôs uma melhoria dos resultados obtidos através da associação de um filtro de diferença de gaussianas na aplicação do filtro bilateral \cite{Winnemoller2006}. Trabalhos posteriores com vista a melhorar, os contornos produzidos pelas imagens abstraídas foram também realizados com sucesso através da introdução de um filtro de diferença de gaussianas baseado baseado em fluxo \cite{Kang2009}.
 
 O filtro bilateral caracteriza-se por suavizar as zonas com menor contraste da imagem enquanto preserva os limites de maior contraste. No entanto, os efeitos deste filtro são poucos visíveis quando toda a imagem possui um elevado contraste. Por outro lado, em imagens pouco contrastadas a informação visual removida é por vezes demasiada, causando um efeito de imagem desfocada na imagem abstraída.
