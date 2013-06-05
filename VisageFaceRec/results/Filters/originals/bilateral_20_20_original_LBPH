@@ -1,0 +1,311 @@
+Library: ..\data\Filters\bilateral_20_20_A - Copy.txt
+	Images Dir: C:\VisageCollections\Filters\bilateral_20_20\
+	Total Images: 1180
+	Total People: 59
+	Images per person MIN | MAX: 20 | 20
+	Percentage of trainned images per person: 80
+Loaded in: 0.016 seconds
+
+Trainned model FISHERFACES with 944 images in 243.653 seconds 
+
+                             Image    Label    Pred           Conf
+Alejandro_Toledo  16 | 4
+          Alejandro_Toledo_0013.jpg     121    5570        81.5969
+          Alejandro_Toledo_0009.jpg     121       -        92.5078
+          Alejandro_Toledo_0019.jpg     121    2173         71.734
+          Alejandro_Toledo_0001.jpg     121    1870        76.0729
+Alvaro_Uribe  16 | 4
+              Alvaro_Uribe_0025.jpg     204    5570        68.9393
+              Alvaro_Uribe_0008.jpg     204    1891        164.503
+              Alvaro_Uribe_0007.jpg     204    1932        98.5683
+              Alvaro_Uribe_0019.jpg     204    5570        81.0246
+Amelie_Mauresmo  16 | 4
+           Amelie_Mauresmo_0013.jpg     223    1870        68.9001
+           Amelie_Mauresmo_0019.jpg     223     781         103.96
+           Amelie_Mauresmo_0021.jpg     223    3319        145.155
+           Amelie_Mauresmo_0004.jpg     223       -        89.6375
+Andre_Agassi  16 | 4
+              Andre_Agassi_0030.jpg     272    5570        74.3235
+              Andre_Agassi_0029.jpg     272       -        76.9213
+              Andre_Agassi_0014.jpg     272       -        95.2114
+              Andre_Agassi_0017.jpg     272       -        71.0421
+Angelina_Jolie  16 | 4
+            Angelina_Jolie_0009.jpg     302       -        87.9454
+            Angelina_Jolie_0017.jpg     302    5352        100.253
+            Angelina_Jolie_0008.jpg     302       -        108.555
+            Angelina_Jolie_0005.jpg     302     544        78.3266
+Ariel_Sharon  16 | 4
+              Ariel_Sharon_0018.jpg     370    2751         106.69
+              Ariel_Sharon_0045.jpg     370       -        58.0234
+              Ariel_Sharon_0011.jpg     370       -        79.2738
+              Ariel_Sharon_0051.jpg     370     302        66.9939
+Arnold_Schwarzenegger  16 | 4
+     Arnold_Schwarzenegger_0017.jpg     386    5352        66.9276
+     Arnold_Schwarzenegger_0042.jpg     386       -        67.0269
+     Arnold_Schwarzenegger_0011.jpg     386    2940        94.6128
+     Arnold_Schwarzenegger_0024.jpg     386    2470        86.3587
+Atal_Bihari_Vajpayee  16 | 4
+      Atal_Bihari_Vajpayee_0012.jpg     417       -        59.4809
+      Atal_Bihari_Vajpayee_0023.jpg     417       -        90.1261
+      Atal_Bihari_Vajpayee_0019.jpg     417    5570        131.087
+      Atal_Bihari_Vajpayee_0006.jpg     417    2500        109.355
+Bill_Clinton  16 | 4
+              Bill_Clinton_0003.jpg     544       -        64.5586
+              Bill_Clinton_0024.jpg     544    1870        67.4809
+              Bill_Clinton_0002.jpg     544       -        54.1117
+              Bill_Clinton_0011.jpg     544       -         78.458
+Carlos_Menem  16 | 4
+              Carlos_Menem_0003.jpg     781    1207        150.814
+              Carlos_Menem_0007.jpg     781    1891        103.604
+              Carlos_Menem_0018.jpg     781       -        74.3059
+              Carlos_Menem_0014.jpg     781    5037        98.0226
+Colin_Powell  16 | 4
+              Colin_Powell_0181.jpg    1047       -        91.9568
+              Colin_Powell_0215.jpg    1047    2470        92.1034
+              Colin_Powell_0080.jpg    1047       -        78.9476
+              Colin_Powell_0179.jpg    1047    1870        67.8868
+David_Beckham  16 | 4
+             David_Beckham_0031.jpg    1207    5037        86.4609
+             David_Beckham_0005.jpg    1207    1964        96.0552
+             David_Beckham_0012.jpg    1207       -        68.6936
+             David_Beckham_0002.jpg    1207    4572        81.9766
+Donald_Rumsfeld  16 | 4
+           Donald_Rumsfeld_0009.jpg    1393    1870        75.1718
+           Donald_Rumsfeld_0040.jpg    1393    2470        86.8997
+           Donald_Rumsfeld_0076.jpg    1393       -        82.2796
+           Donald_Rumsfeld_0117.jpg    1393    3127        174.876
+George_Robertson  16 | 4
+          George_Robertson_0014.jpg    1865    5541        83.8909
+          George_Robertson_0017.jpg    1865       -        67.9343
+          George_Robertson_0008.jpg    1865       -        96.1031
+          George_Robertson_0005.jpg    1865    3401        76.1625
+George_W_Bush  16 | 4
+             George_W_Bush_0485.jpg    1870     121        85.2052
+             George_W_Bush_0413.jpg    1870       -        75.1405
+             George_W_Bush_0417.jpg    1870       -        68.1714
+             George_W_Bush_0295.jpg    1870       -        73.5022
+Gerhard_Schroeder  16 | 4
+         Gerhard_Schroeder_0073.jpg    1891     544        128.544
+         Gerhard_Schroeder_0052.jpg    1891       -        97.9979
+         Gerhard_Schroeder_0032.jpg    1891    1207        77.0225
+         Gerhard_Schroeder_0085.jpg    1891    1870        101.761
+Gloria_Macapagal_Arroyo  16 | 4
+   Gloria_Macapagal_Arroyo_0013.jpg    1932    2470        87.7365
+   Gloria_Macapagal_Arroyo_0025.jpg    1932       -        109.346
+   Gloria_Macapagal_Arroyo_0041.jpg    1932       -        59.3372
+   Gloria_Macapagal_Arroyo_0017.jpg    1932    2940        85.0758
+Gray_Davis  16 | 4
+                Gray_Davis_0011.jpg    1964     544        78.5753
+                Gray_Davis_0002.jpg    1964       -        82.5201
+                Gray_Davis_0021.jpg    1964    2687        113.663
+                Gray_Davis_0013.jpg    1964    2173        63.5453
+Guillermo_Coria  16 | 4
+           Guillermo_Coria_0011.jpg    1993       -        73.9996
+           Guillermo_Coria_0015.jpg    1993       -         105.62
+           Guillermo_Coria_0010.jpg    1993       -        136.135
+           Guillermo_Coria_0027.jpg    1993       -         123.89
+Hamid_Karzai  16 | 4
+              Hamid_Karzai_0001.jpg    2026    4836        96.4471
+              Hamid_Karzai_0010.jpg    2026    5570        83.9839
+              Hamid_Karzai_0002.jpg    2026       -        74.5828
+              Hamid_Karzai_0015.jpg    2026    5352        74.4343
+Hans_Blix  16 | 4
+                 Hans_Blix_0028.jpg    2043    3351        120.786
+                 Hans_Blix_0008.jpg    2043    5570        211.414
+                 Hans_Blix_0038.jpg    2043    1207        166.189
+                 Hans_Blix_0017.jpg    2043    5352        125.902
+Hugo_Chavez  16 | 4
+               Hugo_Chavez_0040.jpg    2173    5570        160.583
+               Hugo_Chavez_0054.jpg    2173    4253        80.4088
+               Hugo_Chavez_0038.jpg    2173    5352        77.5815
+               Hugo_Chavez_0068.jpg    2173     544        82.5606
+Jack_Straw  16 | 4
+                Jack_Straw_0023.jpg    2275     544        88.4053
+                Jack_Straw_0011.jpg    2275    2751        85.5917
+                Jack_Straw_0014.jpg    2275    1964        108.015
+                Jack_Straw_0006.jpg    2275    3702        73.8573
+Jacques_Chirac  16 | 4
+            Jacques_Chirac_0029.jpg    2283    2687        120.062
+            Jacques_Chirac_0042.jpg    2283       -        91.1979
+            Jacques_Chirac_0019.jpg    2283       -        78.1302
+            Jacques_Chirac_0028.jpg    2283    5570        102.885
+Jean_Chretien  16 | 4
+             Jean_Chretien_0007.jpg    2470    1870        76.2741
+             Jean_Chretien_0029.jpg    2470    4057        101.197
+             Jean_Chretien_0051.jpg    2470       -        93.0129
+             Jean_Chretien_0018.jpg    2470       -        90.6787
+Jennifer_Aniston  16 | 4
+          Jennifer_Aniston_0007.jpg    2500    1870        69.2645
+          Jennifer_Aniston_0016.jpg    2500       -        67.1845
+          Jennifer_Aniston_0006.jpg    2500    5037        100.246
+          Jennifer_Aniston_0020.jpg    2500    4836        108.043
+Jennifer_Capriati  16 | 4
+         Jennifer_Capriati_0036.jpg    2501       -        84.9505
+         Jennifer_Capriati_0033.jpg    2501     302        120.046
+         Jennifer_Capriati_0010.jpg    2501       -        109.908
+         Jennifer_Capriati_0029.jpg    2501       -         76.749
+Jennifer_Lopez  16 | 4
+            Jennifer_Lopez_0015.jpg    2508       -        57.6632
+            Jennifer_Lopez_0008.jpg    2508       -        119.049
+            Jennifer_Lopez_0013.jpg    2508     302        103.361
+            Jennifer_Lopez_0001.jpg    2508    5352        65.6402
+Jeremy_Greenstock  16 | 4
+         Jeremy_Greenstock_0022.jpg    2526    4572        92.6897
+         Jeremy_Greenstock_0005.jpg    2526    4372        87.8456
+         Jeremy_Greenstock_0003.jpg    2526       -        77.8509
+         Jeremy_Greenstock_0013.jpg    2526     370        122.795
+John_Ashcroft  16 | 4
+             John_Ashcroft_0030.jpg    2687       -        98.9966
+             John_Ashcroft_0020.jpg    2687    5352        72.7735
+             John_Ashcroft_0003.jpg    2687    4057        96.0127
+             John_Ashcroft_0008.jpg    2687    3127        90.4041
+John_Negroponte  16 | 4
+           John_Negroponte_0016.jpg    2751       -        73.0541
+           John_Negroponte_0028.jpg    2751       -        92.5417
+           John_Negroponte_0027.jpg    2751    4836        142.632
+           John_Negroponte_0020.jpg    2751       -        55.9065
+Jose_Maria_Aznar  16 | 4
+          Jose_Maria_Aznar_0002.jpg    2857    5658        90.8928
+          Jose_Maria_Aznar_0005.jpg    2857       -        87.0568
+          Jose_Maria_Aznar_0022.jpg    2857    4253        99.8401
+          Jose_Maria_Aznar_0019.jpg    2857    5441        104.114
+Juan_Carlos_Ferrero  16 | 4
+       Juan_Carlos_Ferrero_0012.jpg    2885    3401        99.3138
+       Juan_Carlos_Ferrero_0024.jpg    2885    1870        81.8007
+       Juan_Carlos_Ferrero_0027.jpg    2885    3351        101.845
+       Juan_Carlos_Ferrero_0022.jpg    2885    4551        105.185
+Junichiro_Koizumi  16 | 4
+         Junichiro_Koizumi_0027.jpg    2940       -        80.0175
+         Junichiro_Koizumi_0016.jpg    2940       -        70.6213
+         Junichiro_Koizumi_0024.jpg    2940       -        70.0175
+         Junichiro_Koizumi_0053.jpg    2940    3127         88.661
+Kofi_Annan  16 | 4
+                Kofi_Annan_0031.jpg    3127       -        61.4147
+                Kofi_Annan_0026.jpg    3127    4960        79.2664
+                Kofi_Annan_0008.jpg    3127       -        66.4664
+                Kofi_Annan_0018.jpg    3127       -        71.5036
+Laura_Bush  16 | 4
+                Laura_Bush_0032.jpg    3201       -        115.827
+                Laura_Bush_0018.jpg    3201    3319        105.345
+                Laura_Bush_0004.jpg    3201     544        111.747
+                Laura_Bush_0002.jpg    3201    2885        107.996
+Lindsay_Davenport  16 | 4
+         Lindsay_Davenport_0016.jpg    3319       -        108.262
+         Lindsay_Davenport_0020.jpg    3319       -        71.5382
+         Lindsay_Davenport_0014.jpg    3319       -        92.3953
+         Lindsay_Davenport_0006.jpg    3319       -        63.8025
+Lleyton_Hewitt  16 | 4
+            Lleyton_Hewitt_0032.jpg    3351       -        82.1733
+            Lleyton_Hewitt_0027.jpg    3351       -        72.8728
+            Lleyton_Hewitt_0035.jpg    3351    1964        125.555
+            Lleyton_Hewitt_0026.jpg    3351    4011        86.4063
+Luiz_Inacio_Lula_da_Silva  16 | 4
+ Luiz_Inacio_Lula_da_Silva_0025.jpg    3401    2173        76.7139
+ Luiz_Inacio_Lula_da_Silva_0039.jpg    3401    1964        108.399
+ Luiz_Inacio_Lula_da_Silva_0022.jpg    3401       -        82.5019
+ Luiz_Inacio_Lula_da_Silva_0037.jpg    3401       -        58.8283
+Mahmoud_Abbas  16 | 4
+             Mahmoud_Abbas_0029.jpg    3433    2470        130.725
+             Mahmoud_Abbas_0027.jpg    3433    4572        93.5369
+             Mahmoud_Abbas_0025.jpg    3433    4572        122.469
+             Mahmoud_Abbas_0007.jpg    3433       -        75.8009
+Megawati_Sukarnoputri  16 | 4
+     Megawati_Sukarnoputri_0013.jpg    3702    3433        67.6962
+     Megawati_Sukarnoputri_0006.jpg    3702       -        56.3241
+     Megawati_Sukarnoputri_0023.jpg    3702       -        71.9227
+     Megawati_Sukarnoputri_0030.jpg    3702       -        63.0244
+Naomi_Watts  16 | 4
+               Naomi_Watts_0007.jpg    4011     386        116.397
+               Naomi_Watts_0001.jpg    4011       -        54.9396
+               Naomi_Watts_0022.jpg    4011    1870        108.359
+               Naomi_Watts_0013.jpg    4011    1870        76.4335
+Nestor_Kirchner  16 | 4
+           Nestor_Kirchner_0009.jpg    4057    1870        73.6211
+           Nestor_Kirchner_0019.jpg    4057     417        160.208
+           Nestor_Kirchner_0035.jpg    4057     544        82.5447
+           Nestor_Kirchner_0021.jpg    4057       -        81.7069
+Paul_Bremer  16 | 4
+               Paul_Bremer_0020.jpg    4253    4551        85.7591
+               Paul_Bremer_0016.jpg    4253       -        98.0189
+               Paul_Bremer_0009.jpg    4253       -        87.2012
+               Paul_Bremer_0001.jpg    4253     544        87.1043
+Pete_Sampras  16 | 4
+              Pete_Sampras_0002.jpg    4372       -        102.066
+              Pete_Sampras_0012.jpg    4372    2885        81.3136
+              Pete_Sampras_0006.jpg    4372       -         86.309
+              Pete_Sampras_0001.jpg    4372       -        83.5153
+Recep_Tayyip_Erdogan  16 | 4
+      Recep_Tayyip_Erdogan_0025.jpg    4551    1870        124.028
+      Recep_Tayyip_Erdogan_0003.jpg    4551    4572        66.3201
+      Recep_Tayyip_Erdogan_0029.jpg    4551       -        84.5678
+      Recep_Tayyip_Erdogan_0010.jpg    4551     121        86.2832
+Ricardo_Lagos  16 | 4
+             Ricardo_Lagos_0016.jpg    4572       -        65.8957
+             Ricardo_Lagos_0005.jpg    4572    5037        82.6306
+             Ricardo_Lagos_0025.jpg    4572    4551        120.782
+             Ricardo_Lagos_0020.jpg    4572       -        92.8744
+Roh_Moo-hyun  16 | 4
+              Roh_Moo-hyun_0018.jpg    4775       -        93.0468
+              Roh_Moo-hyun_0005.jpg    4775       -        84.0082
+              Roh_Moo-hyun_0013.jpg    4775       -        56.5912
+              Roh_Moo-hyun_0027.jpg    4775       -        125.477
+Rudolph_Giuliani  16 | 4
+          Rudolph_Giuliani_0007.jpg    4836    2283        107.886
+          Rudolph_Giuliani_0021.jpg    4836    1932        62.9624
+          Rudolph_Giuliani_0008.jpg    4836       -        61.4773
+          Rudolph_Giuliani_0015.jpg    4836     370        85.8666
+Saddam_Hussein  16 | 4
+            Saddam_Hussein_0013.jpg    4865    5037        91.8538
+            Saddam_Hussein_0018.jpg    4865    1865        208.652
+            Saddam_Hussein_0014.jpg    4865       -        117.357
+            Saddam_Hussein_0002.jpg    4865       -        111.562
+Serena_Williams  16 | 4
+           Serena_Williams_0048.jpg    4960    1047        82.3082
+           Serena_Williams_0025.jpg    4960       -        76.7884
+           Serena_Williams_0033.jpg    4960    3127        67.9589
+           Serena_Williams_0027.jpg    4960    5352        79.9243
+Silvio_Berlusconi  16 | 4
+         Silvio_Berlusconi_0014.jpg    5037       -        58.4153
+         Silvio_Berlusconi_0016.jpg    5037       -        101.773
+         Silvio_Berlusconi_0019.jpg    5037     121        78.9079
+         Silvio_Berlusconi_0008.jpg    5037    5352        74.2427
+Tiger_Woods  16 | 4
+               Tiger_Woods_0003.jpg    5352       -        100.603
+               Tiger_Woods_0012.jpg    5352       -        72.6089
+               Tiger_Woods_0008.jpg    5352    5037        77.0523
+               Tiger_Woods_0016.jpg    5352       -        48.8711
+Tom_Daschle  16 | 4
+               Tom_Daschle_0009.jpg    5421    1207        113.019
+               Tom_Daschle_0015.jpg    5421    1870        61.7499
+               Tom_Daschle_0025.jpg    5421       -        76.3552
+               Tom_Daschle_0014.jpg    5421    1870        55.2629
+Tom_Ridge  16 | 4
+                 Tom_Ridge_0018.jpg    5441     544        103.865
+                 Tom_Ridge_0003.jpg    5441       -        103.699
+                 Tom_Ridge_0011.jpg    5441    4572         91.862
+                 Tom_Ridge_0022.jpg    5441    1870        95.0868
+Tony_Blair  16 | 4
+                Tony_Blair_0066.jpg    5458     121        61.2707
+                Tony_Blair_0084.jpg    5458     544          95.44
+                Tony_Blair_0138.jpg    5458    1207        111.388
+                Tony_Blair_0034.jpg    5458    3351        127.619
+Vicente_Fox  16 | 4
+               Vicente_Fox_0028.jpg    5541    4572        188.552
+               Vicente_Fox_0020.jpg    5541     544        85.8919
+               Vicente_Fox_0022.jpg    5541    2500        113.361
+               Vicente_Fox_0009.jpg    5541       -        76.1236
+Vladimir_Putin  16 | 4
+            Vladimir_Putin_0044.jpg    5570       -        76.3418
+            Vladimir_Putin_0011.jpg    5570       -        56.4932
+            Vladimir_Putin_0034.jpg    5570       -        100.093
+            Vladimir_Putin_0020.jpg    5570    3351        83.0772
+Winona_Ryder  16 | 4
+              Winona_Ryder_0014.jpg    5658    1964        117.708
+              Winona_Ryder_0006.jpg    5658       -        96.3901
+              Winona_Ryder_0003.jpg    5658    1870        72.6121
+              Winona_Ryder_0013.jpg    5658    1865        129.581
+
+Tested 236 in 2.013 seconds
+Right predictions: 99, 41.9492%
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,311 @@
+Library: ..\data\Filters\akf_20_20_B - Copy.txt
+	Images Dir: C:\VisageCollections\Filters\akf\
+	Total Images: 1180
+	Total People: 59
+	Images per person MIN | MAX: 20 | 20
+	Percentage of trainned images per person: 80
+Loaded in: 0.015 seconds
+
+Trainned model FISHERFACES with 944 images in 242.141 seconds 
+
+                             Image    Label    Pred           Conf
+Alejandro_Toledo  16 | 4
+  out\Alejandro_Toledo_0015-out.png     121       -        159.063
+  out\Alejandro_Toledo_0032-out.png     121       -        80.3373
+  out\Alejandro_Toledo_0028-out.png     121       -        120.451
+  out\Alejandro_Toledo_0001-out.png     121       -        93.3583
+Alvaro_Uribe  16 | 4
+      out\Alvaro_Uribe_0009-out.png     204    1207        126.825
+      out\Alvaro_Uribe_0024-out.png     204    1047        177.813
+      out\Alvaro_Uribe_0027-out.png     204    3201         170.49
+      out\Alvaro_Uribe_0005-out.png     204       -         116.67
+Amelie_Mauresmo  16 | 4
+   out\Amelie_Mauresmo_0007-out.png     223     121        152.532
+   out\Amelie_Mauresmo_0013-out.png     223    4836        99.3363
+   out\Amelie_Mauresmo_0003-out.png     223     121          155.6
+   out\Amelie_Mauresmo_0009-out.png     223    2751        143.946
+Andre_Agassi  16 | 4
+      out\Andre_Agassi_0029-out.png     272     781        126.325
+      out\Andre_Agassi_0022-out.png     272       -        135.029
+      out\Andre_Agassi_0007-out.png     272       -        138.104
+      out\Andre_Agassi_0036-out.png     272    1207        172.228
+Angelina_Jolie  16 | 4
+    out\Angelina_Jolie_0015-out.png     302    2508        142.297
+    out\Angelina_Jolie_0005-out.png     302     121        93.4427
+    out\Angelina_Jolie_0019-out.png     302    3702        141.366
+    out\Angelina_Jolie_0016-out.png     302    1207        87.3112
+Ariel_Sharon  16 | 4
+      out\Ariel_Sharon_0028-out.png     370    1207        154.746
+      out\Ariel_Sharon_0008-out.png     370       -         131.61
+      out\Ariel_Sharon_0074-out.png     370       -        126.011
+      out\Ariel_Sharon_0075-out.png     370    1207        104.064
+Arnold_Schwarzenegger  16 | 4
+out\Arnold_Schwarzenegger_0019-out.png     386    1207        97.0981
+out\Arnold_Schwarzenegger_0011-out.png     386     121        152.044
+out\Arnold_Schwarzenegger_0014-out.png     386    4836        100.586
+out\Arnold_Schwarzenegger_0038-out.png     386    4836        103.083
+Atal_Bihari_Vajpayee  16 | 4
+out\Atal_Bihari_Vajpayee_0022-out.png     417       -          139.8
+out\Atal_Bihari_Vajpayee_0014-out.png     417       -        67.8688
+out\Atal_Bihari_Vajpayee_0011-out.png     417    1207        126.641
+out\Atal_Bihari_Vajpayee_0019-out.png     417    4836         129.87
+Bill_Clinton  16 | 4
+      out\Bill_Clinton_0007-out.png     544    1207        78.4242
+      out\Bill_Clinton_0008-out.png     544    1207        69.4874
+      out\Bill_Clinton_0004-out.png     544       -        154.648
+      out\Bill_Clinton_0028-out.png     544       -        126.839
+Carlos_Menem  16 | 4
+      out\Carlos_Menem_0010-out.png     781       -         103.69
+      out\Carlos_Menem_0011-out.png     781    1207        134.645
+      out\Carlos_Menem_0001-out.png     781       -        100.265
+      out\Carlos_Menem_0004-out.png     781    1047        144.585
+Colin_Powell  16 | 4
+      out\Colin_Powell_0193-out.png    1047    4572        149.344
+      out\Colin_Powell_0142-out.png    1047    1964        142.832
+      out\Colin_Powell_0005-out.png    1047       -        132.168
+      out\Colin_Powell_0154-out.png    1047     417        150.086
+David_Beckham  16 | 4
+     out\David_Beckham_0001-out.png    1207       -         100.65
+     out\David_Beckham_0015-out.png    1207       -        76.7262
+     out\David_Beckham_0011-out.png    1207    4057        107.724
+     out\David_Beckham_0029-out.png    1207       -        77.2023
+Donald_Rumsfeld  16 | 4
+   out\Donald_Rumsfeld_0079-out.png    1393       -        114.592
+   out\Donald_Rumsfeld_0048-out.png    1393    1870        197.598
+   out\Donald_Rumsfeld_0018-out.png    1393    1964         109.35
+   out\Donald_Rumsfeld_0100-out.png    1393     370        164.405
+George_Robertson  16 | 4
+  out\George_Robertson_0017-out.png    1865       -        91.2713
+  out\George_Robertson_0003-out.png    1865       -        108.479
+  out\George_Robertson_0010-out.png    1865    2173        165.555
+  out\George_Robertson_0016-out.png    1865       -        96.9798
+George_W_Bush  16 | 4
+     out\George_W_Bush_0239-out.png    1870       -        136.292
+     out\George_W_Bush_0259-out.png    1870    1047        180.649
+     out\George_W_Bush_0333-out.png    1870       -        80.9403
+     out\George_W_Bush_0190-out.png    1870    1207        77.6035
+Gerhard_Schroeder  16 | 4
+ out\Gerhard_Schroeder_0019-out.png    1891    4836        96.2352
+ out\Gerhard_Schroeder_0028-out.png    1891       -        136.118
+ out\Gerhard_Schroeder_0083-out.png    1891    5441        141.641
+ out\Gerhard_Schroeder_0069-out.png    1891     121        122.227
+Gloria_Macapagal_Arroyo  16 | 4
+out\Gloria_Macapagal_Arroyo_0031-out.png    1932    3201        95.1251
+out\Gloria_Macapagal_Arroyo_0026-out.png    1932       -        161.988
+out\Gloria_Macapagal_Arroyo_0004-out.png    1932    5658        135.354
+out\Gloria_Macapagal_Arroyo_0044-out.png    1932    4572        134.774
+Gray_Davis  16 | 4
+        out\Gray_Davis_0001-out.png    1964    1207        177.505
+        out\Gray_Davis_0002-out.png    1964    1870        150.374
+        out\Gray_Davis_0003-out.png    1964    1207        131.087
+        out\Gray_Davis_0018-out.png    1964    1207        108.784
+Guillermo_Coria  16 | 4
+   out\Guillermo_Coria_0027-out.png    1993    1207        160.979
+   out\Guillermo_Coria_0005-out.png    1993    4372        246.104
+   out\Guillermo_Coria_0028-out.png    1993    2885        172.008
+   out\Guillermo_Coria_0030-out.png    1993       -        96.4656
+Hamid_Karzai  16 | 4
+      out\Hamid_Karzai_0002-out.png    2026    3201        124.558
+      out\Hamid_Karzai_0019-out.png    2026    3127        142.899
+      out\Hamid_Karzai_0001-out.png    2026    4836        135.134
+      out\Hamid_Karzai_0011-out.png    2026       -         132.33
+Hans_Blix  16 | 4
+         out\Hans_Blix_0008-out.png    2043    2470        182.956
+         out\Hans_Blix_0026-out.png    2043    2173         164.99
+         out\Hans_Blix_0025-out.png    2043    1047        135.143
+         out\Hans_Blix_0011-out.png    2043     121        283.333
+Hugo_Chavez  16 | 4
+       out\Hugo_Chavez_0014-out.png    2173    1870        122.809
+       out\Hugo_Chavez_0011-out.png    2173    2940        116.053
+       out\Hugo_Chavez_0051-out.png    2173    1964        122.432
+       out\Hugo_Chavez_0034-out.png    2173    5037        154.729
+Jack_Straw  16 | 4
+        out\Jack_Straw_0007-out.png    2275       -        127.607
+        out\Jack_Straw_0014-out.png    2275       -        140.752
+        out\Jack_Straw_0002-out.png    2275    1207        103.531
+        out\Jack_Straw_0019-out.png    2275    2687         204.42
+Jacques_Chirac  16 | 4
+    out\Jacques_Chirac_0030-out.png    2283     386        163.761
+    out\Jacques_Chirac_0017-out.png    2283    1207        100.027
+    out\Jacques_Chirac_0043-out.png    2283     204        186.251
+    out\Jacques_Chirac_0031-out.png    2283    2687         178.32
+Jean_Chretien  16 | 4
+     out\Jean_Chretien_0043-out.png    2470    3201        108.689
+     out\Jean_Chretien_0025-out.png    2470    1207        111.507
+     out\Jean_Chretien_0029-out.png    2470    2940        196.183
+     out\Jean_Chretien_0050-out.png    2470    3201        84.2812
+Jennifer_Aniston  16 | 4
+  out\Jennifer_Aniston_0018-out.png    2500    1932        165.326
+  out\Jennifer_Aniston_0003-out.png    2500    3201        99.5092
+  out\Jennifer_Aniston_0011-out.png    2500       -        97.8653
+  out\Jennifer_Aniston_0015-out.png    2500       -        133.943
+Jennifer_Capriati  16 | 4
+ out\Jennifer_Capriati_0020-out.png    2501    4572        120.029
+ out\Jennifer_Capriati_0034-out.png    2501    4960        127.839
+ out\Jennifer_Capriati_0021-out.png    2501    5421        151.213
+ out\Jennifer_Capriati_0005-out.png    2501    4836        135.212
+Jennifer_Lopez  16 | 4
+    out\Jennifer_Lopez_0009-out.png    2508       -        98.0226
+    out\Jennifer_Lopez_0019-out.png    2508    4836        135.222
+    out\Jennifer_Lopez_0018-out.png    2508    2940        179.589
+    out\Jennifer_Lopez_0011-out.png    2508    4057        141.724
+Jeremy_Greenstock  16 | 4
+ out\Jeremy_Greenstock_0018-out.png    2526       -        124.417
+ out\Jeremy_Greenstock_0010-out.png    2526    4836        108.544
+ out\Jeremy_Greenstock_0019-out.png    2526       -        130.763
+ out\Jeremy_Greenstock_0005-out.png    2526    2751        135.268
+John_Ashcroft  16 | 4
+     out\John_Ashcroft_0024-out.png    2687     386        124.471
+     out\John_Ashcroft_0012-out.png    2687    4057        129.531
+     out\John_Ashcroft_0016-out.png    2687       -        118.389
+     out\John_Ashcroft_0026-out.png    2687       -        97.0582
+John_Negroponte  16 | 4
+   out\John_Negroponte_0014-out.png    2751       -         113.18
+   out\John_Negroponte_0013-out.png    2751       -        125.396
+   out\John_Negroponte_0001-out.png    2751       -        91.8505
+   out\John_Negroponte_0018-out.png    2751       -        88.4278
+Jose_Maria_Aznar  16 | 4
+  out\Jose_Maria_Aznar_0022-out.png    2857    1047        170.463
+  out\Jose_Maria_Aznar_0012-out.png    2857     386        165.398
+  out\Jose_Maria_Aznar_0017-out.png    2857    2526        163.576
+  out\Jose_Maria_Aznar_0005-out.png    2857    3127        139.896
+Juan_Carlos_Ferrero  16 | 4
+out\Juan_Carlos_Ferrero_0016-out.png    2885    3201        127.963
+out\Juan_Carlos_Ferrero_0004-out.png    2885    4836        113.076
+out\Juan_Carlos_Ferrero_0021-out.png    2885    2751         162.26
+out\Juan_Carlos_Ferrero_0013-out.png    2885    2026        138.638
+Junichiro_Koizumi  16 | 4
+ out\Junichiro_Koizumi_0033-out.png    2940       -         93.064
+ out\Junichiro_Koizumi_0016-out.png    2940       -        106.815
+ out\Junichiro_Koizumi_0060-out.png    2940       -        93.8341
+ out\Junichiro_Koizumi_0047-out.png    2940       -        109.559
+Kofi_Annan  16 | 4
+        out\Kofi_Annan_0011-out.png    3127       -        68.9115
+        out\Kofi_Annan_0028-out.png    3127    1964        187.184
+        out\Kofi_Annan_0030-out.png    3127    1207         75.987
+        out\Kofi_Annan_0023-out.png    3127       -         121.95
+Laura_Bush  16 | 4
+        out\Laura_Bush_0002-out.png    3201    5441        169.261
+        out\Laura_Bush_0010-out.png    3201       -        95.3629
+        out\Laura_Bush_0040-out.png    3201       -        115.429
+        out\Laura_Bush_0005-out.png    3201       -        153.586
+Lindsay_Davenport  16 | 4
+ out\Lindsay_Davenport_0002-out.png    3319    5037        154.455
+ out\Lindsay_Davenport_0020-out.png    3319       -        115.595
+ out\Lindsay_Davenport_0018-out.png    3319       -        154.835
+ out\Lindsay_Davenport_0015-out.png    3319    4057        160.191
+Lleyton_Hewitt  16 | 4
+    out\Lleyton_Hewitt_0017-out.png    3351    5458          140.4
+    out\Lleyton_Hewitt_0020-out.png    3351    1207        116.555
+    out\Lleyton_Hewitt_0019-out.png    3351    1207        118.243
+    out\Lleyton_Hewitt_0029-out.png    3351    1207        74.6749
+Luiz_Inacio_Lula_da_Silva  16 | 4
+out\Luiz_Inacio_Lula_da_Silva_0015-out.png    3401       -        98.0117
+out\Luiz_Inacio_Lula_da_Silva_0047-out.png    3401     121        107.044
+out\Luiz_Inacio_Lula_da_Silva_0035-out.png    3401     417        117.017
+out\Luiz_Inacio_Lula_da_Silva_0014-out.png    3401    1207        116.286
+Mahmoud_Abbas  16 | 4
+     out\Mahmoud_Abbas_0020-out.png    3433    2751        124.706
+     out\Mahmoud_Abbas_0027-out.png    3433    2173        117.759
+     out\Mahmoud_Abbas_0003-out.png    3433    3201        131.306
+     out\Mahmoud_Abbas_0019-out.png    3433       -        107.915
+Megawati_Sukarnoputri  16 | 4
+out\Megawati_Sukarnoputri_0009-out.png    3702    2940        102.721
+out\Megawati_Sukarnoputri_0026-out.png    3702    5570        123.865
+out\Megawati_Sukarnoputri_0030-out.png    3702       -        108.265
+out\Megawati_Sukarnoputri_0029-out.png    3702    1207        125.188
+Naomi_Watts  16 | 4
+       out\Naomi_Watts_0018-out.png    4011       -        102.921
+       out\Naomi_Watts_0010-out.png    4011    1207         99.409
+       out\Naomi_Watts_0016-out.png    4011    4057        121.362
+       out\Naomi_Watts_0009-out.png    4011       -        129.489
+Nestor_Kirchner  16 | 4
+   out\Nestor_Kirchner_0009-out.png    4057    5037        113.622
+   out\Nestor_Kirchner_0003-out.png    4057    4836        148.417
+   out\Nestor_Kirchner_0035-out.png    4057    1207        98.2091
+   out\Nestor_Kirchner_0031-out.png    4057    1207         80.334
+Paul_Bremer  16 | 4
+       out\Paul_Bremer_0005-out.png    4253    2687        127.572
+       out\Paul_Bremer_0017-out.png    4253    1870        114.352
+       out\Paul_Bremer_0012-out.png    4253       -        126.513
+       out\Paul_Bremer_0002-out.png    4253    2500         208.11
+Pete_Sampras  16 | 4
+      out\Pete_Sampras_0014-out.png    4372    2026        170.867
+      out\Pete_Sampras_0015-out.png    4372    5441        143.054
+      out\Pete_Sampras_0020-out.png    4372       -        168.966
+      out\Pete_Sampras_0005-out.png    4372       -        133.326
+Recep_Tayyip_Erdogan  16 | 4
+out\Recep_Tayyip_Erdogan_0011-out.png    4551    5037         178.41
+out\Recep_Tayyip_Erdogan_0024-out.png    4551       -        89.4495
+out\Recep_Tayyip_Erdogan_0017-out.png    4551    2687        186.662
+out\Recep_Tayyip_Erdogan_0026-out.png    4551    1393         193.23
+Ricardo_Lagos  16 | 4
+     out\Ricardo_Lagos_0004-out.png    4572    2687        160.831
+     out\Ricardo_Lagos_0022-out.png    4572       -        79.0976
+     out\Ricardo_Lagos_0025-out.png    4572       -        134.231
+     out\Ricardo_Lagos_0006-out.png    4572    5037        121.298
+Roh_Moo-hyun  16 | 4
+      out\Roh_Moo-hyun_0008-out.png    4775    1891        170.266
+      out\Roh_Moo-hyun_0014-out.png    4775    1207        103.481
+      out\Roh_Moo-hyun_0024-out.png    4775       -        115.754
+      out\Roh_Moo-hyun_0007-out.png    4775       -        90.7219
+Rudolph_Giuliani  16 | 4
+  out\Rudolph_Giuliani_0021-out.png    4836    3201        86.1797
+  out\Rudolph_Giuliani_0026-out.png    4836       -        99.6534
+  out\Rudolph_Giuliani_0011-out.png    4836    5458        156.413
+  out\Rudolph_Giuliani_0009-out.png    4836       -        111.701
+Saddam_Hussein  16 | 4
+    out\Saddam_Hussein_0014-out.png    4865       -        161.523
+    out\Saddam_Hussein_0017-out.png    4865       -        180.184
+    out\Saddam_Hussein_0020-out.png    4865    3127        121.489
+    out\Saddam_Hussein_0019-out.png    4865    1207        155.641
+Serena_Williams  16 | 4
+   out\Serena_Williams_0027-out.png    4960       -        95.4024
+   out\Serena_Williams_0052-out.png    4960    5570        177.753
+   out\Serena_Williams_0003-out.png    4960       -        124.449
+   out\Serena_Williams_0002-out.png    4960    1865        144.637
+Silvio_Berlusconi  16 | 4
+ out\Silvio_Berlusconi_0028-out.png    5037    1207        81.7697
+ out\Silvio_Berlusconi_0019-out.png    5037    1207        101.691
+ out\Silvio_Berlusconi_0030-out.png    5037    4836        190.027
+ out\Silvio_Berlusconi_0022-out.png    5037    1207        80.7784
+Tiger_Woods  16 | 4
+       out\Tiger_Woods_0001-out.png    5352       -        179.537
+       out\Tiger_Woods_0021-out.png    5352    2500         112.07
+       out\Tiger_Woods_0012-out.png    5352    4960        94.0304
+       out\Tiger_Woods_0002-out.png    5352       -        147.424
+Tom_Daschle  16 | 4
+       out\Tom_Daschle_0011-out.png    5421    1207        92.9307
+       out\Tom_Daschle_0019-out.png    5421       -        122.522
+       out\Tom_Daschle_0008-out.png    5421    1207        133.511
+       out\Tom_Daschle_0007-out.png    5421    1870        131.314
+Tom_Ridge  16 | 4
+         out\Tom_Ridge_0006-out.png    5441    1207        100.036
+         out\Tom_Ridge_0017-out.png    5441       -        102.652
+         out\Tom_Ridge_0015-out.png    5441     386        143.153
+         out\Tom_Ridge_0032-out.png    5441    1891        187.124
+Tony_Blair  16 | 4
+        out\Tony_Blair_0051-out.png    5458    5441        199.003
+        out\Tony_Blair_0058-out.png    5458    2940          88.62
+        out\Tony_Blair_0040-out.png    5458    5037        101.952
+        out\Tony_Blair_0096-out.png    5458       -        100.084
+Vicente_Fox  16 | 4
+       out\Vicente_Fox_0016-out.png    5541    2857         173.97
+       out\Vicente_Fox_0002-out.png    5541    2940        119.843
+       out\Vicente_Fox_0017-out.png    5541     370        163.129
+       out\Vicente_Fox_0026-out.png    5541       -        152.891
+Vladimir_Putin  16 | 4
+    out\Vladimir_Putin_0041-out.png    5570       -        124.642
+    out\Vladimir_Putin_0006-out.png    5570     121        105.516
+    out\Vladimir_Putin_0044-out.png    5570       -        94.7166
+    out\Vladimir_Putin_0034-out.png    5570    2940        147.341
+Winona_Ryder  16 | 4
+      out\Winona_Ryder_0011-out.png    5658       -        115.549
+      out\Winona_Ryder_0001-out.png    5658    1207        93.8559
+      out\Winona_Ryder_0008-out.png    5658    5570        155.495
+      out\Winona_Ryder_0021-out.png    5658       -        104.108
+
+Tested 236 in 2.215 seconds
+Right predictions: 82, 34.7458%
+
+-------------------------------------------------------------------------------
