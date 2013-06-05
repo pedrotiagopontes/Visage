@@ -58,4 +58,5 @@ public:
 	
 	int detectAndCropDir(string path, string outputdir = "croppedImages", bool align = false, bool apply_mask=true, int normalize_hist=EqualizeHistogram, int filter=0);
 	void exportDir(string path, string outputdir,string extension);
+	void maskDir(string path, string outputdir);
 };

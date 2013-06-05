@@ -399,6 +399,20 @@ void FaceDetector::exportDir(string path, string outputdir,string extension){
 	}
 }
 
+void FaceDetector::maskDir(string path, string outputdir){
+	vector<string> images;
+	vector<string> names;
+	vector<string> labels;
+	vector<string> dirs;
+
+	loadAndCloneDir(path, outputdir, images, dirs, names, labels);
+	for(unsigned int i = 0; i < names.size(); i++){
+		Mat image = imread(images[i], CV_LOAD_IMAGE_COLOR);
+
+		imwrite(outputdir + "\\" + dirs[i] + "\\" + names[i], applyMask(maskImg, image));
+	}
+}
+
 void FaceDetector::loadAndCloneDir(const string& filename, const string& outputname, vector<string>& images, vector<string>& dirs, vector<string>& names, vector<string>&labels, char separator) {
 	ifstream file(filename.c_str(), ifstream::in);
 	if (!file) {

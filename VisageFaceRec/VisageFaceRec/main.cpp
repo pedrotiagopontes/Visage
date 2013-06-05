@@ -237,6 +237,16 @@ int exportDir(int argc, const char *argv[]){
 	}
 }
 
+int maskDir(int argc, const char *argv[]){
+	FaceDetector detectorLPB("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
+	if(argc > 2){
+		detectorLPB.maskDir(argv[1], argv[2]);
+	}else{
+		cout << "Usage: dirPath outputdir" <<endl;
+		return -1;
+	}
+}
+
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
 	//return faceDetector(argc, argv);
@@ -253,7 +263,9 @@ int main(int argc, const char *argv[]) {
 	/// topN.exe
 	//return topN(argc, argv);
 
-	return exportDir(argc, argv);
+	//return exportDir(argc, argv);
+
+	return maskDir(argc, argv);
 
 	//return 0;
 }
