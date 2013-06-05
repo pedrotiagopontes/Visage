@@ -227,6 +227,16 @@ int topN(int argc, const char *argv[]){
 	return 0;
 }
 
+int exportDir(int argc, const char *argv[]){
+	FaceDetector detectorLPB("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
+	if(argc > 3){
+		detectorLPB.exportDir(argv[1], argv[2], argv[3]);
+	}else{
+		cout << "Usage: dirPath outputdir extension" <<endl;
+		return -1;
+	}
+}
+
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
 	//return faceDetector(argc, argv);
@@ -241,7 +251,9 @@ int main(int argc, const char *argv[]) {
 	//return trainAndSaveModel(argc, argv);
 
 	/// topN.exe
-	return topN(argc, argv);
+	//return topN(argc, argv);
+
+	return exportDir(argc, argv);
 
 	//return 0;
 }
