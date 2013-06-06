@@ -90,7 +90,7 @@ Mat FaceDetector::applyFilter(Mat original, int filter){
 	Mat processedImg = original;
 
 	if(filter == GaussianFilter){
-		GaussianBlur( original, processedImg, Size( 6, 6 ), 0, 0 );
+		GaussianBlur( original, processedImg, Size( 7, 7 ), 0, 0 );
 	}
 
 	if(filter == BilateralFilter){
