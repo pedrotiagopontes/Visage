@@ -57,11 +57,11 @@
 \contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{56}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{58}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{58}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{59}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{60}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{60}{section.5.5}
-\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{61}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{62}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{62}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{63}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{64}{section*.37}
+\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{60}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Resultados}{61}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{61}{section.5.5}
+\contentsline {section}{\numberline {5.6}Discuss\IeC {\~a}o Resultados Obtidos}{62}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{64}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{64}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{65}{section.6.2}
+\contentsline {chapter}{Refer\^{e}ncias}{66}{section*.39}

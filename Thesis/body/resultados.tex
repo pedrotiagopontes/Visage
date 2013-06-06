@@ -350,6 +350,40 @@ Ao nível das três técnicas utilizadas é possível concluir que as duas varia
 Finalmente, a análise comparativa dos resultados obtidos para os três algoritmos implementados, ilustrada pelo gráfico \ref{fig:exp2_comaparacao}, permite concluir que após a normalização do histograma das imagens o desempenho dos algoritmos apresenta uma diferença muito menor do que a registada anteriormente e ilustrada pelo gráfico \ref{fig:exp1_comaparacao}. Nesta experiência o algoritmo LBPH continua a ser o algoritmo com melhor desempenho, registando no entanto uma diferença de apenas 1.8\% e 6.0\% para os algoritmos \textit{Fisherfaces} e \textit{Eigenfaces}, respetivamente, na taxa de identificação de ranking 1 no conjunto Equalized. De notar ainda que, a partir do ranking de nível 2, o algoritmo  \textit{Eigenfaces} possui uma taxa de identificação idêntica ao valores obtidos pela algoritmo \textit{Fisherfaces}, ultrapassando o desempenho do segundo, a partir do ranking 11. Esta grange evolução no desempenho, notada para o algoritmo \textit{Eigenfaces}, em contraste com a ligeira melhoria obtida pelos restantes denota a complexidade associada ao problema de reconhecimento facial automático, nomeadamente no que diz respeito à forma como diferentes fatores afetam de forma diferenciada diferentes algoritmos e diferentes conjuntos de dados.
 
 \subsection{Resultados Experiência 3: Abstração de Imagens}
+\begin{figure}[p]
+        \centering
+        \begin{subfigure}[b]{0.58\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{resultados/Exp_3_eigen}
+                \caption{Eigenfaces}
+                \label{fig:exp3_eigen}
+        \end{subfigure}%
+
+        \begin{subfigure}[b]{0.58\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{resultados/Exp_3_fisher}
+                \caption{Fisherfaces}
+                \label{fig:exp3_fisher}
+        \end{subfigure}
+
+        \begin{subfigure}[b]{0.58\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{resultados/Exp_3_lbph}
+                \caption{LBPH}
+                \label{fig:exp3_lbph}
+        \end{subfigure}
+        \caption{Desempenho algoritmos Eigenfaces, Fisherfaces e LBPH para os conjuntos Gaussian, Bilateral e AKF}
+        \label{fig:exp3}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \leavevmode
+    \includegraphics[width=0.6\textwidth]{resultados/exp3_comparacao}
+    \caption{Comparação do desempenho dos três algoritmos implementados para o conjunto AKF}
+    \label{fig:exp3_comaparacao}
+  \end{center}
+\end{figure}
 
 \section{Avaliação \textit{Image Retrieval}} \label{sec:avaliacao2}
 A metodologia de avaliação proposta na secção \ref{sec:avaliacao1} desta dissertação permite-nos efetuar uma avaliação qualitativa do desempenho do sistema de reconhecimento facial criado, assim como dos diferentes algoritmos implementados, através de uma medida padrão para a avaliação de sistemas de reconhecimento facial automáticos. Nesta segunda avaliação propomos a avaliação do desempenho do sistema de um ponto de vista centrado num possível caso de uso do mesmo: \textit{Image Retrieval}.
