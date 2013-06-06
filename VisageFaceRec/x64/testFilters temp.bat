@@ -1,16 +1,16 @@
-REM AKF
-FaceRecognizer.exe ..\data\Filters\akf_20_20_A.txt akf_20_20_EIGEN.txt -E 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_B.txt akf_20_20_EIGEN_B.txt -E 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_C.txt akf_20_20_EIGEN_C.txt -E 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_D.txt akf_20_20_EIGEN_D.txt -E 30
+REM LBPH
+FaceRecognizer.exe "..\data\Filters\bilateral_20_20_A - Copy.txt" bilateral_20_20_original_LBPH -L 30
+FaceRecognizer.exe "..\data\Filters\bilateral_20_20_B - Copy.txt" bilateral_20_20_original_LBPH_B -L 30
+FaceRecognizer.exe "..\data\Filters\bilateral_20_20_C - Copy.txt" bilateral_20_20_original_LBPH_C -L 30
+FaceRecognizer.exe "..\data\Filters\bilateral_20_20_D - Copy.txt" bilateral_20_20_original_LBPH_D -L 30
 
-FaceRecognizer.exe ..\data\Filters\akf_20_20_A.txt akf_20_20_FISHER.txt -F 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_B.txt akf_20_20_FISHER_B.txt -F 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_C.txt akf_20_20_FISHER_C.txt -F 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_D.txt akf_20_20_FISHER_D.txt -F 30
+FaceRecognizer.exe "..\data\Filters\gaussian_20_20_A - Copy.txt" gaussian_20_20_original_LBPH -L 30
+FaceRecognizer.exe "..\data\Filters\gaussian_20_20_B - Copy.txt" gaussian_20_20_original_LBPH_B -L 30
+FaceRecognizer.exe "..\data\Filters\gaussian_20_20_C - Copy.txt" gaussian_20_20_original_LBPH_C -L 30
+FaceRecognizer.exe "..\data\Filters\gaussian_20_20_D - Copy.txt" gaussian_20_20_original_LBPH_D -L 30
 
-FaceRecognizer.exe ..\data\Filters\akf_20_20_A.txt akf_20_20_LBPH.txt -L 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_B.txt akf_20_20_LBPH_B.txt -L 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_C.txt akf_20_20_LBPH_C.txt -L 30
-FaceRecognizer.exe ..\data\Filters\akf_20_20_D.txt akf_20_20_LBPH_D.txt -L 30
+FaceRecognizer.exe "..\data\Filters\akf_20_20_A - Copy.txt" akf_20_20_original_LBPH -L 30
+FaceRecognizer.exe "..\data\Filters\akf_20_20_B - Copy.txt" akf_20_20_original_LBPH_B -L 30
+FaceRecognizer.exe "..\data\Filters\akf_20_20_C - Copy.txt" akf_20_20_original_LBPH_C -L 30
+FaceRecognizer.exe "..\data\Filters\akf_20_20_D - Copy.txt" akf_20_20_original_LBPH_D -L 30
 PAUSE
