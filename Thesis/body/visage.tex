@@ -367,7 +367,7 @@ Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwa
         ~
         \begin{subfigure}[b]{0.2\textwidth}
                 \centering
-                \includegraphics[width=\textwidth]{filters/original}
+                \includegraphics[width=\textwidth]{filters/akf}
                 \caption{Kuwahara A.}
                 \label{fig:filters-kuwahara}
         \end{subfigure}
@@ -379,12 +379,12 @@ Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwa
 \item[Filtro Gaussiano]
 A aplicação de um filtro gaussiano para a suavização de uma imagem é uma técnica amplamente utilizada com o objetivo de reduzir o ruído e detalhe de uma imagem. Um filtro gaussiano calcula um média pesada dos valores dos pixeis vizinhos, na qual o peso de um pixel na média diminuí conforme a sua distância ao centro aumenta.
 
-No âmbito do sistema Visage a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{GaussianBlur}, tendo sido utilizada uma vizinhança de raio 3 pixeis.
+No âmbito do sistema Visage a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{gaussianBlur}, tendo sido utilizada uma vizinhança de raio sete pixeis.
 
 \item[Filtro Bilateral]
 Tal como introduzido na revisão do estado da arte efetuada em \ref{subsec:bilateral}, o filtro bilateral tem como objetivo suavizar as zonas com menor contraste na imagem sem afetar os limites de maior contraste, permitindo assim reduzir o ruído presente em uma imagem enquanto os seu contornos são preservados.
 
-Á semelhança do filtro gaussiano a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{bilateralFilter}, tendo sido utilizado um raio de cinco pixeis vizinhos na aplicação do filtro.
+Á semelhança do filtro gaussiano a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{bilateralFilter}, tendo sido utilizado um de oito pixeis vizinhos na aplicação do filtro.
 
 \item[Filtro Kuwahara Anisotrópico]
 O filtro Kuwahara Anisotrópico (FKA) consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
