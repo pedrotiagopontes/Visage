@@ -139,28 +139,43 @@ O módulo de reconhecimento facial, \textit{Face Recognizer}, disponibilizado pe
 
 Todas as galerias criadas possuem as imagens contidas nos conjuntos de teste definidos em \ref{sec:conjuntos}, diferenciando-se pelos diferentes passos de pré-processamento a que as imagens foram sujeitas. Na tabela \ref{tab:colecoes} encontram-se resumidas as galerias resultantes do conjunto de experiências efetuadas, as quais se encontram descritas pormenorizadamente de seguida.
 
+\begin{center}
+\begin{table}[ht]
+	\caption{Galerias criadas após pré-processamento.}
+	\begin{center}
+    \begin{tabular}{l|cccc|c}
+    \hline\hline
+    Designação & Recortada   & Normalização           & Filtro Abstração & Máscara & Exemplo \\
+	\hline
+    Original   &   -         & -                      & -                &   -     & \ref{fig:original} \\
+	~ & ~ & ~ & ~ & ~ & ~\\
+    Cropped    & Sim         & -                      & -                &   -     & \ref{fig:cropped}  \\
+    Masked     & Sim         & -                      & -                & Sim     & \ref{fig:masked}  \\
+	~ & ~ & ~ & ~ & ~ & ~\\
+    Normalized & Sim         & Constrast Streching    & -                & Sim     & \ref{fig:normalized}  \\
+    Equalized  & Sim         & Histogram Equalization & -                & Sim     & \ref{fig:equalized}  \\
+    CLAHE      & Sim         & CLAHE                  & -                & Sim     & \ref{fig:clahe}  \\
+	~ & ~ & ~ & ~ & ~ & ~\\
+    Bilateral  & Sim         & Histogram Equalization & Bilateral        & Sim     & \ref{fig:bilateral} \\
+    Gaussian   & Sim         & Histogram Equalization & Gaussian         & Sim     & \ref{fig:gaussian}  \\
+    AKF         & Sim         & Histogram Equalization & Kuwahara Anisotropico & Sim & \ref{fig:akf}     \\
+    \hline\hline
+    \end{tabular}
+	\label{tab:colecoes}
+	\end{center}
+\end{table}
+\end{center}
+
 \subsection{Deteção e segmentação da face} \label{sec:pre-detecao}
 Na revisão efetuada ao estado da arte do reconhecimento facial em imagens destacou-se a importância da resolução de um conjunto de sub-problemas específicos para um reconhecimento facial eficaz (ver \ref{sec:sub-problemas}), nomeadamente a deteção e segmentação das faces existentes numa imagem e  a remoção de elementos de fundo externos à imagem. Para a resolução deste problema, revelou-se necessário a avaliação de diferentes alternativas relativamente à forma como é efetuada a segmentação da face da restante imagem, assim como a determinação do impacto dessa segmentação no processo de reconhecimento.
 
 Após uma análise das diferente alternativas existentes, e através de alguns teste intermédios realizados durante o período de desenvolvimento, foram então criadas as galerias de imagens Original, figura \ref{fig:original}; Cropped, figura \ref{fig:cropped}; e Masked, figura \ref{fig:masked}. A primeira, é constituída pelas imagens originais da biblioteca LFW-a e permite estabelecer uma base de comparação entre as imagens segmentadas e as imagens originais. A galeria cropped é composta por um conjunto de imagens onde as faces foram detetadas e segmentadas pelo detetor facial implementado e descrito no capítulo \ref{sec:facedetector}. A terceira e última galeria criada possui as mesmas imagens da galeria Cropped, sobre as quais foi posteriormente aplicada uma máscara elíptica de modo a aumentar a área de fundo removida das imagens recortadas.
 
-\subsection{Normalização do Contraste} \label{sec:pre-normalizacao}
-A normalização das imagens em termos de contraste é passo comum e essencial à maioria dos sistemas de reconhecimento facial automático modernos, tal como destacado no capítulo \ref{chap:reco} desta dissertação. Assim sendo, no decorrer do desenvolvimento do sistema de reconhecimento facial Visage, revelou-se também importante analisar o qual o impacto da normalização do contraste nas imagens utilizadas, assim como qual a melhor forma de efetuar a sua normalização. Foram então estudadas três formas distintas de efetuar a normalização do contraste, \textit{Contrast Streching}, Equalização Histograma e \textit{CLAHE}, descritas em \ref{sec:normalizacao}.
-
-Da aplicação da técnica de contrast streching às imagens presentes nos conjuntos de teste descritos anteriormente resultou a criação da galeria Normalized. As imagens normalizadas através da equalização simples do histograma encontram-se representadas na galeria Equalized e as normalizadas pela técnica \textit{CLAHE} encontram-se representadas na galeria com o mesmo nome. Para além de normalizadas, as imagens foram também recortadas e após o seu processamento fou aplicada uma máscara elíptica sobre as mesmas. As figuras \ref{fig:normalized}, \ref{fig:equalized} e \ref{fig:clahe} representam exemplos da aplicação das três técnicas avaliadas sobre a mesma imagem.
-
-\subsection{Abstração Imagens} \label{sec:pre-abstração}
-O último conjunto de galerias criadas visa analisar a hipótese levantada no âmbito desta dissertação, acerca do impacto do uso de filtros de abstração no reconhecimento facial em imagens. A utilização de filtros de abstração constitui uma forma moderna de simplificação do conteúdo visual, permitindo remover informação redundante e aumentar o destaque da mensagem visual a transmitir. O uso de filtros de abstração no âmbito do sistema Visage, tem em vista analisar se a remoção de informação não essencial nas imagens processadas, permite uma melhor captura das características essenciais presentes na face representada. 
-
-Para além de abstraídas as imagens foram também sujeitas às tarefas de pré-processamento que apresentaram melhores resultados nos conjuntos anteriormente criados, nomeadamente a deteção e segmentação da face, a normalização do seu histograma e ainda a aplicação de uma máscara após a aplicação do filtro de abstração.
-
-A abstração das imagens foi efetuada com recurso aos filtros gaussiano, bilateral e kuwahara anisotrópico, descritos em \ref{sec:filtros}, resultando na criação das galerias Gaussian, Bilateral e AK, respectivamente.
-
-\begin{figure}
+\begin{figure}[t]
         \centering
         \begin{subfigure}[b]{0.2\textwidth}
                 \centering
-                \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006}
+                \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_original}
                 \caption{Original}
                 \label{fig:original-original} 
         \end{subfigure}%
@@ -201,38 +216,43 @@ A abstração das imagens foi efetuada com recurso aos filtros gaussiano, bilate
                 \caption{CLAHE}
                 \label{fig:clahe}
         \end{subfigure}
+        %
+        
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_gaussian}
+                \caption{Gaussian}
+                \label{fig:gaussian} 
+        \end{subfigure}
+        ~ ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_bilateral}
+                \caption{Bilateral}
+                \label{fig:bilateral}
+        \end{subfigure}
+        ~ ~
+        \begin{subfigure}[b]{0.2\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{angelina/Angelina_Jolie_0006_akf}
+                \caption{AKF}
+                \label{fig:akf}
+        \end{subfigure}
         \caption{Exemplo dos vários pré-processamentos disponíveis.}
         \label{fig:galeriaspreprocessadas}   
 \end{figure}
 
+\subsection{Normalização do Contraste} \label{sec:pre-normalizacao}
+A normalização das imagens em termos de contraste é passo comum e essencial à maioria dos sistemas de reconhecimento facial automático modernos, tal como destacado no capítulo \ref{chap:reco} desta dissertação. Assim sendo, no decorrer do desenvolvimento do sistema de reconhecimento facial Visage, revelou-se também importante analisar o qual o impacto da normalização do contraste nas imagens utilizadas, assim como qual a melhor forma de efetuar a sua normalização. Foram então estudadas três formas distintas de efetuar a normalização do contraste, \textit{Contrast Streching}, Equalização Histograma e \textit{CLAHE}, descritas em \ref{sec:normalizacao}.
 
-\begin{center}
-\begin{table}
-	\caption{Galerias criadas após pré-processamento.}
-	\begin{center}
-    \begin{tabular}{l|cccc|c}
-    \hline\hline
-    Designação & Recortada   & Normalização           & Filtro Abstração & Máscara & Exemplo \\
-	\hline
-    Original   &   -         & -                      & -                &   -     & \ref{fig:original} \\
-	~ & ~ & ~ & ~ & ~ & ~\\
-    Cropped    & Sim         & -                      & -                &   -     & \ref{fig:cropped}  \\
-    Masked     & Sim         & -                      & -                & Sim     & \ref{fig:masked}  \\
-	~ & ~ & ~ & ~ & ~ & ~\\
-    Normalized & Sim         & Constrast Streching    & -                & Sim     & \ref{fig:normalized}  \\
-    Equalized  & Sim         & Histogram Equalization & -                & Sim     & \ref{fig:equalized}  \\
-    CLAHE      & Sim         & CLAHE                  & -                & Sim     & \ref{fig:clahe}  \\
-	~ & ~ & ~ & ~ & ~ & ~\\
-    Bilateral  & Sim         & Histogram Equalization & Bilateral        & Sim       \\
-    Gaussian   & Sim         & Histogram Equalization & Gaussian         & Sim       \\
-    AK         & Sim         & Histogram Equalization & Kuwahara Anisotropico & Sim  \\
-    \hline\hline
-    \end{tabular}
-	\label{tab:colecoes}
-	\end{center}
-\end{table}
-\end{center}
+Da aplicação da técnica de contrast streching às imagens presentes nos conjuntos de teste descritos anteriormente resultou a criação da galeria Normalized. As imagens normalizadas através da equalização simples do histograma encontram-se representadas na galeria Equalized e as normalizadas pela técnica \textit{CLAHE} encontram-se representadas na galeria com o mesmo nome. Para além de normalizadas, as imagens foram também recortadas e após o seu processamento fou aplicada uma máscara elíptica sobre as mesmas. As figuras \ref{fig:normalized}, \ref{fig:equalized} e \ref{fig:clahe} representam exemplos da aplicação das três técnicas avaliadas sobre a mesma imagem.
 
+\subsection{Abstração Imagens} \label{sec:pre-abstração}
+O último conjunto de galerias criadas visa analisar a hipótese levantada no âmbito desta dissertação, acerca do impacto do uso de filtros de abstração no reconhecimento facial em imagens. A utilização de filtros de abstração constitui uma forma moderna de simplificação do conteúdo visual, permitindo remover informação redundante e aumentar o destaque da mensagem visual a transmitir. O uso de filtros de abstração no âmbito do sistema Visage, tem em vista analisar se a remoção de informação não essencial nas imagens processadas, permite uma melhor captura das características essenciais presentes na face representada. 
+
+Para além de abstraídas as imagens foram também sujeitas às tarefas de pré-processamento que apresentaram melhores resultados nos conjuntos anteriormente criados, nomeadamente a deteção e segmentação da face, a normalização do seu histograma e ainda a aplicação de uma máscara após a aplicação do filtro de abstração.
+
+A abstração das imagens foi efetuada com recurso aos filtros gaussiano, bilateral e kuwahara anisotrópico, descritos em \ref{sec:filtros}, resultando na criação das galerias Gaussian, Bilateral e AKF, respectivamente.
 
 \section{Avaliação \textit{Closed-Set Identification}} \label{sec:avaliacao1}
 Tal como introduzido na secção \ref{sec:problema}, o paradigma de \textit{closed-set identification}, constitui um sub-problema de identificação em que uma prova é apresentada ao sistema e pretende-se que este devolva a identidade da pessoa presente na imagem. Neste caso particular do problema de identificação, todas as provas apresentadas possuem uma correspondência na galeria, em oposição ao caso geral de identificação, no qual pode ou não haver uma correspondência.
@@ -350,6 +370,19 @@ Ao nível das três técnicas utilizadas é possível concluir que as duas varia
 Finalmente, a análise comparativa dos resultados obtidos para os três algoritmos implementados, ilustrada pelo gráfico \ref{fig:exp2_comaparacao}, permite concluir que após a normalização do histograma das imagens o desempenho dos algoritmos apresenta uma diferença muito menor do que a registada anteriormente e ilustrada pelo gráfico \ref{fig:exp1_comaparacao}. Nesta experiência o algoritmo LBPH continua a ser o algoritmo com melhor desempenho, registando no entanto uma diferença de apenas 1.8\% e 6.0\% para os algoritmos \textit{Fisherfaces} e \textit{Eigenfaces}, respetivamente, na taxa de identificação de ranking 1 no conjunto Equalized. De notar ainda que, a partir do ranking de nível 2, o algoritmo  \textit{Eigenfaces} possui uma taxa de identificação idêntica ao valores obtidos pela algoritmo \textit{Fisherfaces}, ultrapassando o desempenho do segundo, a partir do ranking 11. Esta grange evolução no desempenho, notada para o algoritmo \textit{Eigenfaces}, em contraste com a ligeira melhoria obtida pelos restantes denota a complexidade associada ao problema de reconhecimento facial automático, nomeadamente no que diz respeito à forma como diferentes fatores afetam de forma diferenciada diferentes algoritmos e diferentes conjuntos de dados.
 
 \subsection{Resultados Experiência 3: Abstração de Imagens}
+lorem ipsum
+
+lorem ipsum
+
+lorem ipsum
+
+
+lorem ipsum
+
+lorem ipsum
+
+lorem ipsum
+
 \begin{figure}[p]
         \centering
         \begin{subfigure}[b]{0.58\textwidth}
@@ -442,6 +475,9 @@ Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos re
     Normalized & 42.4\%          & 53.5\%           & \textbf{57.2\%}    \\
     Equalized  & 55.2\%          & 57.3\%           & \textbf{59.6\%}    \\
     CLAHE      & 53.6\%          & 55.9\%           & \textbf{56.5\%}    \\
+    Gaussian   & 55.3\%          & 54.2\%           & \textbf{58.1\%}    \\
+    Bilateral  & 54.6\%          & \textbf{54.7\%}           & 53.8\%    \\
+    AKF        & 52.8\%          & \textbf{53.9\%}           & 43.0\%             \\
     \hline\hline
     \end{tabular}
     \label{tab:resultadosprecicao}
@@ -478,6 +514,9 @@ Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjun
     Normalized & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
     Equalized  & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
     CLAHE      & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
+    Gaussian \\
+    Bilateral \\
+    AKF \\
     \hline\hline
     \end{tabular}
     \label{tab:ordem_algoritmos}
@@ -500,6 +539,9 @@ Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjun
     Normalized & 2.09\%          & 3.85\%           & \textbf{1.36\%}    \\
     Equalized  &\textbf{ 1.13\%} & 2.26\%           & \textbf{1.13\%}    \\
     CLAHE      & 2.38\%          & 4.03\%           & \textbf{1.17\%}    \\
+    Gaussian   & \textbf{1.80\%}          & 2.22\%           & 2.51\%             \\
+    Bilateral  & \textbf{1.54\%}          & 3.03\%           & 1.92\%             \\
+    AKF        & \textbf{1.26\%}          & 3.93\%           & 2.43\%             \\ 
     \hline\hline
     \end{tabular}
     \label{tab:desviopadrao}
