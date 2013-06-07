@@ -255,6 +255,7 @@ void Evaluator::evaluatePrecision(size_t threshold){
 	rightPredictions.resize(threshold, 0);
 	int nImages= 0;
 	int imagesFoundTotal = 0;
+	int peopleFound = 0;
 
 	clock_t tStart = clock();
 	outputfile << endl;
@@ -320,7 +321,12 @@ void Evaluator::evaluatePrecision(size_t threshold){
 		outputfile << setw(45) << "AVG per Person |";
 		precisionRightPredictions /= imagesTested;
 		avgPredictions += precisionRightPredictions;
-		times /= imagesFoundPerson;
+		if(imagesFoundPerson > 0){
+			times /= imagesFoundPerson;
+			peopleFound++;
+		}else{
+			times = 0;
+		}
 		avgTimes += times;
 		imagesFoundTotal += imagesFoundPerson;
 		outputfile << setw(10) << precisionRightPredictions << "% | "<<setw(18)<< times << " | " << endl;
@@ -336,7 +342,7 @@ void Evaluator::evaluatePrecision(size_t threshold){
 	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	avgPredictions /= this->lib.people.size();
-	avgTimes /= this->lib.people.size();
+	avgTimes /= peopleFound;
 	outputfile << setw(9) << avgPredictions << "% | " << setw(5) << 1/(avgPredictions/100)<<  " | "<< setw(10) << avgTimes << " | " << endl;
 	csvFile << avgPredictions << ";" << 1/(avgPredictions/100) << ";" <<  avgTimes << endl;
 
