@@ -1,4 +1,4 @@
-C:\VisageCollections\cropped_clahe\
+C:\VisageCollections\Filters\akf_clahe\
 Alejandro_Toledo\out\Alejandro_Toledo_0002-out.png;121
 Alejandro_Toledo\out\Alejandro_Toledo_0015-out.png;121
 Alejandro_Toledo\out\Alejandro_Toledo_0014-out.png;121
