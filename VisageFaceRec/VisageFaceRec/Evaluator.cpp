@@ -254,6 +254,7 @@ void Evaluator::evaluatePrecision(size_t threshold){
 	double avgTimes = 0.0;
 	rightPredictions.resize(threshold, 0);
 	int nImages= 0;
+	int imagesFoundTotal = 0;
 
 	clock_t tStart = clock();
 	outputfile << endl;
@@ -268,6 +269,7 @@ void Evaluator::evaluatePrecision(size_t threshold){
 		double precisionRightPredictions = 0.0;
 		double times = 0.0;
 		int imagesTested = 0;
+		int imagesFoundPerson = 0;
 
 		outputfile << this->lib.people[i].getName() << "  " << this->lib.people[i].getTrainImages().size() << " | " << 
 			this->lib.people[i].getTestImages().size() << endl;
@@ -297,6 +299,8 @@ void Evaluator::evaluatePrecision(size_t threshold){
 						avgPredictionsFlat+=precision;
 						avgTimesFlat+=timeImage;
 						foundMatch = true;
+						
+						imagesFoundPerson++; // to compute the right time, avoiding time=0 when not found
 						break;
 					}
 				}
@@ -316,8 +320,9 @@ void Evaluator::evaluatePrecision(size_t threshold){
 		outputfile << setw(45) << "AVG per Person |";
 		precisionRightPredictions /= imagesTested;
 		avgPredictions += precisionRightPredictions;
-		times /= imagesTested;
+		times /= imagesFoundPerson;
 		avgTimes += times;
+		imagesFoundTotal += imagesFoundPerson;
 		outputfile << setw(10) << precisionRightPredictions << "% | "<<setw(18)<< times << " | " << endl;
 
 	}//end of all the people testing
@@ -342,7 +347,7 @@ void Evaluator::evaluatePrecision(size_t threshold){
 	outputfile << setw(46) <<ss.str();
 	totalPercentage = 0;
 	avgPredictionsFlat /= nImages;
-	avgTimesFlat /= nImages;
+	avgTimesFlat /= imagesFoundTotal;
 	outputfile << setw(9) << avgPredictionsFlat << "% | " << setw(5) << 1/(avgPredictionsFlat/100)<<  " | "<< setw(10) << avgTimesFlat << " | " << endl;
 	csvFile << avgPredictionsFlat << ";" << 1/(avgPredictionsFlat/100) << ";" <<  avgTimesFlat << endl;
 	outputfile <<string(80, '=') << endl;

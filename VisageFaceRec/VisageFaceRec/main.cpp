@@ -249,13 +249,13 @@ int maskDir(int argc, const char *argv[]){
 
 int main(int argc, const char *argv[]) {
 	/// FaceDetector.exe
-	return faceDetector(argc, argv);
+	//return faceDetector(argc, argv);
 
 	/// CsvCreator.exe
 	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
-	//return faceRecognizer(argc, argv);
+	return faceRecognizer(argc, argv);
 
 	/// trainAndSaveModel.exe
 	//return trainAndSaveModel(argc, argv);
