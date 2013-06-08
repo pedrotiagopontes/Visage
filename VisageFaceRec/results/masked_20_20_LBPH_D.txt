@@ -4,9 +4,9 @@ Library: ..\data\masked_20_20_D.txt
 	Total People: 59
 	Images per person MIN | MAX: 20 | 20
 	Percentage of trainned images per person: 80
-Loaded in: 0.059 seconds
+Loaded in: 0 seconds
 
-Trainned model LBPH with 944 images in 3.956 seconds 
+Trainned model LBPH with 944 images in 3.058 seconds 
 
                               Image   Label |  1º Pred     Conf  |  2º Pred     Conf  |  3º Pred     Conf  |  4º Pred     Conf  |  5º Pred     Conf  |  6º Pred     Conf  |  7º Pred     Conf  |  8º Pred     Conf  |  9º Pred     Conf  | 10º Pred     Conf  | 11º Pred     Conf  | 12º Pred     Conf  | 13º Pred     Conf  | 14º Pred     Conf  | 15º Pred     Conf  | 16º Pred     Conf  | 17º Pred     Conf  | 18º Pred     Conf  | 19º Pred     Conf  | 20º Pred     Conf  | 21º Pred     Conf  | 22º Pred     Conf  | 23º Pred     Conf  | 24º Pred     Conf  | 25º Pred     Conf  | 26º Pred     Conf  | 27º Pred     Conf  | 28º Pred     Conf  | 29º Pred     Conf  | 30º Pred     Conf  | 
 Alejandro_Toledo  16 | 4
@@ -370,369 +370,369 @@ Winona_Ryder  16 | 4
 ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
             RECOGNITION % FLAT (236 images) |  46% (109):  46%(109)|  10% (23):  56%(132)|   9% (21):  65%(153)|   4% ( 9):  69%(162)|   3% ( 7):  72%(169)|   3% ( 6):  74%(175)|   3% ( 6):  77%(181)|   2% ( 4):  78%(185)|   1% ( 2):  79%(187)|   1% ( 2):  80%(189)|   3% ( 6):  83%(195)|   1% ( 2):  83%(197)|   1% ( 3):  85%(200)|   1% ( 2):  86%(202)|   0% ( 1):  86%(203)|   0% ( 1):  86%(204)|   1% ( 2):  87%(206)|   2% ( 4):  89%(210)|   0% ( 0):  89%(210)|   1% ( 3):  90%(213)|   1% ( 2):  91%(215)|   0% ( 0):  91%(215)|   1% ( 3):  92%(218)|   1% ( 3):  94%(221)|   0% ( 1):  94%(222)|   0% ( 1):  94%(223)|   0% ( 1):  95%(224)|   0% ( 0):  95%(224)|   0% ( 0):  95%(224)|   0% ( 0):  95%(224)| 
 ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-Tested 236 images in 29.1780 seconds
+Tested 236 images in 37.8640 seconds
 
                               Image   Label |  Precision | Level |    Time(s) | 
 Alejandro_Toledo  16 | 4
-          Alejandro_Toledo_0023.jpg     121 |    8.3333% |    12 |     0.1490 | 
-          Alejandro_Toledo_0009.jpg     121 |  100.0000% |     1 |     0.1470 | 
-          Alejandro_Toledo_0007.jpg     121 |  100.0000% |     1 |     0.0960 | 
-          Alejandro_Toledo_0013.jpg     121 |   33.3333% |     3 |     0.0990 | 
-                             AVG per Person |   60.4167% |             0.1228 | 
+          Alejandro_Toledo_0023.jpg     121 |   8.33333% |    12 |      0.203 | 
+          Alejandro_Toledo_0009.jpg     121 |       100% |     1 |      0.094 | 
+          Alejandro_Toledo_0007.jpg     121 |       100% |     1 |      0.078 | 
+          Alejandro_Toledo_0013.jpg     121 |   33.3333% |     3 |      0.156 | 
+                             AVG per Person |   60.4167% |            0.13275 | 
 Alvaro_Uribe  16 | 4
-              Alvaro_Uribe_0007.jpg     204 |  100.0000% |     1 |     0.0970 | 
-              Alvaro_Uribe_0015.jpg     204 |   50.0000% |     2 |     0.1320 | 
-              Alvaro_Uribe_0009.jpg     204 |  100.0000% |     1 |     0.1130 | 
-              Alvaro_Uribe_0027.jpg     204 |  100.0000% |     1 |     0.1250 | 
-                             AVG per Person |   87.5000% |             0.1168 | 
+              Alvaro_Uribe_0007.jpg     204 |       100% |     1 |      0.093 | 
+              Alvaro_Uribe_0015.jpg     204 |        50% |     2 |      0.125 | 
+              Alvaro_Uribe_0009.jpg     204 |       100% |     1 |      0.156 | 
+              Alvaro_Uribe_0027.jpg     204 |       100% |     1 |      0.094 | 
+                             AVG per Person |      87.5% |              0.117 | 
 Amelie_Mauresmo  16 | 4
-           Amelie_Mauresmo_0015.jpg     223 |  100.0000% |     1 |     0.1170 | 
-           Amelie_Mauresmo_0021.jpg     223 |   33.3333% |     3 |     0.1510 | 
-           Amelie_Mauresmo_0009.jpg     223 |  100.0000% |     1 |     0.0970 | 
-           Amelie_Mauresmo_0018.jpg     223 |  100.0000% |     1 |     0.1590 | 
-                             AVG per Person |   83.3333% |             0.1310 | 
+           Amelie_Mauresmo_0015.jpg     223 |       100% |     1 |      0.093 | 
+           Amelie_Mauresmo_0021.jpg     223 |   33.3333% |     3 |      0.156 | 
+           Amelie_Mauresmo_0009.jpg     223 |       100% |     1 |      0.094 | 
+           Amelie_Mauresmo_0018.jpg     223 |       100% |     1 |      0.156 | 
+                             AVG per Person |   83.3333% |            0.12475 | 
 Andre_Agassi  16 | 4
-              Andre_Agassi_0011.jpg     272 |  100.0000% |     1 |     0.1580 | 
-              Andre_Agassi_0005.jpg     272 |   14.2857% |     7 |     0.0960 | 
-              Andre_Agassi_0026.jpg     272 |   50.0000% |     2 |     0.1170 | 
-              Andre_Agassi_0024.jpg     272 |   33.3333% |     3 |     0.1260 | 
-                             AVG per Person |   49.4048% |             0.1243 | 
+              Andre_Agassi_0011.jpg     272 |       100% |     1 |      0.094 | 
+              Andre_Agassi_0005.jpg     272 |   14.2857% |     7 |      0.093 | 
+              Andre_Agassi_0026.jpg     272 |        50% |     2 |       0.11 | 
+              Andre_Agassi_0024.jpg     272 |   33.3333% |     3 |      0.093 | 
+                             AVG per Person |   49.4048% |             0.0975 | 
 Angelina_Jolie  16 | 4
-            Angelina_Jolie_0009.jpg     302 |   12.5000% |     8 |     0.1520 | 
-            Angelina_Jolie_0014.jpg     302 |  100.0000% |     1 |     0.0980 | 
-            Angelina_Jolie_0012.jpg     302 |    4.3478% |    23 |     0.0990 | 
-            Angelina_Jolie_0020.jpg     302 |   25.0000% |     4 |     0.1390 | 
-                             AVG per Person |   35.4620% |             0.1220 | 
+            Angelina_Jolie_0009.jpg     302 |      12.5% |     8 |      0.094 | 
+            Angelina_Jolie_0014.jpg     302 |       100% |     1 |      0.109 | 
+            Angelina_Jolie_0012.jpg     302 |   4.34783% |    23 |      0.094 | 
+            Angelina_Jolie_0020.jpg     302 |        25% |     4 |      0.109 | 
+                             AVG per Person |    35.462% |             0.1015 | 
 Ariel_Sharon  16 | 4
-              Ariel_Sharon_0017.jpg     370 |    4.7619% |    21 |     0.2170 | 
-              Ariel_Sharon_0049.jpg     370 |  100.0000% |     1 |     0.0970 | 
-              Ariel_Sharon_0053.jpg     370 |  100.0000% |     1 |     0.0950 | 
-              Ariel_Sharon_0051.jpg     370 |  100.0000% |     1 |     0.1480 | 
-                             AVG per Person |   76.1905% |             0.1392 | 
+              Ariel_Sharon_0017.jpg     370 |    4.7619% |    21 |      0.093 | 
+              Ariel_Sharon_0049.jpg     370 |       100% |     1 |      0.094 | 
+              Ariel_Sharon_0053.jpg     370 |       100% |     1 |      0.109 | 
+              Ariel_Sharon_0051.jpg     370 |       100% |     1 |      0.094 | 
+                             AVG per Person |   76.1905% |             0.0975 | 
 Arnold_Schwarzenegger  16 | 4
-     Arnold_Schwarzenegger_0042.jpg     386 |    4.3478% |    23 |     0.0950 | 
+     Arnold_Schwarzenegger_0042.jpg     386 |   4.34783% |    23 |      0.093 | 
      Arnold_Schwarzenegger_0021.jpg     386 |         0% |   INF |        INF | 
-     Arnold_Schwarzenegger_0002.jpg     386 |  100.0000% |     1 |     0.1580 | 
-     Arnold_Schwarzenegger_0013.jpg     386 |   11.1111% |     9 |     0.0990 | 
-                             AVG per Person |   28.8647% |             0.0880 | 
+     Arnold_Schwarzenegger_0002.jpg     386 |       100% |     1 |      0.093 | 
+     Arnold_Schwarzenegger_0013.jpg     386 |   11.1111% |     9 |      0.109 | 
+                             AVG per Person |   28.8647% |          0.0983333 | 
 Atal_Bihari_Vajpayee  16 | 4
-      Atal_Bihari_Vajpayee_0013.jpg     417 |   20.0000% |     5 |     0.1140 | 
-      Atal_Bihari_Vajpayee_0006.jpg     417 |   20.0000% |     5 |     0.1490 | 
-      Atal_Bihari_Vajpayee_0011.jpg     417 |    6.2500% |    16 |     0.0980 | 
-      Atal_Bihari_Vajpayee_0020.jpg     417 |   14.2857% |     7 |     0.1110 | 
-                             AVG per Person |   15.1339% |             0.1180 | 
+      Atal_Bihari_Vajpayee_0013.jpg     417 |        20% |     5 |      0.094 | 
+      Atal_Bihari_Vajpayee_0006.jpg     417 |        20% |     5 |      0.094 | 
+      Atal_Bihari_Vajpayee_0011.jpg     417 |      6.25% |    16 |      0.109 | 
+      Atal_Bihari_Vajpayee_0020.jpg     417 |   14.2857% |     7 |      0.093 | 
+                             AVG per Person |   15.1339% |             0.0975 | 
 Bill_Clinton  16 | 4
-              Bill_Clinton_0029.jpg     544 |   12.5000% |     8 |     0.1510 | 
-              Bill_Clinton_0010.jpg     544 |    4.0000% |    25 |     0.0970 | 
-              Bill_Clinton_0020.jpg     544 |   33.3333% |     3 |     0.1090 | 
-              Bill_Clinton_0023.jpg     544 |  100.0000% |     1 |     0.1540 | 
-                             AVG per Person |   37.4583% |             0.1277 | 
+              Bill_Clinton_0029.jpg     544 |      12.5% |     8 |      0.094 | 
+              Bill_Clinton_0010.jpg     544 |         4% |    25 |      0.109 | 
+              Bill_Clinton_0020.jpg     544 |   33.3333% |     3 |      0.094 | 
+              Bill_Clinton_0023.jpg     544 |       100% |     1 |      0.093 | 
+                             AVG per Person |   37.4583% |             0.0975 | 
 Carlos_Menem  16 | 4
-              Carlos_Menem_0008.jpg     781 |    5.5556% |    18 |     0.0980 | 
-              Carlos_Menem_0009.jpg     781 |    3.8462% |    26 |     0.1500 | 
-              Carlos_Menem_0001.jpg     781 |  100.0000% |     1 |     0.1450 | 
-              Carlos_Menem_0014.jpg     781 |  100.0000% |     1 |     0.0980 | 
-                             AVG per Person |   52.3504% |             0.1227 | 
+              Carlos_Menem_0008.jpg     781 |   5.55556% |    18 |       0.11 | 
+              Carlos_Menem_0009.jpg     781 |   3.84615% |    26 |      0.093 | 
+              Carlos_Menem_0001.jpg     781 |       100% |     1 |      0.094 | 
+              Carlos_Menem_0014.jpg     781 |       100% |     1 |      0.093 | 
+                             AVG per Person |   52.3504% |             0.0975 | 
 Colin_Powell  16 | 4
-              Colin_Powell_0181.jpg    1047 |  100.0000% |     1 |     0.1010 | 
-              Colin_Powell_0008.jpg    1047 |   16.6667% |     6 |     0.1550 | 
-              Colin_Powell_0080.jpg    1047 |   50.0000% |     2 |     0.1020 | 
-              Colin_Powell_0066.jpg    1047 |  100.0000% |     1 |     0.1580 | 
-                             AVG per Person |   66.6667% |             0.1290 | 
+              Colin_Powell_0181.jpg    1047 |       100% |     1 |      0.094 | 
+              Colin_Powell_0008.jpg    1047 |   16.6667% |     6 |      0.109 | 
+              Colin_Powell_0080.jpg    1047 |        50% |     2 |      0.094 | 
+              Colin_Powell_0066.jpg    1047 |       100% |     1 |      0.094 | 
+                             AVG per Person |   66.6667% |            0.09775 | 
 David_Beckham  16 | 4
-             David_Beckham_0012.jpg    1207 |   33.3333% |     3 |     0.0980 | 
-             David_Beckham_0029.jpg    1207 |   50.0000% |     2 |     0.1570 | 
-             David_Beckham_0011.jpg    1207 |   20.0000% |     5 |     0.1100 | 
-             David_Beckham_0023.jpg    1207 |   50.0000% |     2 |     0.0990 | 
-                             AVG per Person |   38.3333% |             0.1160 | 
+             David_Beckham_0012.jpg    1207 |   33.3333% |     3 |      0.093 | 
+             David_Beckham_0029.jpg    1207 |        50% |     2 |      0.094 | 
+             David_Beckham_0011.jpg    1207 |        20% |     5 |      0.109 | 
+             David_Beckham_0023.jpg    1207 |        50% |     2 |      0.094 | 
+                             AVG per Person |   38.3333% |             0.0975 | 
 Donald_Rumsfeld  16 | 4
-           Donald_Rumsfeld_0012.jpg    1393 |   50.0000% |     2 |     0.1500 | 
-           Donald_Rumsfeld_0076.jpg    1393 |   14.2857% |     7 |     0.0980 | 
+           Donald_Rumsfeld_0012.jpg    1393 |        50% |     2 |      0.093 | 
+           Donald_Rumsfeld_0076.jpg    1393 |   14.2857% |     7 |      0.109 | 
            Donald_Rumsfeld_0061.jpg    1393 |         0% |   INF |        INF | 
-           Donald_Rumsfeld_0055.jpg    1393 |   14.2857% |     7 |     0.1140 | 
-                             AVG per Person |   19.6429% |             0.0905 | 
+           Donald_Rumsfeld_0055.jpg    1393 |   14.2857% |     7 |      0.109 | 
+                             AVG per Person |   19.6429% |           0.103667 | 
 George_Robertson  16 | 4
-          George_Robertson_0008.jpg    1865 |   50.0000% |     2 |     0.1410 | 
-          George_Robertson_0011.jpg    1865 |  100.0000% |     1 |     0.1550 | 
-          George_Robertson_0012.jpg    1865 |   25.0000% |     4 |     0.1070 | 
-          George_Robertson_0002.jpg    1865 |  100.0000% |     1 |     0.1410 | 
-                             AVG per Person |   68.7500% |             0.1360 | 
+          George_Robertson_0008.jpg    1865 |        50% |     2 |      0.094 | 
+          George_Robertson_0011.jpg    1865 |       100% |     1 |      0.093 | 
+          George_Robertson_0012.jpg    1865 |        25% |     4 |      0.094 | 
+          George_Robertson_0002.jpg    1865 |       100% |     1 |      0.109 | 
+                             AVG per Person |     68.75% |             0.0975 | 
 George_W_Bush  16 | 4
-             George_W_Bush_0405.jpg    1870 |  100.0000% |     1 |     0.0980 | 
-             George_W_Bush_0413.jpg    1870 |    5.5556% |    18 |     0.1550 | 
-             George_W_Bush_0067.jpg    1870 |    5.5556% |    18 |     0.1490 | 
+             George_W_Bush_0405.jpg    1870 |       100% |     1 |      0.094 | 
+             George_W_Bush_0413.jpg    1870 |   5.55556% |    18 |      0.093 | 
+             George_W_Bush_0067.jpg    1870 |   5.55556% |    18 |      0.094 | 
              George_W_Bush_0126.jpg    1870 |         0% |   INF |        INF | 
-                             AVG per Person |   27.7778% |             0.1005 | 
+                             AVG per Person |   27.7778% |          0.0936667 | 
 Gerhard_Schroeder  16 | 4
-         Gerhard_Schroeder_0046.jpg    1891 |  100.0000% |     1 |     0.0950 | 
-         Gerhard_Schroeder_0088.jpg    1891 |    5.8824% |    17 |     0.0950 | 
+         Gerhard_Schroeder_0046.jpg    1891 |       100% |     1 |      0.094 | 
+         Gerhard_Schroeder_0088.jpg    1891 |   5.88235% |    17 |      0.093 | 
          Gerhard_Schroeder_0019.jpg    1891 |         0% |   INF |        INF | 
-         Gerhard_Schroeder_0052.jpg    1891 |   50.0000% |     2 |     0.1340 | 
-                             AVG per Person |   38.9706% |             0.0810 | 
+         Gerhard_Schroeder_0052.jpg    1891 |        50% |     2 |      0.094 | 
+                             AVG per Person |   38.9706% |          0.0936667 | 
 Gloria_Macapagal_Arroyo  16 | 4
-   Gloria_Macapagal_Arroyo_0008.jpg    1932 |  100.0000% |     1 |     0.1100 | 
-   Gloria_Macapagal_Arroyo_0011.jpg    1932 |   33.3333% |     3 |     0.1120 | 
-   Gloria_Macapagal_Arroyo_0042.jpg    1932 |   50.0000% |     2 |     0.1980 | 
-   Gloria_Macapagal_Arroyo_0003.jpg    1932 |   50.0000% |     2 |     0.0970 | 
-                             AVG per Person |   58.3333% |             0.1293 | 
+   Gloria_Macapagal_Arroyo_0008.jpg    1932 |       100% |     1 |      0.109 | 
+   Gloria_Macapagal_Arroyo_0011.jpg    1932 |   33.3333% |     3 |      0.093 | 
+   Gloria_Macapagal_Arroyo_0042.jpg    1932 |        50% |     2 |      0.094 | 
+   Gloria_Macapagal_Arroyo_0003.jpg    1932 |        50% |     2 |      0.094 | 
+                             AVG per Person |   58.3333% |             0.0975 | 
 Gray_Davis  16 | 4
-                Gray_Davis_0002.jpg    1964 |  100.0000% |     1 |     0.0960 | 
-                Gray_Davis_0010.jpg    1964 |  100.0000% |     1 |     0.0970 | 
-                Gray_Davis_0021.jpg    1964 |  100.0000% |     1 |     0.1270 | 
-                Gray_Davis_0011.jpg    1964 |   33.3333% |     3 |     0.1440 | 
-                             AVG per Person |   83.3333% |             0.1160 | 
+                Gray_Davis_0002.jpg    1964 |       100% |     1 |      0.109 | 
+                Gray_Davis_0010.jpg    1964 |       100% |     1 |      0.093 | 
+                Gray_Davis_0021.jpg    1964 |       100% |     1 |      0.094 | 
+                Gray_Davis_0011.jpg    1964 |   33.3333% |     3 |      0.109 | 
+                             AVG per Person |   83.3333% |            0.10125 | 
 Guillermo_Coria  16 | 4
-           Guillermo_Coria_0004.jpg    1993 |  100.0000% |     1 |     0.0980 | 
-           Guillermo_Coria_0013.jpg    1993 |   14.2857% |     7 |     0.1540 | 
-           Guillermo_Coria_0026.jpg    1993 |  100.0000% |     1 |     0.0980 | 
-           Guillermo_Coria_0014.jpg    1993 |   25.0000% |     4 |     0.1070 | 
-                             AVG per Person |   59.8214% |             0.1142 | 
+           Guillermo_Coria_0004.jpg    1993 |       100% |     1 |      0.094 | 
+           Guillermo_Coria_0013.jpg    1993 |   14.2857% |     7 |      0.093 | 
+           Guillermo_Coria_0026.jpg    1993 |       100% |     1 |      0.094 | 
+           Guillermo_Coria_0014.jpg    1993 |        25% |     4 |      0.109 | 
+                             AVG per Person |   59.8214% |             0.0975 | 
 Hamid_Karzai  16 | 4
-              Hamid_Karzai_0018.jpg    2026 |   50.0000% |     2 |     0.1540 | 
-              Hamid_Karzai_0006.jpg    2026 |  100.0000% |     1 |     0.0960 | 
-              Hamid_Karzai_0003.jpg    2026 |  100.0000% |     1 |     0.1020 | 
-              Hamid_Karzai_0008.jpg    2026 |   33.3333% |     3 |     0.1650 | 
-                             AVG per Person |   70.8333% |             0.1293 | 
+              Hamid_Karzai_0018.jpg    2026 |        50% |     2 |      0.094 | 
+              Hamid_Karzai_0006.jpg    2026 |       100% |     1 |      0.093 | 
+              Hamid_Karzai_0003.jpg    2026 |       100% |     1 |       0.11 | 
+              Hamid_Karzai_0008.jpg    2026 |   33.3333% |     3 |      0.093 | 
+                             AVG per Person |   70.8333% |             0.0975 | 
 Hans_Blix  16 | 4
-                 Hans_Blix_0017.jpg    2043 |   50.0000% |     2 |     0.1000 | 
-                 Hans_Blix_0037.jpg    2043 |  100.0000% |     1 |     0.1510 | 
-                 Hans_Blix_0035.jpg    2043 |  100.0000% |     1 |     0.1000 | 
-                 Hans_Blix_0003.jpg    2043 |  100.0000% |     1 |     0.0960 | 
-                             AVG per Person |   87.5000% |             0.1117 | 
+                 Hans_Blix_0017.jpg    2043 |        50% |     2 |      0.094 | 
+                 Hans_Blix_0037.jpg    2043 |       100% |     1 |      0.093 | 
+                 Hans_Blix_0035.jpg    2043 |       100% |     1 |      0.094 | 
+                 Hans_Blix_0003.jpg    2043 |       100% |     1 |      0.094 | 
+                             AVG per Person |      87.5% |            0.09375 | 
 Hugo_Chavez  16 | 4
-               Hugo_Chavez_0029.jpg    2173 |  100.0000% |     1 |     0.1470 | 
-               Hugo_Chavez_0042.jpg    2173 |  100.0000% |     1 |     0.0980 | 
-               Hugo_Chavez_0051.jpg    2173 |    7.6923% |    13 |     0.1470 | 
-               Hugo_Chavez_0031.jpg    2173 |    9.0909% |    11 |     0.1140 | 
-                             AVG per Person |   54.1958% |             0.1265 | 
+               Hugo_Chavez_0029.jpg    2173 |       100% |     1 |      0.109 | 
+               Hugo_Chavez_0042.jpg    2173 |       100% |     1 |      0.093 | 
+               Hugo_Chavez_0051.jpg    2173 |   7.69231% |    13 |      0.094 | 
+               Hugo_Chavez_0031.jpg    2173 |   9.09091% |    11 |      0.094 | 
+                             AVG per Person |   54.1958% |             0.0975 | 
 Jack_Straw  16 | 4
-                Jack_Straw_0006.jpg    2275 |   20.0000% |     5 |     0.1200 | 
-                Jack_Straw_0008.jpg    2275 |  100.0000% |     1 |     0.1240 | 
-                Jack_Straw_0017.jpg    2275 |  100.0000% |     1 |     0.1440 | 
-                Jack_Straw_0011.jpg    2275 |   33.3333% |     3 |     0.1470 | 
-                             AVG per Person |   63.3333% |             0.1337 | 
+                Jack_Straw_0006.jpg    2275 |        20% |     5 |      0.094 | 
+                Jack_Straw_0008.jpg    2275 |       100% |     1 |      0.093 | 
+                Jack_Straw_0017.jpg    2275 |       100% |     1 |      0.094 | 
+                Jack_Straw_0011.jpg    2275 |   33.3333% |     3 |      0.094 | 
+                             AVG per Person |   63.3333% |            0.09375 | 
 Jacques_Chirac  16 | 4
-            Jacques_Chirac_0032.jpg    2283 |  100.0000% |     1 |     0.0970 | 
+            Jacques_Chirac_0032.jpg    2283 |       100% |     1 |      0.093 | 
             Jacques_Chirac_0006.jpg    2283 |         0% |   INF |        INF | 
-            Jacques_Chirac_0030.jpg    2283 |  100.0000% |     1 |     0.1530 | 
-            Jacques_Chirac_0049.jpg    2283 |   50.0000% |     2 |     0.1140 | 
-                             AVG per Person |   62.5000% |             0.0910 | 
+            Jacques_Chirac_0030.jpg    2283 |       100% |     1 |       0.14 | 
+            Jacques_Chirac_0049.jpg    2283 |        50% |     2 |      0.094 | 
+                             AVG per Person |      62.5% |              0.109 | 
 Jean_Chretien  16 | 4
-             Jean_Chretien_0028.jpg    2470 |   25.0000% |     4 |     0.1450 | 
-             Jean_Chretien_0017.jpg    2470 |    7.6923% |    13 |     0.0970 | 
-             Jean_Chretien_0025.jpg    2470 |  100.0000% |     1 |     0.1390 | 
-             Jean_Chretien_0009.jpg    2470 |  100.0000% |     1 |     0.0970 | 
-                             AVG per Person |   58.1731% |             0.1195 | 
+             Jean_Chretien_0028.jpg    2470 |        25% |     4 |      0.094 | 
+             Jean_Chretien_0017.jpg    2470 |   7.69231% |    13 |      0.156 | 
+             Jean_Chretien_0025.jpg    2470 |       100% |     1 |      0.093 | 
+             Jean_Chretien_0009.jpg    2470 |       100% |     1 |      0.109 | 
+                             AVG per Person |   58.1731% |              0.113 | 
 Jennifer_Aniston  16 | 4
-          Jennifer_Aniston_0006.jpg    2500 |   33.3333% |     3 |     0.1530 | 
-          Jennifer_Aniston_0016.jpg    2500 |  100.0000% |     1 |     0.1010 | 
-          Jennifer_Aniston_0003.jpg    2500 |  100.0000% |     1 |     0.1500 | 
-          Jennifer_Aniston_0002.jpg    2500 |  100.0000% |     1 |     0.1030 | 
-                             AVG per Person |   83.3333% |             0.1268 | 
+          Jennifer_Aniston_0006.jpg    2500 |   33.3333% |     3 |      0.125 | 
+          Jennifer_Aniston_0016.jpg    2500 |       100% |     1 |      0.141 | 
+          Jennifer_Aniston_0003.jpg    2500 |       100% |     1 |      0.093 | 
+          Jennifer_Aniston_0002.jpg    2500 |       100% |     1 |      0.125 | 
+                             AVG per Person |   83.3333% |              0.121 | 
 Jennifer_Capriati  16 | 4
-         Jennifer_Capriati_0015.jpg    2501 |  100.0000% |     1 |     0.0960 | 
-         Jennifer_Capriati_0040.jpg    2501 |   12.5000% |     8 |     0.1420 | 
-         Jennifer_Capriati_0028.jpg    2501 |  100.0000% |     1 |     0.0980 | 
+         Jennifer_Capriati_0015.jpg    2501 |       100% |     1 |      0.109 | 
+         Jennifer_Capriati_0040.jpg    2501 |      12.5% |     8 |      0.125 | 
+         Jennifer_Capriati_0028.jpg    2501 |       100% |     1 |      0.094 | 
          Jennifer_Capriati_0005.jpg    2501 |         0% |   INF |        INF | 
-                             AVG per Person |   53.1250% |             0.0840 | 
+                             AVG per Person |    53.125% |           0.109333 | 
 Jennifer_Lopez  16 | 4
-            Jennifer_Lopez_0016.jpg    2508 |  100.0000% |     1 |     0.1520 | 
-            Jennifer_Lopez_0002.jpg    2508 |  100.0000% |     1 |     0.1020 | 
-            Jennifer_Lopez_0009.jpg    2508 |  100.0000% |     1 |     0.1500 | 
-            Jennifer_Lopez_0021.jpg    2508 |    4.7619% |    21 |     0.0980 | 
-                             AVG per Person |   76.1905% |             0.1255 | 
+            Jennifer_Lopez_0016.jpg    2508 |       100% |     1 |      0.109 | 
+            Jennifer_Lopez_0002.jpg    2508 |       100% |     1 |      0.109 | 
+            Jennifer_Lopez_0009.jpg    2508 |       100% |     1 |      0.094 | 
+            Jennifer_Lopez_0021.jpg    2508 |    4.7619% |    21 |      0.093 | 
+                             AVG per Person |   76.1905% |            0.10125 | 
 Jeremy_Greenstock  16 | 4
-         Jeremy_Greenstock_0007.jpg    2526 |  100.0000% |     1 |     0.0980 | 
-         Jeremy_Greenstock_0003.jpg    2526 |   50.0000% |     2 |     0.1520 | 
-         Jeremy_Greenstock_0001.jpg    2526 |    6.6667% |    15 |     0.0960 | 
-         Jeremy_Greenstock_0019.jpg    2526 |   33.3333% |     3 |     0.1610 | 
-                             AVG per Person |   47.5000% |             0.1267 | 
+         Jeremy_Greenstock_0007.jpg    2526 |       100% |     1 |      0.094 | 
+         Jeremy_Greenstock_0003.jpg    2526 |        50% |     2 |      0.109 | 
+         Jeremy_Greenstock_0001.jpg    2526 |   6.66667% |    15 |      0.094 | 
+         Jeremy_Greenstock_0019.jpg    2526 |   33.3333% |     3 |      0.093 | 
+                             AVG per Person |      47.5% |             0.0975 | 
 John_Ashcroft  16 | 4
-             John_Ashcroft_0038.jpg    2687 |  100.0000% |     1 |     0.0970 | 
-             John_Ashcroft_0035.jpg    2687 |   50.0000% |     2 |     0.0990 | 
-             John_Ashcroft_0010.jpg    2687 |    9.0909% |    11 |     0.1580 | 
-             John_Ashcroft_0020.jpg    2687 |    4.1667% |    24 |     0.1590 | 
-                             AVG per Person |   40.8144% |             0.1283 | 
+             John_Ashcroft_0038.jpg    2687 |       100% |     1 |      0.094 | 
+             John_Ashcroft_0035.jpg    2687 |        50% |     2 |      0.094 | 
+             John_Ashcroft_0010.jpg    2687 |   9.09091% |    11 |      0.109 | 
+             John_Ashcroft_0020.jpg    2687 |   4.16667% |    24 |      0.094 | 
+                             AVG per Person |   40.8144% |            0.09775 | 
 John_Negroponte  16 | 4
-           John_Negroponte_0006.jpg    2751 |  100.0000% |     1 |     0.0970 | 
-           John_Negroponte_0025.jpg    2751 |  100.0000% |     1 |     0.0950 | 
-           John_Negroponte_0012.jpg    2751 |  100.0000% |     1 |     0.0950 | 
-           John_Negroponte_0021.jpg    2751 |   10.0000% |    10 |     0.1510 | 
-                             AVG per Person |   77.5000% |             0.1095 | 
+           John_Negroponte_0006.jpg    2751 |       100% |     1 |      0.109 | 
+           John_Negroponte_0025.jpg    2751 |       100% |     1 |      0.094 | 
+           John_Negroponte_0012.jpg    2751 |       100% |     1 |      0.093 | 
+           John_Negroponte_0021.jpg    2751 |        10% |    10 |       0.11 | 
+                             AVG per Person |      77.5% |             0.1015 | 
 Jose_Maria_Aznar  16 | 4
-          Jose_Maria_Aznar_0019.jpg    2857 |    9.0909% |    11 |     0.0960 | 
-          Jose_Maria_Aznar_0014.jpg    2857 |  100.0000% |     1 |     0.1480 | 
-          Jose_Maria_Aznar_0021.jpg    2857 |  100.0000% |     1 |     0.0990 | 
-          Jose_Maria_Aznar_0001.jpg    2857 |  100.0000% |     1 |     0.1520 | 
-                             AVG per Person |   77.2727% |             0.1237 | 
+          Jose_Maria_Aznar_0019.jpg    2857 |   9.09091% |    11 |      0.093 | 
+          Jose_Maria_Aznar_0014.jpg    2857 |       100% |     1 |      0.094 | 
+          Jose_Maria_Aznar_0021.jpg    2857 |       100% |     1 |      0.093 | 
+          Jose_Maria_Aznar_0001.jpg    2857 |       100% |     1 |      0.094 | 
+                             AVG per Person |   77.2727% |             0.0935 | 
 Juan_Carlos_Ferrero  16 | 4
-       Juan_Carlos_Ferrero_0018.jpg    2885 |   50.0000% |     2 |     0.0980 | 
-       Juan_Carlos_Ferrero_0025.jpg    2885 |    8.3333% |    12 |     0.1430 | 
-       Juan_Carlos_Ferrero_0016.jpg    2885 |    9.0909% |    11 |     0.0970 | 
-       Juan_Carlos_Ferrero_0020.jpg    2885 |  100.0000% |     1 |     0.1190 | 
-                             AVG per Person |   41.8561% |             0.1143 | 
+       Juan_Carlos_Ferrero_0018.jpg    2885 |        50% |     2 |      0.109 | 
+       Juan_Carlos_Ferrero_0025.jpg    2885 |   8.33333% |    12 |      0.094 | 
+       Juan_Carlos_Ferrero_0016.jpg    2885 |   9.09091% |    11 |      0.093 | 
+       Juan_Carlos_Ferrero_0020.jpg    2885 |       100% |     1 |       0.11 | 
+                             AVG per Person |   41.8561% |             0.1015 | 
 Junichiro_Koizumi  16 | 4
-         Junichiro_Koizumi_0040.jpg    2940 |  100.0000% |     1 |     0.1220 | 
-         Junichiro_Koizumi_0060.jpg    2940 |    5.0000% |    20 |     0.1630 | 
-         Junichiro_Koizumi_0058.jpg    2940 |   16.6667% |     6 |     0.0980 | 
-         Junichiro_Koizumi_0048.jpg    2940 |  100.0000% |     1 |     0.1000 | 
-                             AVG per Person |   55.4167% |             0.1208 | 
+         Junichiro_Koizumi_0040.jpg    2940 |       100% |     1 |      0.093 | 
+         Junichiro_Koizumi_0060.jpg    2940 |         5% |    20 |      0.156 | 
+         Junichiro_Koizumi_0058.jpg    2940 |   16.6667% |     6 |      0.094 | 
+         Junichiro_Koizumi_0048.jpg    2940 |       100% |     1 |      0.093 | 
+                             AVG per Person |   55.4167% |              0.109 | 
 Kofi_Annan  16 | 4
-                Kofi_Annan_0011.jpg    3127 |  100.0000% |     1 |     0.1520 | 
-                Kofi_Annan_0022.jpg    3127 |  100.0000% |     1 |     0.1040 | 
-                Kofi_Annan_0017.jpg    3127 |  100.0000% |     1 |     0.1580 | 
-                Kofi_Annan_0008.jpg    3127 |  100.0000% |     1 |     0.1030 | 
-                             AVG per Person |  100.0000% |             0.1293 | 
+                Kofi_Annan_0011.jpg    3127 |       100% |     1 |      0.156 | 
+                Kofi_Annan_0022.jpg    3127 |       100% |     1 |      0.094 | 
+                Kofi_Annan_0017.jpg    3127 |       100% |     1 |      0.156 | 
+                Kofi_Annan_0008.jpg    3127 |       100% |     1 |      0.094 | 
+                             AVG per Person |       100% |              0.125 | 
 Laura_Bush  16 | 4
-                Laura_Bush_0012.jpg    3201 |  100.0000% |     1 |     0.1260 | 
-                Laura_Bush_0021.jpg    3201 |  100.0000% |     1 |     0.1000 | 
-                Laura_Bush_0015.jpg    3201 |  100.0000% |     1 |     0.1660 | 
-                Laura_Bush_0031.jpg    3201 |  100.0000% |     1 |     0.1520 | 
-                             AVG per Person |  100.0000% |             0.1360 | 
+                Laura_Bush_0012.jpg    3201 |       100% |     1 |      0.093 | 
+                Laura_Bush_0021.jpg    3201 |       100% |     1 |      0.125 | 
+                Laura_Bush_0015.jpg    3201 |       100% |     1 |      0.172 | 
+                Laura_Bush_0031.jpg    3201 |       100% |     1 |      0.094 | 
+                             AVG per Person |       100% |              0.121 | 
 Lindsay_Davenport  16 | 4
-         Lindsay_Davenport_0006.jpg    3319 |  100.0000% |     1 |     0.1060 | 
-         Lindsay_Davenport_0012.jpg    3319 |  100.0000% |     1 |     0.1360 | 
-         Lindsay_Davenport_0004.jpg    3319 |   33.3333% |     3 |     0.0980 | 
-         Lindsay_Davenport_0005.jpg    3319 |  100.0000% |     1 |     0.1500 | 
-                             AVG per Person |   83.3333% |             0.1225 | 
+         Lindsay_Davenport_0006.jpg    3319 |       100% |     1 |      0.109 | 
+         Lindsay_Davenport_0012.jpg    3319 |       100% |     1 |      0.109 | 
+         Lindsay_Davenport_0004.jpg    3319 |   33.3333% |     3 |      0.094 | 
+         Lindsay_Davenport_0005.jpg    3319 |       100% |     1 |      0.109 | 
+                             AVG per Person |   83.3333% |            0.10525 | 
 Lleyton_Hewitt  16 | 4
-            Lleyton_Hewitt_0024.jpg    3351 |   12.5000% |     8 |     0.1020 | 
-            Lleyton_Hewitt_0016.jpg    3351 |   16.6667% |     6 |     0.1210 | 
-            Lleyton_Hewitt_0005.jpg    3351 |    9.0909% |    11 |     0.1240 | 
-            Lleyton_Hewitt_0027.jpg    3351 |   33.3333% |     3 |     0.1560 | 
-                             AVG per Person |   17.8977% |             0.1257 | 
+            Lleyton_Hewitt_0024.jpg    3351 |      12.5% |     8 |      0.094 | 
+            Lleyton_Hewitt_0016.jpg    3351 |   16.6667% |     6 |      0.093 | 
+            Lleyton_Hewitt_0005.jpg    3351 |   9.09091% |    11 |      0.094 | 
+            Lleyton_Hewitt_0027.jpg    3351 |   33.3333% |     3 |      0.109 | 
+                             AVG per Person |   17.8977% |             0.0975 | 
 Luiz_Inacio_Lula_da_Silva  16 | 4
- Luiz_Inacio_Lula_da_Silva_0032.jpg    3401 |   25.0000% |     4 |     0.0980 | 
- Luiz_Inacio_Lula_da_Silva_0043.jpg    3401 |  100.0000% |     1 |     0.0970 | 
- Luiz_Inacio_Lula_da_Silva_0031.jpg    3401 |    5.8824% |    17 |     0.1470 | 
- Luiz_Inacio_Lula_da_Silva_0022.jpg    3401 |    7.1429% |    14 |     0.0990 | 
-                             AVG per Person |   34.5063% |             0.1102 | 
+ Luiz_Inacio_Lula_da_Silva_0032.jpg    3401 |        25% |     4 |      0.094 | 
+ Luiz_Inacio_Lula_da_Silva_0043.jpg    3401 |       100% |     1 |      0.093 | 
+ Luiz_Inacio_Lula_da_Silva_0031.jpg    3401 |   5.88235% |    17 |      0.094 | 
+ Luiz_Inacio_Lula_da_Silva_0022.jpg    3401 |   7.14286% |    14 |      0.109 | 
+                             AVG per Person |   34.5063% |             0.0975 | 
 Mahmoud_Abbas  16 | 4
-             Mahmoud_Abbas_0009.jpg    3433 |    4.1667% |    24 |     0.1640 | 
-             Mahmoud_Abbas_0029.jpg    3433 |    4.3478% |    23 |     0.0980 | 
-             Mahmoud_Abbas_0007.jpg    3433 |  100.0000% |     1 |     0.1540 | 
-             Mahmoud_Abbas_0002.jpg    3433 |    5.0000% |    20 |     0.0950 | 
-                             AVG per Person |   28.3786% |             0.1277 | 
+             Mahmoud_Abbas_0009.jpg    3433 |   4.16667% |    24 |      0.094 | 
+             Mahmoud_Abbas_0029.jpg    3433 |   4.34783% |    23 |      0.109 | 
+             Mahmoud_Abbas_0007.jpg    3433 |       100% |     1 |      0.094 | 
+             Mahmoud_Abbas_0002.jpg    3433 |         5% |    20 |      0.109 | 
+                             AVG per Person |   28.3786% |             0.1015 | 
 Megawati_Sukarnoputri  16 | 4
-     Megawati_Sukarnoputri_0025.jpg    3702 |  100.0000% |     1 |     0.1480 | 
-     Megawati_Sukarnoputri_0009.jpg    3702 |  100.0000% |     1 |     0.0970 | 
-     Megawati_Sukarnoputri_0003.jpg    3702 |  100.0000% |     1 |     0.0980 | 
-     Megawati_Sukarnoputri_0024.jpg    3702 |  100.0000% |     1 |     0.1050 | 
-                             AVG per Person |  100.0000% |             0.1120 | 
+     Megawati_Sukarnoputri_0025.jpg    3702 |       100% |     1 |      0.109 | 
+     Megawati_Sukarnoputri_0009.jpg    3702 |       100% |     1 |      0.094 | 
+     Megawati_Sukarnoputri_0003.jpg    3702 |       100% |     1 |      0.093 | 
+     Megawati_Sukarnoputri_0024.jpg    3702 |       100% |     1 |      0.109 | 
+                             AVG per Person |       100% |            0.10125 | 
 Naomi_Watts  16 | 4
-               Naomi_Watts_0017.jpg    4011 |  100.0000% |     1 |     0.1530 | 
-               Naomi_Watts_0004.jpg    4011 |  100.0000% |     1 |     0.1010 | 
-               Naomi_Watts_0002.jpg    4011 |  100.0000% |     1 |     0.1550 | 
-               Naomi_Watts_0019.jpg    4011 |  100.0000% |     1 |     0.1530 | 
-                             AVG per Person |  100.0000% |             0.1405 | 
+               Naomi_Watts_0017.jpg    4011 |       100% |     1 |      0.094 | 
+               Naomi_Watts_0004.jpg    4011 |       100% |     1 |      0.094 | 
+               Naomi_Watts_0002.jpg    4011 |       100% |     1 |      0.093 | 
+               Naomi_Watts_0019.jpg    4011 |       100% |     1 |      0.094 | 
+                             AVG per Person |       100% |            0.09375 | 
 Nestor_Kirchner  16 | 4
-           Nestor_Kirchner_0034.jpg    4057 |   10.0000% |    10 |     0.1460 | 
-           Nestor_Kirchner_0021.jpg    4057 |  100.0000% |     1 |     0.0950 | 
-           Nestor_Kirchner_0009.jpg    4057 |  100.0000% |     1 |     0.0960 | 
-           Nestor_Kirchner_0019.jpg    4057 |    5.5556% |    18 |     0.0980 | 
-                             AVG per Person |   53.8889% |             0.1087 | 
+           Nestor_Kirchner_0034.jpg    4057 |        10% |    10 |      0.109 | 
+           Nestor_Kirchner_0021.jpg    4057 |       100% |     1 |      0.094 | 
+           Nestor_Kirchner_0009.jpg    4057 |       100% |     1 |      0.093 | 
+           Nestor_Kirchner_0019.jpg    4057 |   5.55556% |    18 |      0.094 | 
+                             AVG per Person |   53.8889% |             0.0975 | 
 Paul_Bremer  16 | 4
                Paul_Bremer_0002.jpg    4253 |         0% |   INF |        INF | 
-               Paul_Bremer_0010.jpg    4253 |  100.0000% |     1 |     0.1680 | 
+               Paul_Bremer_0010.jpg    4253 |       100% |     1 |      0.094 | 
                Paul_Bremer_0006.jpg    4253 |         0% |   INF |        INF | 
-               Paul_Bremer_0004.jpg    4253 |   50.0000% |     2 |     0.0990 | 
-                             AVG per Person |   37.5000% |             0.0667 | 
+               Paul_Bremer_0004.jpg    4253 |        50% |     2 |      0.094 | 
+                             AVG per Person |      37.5% |              0.094 | 
 Pete_Sampras  16 | 4
-              Pete_Sampras_0005.jpg    4372 |   33.3333% |     3 |     0.1640 | 
-              Pete_Sampras_0021.jpg    4372 |  100.0000% |     1 |     0.0980 | 
-              Pete_Sampras_0020.jpg    4372 |  100.0000% |     1 |     0.1430 | 
-              Pete_Sampras_0004.jpg    4372 |  100.0000% |     1 |     0.0970 | 
-                             AVG per Person |   83.3333% |             0.1255 | 
+              Pete_Sampras_0005.jpg    4372 |   33.3333% |     3 |      0.109 | 
+              Pete_Sampras_0021.jpg    4372 |       100% |     1 |      0.094 | 
+              Pete_Sampras_0020.jpg    4372 |       100% |     1 |      0.093 | 
+              Pete_Sampras_0004.jpg    4372 |       100% |     1 |      0.094 | 
+                             AVG per Person |   83.3333% |             0.0975 | 
 Recep_Tayyip_Erdogan  16 | 4
-      Recep_Tayyip_Erdogan_0017.jpg    4551 |   20.0000% |     5 |     0.1240 | 
-      Recep_Tayyip_Erdogan_0005.jpg    4551 |   25.0000% |     4 |     0.1250 | 
-      Recep_Tayyip_Erdogan_0011.jpg    4551 |  100.0000% |     1 |     0.1380 | 
-      Recep_Tayyip_Erdogan_0026.jpg    4551 |   20.0000% |     5 |     0.0970 | 
-                             AVG per Person |   41.2500% |             0.1210 | 
+      Recep_Tayyip_Erdogan_0017.jpg    4551 |        20% |     5 |      0.093 | 
+      Recep_Tayyip_Erdogan_0005.jpg    4551 |        25% |     4 |      0.094 | 
+      Recep_Tayyip_Erdogan_0011.jpg    4551 |       100% |     1 |      0.109 | 
+      Recep_Tayyip_Erdogan_0026.jpg    4551 |        20% |     5 |      0.094 | 
+                             AVG per Person |     41.25% |             0.0975 | 
 Ricardo_Lagos  16 | 4
-             Ricardo_Lagos_0008.jpg    4572 |  100.0000% |     1 |     0.1080 | 
+             Ricardo_Lagos_0008.jpg    4572 |       100% |     1 |      0.093 | 
              Ricardo_Lagos_0005.jpg    4572 |         0% |   INF |        INF | 
-             Ricardo_Lagos_0027.jpg    4572 |  100.0000% |     1 |     0.1570 | 
-             Ricardo_Lagos_0019.jpg    4572 |   25.0000% |     4 |     0.0980 | 
-                             AVG per Person |   56.2500% |             0.0908 | 
+             Ricardo_Lagos_0027.jpg    4572 |       100% |     1 |       0.11 | 
+             Ricardo_Lagos_0019.jpg    4572 |        25% |     4 |      0.093 | 
+                             AVG per Person |     56.25% |          0.0986667 | 
 Roh_Moo-hyun  16 | 4
-              Roh_Moo-hyun_0013.jpg    4775 |  100.0000% |     1 |     0.1140 | 
-              Roh_Moo-hyun_0004.jpg    4775 |  100.0000% |     1 |     0.2090 | 
-              Roh_Moo-hyun_0002.jpg    4775 |  100.0000% |     1 |     0.0980 | 
-              Roh_Moo-hyun_0017.jpg    4775 |  100.0000% |     1 |     0.1080 | 
-                             AVG per Person |  100.0000% |             0.1323 | 
+              Roh_Moo-hyun_0013.jpg    4775 |       100% |     1 |      0.094 | 
+              Roh_Moo-hyun_0004.jpg    4775 |       100% |     1 |      0.093 | 
+              Roh_Moo-hyun_0002.jpg    4775 |       100% |     1 |      0.094 | 
+              Roh_Moo-hyun_0017.jpg    4775 |       100% |     1 |      0.094 | 
+                             AVG per Person |       100% |            0.09375 | 
 Rudolph_Giuliani  16 | 4
-          Rudolph_Giuliani_0008.jpg    4836 |   33.3333% |     3 |     0.1680 | 
-          Rudolph_Giuliani_0017.jpg    4836 |   33.3333% |     3 |     0.0960 | 
-          Rudolph_Giuliani_0010.jpg    4836 |   16.6667% |     6 |     0.0980 | 
+          Rudolph_Giuliani_0008.jpg    4836 |   33.3333% |     3 |      0.093 | 
+          Rudolph_Giuliani_0017.jpg    4836 |   33.3333% |     3 |      0.094 | 
+          Rudolph_Giuliani_0010.jpg    4836 |   16.6667% |     6 |      0.109 | 
           Rudolph_Giuliani_0007.jpg    4836 |         0% |   INF |        INF | 
-                             AVG per Person |   20.8333% |             0.0905 | 
+                             AVG per Person |   20.8333% |          0.0986667 | 
 Saddam_Hussein  16 | 4
-            Saddam_Hussein_0019.jpg    4865 |   33.3333% |     3 |     0.0960 | 
-            Saddam_Hussein_0014.jpg    4865 |  100.0000% |     1 |     0.1140 | 
-            Saddam_Hussein_0002.jpg    4865 |  100.0000% |     1 |     0.1710 | 
-            Saddam_Hussein_0022.jpg    4865 |  100.0000% |     1 |     0.0980 | 
-                             AVG per Person |   83.3333% |             0.1198 | 
+            Saddam_Hussein_0019.jpg    4865 |   33.3333% |     3 |      0.093 | 
+            Saddam_Hussein_0014.jpg    4865 |       100% |     1 |      0.094 | 
+            Saddam_Hussein_0002.jpg    4865 |       100% |     1 |      0.093 | 
+            Saddam_Hussein_0022.jpg    4865 |       100% |     1 |      0.094 | 
+                             AVG per Person |   83.3333% |             0.0935 | 
 Serena_Williams  16 | 4
-           Serena_Williams_0048.jpg    4960 |   25.0000% |     4 |     0.1290 | 
-           Serena_Williams_0027.jpg    4960 |   50.0000% |     2 |     0.1130 | 
-           Serena_Williams_0033.jpg    4960 |   50.0000% |     2 |     0.1160 | 
-           Serena_Williams_0035.jpg    4960 |   16.6667% |     6 |     0.1520 | 
-                             AVG per Person |   35.4167% |             0.1275 | 
+           Serena_Williams_0048.jpg    4960 |        25% |     4 |      0.094 | 
+           Serena_Williams_0027.jpg    4960 |        50% |     2 |      0.109 | 
+           Serena_Williams_0033.jpg    4960 |        50% |     2 |      0.093 | 
+           Serena_Williams_0035.jpg    4960 |   16.6667% |     6 |      0.094 | 
+                             AVG per Person |   35.4167% |             0.0975 | 
 Silvio_Berlusconi  16 | 4
-         Silvio_Berlusconi_0017.jpg    5037 |   50.0000% |     2 |     0.1010 | 
-         Silvio_Berlusconi_0019.jpg    5037 |   20.0000% |     5 |     0.1350 | 
-         Silvio_Berlusconi_0028.jpg    5037 |   33.3333% |     3 |     0.1560 | 
-         Silvio_Berlusconi_0010.jpg    5037 |  100.0000% |     1 |     0.0990 | 
-                             AVG per Person |   50.8333% |             0.1228 | 
+         Silvio_Berlusconi_0017.jpg    5037 |        50% |     2 |      0.094 | 
+         Silvio_Berlusconi_0019.jpg    5037 |        20% |     5 |      0.109 | 
+         Silvio_Berlusconi_0028.jpg    5037 |   33.3333% |     3 |      0.094 | 
+         Silvio_Berlusconi_0010.jpg    5037 |       100% |     1 |      0.093 | 
+                             AVG per Person |   50.8333% |             0.0975 | 
 Tiger_Woods  16 | 4
-               Tiger_Woods_0020.jpg    5352 |   33.3333% |     3 |     0.1170 | 
-               Tiger_Woods_0018.jpg    5352 |  100.0000% |     1 |     0.1510 | 
-               Tiger_Woods_0001.jpg    5352 |  100.0000% |     1 |     0.0990 | 
-               Tiger_Woods_0012.jpg    5352 |   50.0000% |     2 |     0.1270 | 
-                             AVG per Person |   70.8333% |             0.1235 | 
+               Tiger_Woods_0020.jpg    5352 |   33.3333% |     3 |      0.094 | 
+               Tiger_Woods_0018.jpg    5352 |       100% |     1 |      0.093 | 
+               Tiger_Woods_0001.jpg    5352 |       100% |     1 |      0.094 | 
+               Tiger_Woods_0012.jpg    5352 |        50% |     2 |      0.156 | 
+                             AVG per Person |   70.8333% |            0.10925 | 
 Tom_Daschle  16 | 4
-               Tom_Daschle_0014.jpg    5421 |   33.3333% |     3 |     0.1140 | 
-               Tom_Daschle_0016.jpg    5421 |    7.6923% |    13 |     0.1510 | 
-               Tom_Daschle_0009.jpg    5421 |    5.0000% |    20 |     0.1000 | 
-               Tom_Daschle_0019.jpg    5421 |  100.0000% |     1 |     0.1630 | 
-                             AVG per Person |   36.5064% |             0.1320 | 
+               Tom_Daschle_0014.jpg    5421 |   33.3333% |     3 |      0.094 | 
+               Tom_Daschle_0016.jpg    5421 |   7.69231% |    13 |      0.093 | 
+               Tom_Daschle_0009.jpg    5421 |         5% |    20 |      0.109 | 
+               Tom_Daschle_0019.jpg    5421 |       100% |     1 |      0.094 | 
+                             AVG per Person |   36.5064% |             0.0975 | 
 Tom_Ridge  16 | 4
-                 Tom_Ridge_0017.jpg    5441 |   33.3333% |     3 |     0.1060 | 
-                 Tom_Ridge_0018.jpg    5441 |   16.6667% |     6 |     0.1710 | 
-                 Tom_Ridge_0008.jpg    5441 |   11.1111% |     9 |     0.0980 | 
-                 Tom_Ridge_0019.jpg    5441 |   14.2857% |     7 |     0.1120 | 
-                             AVG per Person |   18.8492% |             0.1218 | 
+                 Tom_Ridge_0017.jpg    5441 |   33.3333% |     3 |      0.094 | 
+                 Tom_Ridge_0018.jpg    5441 |   16.6667% |     6 |      0.093 | 
+                 Tom_Ridge_0008.jpg    5441 |   11.1111% |     9 |      0.109 | 
+                 Tom_Ridge_0019.jpg    5441 |   14.2857% |     7 |      0.094 | 
+                             AVG per Person |   18.8492% |             0.0975 | 
 Tony_Blair  16 | 4
-                Tony_Blair_0123.jpg    5458 |    9.0909% |    11 |     0.1850 | 
-                Tony_Blair_0009.jpg    5458 |   50.0000% |     2 |     0.0990 | 
-                Tony_Blair_0138.jpg    5458 |  100.0000% |     1 |     0.1350 | 
-                Tony_Blair_0073.jpg    5458 |    7.1429% |    14 |     0.1270 | 
-                             AVG per Person |   41.5584% |             0.1365 | 
+                Tony_Blair_0123.jpg    5458 |   9.09091% |    11 |      0.094 | 
+                Tony_Blair_0009.jpg    5458 |        50% |     2 |      0.124 | 
+                Tony_Blair_0138.jpg    5458 |       100% |     1 |      0.156 | 
+                Tony_Blair_0073.jpg    5458 |   7.14286% |    14 |      0.094 | 
+                             AVG per Person |   41.5584% |              0.117 | 
 Vicente_Fox  16 | 4
-               Vicente_Fox_0026.jpg    5541 |  100.0000% |     1 |     0.1560 | 
+               Vicente_Fox_0026.jpg    5541 |       100% |     1 |      0.093 | 
                Vicente_Fox_0028.jpg    5541 |         0% |   INF |        INF | 
-               Vicente_Fox_0008.jpg    5541 |   25.0000% |     4 |     0.1000 | 
-               Vicente_Fox_0012.jpg    5541 |  100.0000% |     1 |     0.1530 | 
-                             AVG per Person |   56.2500% |             0.1023 | 
+               Vicente_Fox_0008.jpg    5541 |        25% |     4 |      0.093 | 
+               Vicente_Fox_0012.jpg    5541 |       100% |     1 |      0.094 | 
+                             AVG per Person |     56.25% |          0.0933333 | 
 Vladimir_Putin  16 | 4
-            Vladimir_Putin_0045.jpg    5570 |  100.0000% |     1 |     0.0990 | 
-            Vladimir_Putin_0032.jpg    5570 |  100.0000% |     1 |     0.1580 | 
-            Vladimir_Putin_0036.jpg    5570 |  100.0000% |     1 |     0.1080 | 
-            Vladimir_Putin_0006.jpg    5570 |    3.7037% |    27 |     0.0970 | 
-                             AVG per Person |   75.9259% |             0.1155 | 
+            Vladimir_Putin_0045.jpg    5570 |       100% |     1 |      0.093 | 
+            Vladimir_Putin_0032.jpg    5570 |       100% |     1 |      0.094 | 
+            Vladimir_Putin_0036.jpg    5570 |       100% |     1 |      0.093 | 
+            Vladimir_Putin_0006.jpg    5570 |    3.7037% |    27 |      0.094 | 
+                             AVG per Person |   75.9259% |             0.0935 | 
 Winona_Ryder  16 | 4
-              Winona_Ryder_0004.jpg    5658 |   50.0000% |     2 |     0.1120 | 
-              Winona_Ryder_0013.jpg    5658 |    4.1667% |    24 |     0.1690 | 
-              Winona_Ryder_0009.jpg    5658 |  100.0000% |     1 |     0.0950 | 
+              Winona_Ryder_0004.jpg    5658 |        50% |     2 |      0.109 | 
+              Winona_Ryder_0013.jpg    5658 |   4.16667% |    24 |      0.094 | 
+              Winona_Ryder_0009.jpg    5658 |       100% |     1 |      0.093 | 
               Winona_Ryder_0005.jpg    5658 |         0% |   INF |        INF | 
-                             AVG per Person |   38.5417% |             0.0940 | 
+                             AVG per Person |   38.5417% |          0.0986667 | 
 
 ================================================================================
-        RETRIEVAL AVG per Person(59 people) |   57.6696% | 1.7340 |     0.1175 | 
+        RETRIEVAL AVG per Person(59 people) |     57.67% | 1.734 |     0.1016 | 
 ================================================================================
-             RETRIEVAL AVG FLAT(236 images) |   57.6696% | 1.7340 |     0.1175 | 
+             RETRIEVAL AVG FLAT(236 images) |     57.67% | 1.734 |     0.1017 | 
 ================================================================================
-Tested 236 images in 29.2190 seconds
+Tested 236 images in 31.11 seconds
 
 -------------------------------------------------------------------------------

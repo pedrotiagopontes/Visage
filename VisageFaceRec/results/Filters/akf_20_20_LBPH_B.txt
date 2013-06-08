@@ -4,9 +4,9 @@ Library: ..\data\Filters\akf_20_20_B.txt
 	Total People: 59
 	Images per person MIN | MAX: 20 | 20
 	Percentage of trainned images per person: 80
-Loaded in: 0.063 seconds
+Loaded in: 0.016 seconds
 
-Trainned model LBPH with 944 images in 3.619 seconds 
+Trainned model LBPH with 944 images in 3.869 seconds 
 
                               Image   Label |  1º Pred     Conf  |  2º Pred     Conf  |  3º Pred     Conf  |  4º Pred     Conf  |  5º Pred     Conf  |  6º Pred     Conf  |  7º Pred     Conf  |  8º Pred     Conf  |  9º Pred     Conf  | 10º Pred     Conf  | 11º Pred     Conf  | 12º Pred     Conf  | 13º Pred     Conf  | 14º Pred     Conf  | 15º Pred     Conf  | 16º Pred     Conf  | 17º Pred     Conf  | 18º Pred     Conf  | 19º Pred     Conf  | 20º Pred     Conf  | 21º Pred     Conf  | 22º Pred     Conf  | 23º Pred     Conf  | 24º Pred     Conf  | 25º Pred     Conf  | 26º Pred     Conf  | 27º Pred     Conf  | 28º Pred     Conf  | 29º Pred     Conf  | 30º Pred     Conf  | 
 Alejandro_Toledo  16 | 4
@@ -370,369 +370,369 @@ Winona_Ryder  16 | 4
 ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
             RECOGNITION % FLAT (236 images) |  34% (80):  34%(80)|  11% (25):  44%(105)|   4% ( 9):  48%(114)|   5% (11):  53%(125)|   6% (14):  59%(139)|   0% ( 0):  59%(139)|   4% ( 9):  63%(148)|   1% ( 2):  64%(150)|   1% ( 3):  65%(153)|   4% ( 9):  69%(162)|   2% ( 4):  70%(166)|   0% ( 0):  70%(166)|   2% ( 4):  72%(170)|   1% ( 2):  73%(172)|   2% ( 5):  75%(177)|   1% ( 2):  76%(179)|   1% ( 3):  77%(182)|   1% ( 2):  78%(184)|   3% ( 6):  81%(190)|   2% ( 4):  82%(194)|   2% ( 4):  84%(198)|   0% ( 1):  84%(199)|   0% ( 1):  85%(200)|   1% ( 2):  86%(202)|   1% ( 2):  86%(204)|   0% ( 1):  87%(205)|   0% ( 0):  87%(205)|   1% ( 2):  88%(207)|   1% ( 2):  89%(209)|   3% ( 6):  91%(215)| 
 ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
-Tested 236 images in 28.0020 seconds
+Tested 236 images in 26.6300 seconds
 
                               Image   Label |  Precision | Level |    Time(s) | 
 Alejandro_Toledo  16 | 4
-  out\Alejandro_Toledo_0015-out.png     121 |   4.16667% |    24 |      0.156 | 
-  out\Alejandro_Toledo_0032-out.png     121 |        10% |    10 |      0.094 | 
-  out\Alejandro_Toledo_0028-out.png     121 |   6.66667% |    15 |       0.14 | 
+  out\Alejandro_Toledo_0015-out.png     121 |   4.16667% |    24 |      0.094 | 
+  out\Alejandro_Toledo_0032-out.png     121 |        10% |    10 |       0.14 | 
+  out\Alejandro_Toledo_0028-out.png     121 |   6.66667% |    15 |      0.094 | 
   out\Alejandro_Toledo_0001-out.png     121 |   14.2857% |     7 |      0.094 | 
-                             AVG per Person |   8.77976% |              0.121 | 
+                             AVG per Person |   8.77976% |             0.1055 | 
 Alvaro_Uribe  16 | 4
-      out\Alvaro_Uribe_0009-out.png     204 |       100% |     1 |      0.125 | 
-      out\Alvaro_Uribe_0024-out.png     204 |        25% |     4 |      0.078 | 
-      out\Alvaro_Uribe_0027-out.png     204 |        20% |     5 |      0.125 | 
-      out\Alvaro_Uribe_0005-out.png     204 |   14.2857% |     7 |      0.124 | 
-                             AVG per Person |   39.8214% |              0.113 | 
+      out\Alvaro_Uribe_0009-out.png     204 |       100% |     1 |      0.109 | 
+      out\Alvaro_Uribe_0024-out.png     204 |        25% |     4 |      0.125 | 
+      out\Alvaro_Uribe_0027-out.png     204 |        20% |     5 |      0.093 | 
+      out\Alvaro_Uribe_0005-out.png     204 |   14.2857% |     7 |      0.093 | 
+                             AVG per Person |   39.8214% |              0.105 | 
 Amelie_Mauresmo  16 | 4
-   out\Amelie_Mauresmo_0007-out.png     223 |        50% |     2 |      0.094 | 
-   out\Amelie_Mauresmo_0013-out.png     223 |        25% |     4 |       0.14 | 
-   out\Amelie_Mauresmo_0003-out.png     223 |        20% |     5 |       0.25 | 
-   out\Amelie_Mauresmo_0009-out.png     223 |   7.14286% |    14 |      0.218 | 
-                             AVG per Person |   25.5357% |             0.1755 | 
+   out\Amelie_Mauresmo_0007-out.png     223 |        50% |     2 |      0.156 | 
+   out\Amelie_Mauresmo_0013-out.png     223 |        25% |     4 |      0.188 | 
+   out\Amelie_Mauresmo_0003-out.png     223 |        20% |     5 |      0.187 | 
+   out\Amelie_Mauresmo_0009-out.png     223 |   7.14286% |    14 |      0.203 | 
+                             AVG per Person |   25.5357% |             0.1835 | 
 Andre_Agassi  16 | 4
-      out\Andre_Agassi_0029-out.png     272 |        50% |     2 |       0.25 | 
-      out\Andre_Agassi_0022-out.png     272 |       100% |     1 |       0.25 | 
-      out\Andre_Agassi_0007-out.png     272 |        50% |     2 |       0.14 | 
-      out\Andre_Agassi_0036-out.png     272 |       100% |     1 |       0.25 | 
-                             AVG per Person |        75% |             0.2225 | 
+      out\Andre_Agassi_0029-out.png     272 |        50% |     2 |       0.28 | 
+      out\Andre_Agassi_0022-out.png     272 |       100% |     1 |      0.141 | 
+      out\Andre_Agassi_0007-out.png     272 |        50% |     2 |      0.093 | 
+      out\Andre_Agassi_0036-out.png     272 |       100% |     1 |      0.125 | 
+                             AVG per Person |        75% |            0.15975 | 
 Angelina_Jolie  16 | 4
-    out\Angelina_Jolie_0015-out.png     302 |       100% |     1 |      0.265 | 
-    out\Angelina_Jolie_0005-out.png     302 |        50% |     2 |      0.093 | 
-    out\Angelina_Jolie_0019-out.png     302 |        50% |     2 |      0.188 | 
-    out\Angelina_Jolie_0016-out.png     302 |        50% |     2 |      0.156 | 
-                             AVG per Person |      62.5% |             0.1755 | 
+    out\Angelina_Jolie_0015-out.png     302 |       100% |     1 |      0.156 | 
+    out\Angelina_Jolie_0005-out.png     302 |        50% |     2 |      0.078 | 
+    out\Angelina_Jolie_0019-out.png     302 |        50% |     2 |      0.094 | 
+    out\Angelina_Jolie_0016-out.png     302 |        50% |     2 |      0.094 | 
+                             AVG per Person |      62.5% |             0.1055 | 
 Ariel_Sharon  16 | 4
-      out\Ariel_Sharon_0028-out.png     370 |   5.26316% |    19 |      0.234 | 
-      out\Ariel_Sharon_0008-out.png     370 |       100% |     1 |      0.156 | 
-      out\Ariel_Sharon_0074-out.png     370 |   3.44828% |    29 |      0.078 | 
-      out\Ariel_Sharon_0075-out.png     370 |        25% |     4 |      0.109 | 
-                             AVG per Person |   33.4279% |            0.14425 | 
+      out\Ariel_Sharon_0028-out.png     370 |   5.26316% |    19 |      0.124 | 
+      out\Ariel_Sharon_0008-out.png     370 |       100% |     1 |      0.094 | 
+      out\Ariel_Sharon_0074-out.png     370 |   3.44828% |    29 |       0.14 | 
+      out\Ariel_Sharon_0075-out.png     370 |        25% |     4 |      0.094 | 
+                             AVG per Person |   33.4279% |              0.113 | 
 Arnold_Schwarzenegger  16 | 4
 out\Arnold_Schwarzenegger_0019-out.png     386 |   3.33333% |    30 |       0.14 | 
 out\Arnold_Schwarzenegger_0011-out.png     386 |         0% |   INF |        INF | 
 out\Arnold_Schwarzenegger_0014-out.png     386 |   14.2857% |     7 |      0.094 | 
-out\Arnold_Schwarzenegger_0038-out.png     386 |   5.55556% |    18 |       0.14 | 
-                             AVG per Person |   5.79365% |             0.0935 | 
+out\Arnold_Schwarzenegger_0038-out.png     386 |   5.55556% |    18 |      0.078 | 
+                             AVG per Person |   5.79365% |              0.104 | 
 Atal_Bihari_Vajpayee  16 | 4
-out\Atal_Bihari_Vajpayee_0022-out.png     417 |        10% |    10 |      0.141 | 
+out\Atal_Bihari_Vajpayee_0022-out.png     417 |        10% |    10 |      0.094 | 
 out\Atal_Bihari_Vajpayee_0014-out.png     417 |       100% |     1 |      0.093 | 
-out\Atal_Bihari_Vajpayee_0011-out.png     417 |   14.2857% |     7 |      0.094 | 
+out\Atal_Bihari_Vajpayee_0011-out.png     417 |   14.2857% |     7 |      0.109 | 
 out\Atal_Bihari_Vajpayee_0019-out.png     417 |         0% |   INF |        INF | 
-                             AVG per Person |   31.0714% |              0.082 | 
+                             AVG per Person |   31.0714% |          0.0986667 | 
 Bill_Clinton  16 | 4
-      out\Bill_Clinton_0007-out.png     544 |        50% |     2 |      0.156 | 
-      out\Bill_Clinton_0008-out.png     544 |   14.2857% |     7 |      0.078 | 
+      out\Bill_Clinton_0007-out.png     544 |        50% |     2 |      0.141 | 
+      out\Bill_Clinton_0008-out.png     544 |   14.2857% |     7 |      0.093 | 
       out\Bill_Clinton_0004-out.png     544 |       100% |     1 |      0.094 | 
-      out\Bill_Clinton_0028-out.png     544 |   14.2857% |     7 |      0.156 | 
-                             AVG per Person |   44.6429% |              0.121 | 
+      out\Bill_Clinton_0028-out.png     544 |   14.2857% |     7 |       0.14 | 
+                             AVG per Person |   44.6429% |              0.117 | 
 Carlos_Menem  16 | 4
-      out\Carlos_Menem_0010-out.png     781 |       100% |     1 |      0.093 | 
+      out\Carlos_Menem_0010-out.png     781 |       100% |     1 |      0.094 | 
       out\Carlos_Menem_0011-out.png     781 |         0% |   INF |        INF | 
-      out\Carlos_Menem_0001-out.png     781 |       100% |     1 |      0.109 | 
-      out\Carlos_Menem_0004-out.png     781 |   11.1111% |     9 |      0.203 | 
-                             AVG per Person |   52.7778% |            0.10125 | 
+      out\Carlos_Menem_0001-out.png     781 |       100% |     1 |      0.078 | 
+      out\Carlos_Menem_0004-out.png     781 |   11.1111% |     9 |      0.109 | 
+                             AVG per Person |   52.7778% |          0.0936667 | 
 Colin_Powell  16 | 4
-      out\Colin_Powell_0193-out.png    1047 |       100% |     1 |      0.109 | 
+      out\Colin_Powell_0193-out.png    1047 |       100% |     1 |      0.094 | 
       out\Colin_Powell_0142-out.png    1047 |   4.54545% |    22 |       0.14 | 
       out\Colin_Powell_0005-out.png    1047 |   11.1111% |     9 |      0.094 | 
       out\Colin_Powell_0154-out.png    1047 |   3.33333% |    30 |      0.109 | 
-                             AVG per Person |   29.7475% |              0.113 | 
+                             AVG per Person |   29.7475% |            0.10925 | 
 David_Beckham  16 | 4
-     out\David_Beckham_0001-out.png    1207 |        20% |     5 |      0.141 | 
-     out\David_Beckham_0015-out.png    1207 |   3.33333% |    30 |      0.452 | 
-     out\David_Beckham_0011-out.png    1207 |       100% |     1 |      0.265 | 
-     out\David_Beckham_0029-out.png    1207 |   7.69231% |    13 |      0.156 | 
-                             AVG per Person |   32.7564% |             0.2535 | 
+     out\David_Beckham_0001-out.png    1207 |        20% |     5 |      0.156 | 
+     out\David_Beckham_0015-out.png    1207 |   3.33333% |    30 |      0.093 | 
+     out\David_Beckham_0011-out.png    1207 |       100% |     1 |      0.078 | 
+     out\David_Beckham_0029-out.png    1207 |   7.69231% |    13 |      0.141 | 
+                             AVG per Person |   32.7564% |              0.117 | 
 Donald_Rumsfeld  16 | 4
-   out\Donald_Rumsfeld_0079-out.png    1393 |   33.3333% |     3 |      0.094 | 
-   out\Donald_Rumsfeld_0048-out.png    1393 |        50% |     2 |       0.14 | 
-   out\Donald_Rumsfeld_0018-out.png    1393 |   4.16667% |    24 |      0.094 | 
-   out\Donald_Rumsfeld_0100-out.png    1393 |        25% |     4 |      0.156 | 
-                             AVG per Person |    28.125% |              0.121 | 
+   out\Donald_Rumsfeld_0079-out.png    1393 |   33.3333% |     3 |      0.093 | 
+   out\Donald_Rumsfeld_0048-out.png    1393 |        50% |     2 |       0.11 | 
+   out\Donald_Rumsfeld_0018-out.png    1393 |   4.16667% |    24 |       0.14 | 
+   out\Donald_Rumsfeld_0100-out.png    1393 |        25% |     4 |      0.094 | 
+                             AVG per Person |    28.125% |            0.10925 | 
 George_Robertson  16 | 4
-  out\George_Robertson_0017-out.png    1865 |   5.26316% |    19 |      0.109 | 
-  out\George_Robertson_0003-out.png    1865 |       100% |     1 |       0.14 | 
-  out\George_Robertson_0010-out.png    1865 |   4.34783% |    23 |      0.156 | 
-  out\George_Robertson_0016-out.png    1865 |        50% |     2 |      0.234 | 
-                             AVG per Person |   39.9027% |            0.15975 | 
+  out\George_Robertson_0017-out.png    1865 |   5.26316% |    19 |      0.078 | 
+  out\George_Robertson_0003-out.png    1865 |       100% |     1 |      0.156 | 
+  out\George_Robertson_0010-out.png    1865 |   4.34783% |    23 |      0.093 | 
+  out\George_Robertson_0016-out.png    1865 |        50% |     2 |      0.094 | 
+                             AVG per Person |   39.9027% |            0.10525 | 
 George_W_Bush  16 | 4
-     out\George_W_Bush_0239-out.png    1870 |   7.69231% |    13 |      0.203 | 
-     out\George_W_Bush_0259-out.png    1870 |       100% |     1 |      0.109 | 
-     out\George_W_Bush_0333-out.png    1870 |       100% |     1 |      0.218 | 
-     out\George_W_Bush_0190-out.png    1870 |       100% |     1 |      0.094 | 
-                             AVG per Person |   76.9231% |              0.156 | 
+     out\George_W_Bush_0239-out.png    1870 |   7.69231% |    13 |      0.125 | 
+     out\George_W_Bush_0259-out.png    1870 |       100% |     1 |      0.125 | 
+     out\George_W_Bush_0333-out.png    1870 |       100% |     1 |      0.156 | 
+     out\George_W_Bush_0190-out.png    1870 |       100% |     1 |      0.078 | 
+                             AVG per Person |   76.9231% |              0.121 | 
 Gerhard_Schroeder  16 | 4
- out\Gerhard_Schroeder_0019-out.png    1891 |       100% |     1 |      0.078 | 
+ out\Gerhard_Schroeder_0019-out.png    1891 |       100% |     1 |      0.093 | 
  out\Gerhard_Schroeder_0028-out.png    1891 |       100% |     1 |      0.109 | 
- out\Gerhard_Schroeder_0083-out.png    1891 |   5.26316% |    19 |       0.25 | 
- out\Gerhard_Schroeder_0069-out.png    1891 |   3.84615% |    26 |      0.218 | 
-                             AVG per Person |   52.2773% |            0.16375 | 
+ out\Gerhard_Schroeder_0083-out.png    1891 |   5.26316% |    19 |       0.11 | 
+ out\Gerhard_Schroeder_0069-out.png    1891 |   3.84615% |    26 |      0.156 | 
+                             AVG per Person |   52.2773% |              0.117 | 
 Gloria_Macapagal_Arroyo  16 | 4
-out\Gloria_Macapagal_Arroyo_0031-out.png    1932 |       100% |     1 |       0.25 | 
-out\Gloria_Macapagal_Arroyo_0026-out.png    1932 |        25% |     4 |      0.203 | 
-out\Gloria_Macapagal_Arroyo_0004-out.png    1932 |   14.2857% |     7 |      0.203 | 
+out\Gloria_Macapagal_Arroyo_0031-out.png    1932 |       100% |     1 |      0.078 | 
+out\Gloria_Macapagal_Arroyo_0026-out.png    1932 |        25% |     4 |      0.093 | 
+out\Gloria_Macapagal_Arroyo_0004-out.png    1932 |   14.2857% |     7 |      0.125 | 
 out\Gloria_Macapagal_Arroyo_0044-out.png    1932 |       100% |     1 |       0.14 | 
-                             AVG per Person |   59.8214% |              0.199 | 
+                             AVG per Person |   59.8214% |              0.109 | 
 Gray_Davis  16 | 4
-        out\Gray_Davis_0001-out.png    1964 |       100% |     1 |      0.172 | 
-        out\Gray_Davis_0002-out.png    1964 |   33.3333% |     3 |       0.14 | 
+        out\Gray_Davis_0001-out.png    1964 |       100% |     1 |      0.094 | 
+        out\Gray_Davis_0002-out.png    1964 |   33.3333% |     3 |      0.094 | 
         out\Gray_Davis_0003-out.png    1964 |   5.26316% |    19 |      0.109 | 
-        out\Gray_Davis_0018-out.png    1964 |       100% |     1 |      0.094 | 
-                             AVG per Person |   59.6491% |            0.12875 | 
+        out\Gray_Davis_0018-out.png    1964 |       100% |     1 |       0.14 | 
+                             AVG per Person |   59.6491% |            0.10925 | 
 Guillermo_Coria  16 | 4
-   out\Guillermo_Coria_0027-out.png    1993 |       100% |     1 |      0.109 | 
+   out\Guillermo_Coria_0027-out.png    1993 |       100% |     1 |      0.094 | 
    out\Guillermo_Coria_0005-out.png    1993 |   3.33333% |    30 |       0.14 | 
    out\Guillermo_Coria_0028-out.png    1993 |        25% |     4 |      0.094 | 
-   out\Guillermo_Coria_0030-out.png    1993 |       100% |     1 |      0.094 | 
-                             AVG per Person |   57.0833% |            0.10925 | 
+   out\Guillermo_Coria_0030-out.png    1993 |       100% |     1 |      0.093 | 
+                             AVG per Person |   57.0833% |            0.10525 | 
 Hamid_Karzai  16 | 4
-      out\Hamid_Karzai_0002-out.png    2026 |       100% |     1 |      0.124 | 
-      out\Hamid_Karzai_0019-out.png    2026 |    4.7619% |    21 |       0.11 | 
+      out\Hamid_Karzai_0002-out.png    2026 |       100% |     1 |      0.141 | 
+      out\Hamid_Karzai_0019-out.png    2026 |    4.7619% |    21 |      0.093 | 
       out\Hamid_Karzai_0001-out.png    2026 |         0% |   INF |        INF | 
-      out\Hamid_Karzai_0011-out.png    2026 |       100% |     1 |      0.125 | 
-                             AVG per Person |   51.1905% |            0.08975 | 
+      out\Hamid_Karzai_0011-out.png    2026 |       100% |     1 |      0.109 | 
+                             AVG per Person |   51.1905% |           0.114333 | 
 Hans_Blix  16 | 4
-         out\Hans_Blix_0008-out.png    2043 |       100% |     1 |      0.093 | 
-         out\Hans_Blix_0026-out.png    2043 |   5.88235% |    17 |      0.203 | 
-         out\Hans_Blix_0025-out.png    2043 |       100% |     1 |      0.109 | 
-         out\Hans_Blix_0011-out.png    2043 |    4.7619% |    21 |      0.187 | 
-                             AVG per Person |   52.6611% |              0.148 | 
+         out\Hans_Blix_0008-out.png    2043 |       100% |     1 |      0.125 | 
+         out\Hans_Blix_0026-out.png    2043 |   5.88235% |    17 |      0.156 | 
+         out\Hans_Blix_0025-out.png    2043 |       100% |     1 |      0.094 | 
+         out\Hans_Blix_0011-out.png    2043 |    4.7619% |    21 |      0.078 | 
+                             AVG per Person |   52.6611% |            0.11325 | 
 Hugo_Chavez  16 | 4
-       out\Hugo_Chavez_0014-out.png    2173 |   5.88235% |    17 |      0.203 | 
-       out\Hugo_Chavez_0011-out.png    2173 |   33.3333% |     3 |      0.094 | 
-       out\Hugo_Chavez_0051-out.png    2173 |   7.69231% |    13 |      0.125 | 
-       out\Hugo_Chavez_0034-out.png    2173 |   9.09091% |    11 |      0.156 | 
-                             AVG per Person |   13.9997% |             0.1445 | 
+       out\Hugo_Chavez_0014-out.png    2173 |   5.88235% |    17 |      0.093 | 
+       out\Hugo_Chavez_0011-out.png    2173 |   33.3333% |     3 |      0.141 | 
+       out\Hugo_Chavez_0051-out.png    2173 |   7.69231% |    13 |      0.093 | 
+       out\Hugo_Chavez_0034-out.png    2173 |   9.09091% |    11 |      0.109 | 
+                             AVG per Person |   13.9997% |              0.109 | 
 Jack_Straw  16 | 4
-        out\Jack_Straw_0007-out.png    2275 |       100% |     1 |      0.093 | 
-        out\Jack_Straw_0014-out.png    2275 |   7.14286% |    14 |      0.094 | 
+        out\Jack_Straw_0007-out.png    2275 |       100% |     1 |       0.11 | 
+        out\Jack_Straw_0014-out.png    2275 |   7.14286% |    14 |      0.109 | 
         out\Jack_Straw_0002-out.png    2275 |         0% |   INF |        INF | 
-        out\Jack_Straw_0019-out.png    2275 |   33.3333% |     3 |      0.093 | 
-                             AVG per Person |    35.119% |               0.07 | 
+        out\Jack_Straw_0019-out.png    2275 |   33.3333% |     3 |      0.125 | 
+                             AVG per Person |    35.119% |           0.114667 | 
 Jacques_Chirac  16 | 4
     out\Jacques_Chirac_0030-out.png    2283 |         0% |   INF |        INF | 
-    out\Jacques_Chirac_0017-out.png    2283 |         5% |    20 |      0.093 | 
-    out\Jacques_Chirac_0043-out.png    2283 |        50% |     2 |      0.141 | 
-    out\Jacques_Chirac_0031-out.png    2283 |   3.44828% |    29 |      0.093 | 
-                             AVG per Person |   14.6121% |            0.08175 | 
+    out\Jacques_Chirac_0017-out.png    2283 |         5% |    20 |      0.141 | 
+    out\Jacques_Chirac_0043-out.png    2283 |        50% |     2 |      0.093 | 
+    out\Jacques_Chirac_0031-out.png    2283 |   3.44828% |    29 |      0.141 | 
+                             AVG per Person |   14.6121% |              0.125 | 
 Jean_Chretien  16 | 4
-     out\Jean_Chretien_0043-out.png    2470 |   3.33333% |    30 |      0.125 | 
+     out\Jean_Chretien_0043-out.png    2470 |   3.33333% |    30 |      0.093 | 
      out\Jean_Chretien_0025-out.png    2470 |         0% |   INF |        INF | 
-     out\Jean_Chretien_0029-out.png    2470 |       100% |     1 |       0.14 | 
+     out\Jean_Chretien_0029-out.png    2470 |       100% |     1 |      0.141 | 
      out\Jean_Chretien_0050-out.png    2470 |         0% |   INF |        INF | 
-                             AVG per Person |   25.8333% |            0.06625 | 
+                             AVG per Person |   25.8333% |              0.117 | 
 Jennifer_Aniston  16 | 4
-  out\Jennifer_Aniston_0018-out.png    2500 |        20% |     5 |       0.14 | 
-  out\Jennifer_Aniston_0003-out.png    2500 |        50% |     2 |      0.078 | 
-  out\Jennifer_Aniston_0011-out.png    2500 |        10% |    10 |      0.156 | 
+  out\Jennifer_Aniston_0018-out.png    2500 |        20% |     5 |      0.078 | 
+  out\Jennifer_Aniston_0003-out.png    2500 |        50% |     2 |      0.156 | 
+  out\Jennifer_Aniston_0011-out.png    2500 |        10% |    10 |      0.078 | 
   out\Jennifer_Aniston_0015-out.png    2500 |        50% |     2 |      0.094 | 
-                             AVG per Person |      32.5% |              0.117 | 
+                             AVG per Person |      32.5% |             0.1015 | 
 Jennifer_Capriati  16 | 4
- out\Jennifer_Capriati_0020-out.png    2501 |       100% |     1 |       0.14 | 
- out\Jennifer_Capriati_0034-out.png    2501 |       100% |     1 |      0.094 | 
- out\Jennifer_Capriati_0021-out.png    2501 |       100% |     1 |      0.093 | 
+ out\Jennifer_Capriati_0020-out.png    2501 |       100% |     1 |      0.125 | 
+ out\Jennifer_Capriati_0034-out.png    2501 |       100% |     1 |      0.124 | 
+ out\Jennifer_Capriati_0021-out.png    2501 |       100% |     1 |      0.141 | 
  out\Jennifer_Capriati_0005-out.png    2501 |         0% |   INF |        INF | 
-                             AVG per Person |        75% |            0.08175 | 
+                             AVG per Person |        75% |               0.13 | 
 Jennifer_Lopez  16 | 4
-    out\Jennifer_Lopez_0009-out.png    2508 |       100% |     1 |      0.124 | 
-    out\Jennifer_Lopez_0019-out.png    2508 |        20% |     5 |       0.11 | 
-    out\Jennifer_Lopez_0018-out.png    2508 |   14.2857% |     7 |       0.14 | 
-    out\Jennifer_Lopez_0011-out.png    2508 |   33.3333% |     3 |      0.078 | 
-                             AVG per Person |   41.9048% |              0.113 | 
+    out\Jennifer_Lopez_0009-out.png    2508 |       100% |     1 |      0.094 | 
+    out\Jennifer_Lopez_0019-out.png    2508 |        20% |     5 |      0.094 | 
+    out\Jennifer_Lopez_0018-out.png    2508 |   14.2857% |     7 |      0.109 | 
+    out\Jennifer_Lopez_0011-out.png    2508 |   33.3333% |     3 |      0.109 | 
+                             AVG per Person |   41.9048% |             0.1015 | 
 Jeremy_Greenstock  16 | 4
- out\Jeremy_Greenstock_0018-out.png    2526 |        10% |    10 |      0.156 | 
- out\Jeremy_Greenstock_0010-out.png    2526 |       100% |     1 |      0.094 | 
- out\Jeremy_Greenstock_0019-out.png    2526 |       100% |     1 |      0.093 | 
- out\Jeremy_Greenstock_0005-out.png    2526 |        20% |     5 |      0.094 | 
-                             AVG per Person |      57.5% |            0.10925 | 
+ out\Jeremy_Greenstock_0018-out.png    2526 |        10% |    10 |      0.125 | 
+ out\Jeremy_Greenstock_0010-out.png    2526 |       100% |     1 |      0.093 | 
+ out\Jeremy_Greenstock_0019-out.png    2526 |       100% |     1 |      0.141 | 
+ out\Jeremy_Greenstock_0005-out.png    2526 |        20% |     5 |      0.093 | 
+                             AVG per Person |      57.5% |              0.113 | 
 John_Ashcroft  16 | 4
      out\John_Ashcroft_0024-out.png    2687 |         0% |   INF |        INF | 
-     out\John_Ashcroft_0012-out.png    2687 |        50% |     2 |      0.078 | 
-     out\John_Ashcroft_0016-out.png    2687 |       100% |     1 |      0.156 | 
-     out\John_Ashcroft_0026-out.png    2687 |        20% |     5 |      0.078 | 
-                             AVG per Person |      42.5% |              0.078 | 
+     out\John_Ashcroft_0012-out.png    2687 |        50% |     2 |      0.109 | 
+     out\John_Ashcroft_0016-out.png    2687 |       100% |     1 |       0.14 | 
+     out\John_Ashcroft_0026-out.png    2687 |        20% |     5 |      0.094 | 
+                             AVG per Person |      42.5% |           0.114333 | 
 John_Negroponte  16 | 4
-   out\John_Negroponte_0014-out.png    2751 |       100% |     1 |      0.156 | 
-   out\John_Negroponte_0013-out.png    2751 |       100% |     1 |      0.109 | 
-   out\John_Negroponte_0001-out.png    2751 |        20% |     5 |      0.078 | 
-   out\John_Negroponte_0018-out.png    2751 |        50% |     2 |       0.14 | 
-                             AVG per Person |      67.5% |            0.12075 | 
+   out\John_Negroponte_0014-out.png    2751 |       100% |     1 |      0.093 | 
+   out\John_Negroponte_0013-out.png    2751 |       100% |     1 |       0.11 | 
+   out\John_Negroponte_0001-out.png    2751 |        20% |     5 |       0.14 | 
+   out\John_Negroponte_0018-out.png    2751 |        50% |     2 |      0.094 | 
+                             AVG per Person |      67.5% |            0.10925 | 
 Jose_Maria_Aznar  16 | 4
-  out\Jose_Maria_Aznar_0022-out.png    2857 |        25% |     4 |      0.094 | 
-  out\Jose_Maria_Aznar_0012-out.png    2857 |       100% |     1 |      0.109 | 
-  out\Jose_Maria_Aznar_0017-out.png    2857 |       100% |     1 |      0.141 | 
-  out\Jose_Maria_Aznar_0005-out.png    2857 |        20% |     5 |      0.093 | 
-                             AVG per Person |     61.25% |            0.10925 | 
+  out\Jose_Maria_Aznar_0022-out.png    2857 |        25% |     4 |      0.093 | 
+  out\Jose_Maria_Aznar_0012-out.png    2857 |       100% |     1 |      0.125 | 
+  out\Jose_Maria_Aznar_0017-out.png    2857 |       100% |     1 |      0.109 | 
+  out\Jose_Maria_Aznar_0005-out.png    2857 |        20% |     5 |      0.109 | 
+                             AVG per Person |     61.25% |              0.109 | 
 Juan_Carlos_Ferrero  16 | 4
-out\Juan_Carlos_Ferrero_0016-out.png    2885 |   5.88235% |    17 |      0.109 | 
-out\Juan_Carlos_Ferrero_0004-out.png    2885 |        20% |     5 |      0.141 | 
+out\Juan_Carlos_Ferrero_0016-out.png    2885 |   5.88235% |    17 |       0.11 | 
+out\Juan_Carlos_Ferrero_0004-out.png    2885 |        20% |     5 |      0.109 | 
 out\Juan_Carlos_Ferrero_0021-out.png    2885 |         0% |   INF |        INF | 
-out\Juan_Carlos_Ferrero_0013-out.png    2885 |    4.7619% |    21 |      0.094 | 
-                             AVG per Person |   7.66106% |              0.086 | 
+out\Juan_Carlos_Ferrero_0013-out.png    2885 |    4.7619% |    21 |      0.109 | 
+                             AVG per Person |   7.66106% |           0.109333 | 
 Junichiro_Koizumi  16 | 4
- out\Junichiro_Koizumi_0033-out.png    2940 |       100% |     1 |       0.14 | 
- out\Junichiro_Koizumi_0016-out.png    2940 |        20% |     5 |      0.094 | 
- out\Junichiro_Koizumi_0060-out.png    2940 |       100% |     1 |       0.14 | 
- out\Junichiro_Koizumi_0047-out.png    2940 |       100% |     1 |      0.094 | 
-                             AVG per Person |        80% |              0.117 | 
+ out\Junichiro_Koizumi_0033-out.png    2940 |       100% |     1 |      0.109 | 
+ out\Junichiro_Koizumi_0016-out.png    2940 |        20% |     5 |      0.156 | 
+ out\Junichiro_Koizumi_0060-out.png    2940 |       100% |     1 |      0.094 | 
+ out\Junichiro_Koizumi_0047-out.png    2940 |       100% |     1 |       0.14 | 
+                             AVG per Person |        80% |            0.12475 | 
 Kofi_Annan  16 | 4
         out\Kofi_Annan_0011-out.png    3127 |       100% |     1 |      0.094 | 
         out\Kofi_Annan_0028-out.png    3127 |      12.5% |     8 |      0.093 | 
         out\Kofi_Annan_0030-out.png    3127 |   33.3333% |     3 |      0.141 | 
         out\Kofi_Annan_0023-out.png    3127 |         0% |   INF |        INF | 
-                             AVG per Person |   36.4583% |              0.082 | 
+                             AVG per Person |   36.4583% |           0.109333 | 
 Laura_Bush  16 | 4
-        out\Laura_Bush_0002-out.png    3201 |       100% |     1 |       0.14 | 
-        out\Laura_Bush_0010-out.png    3201 |       100% |     1 |      0.094 | 
-        out\Laura_Bush_0040-out.png    3201 |       100% |     1 |      0.109 | 
-        out\Laura_Bush_0005-out.png    3201 |        50% |     2 |       0.14 | 
-                             AVG per Person |      87.5% |            0.12075 | 
+        out\Laura_Bush_0002-out.png    3201 |       100% |     1 |      0.094 | 
+        out\Laura_Bush_0010-out.png    3201 |       100% |     1 |       0.14 | 
+        out\Laura_Bush_0040-out.png    3201 |       100% |     1 |      0.125 | 
+        out\Laura_Bush_0005-out.png    3201 |        50% |     2 |      0.078 | 
+                             AVG per Person |      87.5% |            0.10925 | 
 Lindsay_Davenport  16 | 4
  out\Lindsay_Davenport_0002-out.png    3319 |      6.25% |    16 |      0.094 | 
- out\Lindsay_Davenport_0020-out.png    3319 |        50% |     2 |      0.141 | 
+ out\Lindsay_Davenport_0020-out.png    3319 |        50% |     2 |      0.156 | 
  out\Lindsay_Davenport_0018-out.png    3319 |       100% |     1 |      0.093 | 
  out\Lindsay_Davenport_0015-out.png    3319 |        10% |    10 |      0.078 | 
-                             AVG per Person |   41.5625% |             0.1015 | 
+                             AVG per Person |   41.5625% |            0.10525 | 
 Lleyton_Hewitt  16 | 4
-    out\Lleyton_Hewitt_0017-out.png    3351 |         5% |    20 |      0.109 | 
+    out\Lleyton_Hewitt_0017-out.png    3351 |         5% |    20 |      0.125 | 
     out\Lleyton_Hewitt_0020-out.png    3351 |   6.66667% |    15 |      0.125 | 
-    out\Lleyton_Hewitt_0019-out.png    3351 |       100% |     1 |      0.094 | 
+    out\Lleyton_Hewitt_0019-out.png    3351 |       100% |     1 |      0.078 | 
     out\Lleyton_Hewitt_0029-out.png    3351 |       100% |     1 |      0.125 | 
                              AVG per Person |   52.9167% |            0.11325 | 
 Luiz_Inacio_Lula_da_Silva  16 | 4
-out\Luiz_Inacio_Lula_da_Silva_0015-out.png    3401 |       100% |     1 |       0.14 | 
-out\Luiz_Inacio_Lula_da_Silva_0047-out.png    3401 |        50% |     2 |      0.094 | 
+out\Luiz_Inacio_Lula_da_Silva_0015-out.png    3401 |       100% |     1 |      0.093 | 
+out\Luiz_Inacio_Lula_da_Silva_0047-out.png    3401 |        50% |     2 |      0.141 | 
 out\Luiz_Inacio_Lula_da_Silva_0035-out.png    3401 |   6.66667% |    15 |      0.093 | 
-out\Luiz_Inacio_Lula_da_Silva_0014-out.png    3401 |       100% |     1 |      0.109 | 
-                             AVG per Person |   64.1667% |              0.109 | 
+out\Luiz_Inacio_Lula_da_Silva_0014-out.png    3401 |       100% |     1 |       0.11 | 
+                             AVG per Person |   64.1667% |            0.10925 | 
 Mahmoud_Abbas  16 | 4
-     out\Mahmoud_Abbas_0020-out.png    3433 |       100% |     1 |      0.141 | 
-     out\Mahmoud_Abbas_0027-out.png    3433 |        20% |     5 |       0.14 | 
+     out\Mahmoud_Abbas_0020-out.png    3433 |       100% |     1 |       0.14 | 
+     out\Mahmoud_Abbas_0027-out.png    3433 |        20% |     5 |      0.156 | 
      out\Mahmoud_Abbas_0003-out.png    3433 |        10% |    10 |      0.094 | 
      out\Mahmoud_Abbas_0019-out.png    3433 |         0% |   INF |        INF | 
-                             AVG per Person |      32.5% |            0.09375 | 
+                             AVG per Person |      32.5% |               0.13 | 
 Megawati_Sukarnoputri  16 | 4
-out\Megawati_Sukarnoputri_0009-out.png    3702 |       100% |     1 |      0.141 | 
-out\Megawati_Sukarnoputri_0026-out.png    3702 |        50% |     2 |      0.078 | 
-out\Megawati_Sukarnoputri_0030-out.png    3702 |       100% |     1 |      0.125 | 
-out\Megawati_Sukarnoputri_0029-out.png    3702 |         4% |    25 |      0.078 | 
-                             AVG per Person |      63.5% |             0.1055 | 
+out\Megawati_Sukarnoputri_0009-out.png    3702 |       100% |     1 |      0.093 | 
+out\Megawati_Sukarnoputri_0026-out.png    3702 |        50% |     2 |      0.094 | 
+out\Megawati_Sukarnoputri_0030-out.png    3702 |       100% |     1 |       0.14 | 
+out\Megawati_Sukarnoputri_0029-out.png    3702 |         4% |    25 |      0.094 | 
+                             AVG per Person |      63.5% |            0.10525 | 
 Naomi_Watts  16 | 4
-       out\Naomi_Watts_0018-out.png    4011 |       100% |     1 |      0.125 | 
-       out\Naomi_Watts_0010-out.png    4011 |        25% |     4 |      0.094 | 
-       out\Naomi_Watts_0016-out.png    4011 |   7.69231% |    13 |       0.14 | 
-       out\Naomi_Watts_0009-out.png    4011 |   33.3333% |     3 |      0.094 | 
-                             AVG per Person |   41.5064% |            0.11325 | 
+       out\Naomi_Watts_0018-out.png    4011 |       100% |     1 |      0.156 | 
+       out\Naomi_Watts_0010-out.png    4011 |        25% |     4 |      0.093 | 
+       out\Naomi_Watts_0016-out.png    4011 |   7.69231% |    13 |      0.078 | 
+       out\Naomi_Watts_0009-out.png    4011 |   33.3333% |     3 |      0.141 | 
+                             AVG per Person |   41.5064% |              0.117 | 
 Nestor_Kirchner  16 | 4
-   out\Nestor_Kirchner_0009-out.png    4057 |    4.7619% |    21 |      0.109 | 
+   out\Nestor_Kirchner_0009-out.png    4057 |    4.7619% |    21 |      0.093 | 
    out\Nestor_Kirchner_0003-out.png    4057 |         0% |   INF |        INF | 
-   out\Nestor_Kirchner_0035-out.png    4057 |        50% |     2 |      0.093 | 
-   out\Nestor_Kirchner_0031-out.png    4057 |        50% |     2 |      0.125 | 
-                             AVG per Person |   26.1905% |            0.08175 | 
+   out\Nestor_Kirchner_0035-out.png    4057 |        50% |     2 |      0.078 | 
+   out\Nestor_Kirchner_0031-out.png    4057 |        50% |     2 |      0.141 | 
+                             AVG per Person |   26.1905% |              0.104 | 
 Paul_Bremer  16 | 4
-       out\Paul_Bremer_0005-out.png    4253 |   9.09091% |    11 |       0.14 | 
-       out\Paul_Bremer_0017-out.png    4253 |       100% |     1 |      0.094 | 
-       out\Paul_Bremer_0012-out.png    4253 |       100% |     1 |      0.094 | 
+       out\Paul_Bremer_0005-out.png    4253 |   9.09091% |    11 |      0.093 | 
+       out\Paul_Bremer_0017-out.png    4253 |       100% |     1 |      0.141 | 
+       out\Paul_Bremer_0012-out.png    4253 |       100% |     1 |      0.093 | 
        out\Paul_Bremer_0002-out.png    4253 |         0% |   INF |        INF | 
-                             AVG per Person |   52.2727% |              0.082 | 
+                             AVG per Person |   52.2727% |              0.109 | 
 Pete_Sampras  16 | 4
       out\Pete_Sampras_0014-out.png    4372 |         0% |   INF |        INF | 
       out\Pete_Sampras_0015-out.png    4372 |         0% |   INF |        INF | 
-      out\Pete_Sampras_0020-out.png    4372 |       100% |     1 |      0.094 | 
-      out\Pete_Sampras_0005-out.png    4372 |        20% |     5 |       0.14 | 
-                             AVG per Person |        30% |             0.0585 | 
+      out\Pete_Sampras_0020-out.png    4372 |       100% |     1 |      0.078 | 
+      out\Pete_Sampras_0005-out.png    4372 |        20% |     5 |      0.156 | 
+                             AVG per Person |        30% |              0.117 | 
 Recep_Tayyip_Erdogan  16 | 4
-out\Recep_Tayyip_Erdogan_0011-out.png    4551 |       100% |     1 |      0.094 | 
-out\Recep_Tayyip_Erdogan_0024-out.png    4551 |       100% |     1 |      0.109 | 
-out\Recep_Tayyip_Erdogan_0017-out.png    4551 |   3.57143% |    28 |      0.109 | 
-out\Recep_Tayyip_Erdogan_0026-out.png    4551 |      12.5% |     8 |      0.094 | 
-                             AVG per Person |   54.0179% |             0.1015 | 
+out\Recep_Tayyip_Erdogan_0011-out.png    4551 |       100% |     1 |      0.078 | 
+out\Recep_Tayyip_Erdogan_0024-out.png    4551 |       100% |     1 |      0.078 | 
+out\Recep_Tayyip_Erdogan_0017-out.png    4551 |   3.57143% |    28 |      0.094 | 
+out\Recep_Tayyip_Erdogan_0026-out.png    4551 |      12.5% |     8 |      0.124 | 
+                             AVG per Person |   54.0179% |             0.0935 | 
 Ricardo_Lagos  16 | 4
      out\Ricardo_Lagos_0004-out.png    4572 |         0% |   INF |        INF | 
-     out\Ricardo_Lagos_0022-out.png    4572 |       100% |     1 |      0.094 | 
-     out\Ricardo_Lagos_0025-out.png    4572 |   5.55556% |    18 |       0.14 | 
-     out\Ricardo_Lagos_0006-out.png    4572 |   33.3333% |     3 |      0.094 | 
-                             AVG per Person |   34.7222% |              0.082 | 
+     out\Ricardo_Lagos_0022-out.png    4572 |       100% |     1 |       0.14 | 
+     out\Ricardo_Lagos_0025-out.png    4572 |   5.55556% |    18 |      0.094 | 
+     out\Ricardo_Lagos_0006-out.png    4572 |   33.3333% |     3 |       0.14 | 
+                             AVG per Person |   34.7222% |           0.124667 | 
 Roh_Moo-hyun  16 | 4
-      out\Roh_Moo-hyun_0008-out.png    4775 |       100% |     1 |      0.093 | 
-      out\Roh_Moo-hyun_0014-out.png    4775 |        20% |     5 |       0.11 | 
-      out\Roh_Moo-hyun_0024-out.png    4775 |        25% |     4 |       0.14 | 
-      out\Roh_Moo-hyun_0007-out.png    4775 |       100% |     1 |      0.094 | 
-                             AVG per Person |     61.25% |            0.10925 | 
+      out\Roh_Moo-hyun_0008-out.png    4775 |       100% |     1 |      0.094 | 
+      out\Roh_Moo-hyun_0014-out.png    4775 |        20% |     5 |      0.093 | 
+      out\Roh_Moo-hyun_0024-out.png    4775 |        25% |     4 |      0.141 | 
+      out\Roh_Moo-hyun_0007-out.png    4775 |       100% |     1 |      0.093 | 
+                             AVG per Person |     61.25% |            0.10525 | 
 Rudolph_Giuliani  16 | 4
-  out\Rudolph_Giuliani_0021-out.png    4836 |   14.2857% |     7 |       0.14 | 
-  out\Rudolph_Giuliani_0026-out.png    4836 |       100% |     1 |      0.094 | 
-  out\Rudolph_Giuliani_0011-out.png    4836 |        10% |    10 |      0.125 | 
-  out\Rudolph_Giuliani_0009-out.png    4836 |        25% |     4 |       0.14 | 
-                             AVG per Person |   37.3214% |            0.12475 | 
+  out\Rudolph_Giuliani_0021-out.png    4836 |   14.2857% |     7 |      0.078 | 
+  out\Rudolph_Giuliani_0026-out.png    4836 |       100% |     1 |      0.141 | 
+  out\Rudolph_Giuliani_0011-out.png    4836 |        10% |    10 |      0.109 | 
+  out\Rudolph_Giuliani_0009-out.png    4836 |        25% |     4 |      0.078 | 
+                             AVG per Person |   37.3214% |             0.1015 | 
 Saddam_Hussein  16 | 4
-    out\Saddam_Hussein_0014-out.png    4865 |       100% |     1 |      0.094 | 
-    out\Saddam_Hussein_0017-out.png    4865 |        10% |    10 |      0.093 | 
+    out\Saddam_Hussein_0014-out.png    4865 |       100% |     1 |      0.156 | 
+    out\Saddam_Hussein_0017-out.png    4865 |        10% |    10 |      0.078 | 
     out\Saddam_Hussein_0020-out.png    4865 |   6.66667% |    15 |      0.109 | 
-    out\Saddam_Hussein_0019-out.png    4865 |       100% |     1 |      0.156 | 
-                             AVG per Person |   54.1667% |              0.113 | 
+    out\Saddam_Hussein_0019-out.png    4865 |       100% |     1 |      0.125 | 
+                             AVG per Person |   54.1667% |              0.117 | 
 Serena_Williams  16 | 4
-   out\Serena_Williams_0027-out.png    4960 |        50% |     2 |      0.078 | 
-   out\Serena_Williams_0052-out.png    4960 |       100% |     1 |      0.078 | 
-   out\Serena_Williams_0003-out.png    4960 |        50% |     2 |      0.109 | 
-   out\Serena_Williams_0002-out.png    4960 |       100% |     1 |      0.125 | 
-                             AVG per Person |        75% |             0.0975 | 
+   out\Serena_Williams_0027-out.png    4960 |        50% |     2 |      0.125 | 
+   out\Serena_Williams_0052-out.png    4960 |       100% |     1 |      0.093 | 
+   out\Serena_Williams_0003-out.png    4960 |        50% |     2 |      0.125 | 
+   out\Serena_Williams_0002-out.png    4960 |       100% |     1 |      0.109 | 
+                             AVG per Person |        75% |              0.113 | 
 Silvio_Berlusconi  16 | 4
- out\Silvio_Berlusconi_0028-out.png    5037 |   9.09091% |    11 |      0.109 | 
- out\Silvio_Berlusconi_0019-out.png    5037 |         4% |    25 |      0.125 | 
- out\Silvio_Berlusconi_0030-out.png    5037 |   5.26316% |    19 |      0.094 | 
- out\Silvio_Berlusconi_0022-out.png    5037 |       100% |     1 |      0.109 | 
+ out\Silvio_Berlusconi_0028-out.png    5037 |   9.09091% |    11 |      0.125 | 
+ out\Silvio_Berlusconi_0019-out.png    5037 |         4% |    25 |      0.094 | 
+ out\Silvio_Berlusconi_0030-out.png    5037 |   5.26316% |    19 |      0.124 | 
+ out\Silvio_Berlusconi_0022-out.png    5037 |       100% |     1 |      0.094 | 
                              AVG per Person |   29.5885% |            0.10925 | 
 Tiger_Woods  16 | 4
        out\Tiger_Woods_0001-out.png    5352 |       100% |     1 |      0.109 | 
-       out\Tiger_Woods_0021-out.png    5352 |        25% |     4 |      0.094 | 
-       out\Tiger_Woods_0012-out.png    5352 |   33.3333% |     3 |      0.124 | 
-       out\Tiger_Woods_0002-out.png    5352 |       100% |     1 |      0.125 | 
+       out\Tiger_Woods_0021-out.png    5352 |        25% |     4 |      0.141 | 
+       out\Tiger_Woods_0012-out.png    5352 |   33.3333% |     3 |      0.093 | 
+       out\Tiger_Woods_0002-out.png    5352 |       100% |     1 |      0.109 | 
                              AVG per Person |   64.5833% |              0.113 | 
 Tom_Daschle  16 | 4
-       out\Tom_Daschle_0011-out.png    5421 |   3.33333% |    30 |      0.094 | 
-       out\Tom_Daschle_0019-out.png    5421 |       100% |     1 |      0.109 | 
-       out\Tom_Daschle_0008-out.png    5421 |       100% |     1 |      0.125 | 
-       out\Tom_Daschle_0007-out.png    5421 |       100% |     1 |      0.156 | 
-                             AVG per Person |   75.8333% |              0.121 | 
+       out\Tom_Daschle_0011-out.png    5421 |   3.33333% |    30 |      0.125 | 
+       out\Tom_Daschle_0019-out.png    5421 |       100% |     1 |      0.094 | 
+       out\Tom_Daschle_0008-out.png    5421 |       100% |     1 |       0.14 | 
+       out\Tom_Daschle_0007-out.png    5421 |       100% |     1 |      0.094 | 
+                             AVG per Person |   75.8333% |            0.11325 | 
 Tom_Ridge  16 | 4
-         out\Tom_Ridge_0006-out.png    5441 |         5% |    20 |       0.14 | 
+         out\Tom_Ridge_0006-out.png    5441 |         5% |    20 |      0.093 | 
          out\Tom_Ridge_0017-out.png    5441 |         0% |   INF |        INF | 
-         out\Tom_Ridge_0015-out.png    5441 |        10% |    10 |      0.093 | 
+         out\Tom_Ridge_0015-out.png    5441 |        10% |    10 |      0.078 | 
          out\Tom_Ridge_0032-out.png    5441 |         0% |   INF |        INF | 
-                             AVG per Person |      3.75% |            0.05825 | 
+                             AVG per Person |      3.75% |             0.0855 | 
 Tony_Blair  16 | 4
-        out\Tony_Blair_0051-out.png    5458 |      6.25% |    16 |      0.109 | 
-        out\Tony_Blair_0058-out.png    5458 |   3.57143% |    28 |      0.141 | 
+        out\Tony_Blair_0051-out.png    5458 |      6.25% |    16 |      0.094 | 
+        out\Tony_Blair_0058-out.png    5458 |   3.57143% |    28 |       0.14 | 
         out\Tony_Blair_0040-out.png    5458 |         0% |   INF |        INF | 
         out\Tony_Blair_0096-out.png    5458 |   5.26316% |    19 |      0.094 | 
-                             AVG per Person |   3.77115% |              0.086 | 
+                             AVG per Person |   3.77115% |           0.109333 | 
 Vicente_Fox  16 | 4
-       out\Vicente_Fox_0016-out.png    5541 |       100% |     1 |      0.109 | 
-       out\Vicente_Fox_0002-out.png    5541 |   11.1111% |     9 |      0.141 | 
-       out\Vicente_Fox_0017-out.png    5541 |       100% |     1 |       0.14 | 
-       out\Vicente_Fox_0026-out.png    5541 |        50% |     2 |      0.094 | 
-                             AVG per Person |   65.2778% |              0.121 | 
+       out\Vicente_Fox_0016-out.png    5541 |       100% |     1 |      0.156 | 
+       out\Vicente_Fox_0002-out.png    5541 |   11.1111% |     9 |      0.093 | 
+       out\Vicente_Fox_0017-out.png    5541 |       100% |     1 |      0.094 | 
+       out\Vicente_Fox_0026-out.png    5541 |        50% |     2 |       0.14 | 
+                             AVG per Person |   65.2778% |            0.12075 | 
 Vladimir_Putin  16 | 4
-    out\Vladimir_Putin_0041-out.png    5570 |   6.66667% |    15 |      0.093 | 
-    out\Vladimir_Putin_0006-out.png    5570 |         5% |    20 |      0.156 | 
-    out\Vladimir_Putin_0044-out.png    5570 |        50% |     2 |      0.094 | 
-    out\Vladimir_Putin_0034-out.png    5570 |   9.09091% |    11 |      0.093 | 
-                             AVG per Person |   17.6894% |              0.109 | 
+    out\Vladimir_Putin_0041-out.png    5570 |   6.66667% |    15 |      0.094 | 
+    out\Vladimir_Putin_0006-out.png    5570 |         5% |    20 |      0.093 | 
+    out\Vladimir_Putin_0044-out.png    5570 |        50% |     2 |      0.141 | 
+    out\Vladimir_Putin_0034-out.png    5570 |   9.09091% |    11 |      0.078 | 
+                             AVG per Person |   17.6894% |             0.1015 | 
 Winona_Ryder  16 | 4
-      out\Winona_Ryder_0011-out.png    5658 |        50% |     2 |      0.141 | 
-      out\Winona_Ryder_0001-out.png    5658 |       100% |     1 |      0.093 | 
+      out\Winona_Ryder_0011-out.png    5658 |        50% |     2 |      0.093 | 
+      out\Winona_Ryder_0001-out.png    5658 |       100% |     1 |      0.156 | 
       out\Winona_Ryder_0008-out.png    5658 |       100% |     1 |      0.094 | 
-      out\Winona_Ryder_0021-out.png    5658 |       100% |     1 |      0.125 | 
-                             AVG per Person |      87.5% |            0.11325 | 
+      out\Winona_Ryder_0021-out.png    5658 |       100% |     1 |      0.094 | 
+                             AVG per Person |      87.5% |            0.10925 | 
 
 ================================================================================
-        RETRIEVAL AVG per Person(59 people) |     45.22% | 2.211 |     0.1154 | 
+        RETRIEVAL AVG per Person(59 people) |     45.22% | 2.211 |     0.1125 | 
 ================================================================================
-             RETRIEVAL AVG FLAT(236 images) |     45.22% | 2.211 |     0.1154 | 
+             RETRIEVAL AVG FLAT(236 images) |     45.22% | 2.211 |     0.1127 | 
 ================================================================================
-Tested 236 images in 29.63 seconds
+Tested 236 images in 26.68 seconds
 
 -------------------------------------------------------------------------------

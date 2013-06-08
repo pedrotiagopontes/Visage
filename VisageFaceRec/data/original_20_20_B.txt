@@ -1,4 +1,4 @@
-C:\VisageCollections\cropped_clahe\
+C:\VisageCollections\lfw_aligned_BW\
 Alejandro_Toledo\Alejandro_Toledo_0006.jpg;121
 Alejandro_Toledo\Alejandro_Toledo_0014.jpg;121
 Alejandro_Toledo\Alejandro_Toledo_0027.jpg;121
