@@ -9,7 +9,7 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Resultados etapa de de dete\IeC {\c c}\IeC {\~a}o facial para todas as pessoas com pelo menos 2 imagens na biblioteca LFW-a.\relax }}{36}{table.caption.20}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Galerias criadas ap\IeC {\'o}s pr\IeC {\'e}-processamento.\relax }}{50}{table.caption.28}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados M\IeC {\'e}dia Precis\IeC {\~a}o na Galeria (melhores a negrito)\relax }}{62}{table.caption.36}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste, em cada galeria (L = LBPH, F = Fisherfaces, E = Eigenfaces).\relax }}{63}{table.caption.37}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Desvio padr\IeC {\~a}o ($\sigma $) entre os valores de MPG obtidos para os 4 conjuntos de teste.\relax }}{63}{table.caption.38}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados da M\IeC {\'e}dia da Precis\IeC {\~a}o na Galeria (melhores a negrito).\relax }}{63}{table.caption.36}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste (L = LBPH, F = Fisherfaces, E = Eigenfaces; melhores a negrito).\relax }}{64}{table.caption.37}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Desvio padr\IeC {\~a}o ($\sigma $) entre os valores de MPG obtidos para os 4 conjuntos de teste (melhores a negrito).\relax }}{64}{table.caption.38}
 \addvspace {10\p@ }

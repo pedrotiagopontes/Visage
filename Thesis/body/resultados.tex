@@ -15,7 +15,11 @@ O desempenho de sistemas de reconhecimento facial pode ser analisado através de
 
 Na avaliação de sistemas de reconhecimento facial automáticos designam-se de \textit{amostras biométricas} as capturas de características de uma pessoa que permitem efetuar o seu reconhecimento. Dependendo do sistema, as amostras biométricas podem ser apenas uma imagem, um conjunto de imagens, ou um vídeo. No projeto Visage as amostras biométricas de um indivíduo são constituídas por um conjunto de imagens, um exemplo de amostras biométricas de um indivíduo para a biblioteca LFW-a encontra-se representado nas figuras \ref{fig:galeria}  e \ref{fig:provas}. Designam-se ainda de \textit{provas} as amostras biométricas apresentadas ao sistema para serem reconhecidas.
 
-Para a avaliação efetuada foram criados 4 conjuntos de teste. Todos os conjuntos possuem um total de 1180 imagens, correspondentes a amostras biométricas de 59 pessoas diferentes, existindo 20 imagens por cada pessoa presente em cada conjunto. Dessas imagens foram ainda criados dois sub-conjuntos de dados: conjunto $\mathscr{G}$, designado de galeria de treino e conjunto $\mathscr{P}$, designado de provas.
+Para a avaliação efetuada foram criados 4 conjuntos de teste. Todos os conjuntos possuem um total de 1180 imagens, correspondentes a amostras biométricas de 59 personalidades distintas, existindo 20 imagens por cada pessoa presente em cada conjunto. 
+
+As 20 imagens de cada personalidade incluídas em cada um dos conjuntos de testes, variam conforme o conjunto e foram selecionadas aleatoriamente a partir da ferramenta criada especificamente para a criação de conjuntos de teste, \textit{GaleryCreator.exe}, descrita no capítulo \ref{chap:facedetector}. Algumas imagens encontram-se presentes em todos os quatro conjuntos de teste criados, enquanto outras encontram-se presentes apenas num único conjunto. No total os quatro conjuntos de teste possuem 1592 imagens diferentes.
+
+Para cada conjunto foram ainda criados dois sub-conjuntos de dados: conjunto $\mathscr{G}$, designado de galeria de treino e conjunto $\mathscr{P}$, designado de provas.
 
 \begin{figure}
         \centering
@@ -132,7 +136,7 @@ A galeria de treino, $\mathscr{G}$, é constituída por 80\% das imagens de cada
 
 O conjunto $\mathscr{P}$ contem os restantes 20\% das imagens de cada pessoa (4 imagens por pessoa) e, tal como o seu nome indica, as suas imagens são utilizadas para a avaliação do sistema desenvolvido. Um exemplo das imagens presentes nas provas para o sujeito Angelina Jolie pode ser visto na figura \ref{fig:provas}.
 
-A diferença existente entre os quatro conjuntos criados encontras-se relacionada com as imagens incluídas na galeria de treino e nas provas, sendo que estas diferem de forma aleatória entre os quatro conjuntos. A criação de 4 conjuntos com igual tamanho mas diferentes imagens de treino e teste tem em vista analisar o desempenho do sistema com diferentes galerias, de forma a determinar se existe uma variação significativa dos resultados obtidos em cada galeria.
+As imagens incluídas na galeria de treino e nas provas, diferem também de forma aleatória entre os quatro conjuntos, tendo sido também selecionadas a partir da ferramenta \textit{GaleryCreator.exe}. A criação de 4 conjuntos com igual tamanho mas diferentes imagens de treino e teste tem em vista analisar o desempenho do sistema com diferentes galerias, de forma a determinar se existe uma variação significativa dos resultados obtidos em cada galeria.
 
 \section{Pré-processamento} \label{sec:experiencias}
 O módulo de reconhecimento facial, \textit{Face Recognizer}, disponibilizado pela plataforma \textit{OpenCV}, constituiu uma base sólida para o desenvolvimento do sistema de reconhecimento facial \textit{Visage}, contudo, de modo a tornar este sistema mais completo e versátil, revelou-se necessário adapta-lo e expandir as suas capacidades, nomeadamente através da aplicação de uma cadeia de pré-processamento às imagens existentes, tal como descrito na secção \ref{sec:facedetector} deste relatório. A evolução do sistema desenvolvido foi efetuada de forma gradual e iterativa, e culminou na construção de um conjunto de galerias de imagens, analisadas através de um grupo de experiências que permitem tirar conclusões acerca dos efeitos das diversas etapas de pré-processamento realizadas e da contribuição de cada uma delas para a melhoria do desempenho do sistema criado. 
@@ -152,13 +156,13 @@ Todas as galerias criadas possuem as imagens contidas nos conjuntos de teste def
     Cropped    & Sim         & -                      & -                &   -     & \ref{fig:cropped}  \\
     Masked     & Sim         & -                      & -                & Sim     & \ref{fig:masked}  \\
 	~ & ~ & ~ & ~ & ~ & ~\\
-    Normalized & Sim         & Constrast Streching    & -                & Sim     & \ref{fig:normalized}  \\
-    Equalized  & Sim         & Histogram Equalization & -                & Sim     & \ref{fig:equalized}  \\
-    CLAHE      & Sim         & CLAHE                  & -                & Sim     & \ref{fig:clahe}  \\
+    Normalized & Sim         & \textit{Constrast Streching}& -           & Sim     & \ref{fig:normalized}  \\
+    Equalized  & Sim         & Equalização Histograma & -                & Sim     & \ref{fig:equalized}  \\
+    CLAHE      & Sim         & \textit{CLAHE}         & -                & Sim     & \ref{fig:clahe}  \\
 	~ & ~ & ~ & ~ & ~ & ~\\
-    Bilateral  & Sim         & Histogram Equalization & Bilateral        & Sim     & \ref{fig:bilateral} \\
-    Gaussian   & Sim         & Histogram Equalization & Gaussian         & Sim     & \ref{fig:gaussian}  \\
-    AKF         & Sim         & Histogram Equalization & Kuwahara Anisotropico & Sim & \ref{fig:akf}     \\
+    Bilateral  & Sim         & Equalização Histograma & Bilateral        & Sim     & \ref{fig:bilateral} \\
+    Gaussian   & Sim         & Equalização Histograma & Gaussian         & Sim     & \ref{fig:gaussian}  \\
+    AKF         & Sim        & Equalização Histograma & Kuwahara Anisotropico & Sim & \ref{fig:akf}     \\
     \hline\hline
     \end{tabular}
 	\label{tab:colecoes}
@@ -238,7 +242,7 @@ Após uma análise das diferente alternativas existentes, e através de alguns t
                 \caption{AKF}
                 \label{fig:akf}
         \end{subfigure}
-        \caption{Exemplo dos vários pré-processamentos disponíveis.}
+        \caption{Variação da mesma imagem nos vários conjuntos pré-processados analisados.}
         \label{fig:galeriaspreprocessadas}   
 \end{figure}
 
@@ -248,7 +252,8 @@ A normalização das imagens em termos de contraste é passo comum e essencial �
 Da aplicação da técnica de contrast streching às imagens presentes nos conjuntos de teste descritos anteriormente resultou a criação da galeria Normalized. As imagens normalizadas através da equalização simples do histograma encontram-se representadas na galeria Equalized e as normalizadas pela técnica \textit{CLAHE} encontram-se representadas na galeria com o mesmo nome. Para além de normalizadas, as imagens foram também recortadas e após o seu processamento fou aplicada uma máscara elíptica sobre as mesmas. As figuras \ref{fig:normalized}, \ref{fig:equalized} e \ref{fig:clahe} representam exemplos da aplicação das três técnicas avaliadas sobre a mesma imagem.
 
 \subsection{Abstração Imagens} \label{sec:pre-abstração}
-O último conjunto de galerias criadas visa analisar a hipótese levantada no âmbito desta dissertação, acerca do impacto do uso de filtros de abstração no reconhecimento facial em imagens. A utilização de filtros de abstração constitui uma forma moderna de simplificação do conteúdo visual, permitindo remover informação redundante e aumentar o destaque da mensagem visual a transmitir. O uso de filtros de abstração no âmbito do sistema Visage, tem em vista analisar se a remoção de informação não essencial nas imagens processadas, permite uma melhor captura das características essenciais presentes na face representada. 
+O último conjunto de galerias criadas visa analisar a hipótese levantada no âmbito desta dissertação, acerca do impacto do uso de filtros de abstração no reconhecimento facial em imagens. 
+A utilização de filtros de abstração constitui uma forma moderna de simplificação do conteúdo visual, permitindo remover informação redundante e aumentar o destaque da mensagem visual a transmitir. Estudos efetuados demonstraram que a aplicação destes filtros na recuperação de informação multimédia, nomeadamente no âmbito da da ilustração automática de texto têm a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento das imagens \cite{Coelho2012}. O uso de filtros de abstração no âmbito do sistema Visage, tem em vista analisar qual o impacto do uso destes filtros no reconhecimento facial em imagens, quer ao nível do desempenho do sistema, quer ao nível das suas necessidades de armazenamento e processamento das imagens.
 
 Para além de abstraídas as imagens foram também sujeitas às tarefas de pré-processamento que apresentaram melhores resultados nos conjuntos anteriormente criados, nomeadamente a deteção e segmentação da face, a normalização do seu histograma e ainda a aplicação de uma máscara após a aplicação do filtro de abstração.
 
@@ -350,7 +355,7 @@ Finalmente, através da análise do gráfico \ref{fig:exp1_comaparacao}, é poss
         \label{fig:exp2}
 \end{figure}
 
-A aquisição de imagens em condições não controladas pode resultar na obtenção de fotografias com um contraste reduzido e níveis de iluminação muito distintos. De forma a ultrapassar este problema, a normalização do contraste de uma imagem é uma tarefa comum nos sistemas de reconhecimento faciais modernos. Nesta experiência pretendemos analisar qual o impacto da normalização do contraste de uma imagem nos diferentes algoritmos implementados, assim como determinar qual a melhor de entre três técnicas distintas implementadas, através da analise do desempenho do sistema em três galerias previamente normalizadas com cada uma dessas técnicas (ver \ref{sec:pre-normalizacao}).
+A aquisição de imagens em condições não controladas pode resultar na obtenção de fotografias com um contraste reduzido e níveis de iluminação muito distintos. De forma a ultrapassar este problema, a normalização do contraste de uma imagem é uma tarefa comum nos sistemas de reconhecimento faciais modernos. Nesta experiência pretendemos analisar qual o impacto da normalização do contraste de uma imagem nos diferentes algoritmos implementados, assim como determinar qual a melhor estratégia de normalização, de entre três técnicas distintas implementadas, através da analise do desempenho do sistema em três galerias previamente normalizadas com cada uma dessas técnicas (ver \ref{sec:pre-normalizacao}).
 
 Na figura \ref{fig:exp2} é possível visualizar os resultados para obtidos para o desempenho do sistema nas galerias Normalized, Equalized e CLAHE, correspondentes às técnicas de normalização \textit{contrast stretching}, equalização histograma e CLAHE, respectivamente, as quais encontram-se descritas na secção \ref{sec:normalizacao} deste relatório. Nos gráficos da figura \ref{fig:exp2} encontra-se ainda representados os resultados obtidos para o conjunto Masked, utilizado na experiência 1, o qual serve de referência para a comparação entre os conjuntos não normalizados e os conjuntos normalizados.
 
@@ -370,18 +375,9 @@ Ao nível das três técnicas utilizadas é possível concluir que as duas varia
 Finalmente, a análise comparativa dos resultados obtidos para os três algoritmos implementados, ilustrada pelo gráfico \ref{fig:exp2_comaparacao}, permite concluir que após a normalização do histograma das imagens o desempenho dos algoritmos apresenta uma diferença muito menor do que a registada anteriormente e ilustrada pelo gráfico \ref{fig:exp1_comaparacao}. Nesta experiência o algoritmo LBPH continua a ser o algoritmo com melhor desempenho, registando no entanto uma diferença de apenas 1.8\% e 6.0\% para os algoritmos \textit{Fisherfaces} e \textit{Eigenfaces}, respetivamente, na taxa de identificação de ranking 1 no conjunto Equalized. De notar ainda que, a partir do ranking de nível 2, o algoritmo  \textit{Eigenfaces} possui uma taxa de identificação idêntica ao valores obtidos pela algoritmo \textit{Fisherfaces}, ultrapassando o desempenho do segundo, a partir do ranking 11. Esta grange evolução no desempenho, notada para o algoritmo \textit{Eigenfaces}, em contraste com a ligeira melhoria obtida pelos restantes denota a complexidade associada ao problema de reconhecimento facial automático, nomeadamente no que diz respeito à forma como diferentes fatores afetam de forma diferenciada diferentes algoritmos e diferentes conjuntos de dados.
 
 \subsection{Resultados Experiência 3: Abstração de Imagens}
-lorem ipsum
+A terceira e última experiência realizada visa analisar qual o impacto da utilização de filtros de abstração no processo de reconhecimento facial em imagens. A análise foi efetuada com recurso a três filtros de abstração diferentes, descritos em \ref{sec:filtros}, os quais correspondem a diferentes técnicas e níveis de abstração, sendo o filtro gaussiano o filtro com um menor impacto na imagem original e o filtro kuwahara anisotróprico aquele que produz um maior grau de abstração. 
 
-lorem ipsum
-
-lorem ipsum
-
-
-lorem ipsum
-
-lorem ipsum
-
-lorem ipsum
+Os resultados da análise de desempenho efetuada nesta terceira experiência encontram-se representados na figura \ref{fig:exp3} em quatro galerias distintas. A primeira corresponde à galeria Equalized, utilizada na experiência 2, e que serve como referência de comparação entre as imagens abstraídas e as imagens normalizadas, uma vez que esta foi a galeria onde se registou o melhor desempenho na experiência 2. Da aplicação dos filtros de abstração nas imagens existentes na galeria Equalized, resultou a criação de três galerias distintas Gaussian, na qual foi utilizado o filtro gaussiano para  a abstração das imagens, Bilateral, na qual foi utilizado o filtro homónimo para a abstração das imagens e ainda a galeria AKF cujas imagens foram abstraídas com recurso ao filtro kuwahara anisotrópico. Uma descrição mais pormenorizada destas galerias pode ser encontrada em \ref{sec:pre-abstração}.
 
 \begin{figure}[p]
         \centering
@@ -409,6 +405,15 @@ lorem ipsum
         \label{fig:exp3}
 \end{figure}
 
+A análise da figura \ref{fig:exp3} permite concluir que, de uma forma global, não se verifica um melhoria significativa nos resultados obtidos com o recurso à abstração de imagens no desempenho do sistema de reconhecimento facial criado. 
+
+O impacto do uso da abstração de imagens varia, no entanto, conforme o algoritmo de reconhecimento utilizado. O algoritmo \textit{Eigenfaces} é o que regista uma menor variação nos resultados obtidos quando comparadas taxas de identificação registadas nas galerias abstraídas com as registadas para a coleção Equalized. A este nível as galerias Gaussian e Bilateral registam um desempenho equivalente ao conjunto de imagens Equalized, enquanto que a galeria AKF regista um desempenho ligeiramente inferior, como é possível verificar pelas taxas de identificação nível 1 de 43.0\%, 43.4\%, 42.7\% para as galerias Equalized, Gaussian e Bilateral e 41.0\% para a galeria AKF.
+
+Para o algoritmo \textit{Fisherfaces} a galeria abstraída com recurso ao filtro gaussiano é a que regista um pior desempenho, obtendo uma taxa de identificação inferior, ou equivalente às restantes galerias em todos os níveis para os quais a taxa de identificação se encontra reportada. As galerias Bilateral e AKF, apresentam um desempenho equivalente ao da galeria Equalized, sendo que no caso do conjunto Bilateral o desempenho é regra geral ligeiramente inferior ao das outras duas galerias, ao passo que o o conjunto AKF regista uma melhoria considerável no número de pessoas identificadas a partir do ranking 20 até ao final, como é possível verificar pelas taxas de identificação de ranking 30 de cerca de 91\% para os conjuntos Equalized, Gaussian e Bilateral e de 94.2\% para o conjunto AKF.
+
+Finalmente, o algoritmo \textit{LBPH} é o que regista um maior impacto na utilização da abstração de imagens no processo de reconhecimento, sendo que nos casos dos conjuntos Bilateral e AKF o desempenho do reconhecimento piora significativamente, registando valores 6.8\% inferiores para a taxa de identificação nível 1 no conjunto Bilateral e 17.6\% inferiores para o mesmo ranking na comparação entre o conjunto AKF e Equalized. No caso do conjunto Gaussian, o desempenho é equivalente ou ligeiramente inferior do que o registado para o conjunto Equalized até ao ranking 6, passando a ser ligeiramente superior a partir deste nível até ao final onde é registada um diferença de 1.5 pontos na percentagem de pessoas identificadas.
+
+
 \begin{figure}[ht]
   \begin{center}
     \leavevmode
@@ -421,9 +426,9 @@ lorem ipsum
 \section{Avaliação \textit{Image Retrieval}} \label{sec:avaliacao2}
 A metodologia de avaliação proposta na secção \ref{sec:avaliacao1} desta dissertação permite-nos efetuar uma avaliação qualitativa do desempenho do sistema de reconhecimento facial criado, assim como dos diferentes algoritmos implementados, através de uma medida padrão para a avaliação de sistemas de reconhecimento facial automáticos. Nesta segunda avaliação propomos a avaliação do desempenho do sistema de um ponto de vista centrado num possível caso de uso do mesmo: \textit{Image Retrieval}.
 
-A área de recuperação de informação multimédia regista atualmente uma importância crescente, resultado do elevado número de conteúdos produzidos, assim como do elevado número de dispositivos de partilha disponíveis, tal como destacado no estado da arte desta dissertação. Desta forma, a recuperação de informação multimédia e em particular a área de \textit{Image Retrieval} representa uma das áreas com maior potencial para a utilização do sistema de reconhecimento facial criado.
+A área de recuperação de informação multimédia regista atualmente uma importância crescente, resultado do elevado número de conteúdos produzidos, assim como do elevado número de dispositivos de partilha disponíveis, tal como destacado na revisão do estado da arte desta dissertação. Desta forma, a recuperação de informação multimédia e em particular a área de \textit{Image Retrieval} representa uma das áreas com maior potencial para a utilização do sistema de reconhecimento facial criado.
 
-Para uma dada imagem contendo uma face, o sistema Visage é capaz de detetar a face presente na imagem e apresentar uma lista ordenada de possíveis entidades que se encontram representadas nessa imagem. Com base neste sistema é possível desenvolver aplicações de \textit{image retrieval} capazes de encontrar fotos de uma personalidade específica ou apresentar, para uma foto de rosto fornecida pelo utilizador, a celebridade ou figura pública mais parecida.
+Para uma dada imagem contendo uma face, o sistema Visage é capaz de detetar a face presente na imagem e apresentar uma lista ordenada de possíveis entidades que se encontram representadas nessa imagem, de acordo com um modelo anteriormente treinado. Com base neste sistema é possível desenvolver aplicações de \textit{image retrieval} capazes de encontrar fotos de uma personalidade específica ou apresentar, para uma foto de rosto fornecida pelo utilizador, a celebridade ou figura pública mais parecida.
 
 \subsection{Metodologia Avaliação}
 Em recuperação de informação multimédia designa-se de \textit{precisão} a fração de documentos relevantes do total de documentos retornados por uma pesquisa. Ao analisar a precisão podem ser analisados todos os documentos relevantes ou apenas os $n$ documentos mais relevantes, designado-se nessa situação de \textit{precisão a n}.
@@ -447,23 +452,14 @@ MPG_{algoritmo} = \frac{ \sum\limits_{i=0}^{n} PG_{p_i} }{n}
 
 Em que $n$ corresponde ao número de provas existentes em $\mathscr{P}$.
 
+Através da \textit{média da precisão na galeria} é possível analisar o desempenho de um algoritmo de uma forma global, ao contrário da avaliação efetuada em  \ref{sec:avaliacao1}, onde o desempenho de um algoritmo é analisado em função da progressão da sua taxa de identificação em vários rankings.
+
 \subsection{Resultados}
-Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos resultados obtidos nos quatro conjuntos de teste existentes para a \textit{média da precisão na galeria} dos três algoritmos implementados em cada uma das galerias introduzidas em \ref{sec:experiencias}.
-
--LBPH tem maior precisão em todos os conjuntos à excepção das imagens não manipuladas.
-
--Conjuntos Cropped e Masked tem resultados semelhantes.
-
--Má manipulação pode reduzir eficácia, exemplo Normalized.
-
--Equalized é o que apresenta melhores resultados para os três algoritmos
-
--Corte e Equalização reduzem as diferenças de desempenho entre os algoritmos.
 
 \begin{center}
 \begin{table}
     \begin{center}
-    \caption{Resultados Média Precisão na Galeria (melhores a negrito)}
+    \caption{Resultados da Média da Precisão na Galeria (melhores a negrito).}
     \begin{tabular}{l|ccc}
     Galeria    & $MPG_{Eigenfaces}$ & $MPG_{Fisherfaces}$ & $MPG_{LBPH}$ \\ 
     \hline\hline
@@ -475,6 +471,7 @@ Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos re
     Normalized & 42.4\%          & 53.5\%           & \textbf{57.2\%}    \\
     Equalized  & 55.2\%          & 57.3\%           & \textbf{59.6\%}    \\
     CLAHE      & 53.6\%          & 55.9\%           & \textbf{56.5\%}    \\
+    ~ \\
     Gaussian   & 55.3\%          & 54.2\%           & \textbf{58.1\%}    \\
     Bilateral  & 54.6\%          & \textbf{54.7\%}           & 53.8\%    \\
     AKF        & 52.8\%          & \textbf{53.9\%}           & 43.0\%             \\
@@ -485,38 +482,37 @@ Na tabela \ref{tab:resultadosprecicao} encontram-se representada a média dos re
 \end{table}
 \end{center}
 
+Na tabela \ref{tab:resultadosprecicao} encontram-se representada a \textit{média da precisão na galeria} dos três algoritmos avaliados em cada uma das galerias introduzidas em \ref{sec:experiencias}. 
+
+Através da análise dos resultados obtidos é possível concluir que o algoritmo \textit{LBPH} é aquele que possuí um melhor desempenho a nível global, apresentando os melhores resultados em 6 das galerias avaliadas, ao passo que o algoritmo \textit{Fisherfaces} foi o melhor em apenas 3 das galerias e o algoritmo \textit{Eigenfaces} em nenhuma das galerias.
+
+Por outro lado, o algoritmo \textit{LBPH} revela também uma maior sensibilidade em relação às etapas de pré-processamento efetuadas sobre as imagens, demonstrando a maior variação registada nas nove galerias avaliadas. A este nível o algoritmo \textit{Fisherfaces} revelou ser o mais robusto ao apresentar uma variação máxima de 13.9\% nas várias galerias, enquanto os algoritmos \textit{Eigenfaces} e \textit{LBPH} revelaram uma diferença entre a \textit{média da precisão na galeria} mínima e máxima obtidas nas nove galerias de 32.2\% e 43.6\%, respetivamente.
+
+Em relação às diversas tarefas de pré-processamento efetuadas o maior impacto é verificado após a deteção da face e respetiva segmentação da restante imagem, sendo que aqui, tal como verificado na experiência reportada em \ref{sec:avaliacao2-exp2}, a aplicação de uma máscara revela-se pouco significativa, apresentando apenas uma ligeira melhoria no desempenho do algoritmo \textit{Eigenfaces}. Comparando os resultados obtidos nas várias galerias é possível concluir que as etapas de pré-processamento aplicadas na galeria Equalized, nomeadamente a segmentação da face, equalização do histograma e aplicação de uma máscara, são as que produzem de forma global um desempenho mais elevado.
+
+Finalmente, o uso de filtros de abstração na cadeia de pré-processamento das imagens produz uma ligeira diminuição da \textit{média da precisão na galeria} obtida, sendo esta mais evidente para algoritmo \textit{LBPH} na galeria \textit{AKF}.
+
 
 \section{Variação Desempenho} \label{sec:variacaodesempenho}
-Considerando que de um ponto de vista estatístico um algoritmo de reconhecimento facial estima a identidade de uma face, é então possível interrogarmos-nos se, para uma dada categoria de imagens, se verifica uma variação no desempenho de um algoritmo quando são utilizadas galerias de treino e provas diferentes \cite{Phillips2000}.
-
-Para o estudo do desempenho do sistema de reconhecimento facial Visage foram criados quatro conjuntos de teste, que designamos aqui de A, B, C, D, onde a diferença entre os quatro conjuntos se encontra nas imagens utilizadas como galeria de treino e provas, tal com descrito em \ref{sec:conjuntos}. As imagens de cada conjunto podem ser sujeitas a um conjunto de operações de pré-processamento diferentes, resultantes na criação das galerias original, cropped, masked, normalized, equalized e CLAHE, onde cada galeria contem todas as imagens dos quatro conjuntos de teste, tal como descrito em \ref{sec:experiencias}.
-
-Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjuntos de teste criados em cada uma das galerias existente.
-
--Conjunto B obtém melhor desempenho em todos os algoritmos e todas as galerias.
-
--No conjunto B Fisherfaces obtem melhores resultados
-
--LBPH é o que apresenta melhor desempenho e menor desvio padrão
-
 \begin{center}
-\begin{table}
+\begin{table}[ht]
     \begin{center}
-    \caption{Algoritmos ordenados por desempenho nos diversos conjuntos de teste, em cada galeria (L = LBPH, F = Fisherfaces, E = Eigenfaces).}
+    \caption{Algoritmos ordenados por desempenho nos diversos conjuntos de teste (L = LBPH, F = Fisherfaces, E = Eigenfaces; melhores a negrito).}
     \begin{tabular}{l|cccc}
     Galeria    & A & B & C & D \\ 
     \hline\hline
-    Original   & F, E, L          &\textbf{ F, E, L }         & F, E, L           & F, E, L    \\
+    Original   & F, E, L          &\textbf{F, E, L}           & F, E, L           & F, E, L    \\
     ~ \\
-    Cropped    & L, F, E          & L, F, E          & L, F, E           & L, F, E    \\
-    Masked     & L, F, E          & L, F, E          & L, F, E           & L, F, E    \\
+    Cropped    & L, F, E          & \textbf{L, F, E}          & L, F, E           & L, F, E    \\
+    Masked     & L, F, E          & \textbf{L, F, E}          & L, F, E           & L, F, E    \\
     ~ \\
     Normalized & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
     Equalized  & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
     CLAHE      & L, F, E          &\textbf{ F, L, E}          & L, F, E           & L, F, E    \\
-    Gaussian \\
-    Bilateral \\
-    AKF \\
+    ~ \\
+    Gaussian   & L, F, E          &\textbf{ L, F, E}          & L, F, E           & L, F, E    \\
+    Bilateral  & F, E, L          &\textbf{ F, L, E}          & E, L, F           & E, L, F    \\
+    AKF        & E, F, L          &\textbf{ F, E, L}          & F, E, L           & E, F, L    \\
     \hline\hline
     \end{tabular}
     \label{tab:ordem_algoritmos}
@@ -525,9 +521,9 @@ Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjun
 \end{center}
 
 \begin{center}
-\begin{table}
+\begin{table}[ht]
     \begin{center}
-    \caption{Desvio padrão ($\sigma$) entre os valores de MPG obtidos para os 4 conjuntos de teste.}
+    \caption{Desvio padrão ($\sigma$) entre os valores de MPG obtidos para os 4 conjuntos de teste (melhores a negrito).}
     \begin{tabular}{l|ccc}
     Galeria    & $\sigma_{Eigenfaces}$ & $\sigma_{Fisherfaces}$ & $\sigma_{LBPH}$ \\ 
     \hline\hline
@@ -539,6 +535,7 @@ Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjun
     Normalized & 2.09\%          & 3.85\%           & \textbf{1.36\%}    \\
     Equalized  &\textbf{ 1.13\%} & 2.26\%           & \textbf{1.13\%}    \\
     CLAHE      & 2.38\%          & 4.03\%           & \textbf{1.17\%}    \\
+    ~ \\
     Gaussian   & \textbf{1.80\%}          & 2.22\%           & 2.51\%             \\
     Bilateral  & \textbf{1.54\%}          & 3.03\%           & 1.92\%             \\
     AKF        & \textbf{1.26\%}          & 3.93\%           & 2.43\%             \\ 
@@ -548,5 +545,21 @@ Nesta secção é efetuada a análise do desempenho do sistema nos quatro conjun
     \end{center}
 \end{table}
 \end{center}
+
+Considerando que de um ponto de vista estatístico um algoritmo de reconhecimento facial estima a identidade de uma face, é então possível interrogarmos-nos se, para uma dada categoria de imagens, se verifica uma variação no desempenho de um algoritmo quando são utilizadas galerias de treino e provas diferentes \cite{Phillips2000}.
+
+Os resultados das avaliações efetuadas apresentados nas secções \ref{sec:avaliacao1} e \ref{sec:avaliacao2}, representam a média dos resultados obtidos nos quatro conjuntos de tese criados para a avaliação do sistema de reconhecimento facial Visage. Nesta secção é efetuada uma análise à variação dos resultados obtidos para cada um dos conjuntos de teste criados, nas várias galerias e para os três algoritmos de reconhecimento facial utilizados.
+
+Os quatro conjuntos de teste criados, aqui designados de A, B, C e D,  são constituídos por 20 imagens de 59 indivíduos distintos, sendo que a diferença entre os quatro conjuntos se encontra nas imagens utilizadas como galeria de treino e provas, tal com descrito em \ref{sec:conjuntos}. As imagens de cada conjunto foram sujeitas a um conjunto de operações de pré-processamento diferentes, resultantes na criação das galerias original, cropped, masked, normalized, equalized, CLAHE, Gaussian, Bilateral e AKF onde cada galeria contem todas as imagens dos quatro conjuntos de teste, tal como descrito em \ref{sec:experiencias}. A variação do desempenho dos três algoritmos, para cada galeria, nos diversos conjuntos de teste encontra-se reportada nas tabelas \ref{tab:ordem_algoritmos} e \ref{tab:desviopadrao}.
+
+Tal como é possível verificar através da observação da tabela \ref{tab:ordem_algoritmos}, o conjunto B, apresenta os melhores resultados em todas as galerias analisadas.
+
+Verifica-se variação ao nível do algoritmo com melhor desempenho, conforme o conjunto de teste analisado. -No conjunto B Fisherfaces obtem melhores resultados
+
+-LBPH é o que apresenta melhor desempenho e menor desvio padrão, com excepção dos conjuntos abstraídos.
+
+-O desvio padrão varia desde 0.39\% para LBPH no conjunto Original, até um máximo de 4.03\%  para o algoritmo Fisherfaces no conjunto CLAHE
+
+-Para o conjunto com melhor desempenho -  equalized lbph - desvio=1.13\%
 
 \section{Discussão Resultados Obtidos} \label{sec:discussao}
