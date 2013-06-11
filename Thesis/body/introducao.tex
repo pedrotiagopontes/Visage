@@ -18,17 +18,24 @@ Por outro lado, o elevado valor comercial associado aos sistemas de reconhecimen
 Finalmente, a aplicação de filtros de abstração de imagens para a ilustração automática de texto demonstrou melhorias ao  nível da informação retornada, assim como, na redução significativa das necessidades de processamento e armazenamento necessárias \citep{Coelho:2012:IAC:2260641.2260676}, tornando-se assim pertinente o estudo do impacto dos filtros de abstração no processo de reconhecimento facial no âmbito desta dissertação.
 
 \section{Objetivos} \label{sec:objetivosintro}
-O principal objetivo deste projeto visa o estudo do impacto de filtros de abstração visual de informação no processo de reconhecimento facial automático em imagens. Para isso, destacam-se o seguinte conjunto de objetivos parciais:
+O principal objetivo desta dissertação visa o desenvolvimento de um sistema de reconhecimento facial automático, que permita o estudo do impacto da utilização de filtros de abstração visual de informação, assim como de várias etapas de pré-processamento, no processo de reconhecimento facial automático em imagens. Para isso, destacam-se o seguinte conjunto de objetivos parciais:
 
 \begin{enumerate}
-\item Desenvolvimento de um sistema de reconhecimento facial de personalidades;
+\item Desenvolvimento de um sistema de reconhecimento facial de personalidades, baseado em software livre;
+\item Integração de diferentes tarefas de pré-processamento de imagens de modo a aumentar a robustez do sistema;
 \item Integração da abstração de imagens no sistema desenvolvido;
-\item Avaliação dos resultados da abstração de imagens no processo de reconhecimento facial;
+\item Avaliação do impacto das diferentes tarefas de pré-processamento, assim como da abstração de imagens no processo de reconhecimento facial;
 \end{enumerate}
 
-O sistema desenvolvido deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas.
-
-Da avaliação efetuada, para além da publicação desta dissertação, espera-se ainda a publicação de um artigo científico onde sejam descritos os resultados obtidos.
+O sistema desenvolvido deverá ser capaz de detetar as faces presentes numa imagem e apresentar uma lista de possíveis entidades nela contidas, permitindo, desta forma, quer a realização avaliação levada a cabo no âmbito desta dissertação, quer a construção de uma base sólida para o desenvolvimento de futuras aplicações que tiram partido do reconhecimento facial automático em imagens no seu funcionamento.
 
 \section{Estrutura do Relatório} \label{sec:struct}
-Este relatório encontra-se dividido em quatro capítulos. Após uma breve introdução, é efetuada, no segundo capítulo, uma revisão do problema de reconhecimento facial automático em imagens, analisando os desafios existentes, as suas diversas áreas de aplicação e as estratégias adotadas para os sistemas atualmente existentes. No terceiro capítulo deste relatório, é abordado o tema da abstração de imagens, ilustrando as soluções existentes, assim como o trabalho relacionado com esta dissertação efetuado com  recurso à abstração de imagens. Por último, no quarto capítulo, é apresentada a perspetiva de solução a desenvolver, nomeadamente os detalhes da sua implementação, a forma como temos em vista analisar o desempenho do sistema e o plano de trabalho previsto.
+Este relatório encontra-se dividido em seis capítulos. No primeiro capítulo deste relatório, após uma breve introdução, são sintetizados os objetivos e motivação desta dissertação.
+
+De seguida, é apresentada uma revisão do problema de reconhecimento facial automático em imagens, analisando os desafios existentes, as suas diversas áreas de aplicação e as estratégias adotadas para os sistemas atualmente existentes. No terceiro capítulo deste relatório, é abordado o tema da abstração de imagens, ilustrando as soluções existentes, assim como o trabalho relacionado com esta dissertação efetuado com  recurso à abstração de imagens.
+
+Em quarto lugar, encontra-se descrito o sistema de reconhecimento facial desenvolvido, a sua arquitetura, os seus principais módulos e funcionalidades e ainda a biblioteca de imagens utilizada para o desenvolvimento e avaliação do sistema criado.
+
+O quinto capítulo retrata os temas avaliação e resultados. Nele são apresentados os conjuntos de teste criados para a avaliação do sistema Visage, as diferentes galerias criadas após pré-processamento das imagens, as metodologias de avaliação adotadas e os seus respetivos resultados.
+
+Por último, no sexto capítulo, encontram-se sintetizadas as principais conclusões a retirar do trabalho desenvolvido, assim como, algum do trabalho futuro a realizar.

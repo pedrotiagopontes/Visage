@@ -25,46 +25,48 @@
 \BOOKMARK [0][-]{chapter.3}{3 Abstra\347\343o de Imagens}{}% 25
 \BOOKMARK [1][-]{section.3.1}{3.1 Estiliza\347\343o Art\355stica de Imagens}{chapter.3}% 26
 \BOOKMARK [1][-]{section.3.2}{3.2 Filtros de Abstra\347\343o de Imagens}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Filtro Bilateral}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Kuwahara}{section.3.2}% 29
-\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Diffusion Shock Filter}{section.3.2}% 30
-\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Filtros Morfol\363gicos}{section.3.2}% 31
-\BOOKMARK [2][-]{subsection.3.2.5}{3.2.5 T\351cnicas Gradient Domain}{section.3.2}% 32
-\BOOKMARK [1][-]{section.3.3}{3.3 Trabalho Relacionado}{chapter.3}% 33
-\BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 34
-\BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.2}{4.2 Visage - Vis\343o geral}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.3}{4.3 Cole\347\343o de dados - Labeled Faces in the Wild}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.4}{4.4 Arquitetura}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceDetector}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o Face}{section.4.5}% 40
-\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 Alinhamento e Corte}{section.4.5}% 41
-\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 Normaliza\347\343o Contraste}{section.4.5}% 42
-\BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 Aplica\347\343o Filtro Abstra\347\343o}{section.4.5}% 43
-\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 Aplica\347\343o M\341scara}{section.4.5}% 44
-\BOOKMARK [1][-]{section.4.6}{4.6 M\363dulo FaceModel}{chapter.4}% 45
-\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Eigenfaces}{section.4.6}% 46
-\BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 Fisherfaces}{section.4.6}% 47
-\BOOKMARK [2][-]{subsection.4.6.3}{4.6.3 Local Binary Patterns Histograms \(LBPH\)}{section.4.6}% 48
-\BOOKMARK [2][-]{subsection.4.6.4}{4.6.4 Top N Resultados}{section.4.6}% 49
-\BOOKMARK [1][-]{section.4.7}{4.7 Funcionalidades}{chapter.4}% 50
-\BOOKMARK [0][-]{chapter.5}{5 Avalia\347\343o e Resultados}{}% 51
-\BOOKMARK [1][-]{section.5.1}{5.1 Conjuntos de Teste}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.2}{5.2 Pr\351-processamento}{chapter.5}% 53
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Dete\347\343o e segmenta\347\343o da face}{section.5.2}% 54
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 55
-\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o Imagens}{section.5.2}% 56
-\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 57
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 58
-\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1: Impacto da segmenta\347\343o das faces}{section.5.3}% 59
-\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 60
-\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3: Abstra\347\343o de Imagens}{section.5.3}% 61
-\BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 62
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 63
-\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 64
-\BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.6}{5.6 Discuss\343o Resultados Obtidos}{chapter.5}% 66
-\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 67
-\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 69
-\BOOKMARK [0][-]{section*.39}{Refer\352ncias}{}% 70
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Filtro Gaussiano}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Filtro Bilateral}{section.3.2}% 29
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Kuwahara}{section.3.2}% 30
+\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Diffusion Shock Filter}{section.3.2}% 31
+\BOOKMARK [2][-]{subsection.3.2.5}{3.2.5 Filtros Morfol\363gicos}{section.3.2}% 32
+\BOOKMARK [2][-]{subsection.3.2.6}{3.2.6 T\351cnicas Gradient Domain}{section.3.2}% 33
+\BOOKMARK [1][-]{section.3.3}{3.3 Trabalho Relacionado}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 35
+\BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{4.2 Visage - Vis\343o geral}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.3}{4.3 Cole\347\343o de dados - Labeled Faces in the Wild}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.4}{4.4 Arquitetura}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceDetector}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o Face}{section.4.5}% 41
+\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 Alinhamento e Corte}{section.4.5}% 42
+\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 Normaliza\347\343o Contraste}{section.4.5}% 43
+\BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 Aplica\347\343o Filtro Abstra\347\343o}{section.4.5}% 44
+\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 Aplica\347\343o M\341scara}{section.4.5}% 45
+\BOOKMARK [1][-]{section.4.6}{4.6 M\363dulo FaceModel}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Eigenfaces}{section.4.6}% 47
+\BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 Fisherfaces}{section.4.6}% 48
+\BOOKMARK [2][-]{subsection.4.6.3}{4.6.3 Local Binary Patterns Histograms \(LBPH\)}{section.4.6}% 49
+\BOOKMARK [2][-]{subsection.4.6.4}{4.6.4 Top N Resultados}{section.4.6}% 50
+\BOOKMARK [1][-]{section.4.7}{4.7 Funcionalidades}{chapter.4}% 51
+\BOOKMARK [0][-]{chapter.5}{5 Avalia\347\343o e Resultados}{}% 52
+\BOOKMARK [1][-]{section.5.1}{5.1 Conjuntos de Teste}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.2}{5.2 Pr\351-processamento}{chapter.5}% 54
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Dete\347\343o e segmenta\347\343o da face}{section.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 56
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o Imagens}{section.5.2}% 57
+\BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 58
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 59
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1: Impacto da segmenta\347\343o das faces}{section.5.3}% 60
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 61
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3: Abstra\347\343o de Imagens}{section.5.3}% 62
+\BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 64
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 65
+\BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.6}{5.6 An\341lise Necessidade Armazenamento}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.7}{5.7 Discuss\343o Resultados Obtidos}{chapter.5}% 68
+\BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 69
+\BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 70
+\BOOKMARK [1][-]{section.6.2}{6.2 Perspectivas Futuras}{chapter.6}% 71
+\BOOKMARK [0][-]{section*.40}{Refer\352ncias}{}% 72

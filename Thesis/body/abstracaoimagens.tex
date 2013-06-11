@@ -1,13 +1,5 @@
 \chapter{Abstração de Imagens} \label{chap:abstracao}
 
-*********
-
-- Falar sobre o filtro gaussiano, image blur;
-
-- Expandir trabalho relacionado;
-
-*********
-
 Neste capítulo é efetuada uma análise das diversas abordagens existentes para a abstração de imagens. Inicialmente, é apresentada uma contextualização da abstração de imagens, no âmbito da estilização artística de imagens, onde são abordadas de forma sumária as diferentes técnicas existentes para o efeito. De seguida, encontram-se descritos alguns dos filtros de abstração de imagens mais comuns. Por último, é ainda apresentado um trabalho relacionado com esta dissertação na área de abstração de imagens.
 
 \section{Estilização Artística de Imagens}
@@ -35,7 +27,7 @@ De acordo com o estudo do estado da arte da área de estilização artística de
 Apesar de os filtros de abstração de imagens possuírem uma menor diversidade numa perspetiva artística de renderização, a utilização de uma abordagem local por parte destes filtros torna-os vantajosos, quando comparada com as restantes técnicas de renderização artística de imagens. Esta abordagem permite uma fácil adaptação dos processos de abstração de imagens a tecnologias de processamento paralelo, presentes nos CPUs modernos, assim como uma implementação direta do processo de abstração de alguns dos filtros pelos próprios GPUs. Nesse sentido, e devido ao grande número de imagens utilizadas no processo de reconhecimento facial automático a utilização de filtros de abstração de imagens torna-se mais vantajosa no âmbito desta dissertação.
 
 \section{Filtros de Abstração de Imagens}
-Os filtros de abstração de imagens permitem simplificar o conteúdo visual, destacando apenas a informação essencial contida nas imagens. Existem vários tipos de filtros de abstração, de seguida encontram-se descritas cinco categorias de filtros de abstração de imagem tipicamente utilizados.
+Os filtros de abstração de imagens permitem simplificar o conteúdo visual, destacando apenas a informação essencial contida nas imagens. Existem vários tipos de filtros de abstração, de seguida encontram-se descritas seis categorias de filtros de abstração de imagem tipicamente utilizados.
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
@@ -74,6 +66,13 @@ Os filtros de abstração de imagens permitem simplificar o conteúdo visual, de
         \end{subfigure}
         \caption{Diferentes filtros de abstração aplicados sobre a mesma imagem \cite{Kyprianidis2009}.}\label{fig:filtrosabtracao}
 \end{figure}
+
+\subsection{Filtro Gaussiano} \label{subsec:gaussian}
+A utilização de filtros gaussianos no âmbito do processamento de imagem e visão por computador tem sido alvo de estudo desde há mais de 20 anos \cite{373563}.
+
+O principal objetivo deste filtro é suavizar a imagem original de forma a reduzir o ruído existente na mesma. Este filtro utiliza uma função gaussiana, para determinar a transformação a aplicar a cada pixel da imagem original, a qual pode ser resumida, de uma forma simplificada, como sendo uma média pesada dos valores existentes nos pixeis vizinhos, na qual o peso de um pixel na média diminuí conforme a sua distância ao centro aumenta.
+
+Apesar de diminuir o ruído existente numa imagem, a filtragem gaussiana apresenta como principal desvantagem o facto de reduzir o detalhe existente na imagem, assim como os limites dos objetos nela contidos. Por esse motivo este filtro é muitas vezes utilizado paralelamente com outras técnicas de abstração visual, de modo a melhorar os resultados obtidos.
 
 \subsection{Filtro Bilateral} \label{subsec:bilateral}
 Uma abordagem baseada num filtro bilateral foi proposta em primeira mão por Tomasi e Manduchi em 1998 \cite{Tomasi1998} e encontra-se representada na imagem \ref{fig:bilateral}. Já em 2006, Winnemöller propôs uma melhoria dos resultados obtidos através da associação de um filtro de diferença de gaussianas na aplicação do filtro bilateral \cite{Winnemoller2006}. Trabalhos posteriores com vista a melhorar, os contornos produzidos pelas imagens abstraídas foram também realizados com sucesso através da introdução de um filtro de diferença de gaussianas baseado baseado em fluxo \cite{Kang2009}.
@@ -125,6 +124,7 @@ Os filtros de abstração são normalmente utilizados por artistas para comunica
 
 A ilustração de texto é uma tarefa enquadrada na área da recuperação de informação multimédia e que consiste na pesquisa de imagens adequadas para a ilustração de fragmentos de texto, tais como notícias ou livros. Coelho e Ribeiro  \cite{Coelho:2012:IAC:2260641.2260676}, propõem o uso da abstração de imagens para a ilustração automática de texto, através de um sistema de recuperação de informação, o qual dada uma entrada textual inicial, seleciona automaticamente uma pequena lista de imagens relacionadas a partir da análise coleção de imagens previamente processada.
 
-O sistema desenvolvido utiliza a abstração de imagens para melhorar a informação capturada pelos descritores de informação visual utilizados e consequentemente melhorar os resultados obtidos a partir da análise baseada em conteúdos efetuada à coleção de dados.
+O sistema de ilustração automática de texto utiliza a abstração de imagens para melhorar a informação capturada pelos descritores de informação visual utilizados e consequentemente melhorar os resultados obtidos a partir da análise baseada em conteúdos efetuada à coleção de dados.
 
 Os resultados obtidos demonstraram que o uso de abstração tem a potencialidade de melhorar a informação recuperada, assim como reduzir as necessidades de processamento e armazenamento da coleção de dados utilizada.
+

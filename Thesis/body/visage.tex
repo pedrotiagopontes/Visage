@@ -23,8 +23,8 @@ A criação do sistema Visage teve como principal objetivo o desenvolvimento de 
 
 De uma forma genérica, o funcionamento do sistema Visage pode ser agrupado nas seguintes fases fundamentais:
 \begin{description}
-\item[Pré-processamento] Corresponde à primeira etapa executa pelo sistema, na qual é fornecida uma galeria de imagens a pré-processar que irão ser posteriormente utilizadas na fases de treino e identificação. O pré-processamento engloba tarefas como deteção das faces na imagem, normalização do contraste e iluminação, aplicação de filtros de abstração ou alinhamento das imagens.
-\item[Treino] Nesta fase, são fornecidas um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita de futuro proceder à identificação de novas imagens de acordo com a informação obtida treinada.
+\item[Pré-processamento] Corresponde à primeira etapa executa pelo sistema, na qual é fornecida uma galeria de imagens a pré-processar, as quais irão ser posteriormente utilizadas na fases de treino e identificação. O pré-processamento engloba tarefas como deteção das faces na imagem, normalização do contraste e iluminação, aplicação de filtros de abstração ou alinhamento das imagens.
+\item[Treino] Nesta fase, são fornecidas um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita de futuro proceder à identificação de novas imagens de acordo com a informação treinada.
 \item[Identificação] Corresponde à utilização do sistema como intuito de identificar novas imagens não anotadas. Para uma dada imagem fornecida ao sistema, este deve devolver no nome da pessoa que se encontra na imagem tendo em conta a informação obtida na fase de treino. Nesta fase é também possível obter uma lista de entidades, ordenada de forma crescente pela similaridade em relação à pessoa representada na imagem.
 \end{description}
 
@@ -39,24 +39,24 @@ Finalmente, ao nível das galerias de imagens, foi utilizada a coleção \textit
 
 \section{Coleção de dados - \textit{Labeled Faces in the Wild}} \label{sec:lfw}
 
-A evolução do estado da arte do reconhecimento facial automático em imagens tem beneficiado em larga escala do aumento constante dos recursos disponíveis para o seu estudo, nomeadamente através da criação de novas e mais completas coleções de dados \cite{Huang2007}. A grande maioria destas coleções, caracteriza-se por ter condições de captura controladas com o intuito de efetuar o estudo de fatores específicos que afetam a qualidade do reconhecimento, tais como a variação da pose, iluminação, expressão e outros fatores mencionados no capítulo \ref{desafios}. O objeto de estudo desta dissertação não é, no entanto, a análise específica de alguns desses fatores, mas sim a criação de um sistema de reconhecimento facial automático em imagens a partir de recursos de código aberto disponíveis, assim como a análise posterior do impacto do uso de abstração de imagens no sistema desenvolvido. Desta forma, a escolha de uma biblioteca apropriada e que represente as grandes variações associadas aos diferentes desafios que afetam o reconhecimento facial em imagens torna-se crucial.
+A evolução do estado da arte do reconhecimento facial automático em imagens tem beneficiado em larga escala do aumento constante dos recursos disponíveis para o seu estudo, nomeadamente através da criação de novas e mais completas coleções de dados \cite{Huang2007}. A grande maioria destas coleções, caracteriza-se por ter condições de captura controladas com o intuito de efetuar o estudo de fatores específicos que afetam a qualidade do reconhecimento. No âmbito desta dissertação, temos em vista a análise do problema de reconhecimento facial automático do um ponto de vista geral, e próximo das situações onde este tipo de sistemas são utilizados verdadeiramente, desta forma, a escolha de uma biblioteca apropriada e que represente as grandes variações associadas aos diferentes desafios que afetam o reconhecimento facial em imagens torna-se crucial.
 
 Tendo em conta as preocupações acima mencionadas, para o desenvolvimento do sistema de reconhecimento facial  Visage e posterior análise dos resultados obtidos no âmbito nesta dissertação foi escolhida a coleção de imagens \textit{Labeled Faces in the Wild}.
 
-A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Nesse sentido, as imagens que constituem a galeria caracterizam-se por possuir uma grande variabilidade, nomeadamente ao nível da pose, expressão, iluminação, etnia, idade, género, vestuário e qualidade da câmara, por exemplo \cite{Huang2007}.
+A coleção \textit{Labeled Faces in the Wild (LFW)} é uma base de dados fotográfica desenhada especificamente para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Nesse sentido, as imagens que constituem a galeria caracterizam-se por possuir uma grande variabilidade, nomeadamente ao nível da pose, expressão, iluminação, etnia, idade, género, vestuário e qualidade da câmara com a qual foi efetuada a captura\cite{Huang2007}.
 
-Nesta coleção encontram-se representados um conjunto de 5749 indivíduos, ilustrados por 13233 imagens. O número de imagens por pessoa apresenta no entanto uma grande variação, desde um mínimo de 1 imagem por pessoa para 4069 indivíduos, até um máximo de 530 imagens que representam o antigo presidente dos Estados Unidos da América George W. Bush. O gráfico \ref{fig:distribuicaoLFW} ilustra a grande variação da distribuição do número de imagens por pessoa.
+Nesta coleção encontram-se representados um conjunto de 5749 indivíduos, ilustrados por 13233 imagens. O número de imagens por pessoa apresenta no entanto uma grande variação, desde um mínimo de 1 imagem por pessoa para 4069 indivíduos, até um máximo de 530 imagens que representam o antigo presidente dos Estados Unidos da América George W. Bush. O gráfico \ref{fig:distribuicaoLFW} ilustra a grande variação da distribuição do número de imagens por pessoa. No eixo vertical encontram-se representadas o número de pessoas em escala logarítmica e no eixo horizontal o número de imagens correspondente.
 
 \begin{figure}[ht]
   \begin{center}
     \leavevmode
     \includegraphics[width=1\textwidth]{Distribuicao}
-    \caption{Distribuição do número de imagens por pessoa na biblioteca LFW. No eixo vertical encontram-se representadas o número de pessoas em escala logarítmica e no eixo horizontal o número de imagens correspondente.}
+    \caption{Distribuição do número de imagens por pessoa na biblioteca LFW.}
     \label{fig:distribuicaoLFW}
   \end{center}
 \end{figure}
 
-As imagens desta coleção são maioritariamente a cores, com diferentes graus de saturação, existindo também um número reduzido de imagens a preto e branco. Devido à inexistência de restrições na captura de imagens, cada fotografia pode possuir mais do que uma face representada, sendo que a face que contem o pixel central deve ser considerada como a entidade representada na imagem. A cada imagem encontra-se também associada uma anotação textual, relativa ao nome da pessoa representada. A tabela \ref{tab:lfw} sintetiza algumas das características mais significativas da biblioteca.
+Devido à inexistência de restrições na captura de imagens, cada fotografia pode possuir mais do que uma face representada, sendo que a face que contem o pixel central deve ser considerada como a entidade representada na imagem. As imagens desta coleção são maioritariamente a cores, com diferentes graus de saturação, existindo também um número reduzido de imagens a preto e branco. A cada imagem encontra-se também associada uma anotação textual, relativa ao nome da pessoa representada. A tabela \ref{tab:lfw} sintetiza algumas das características mais significativas da biblioteca.
 
 \begin{center}
 \begin{table}
@@ -104,13 +104,13 @@ Para além da coleção LFW original, encontram-se também disponíveis para fin
         \caption{Diferentes versões da biblioteca LFW}\label{fig:lfwversoes}
 \end{figure}
 
-A coleção LFW é particularmente interessante para o estudo do desempenho do sistema desenvolvido e consequentemente do impacto do uso da abstração de imagens no reconhecimento facial uma vez que a variabilidade presente nas suas imagens, representa uma amostra fiável das variações encontradas no dia-a-dia de uma pessoa. Por outro lado, o facto de as suas imagens não terem sido capturadas com o intuito específico da análise do problema do reconhecimento facial, aproxima este conjunto de dados das imagens utilizadas por um utilizador final de um sistema de reconhecimento facial automático na grande maioria das situações. Finalmente, e uma vez que a tarefa de alinhamento da face na imagem não é um objeto de estudo primordial desta dissertação, a existência de versões já alinhadas da coleção permitiu agilizar os testes realizados, retirando um fator importante de variação dos resultados obtidos. Assim sendo, no âmbito desta dissertação optamos pela utilização da versão alinhada LFW-a \citep{autor} para fins de avaliação do desempenho do sistema de reconhecimento facial criado e do impacto do uso de filtros de abstração sobre essas imagens.
+A coleção LFW é particularmente interessante para o estudo do desempenho do sistema desenvolvido e consequentemente do impacto do uso da abstração de imagens no reconhecimento facial uma vez que a variabilidade presente nas suas imagens, representa uma amostra fiável das variações encontradas no dia-a-dia de uma pessoa. Por outro lado, o facto de as suas imagens não terem sido capturadas com o intuito específico da análise do problema do reconhecimento facial, aproxima este conjunto de dados das imagens utilizadas por um utilizador final de um sistema de reconhecimento facial automático. Finalmente, e uma vez que a tarefa de alinhamento da face na imagem não é um objeto de estudo primordial desta dissertação, a existência de versões já alinhadas da coleção permitiu agilizar os testes realizados, retirando um fator importante de variação dos resultados obtidos. Assim sendo, no âmbito desta dissertação optamos pela utilização da versão alinhada LFW-a \citep{autor} para fins de avaliação do desempenho do sistema de reconhecimento facial criado e do impacto do uso de filtros de abstração sobre essas imagens.
 
 \section{Arquitetura}
 O sistema de reconhecimento facial criado é constituído pelos seguintes 6 módulos:
 
 \begin{description}
-\item[\textit{Person}] Módulo responsável por efetuar o encapsulamento da informação relativa a uma pessoa, nomeadamente o seu nome, código de identificação e imagens a esta associadas. De modo a facilitar a avaliação do sistema criado é ainda possível armazenar de forma diferenciada imagens de treino e teste de cada pessoa.
+\item[\textit{Person}] Módulo responsável por efetuar o encapsulamento da informação relativa a uma pessoa, nomeadamente o seu nome, código de identificação e imagens a esta associada. De modo a facilitar a avaliação do sistema criado é ainda possível armazenar de forma diferenciada imagens de treino e teste de cada pessoa.
 \item[\textit{Library}]Módulo responsável por encapsular a informação de uma galeria de imagens utilizada para treinar o sistema, nomeadamente o seu diretório, as pessoas representadas nessa biblioteca (agrupadas num \textit{array} de objetos do tipo \textit{Person}) e alguns dados estatísticos como o número mínimo e máximo de imagens existentes por pessoa e o número total de imagens da galeria. Apesar de poder ser utilizado com diferentes funcionalidades este módulo foi desenvolvido com o intuito de facilitar a avaliação do sistema Visage com diferentes galerias de imagens, pelo que na criação de uma \textit{Library} é possível definir qual a percentagem das imagens, de cada pessoa, que devem ser utilizadas como conjunto de teste e conjunto de treino do sistema (Ver capítulo \ref{chap:resultados} para mais detalhes).
 \item[\textit{FaceDetector}] A par do módulo \textit{FaceModel} é um dos componentes principais do sistema, sendo responsável por efetuar um conjunto de tarefas de pré-processamento sobre as imagens utilizadas. Este módulo encontra-se descrito detalhadamente na secção \ref{sec:facedetector}.
 \item[\textit{FaceModel}] 
@@ -137,15 +137,15 @@ Na figura \ref{fig:preprocessamento} encontram-se representadas as diferentes ta
 \subsection{Deteção Face} \label{sec:detecao_face}
 A existência de elementos de fundo numa imagem produz um impacto significativo nos resultados obtidos por sistemas de reconhecimento facial automático, pelo que a deteção da zona de uma imagem onde se encontra representada a face a identificar é fundamental para um bom desempenho do sistema criado. A fase de pré-processamento designada de "deteção face" implementada no sistema Visage tem então como objetivo, para uma dada imagem fornecida ao sistema, determinar qual a zona da imagem onde se encontra a face a identificar.
 
-A deteção facial é efetuada com recurso um classificador em cascata, designado de \textit{boosted cascade classifier},  treinado especificamente para a deteção de faces, utilizando para isso a implementação existente na \textit{Open Source Computer Vision Library}, a qual é baseada na nos trabalhos de Viola e Jones \cite{Viola2001} e posteriores melhorias introduzidas por Lienhart, Kuranov e Pisarevsky \cite{Lienhart2003}.
+A deteção facial é efetuada com recurso um classificador em cascata, designado de \textit{boosted cascade classifier},  treinado especificamente para a deteção de faces. O classificador utilizado encontra-se implementado na biblioteca \textit{OpenCV} e baseia-se nos trabalhos de Viola e Jones \cite{Viola2001} e posteriores melhorias introduzidas por Lienhart, Kuranov e Pisarevsky \cite{Lienhart2003}.
 
-Um classificador deste tipo é treinado com algumas centenas de imagens, de um objeto particular, neste caso uma face em posição frontal, designando-se essas imagens de exemplos positivos; assim como algumas imagens arbitrárias e não relacionadas, designadas de exemplos negativos. Quer os exemplos negativos, quer os positivos são previamente escalados para o mesmo tamanho. Após o treino, o classificador é capaz de determinar se numa região de igual tamanho às imagens utilizadas no seu treino, designada de janela, é provável, ou não,  a existência de uma face. Para efetuar a pesquisa de faces em toda a imagem a janela do classificador é movida ao longo da mesma de forma a que toda a área existente seja pesquisada. Para a pesquisa de faces de diferentes tamanhos é possível escalar o classificador, efetuando o varrimento da imagem nas diversas escalas que se pretende pesquisar.
+Um classificador deste tipo é treinado com algumas centenas de imagens, de um objeto particular, neste caso uma face em posição frontal, designando-se essas imagens de exemplos positivos; assim como algumas imagens arbitrárias e não relacionadas, designadas de exemplos negativos. Quer os exemplos negativos, quer os positivos são previamente escalados para o mesmo tamanho. Após o treino, o classificador é capaz de determinar se numa região de igual tamanho às imagens utilizadas no seu treino, designada de janela, é provável, ou não,  a existência de uma face. Para efetuar a pesquisa de faces em toda a imagem a janela do classificador é movida ao longo da imagem de forma a que toda a área existente seja pesquisada. Para a pesquisa de faces de diferentes tamanhos é possível escalar o classificador, efetuando o varrimento da imagem nas diversas escalas que se pretende pesquisar.
 
-Um dos principais contributos de Viola e Jones para a construção de um sistema de deteção facial eficaz prende-se com utilização de um algoritmo de aprendizagem, designado de \textit{Adaboost}, que efetua a seleção de um número de características visuais críticas comuns a um conjunto alargado de imagens, permitindo assim a extração de pormenores essenciais para a classificação de um tipo de objecto \cite{Viola2001}. Desta forma é possível a criação de vários classificadores simples focados em características especificas da imagem. A palavra "\textit{boosted}" no classificador utilizado deriva da utilização desta técnica no mesmo. \footnote{As caraterísticas especificas da imagem utilizadas para alimentar os vários classificadores podem ser Haar ou LBP.}
+Um dos principais contributos de Viola e Jones para a construção de um sistema de deteção facial eficaz prende-se com utilização de um algoritmo de aprendizagem, designado de \textit{Adaboost}, que efetua a seleção de um número de características visuais críticas comuns a um conjunto alargado de imagens, permitindo assim a extração de pormenores essenciais para a classificação de um tipo de objecto \cite{Viola2001}. Desta forma é possível a criação de vários classificadores simples focados em características especificas da imagem. A palavra "\textit{boosted}" no classificador utilizado deriva da utilização desta técnica no mesmo.
  
 A designação de classificador em cascata deriva da utilização de um conjunto de classificadores simples, de forma sequencial e combinada. Para a determinação da existência de uma face, todos os classificadores utilizados  têm de aprovar a existência da mesma, caso contrário a face é rejeitada. Um exemplo básico de um classificador seria uma árvore de decisão com pelo menos duas folhas.
 
-No sistema Visage é utilizado um classificador facial, treinado através das características obtidas pela extração das \textit{Local Binary Patterns} \cite{Ahonen2006} de um conjunto de imagens de caras frontais. Contudo, a implementação existente na biblioteca OpenCV deste tipo de classificadores pode ser igualmente utilizada para reconhecer qualquer tipo de objetos para os quais exista informação de treino disponível.
+No sistema Visage é utilizado um classificador facial, disponibilizado pela biblioteca \textit{OpenCV}, treinado através das características obtidas pela extração das \textit{Local Binary Patterns} \cite{Ahonen2006} de um conjunto de imagens de caras frontais. Contudo, a implementação existente na biblioteca OpenCV deste tipo de classificadores pode ser igualmente utilizada para reconhecer qualquer tipo de objetos para os quais exista informação de treino disponível.
 
 \subsubsection*{Remoção Conflitos e Falsos Positivos}
 
@@ -181,14 +181,14 @@ No sistema Visage é utilizado um classificador facial, treinado através das ca
         \caption{Comparação entre face correctamente detectada e situações de erro na detação}\label{fig:conflitos-detecao}
 \end{figure}
 
-Para uma dada imagem, a tarefa de deteção face é responsável pela determinação de uma área de interesse onde se encontra a face que se pretende fornecer às etapas de treino ou teste do sistema Visage, um exemplo de uma imagem cuja face foi corretamente detetada e respetiva área de interesse, assinada a vermelho, pode ser encontrada na figura \ref{fig:conflitos-correcta}.
+Para uma dada imagem, a tarefa de deteção face é responsável pela determinação de uma área de interesse, de forma rectangular, onde se encontra a face que se pretende fornecer às etapas de treino ou teste do sistema Visage. Um exemplo de uma imagem cuja face foi corretamente detetada e da respetiva área de interesse, assinada a vermelho, pode ser encontrado na figura \ref{fig:conflitos-correcta}.
 
 Apesar do bom desempenho do classificador utilizado na deteção das faces presentes nas imagens existem algumas situações onde se verificou a existência de erros ou conflitos nos resultados obtidos, tal como ilustrado em \ref{fig:conflitos-detecao}. As três situações de erro encontradas podem ser agrupadas em:
-\begin{itemize}
-\item Falsos Positivos. Zonas da imagem que não contém faces podem ser assinaladas como área de interesse, tal como ilustrado em \ref{fig:conflitos-falsos_positivos};
-\item Múltiplas Áreas de Interesse. Para a mesma face, na análise de uma imagem são devolvidas várias regiões de interesse, tal como pode ser visto em \ref{fig:conflitos-multiplas_areas};
-\item Múltiplas Faces. Na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:conflitos-multiplas_faces}, onde apenas a face maior possuí uma anotação textual associada, pelo que apenas essa face deve ser extraída da imagem.
-\end{itemize}
+\begin{description}
+\item[Falsos Positivos] Zonas da imagem que não contém faces podem ser assinaladas como área de interesse, tal como ilustrado em \ref{fig:conflitos-falsos_positivos};
+\item[Múltiplas Áreas de Interesse] Para a mesma face, na análise de uma imagem são devolvidas várias regiões de interesse, tal como pode ser visto em \ref{fig:conflitos-multiplas_areas};
+\item[Múltiplas Faces] Na galeria utilizada para o desenvolvimento e avaliação do sistema, LFW-a, existem fotografias onde mais do que uma pessoa se encontra representada na mesma imagem, no entanto, em cada imagem é apresentada apenas a anotação textual para a face mais relevante na fotografia, tal como pode ser visto em \ref{fig:conflitos-multiplas_faces}, onde apenas a face maior possuí uma anotação textual associada, pelo que apenas essa face deve ser extraída da imagem.
+\end{description}
 
 \begin{table}
 \caption{Resultados etapa de de deteção facial para todas as pessoas com pelo menos 2 imagens na biblioteca LFW-a.}
@@ -197,10 +197,10 @@ Apesar do bom desempenho do classificador utilizado na deteção das faces prese
     \hline
     Pessoas                                                 & 1680                   \\
     Imagens                                                 & 9165                   \\ \hline
-    Imagens com Faces Detectadas                            & 95.50\% (8753 imagens) \\
-    Imagens com Faces Não Detectadas                        & 2.52\% (231 imagens)   \\
-    Conflitos e Falsos Positivos Resolvidos Automáticamente & 1.63\% (149 imagens)   \\
-    Conflitos e Falsos Positivos Não Resolvidos (Empates)   & 0.34\% (31 imagens)    \\
+    Imagens com faces detectadas s/ conflito                & 95.50\% (8753 imagens) \\
+    Conflitos e falsos positivos resolvidos automaticamente & 1.63\% (149 imagens)   \\
+    Conflitos e falsos positivos não resolvidos (empates)   & 0.34\% (31 imagens)    \\
+    Imagens com faces não detectadas                        & 2.52\% (231 imagens)   \\
     \hline
     \hline
     \end{tabular}
@@ -217,17 +217,17 @@ Na avaliação das várias regiões de interesse é procurada a existência de o
 \item +50 Pontos caso seja encontrada a boca. No caso de terem sido encontrados previamente os olhos, é também verficado se distância entre a boca e os olhos é de de pelo menos 20 pixeis, de modo a garantir que um olho não é classificado como boca e vice-versa;
 \item + 50 Pontos caso seja encontrado o nariz na face.
 \end{itemize}
-A pontuação de uma região de interesse varia assim entre 0 e 200 pontos. No final é guardada apenas a região de interesse com maior pontuação. No caso de empate, são guardadas ambas as regiões de interesse, e o utilizador do sistema é avisado do conflito, o qual deverá ser resolvido posteriormente de forma manual.
+A pontuação de uma região de interesse varia assim entre os 0 e os 200 pontos. No final, é guardada apenas a região de interesse com maior pontuação. Em caso de empate, são guardadas ambas as regiões de interesse, e o utilizador do sistema é avisado do conflito, o qual deverá ser resolvido posteriormente de forma manual.
 
-O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, com e sem remoção de conflitos pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra foram incluídas apenas as fotografias de pessoas que tenham pelos menos 2 imagens na biblioteca LFW-a, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste.
+O desempenho da tarefa de deteção facial numa amostra da biblioteca LFW-a, pode ser vista na tabela \ref{tab:desempenho_detecao}. Nesta amostra foram incluídas apenas as fotografias de pessoas que tenham pelos menos 2 imagens na biblioteca LFW-a, uma vez que apenas essas poderão ser utilizadas na avaliação do desempenho do sistema, utilizando, pelo menos, uma imagem para treino e uma imagem para teste. Tal como é possível visualizar o desempenho desta etapa é muito satisfatório, sendo que 95.5\% das faces imagens presentes nas imagens são detetadas automaticamente, às quais acrescentem 149 imagens para as quais foi possível resolver automaticamente os conflitos detetados.
 
 \subsection{Alinhamento e Corte} \label{sec:alinhamentoEcorte}
-A tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face, sendo essa região correspondente a um retângulo tal como ilustrado na figura \ref{fig:conflitos-correcta}. Após a deteção da região de interesse onde se encontra a face, é então possível proceder ao seu alinhamento e corte para os quais foi adotada a seguinte estratégia:
+A tarefa de deteção face é responsável pela determinação de uma região de interesse na imagem original onde se encontra a face, sendo essa região correspondente a um retângulo tal como ilustrado na figura \ref{fig:conflitos-correcta}. Após a deteção da região de interesse onde se encontra a face, é então possível proceder ao seu alinhamento e corte através da seguinte estratégia:
 
 \begin{enumerate}
 \item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho esquerdo na região de interesse determinada para a face;
 \item Utilizando um classificador em cascata existente na biblioteca \textit{OpenCV} é verificada a posição do olho direito na região de interesse determinada para a face;
-\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito (ver secção seguinte), obtendo-se assim as duas posições mais prováveis para cada um dos olhos;
+\item São removidos conflitos e falsos positivos nas posições obtidas para o olho esquerdo e direito (ver sub-secção seguinte), obtendo-se assim as duas regiões mais prováveis para cada um dos olhos;
 \item É calculado o ponto central das regiões determinadas como mais prováveis para o olho esquerdo e direito, em que $p_{esquerdo}(x_1,y_1)$ corresponde ao ponto central da região detetada para o olho esquerdo, e  $p_{direito}(x_2,y_2)$ corresponde ao ponto central da região detetada para o olho direito.
 \item É calculado o ângulo de rotação da imagem ($\theta$), a partir da posição determinada para os olhos:
 \begin{equation}
@@ -237,14 +237,14 @@ A tarefa de deteção face é responsável pela determinação de uma região de
 \item A imagem é cortada de acordo com a região de interesse determinada na tarefa de deteção face.
 \end{enumerate}
 
-Caso não se pretenda efetuar o alinhamento da face, mas apenas a sua segmentação da restante imagem, como se verifica na utilização da galeria já alinhada, LFW-a, na avaliação do desempenho do sistema, os passos 1 a 6 são ignorados, sendo apenas segmentada a imagem de acordo com a região de interesse determinada na tarefa de deteção face.
+Caso não se pretenda efetuar o alinhamento da face, mas apenas a sua segmentação da restante imagem, como se verifica na utilização da galeria já alinhada, LFW-a, na avaliação do desempenho do sistema, os passos 1 a 6 são ignorados, sendo apenas segmentada a imagem de acordo com a região de interesse determinada na tarefa de deteção face. Na figura \ref{fig:alinhamentos} encontra-se representada uma comparação entre uma imagem apenas recortada, a mesma imagem alinhada e recortada pelas estratégias acima descritas e ainda as versões LFW e LFW-a dessa imagem.
 
 \begin{figure}[t]
         \centering
         \begin{subfigure}[b]{0.2\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{alinhamentos/original}
-                \caption{Original}
+                \caption{LFW-Original}
                 \label{fig:alinha_original}
         \end{subfigure}%
         ~ 
@@ -274,7 +274,7 @@ Caso não se pretenda efetuar o alinhamento da face, mas apenas a sua segmentaç
 \subsubsection*{Remoção Conflitos e Falsos Positivos}
 Tal como explicado anteriormente, a necessidade de alinhamento de uma face previamente detetada é calculada com base na localização estimada para o seu olho esquerdo e direito e a inclinação da reta formada pela intersecção dos dois pontos centrais de cada um dos olhos. Para detetar um olho, à semelhança da estratégia adotada para detetar uma face, é utilizado um classificador em cascata que devolve uma região rectangular onde é provável a existência desse mesmo olho. 
 
-A morfologia de um olho é um caso particularmente difícil de deteção, tendo-se registado a existência de um grande número de falsos positivos para os classificador utilizados (olho esquerdo e direito), assim como uma má diferenciação entre o olho esquerdo, direito e a boca em algumas das imagens, pelo que a adoção de uma estratégia de remoção de conflitos se revelou essencial para a conclusão desta tarefa de pré-processamento com sucesso. A estratégia adoptada foi então a seguinte:
+A morfologia de um olho é um caso particularmente difícil de deteção, tendo-se registado a existência de um grande número de falsos positivos para os classificadores utilizados (olho esquerdo e direito), assim como uma má diferenciação entre o olho esquerdo, direito e a boca em algumas das imagens, pelo que a adoção de uma estratégia de remoção de conflitos se revelou essencial para a conclusão desta tarefa de pré-processamento com sucesso. A estratégia adoptada foi então a seguinte:
 
 Considerando $w$ a largura de uma imagem de face a alinhar e $h$ a sua altura. Sejam $c_{esquerdo}(x_1,y_1)$ e  $c_{direito}(x_2,y_2)$  os pontos correspondentes aos cantos superiores esquerdos das regiões de interesse detetadas para o olho esquerdo e direito, respetivamente, e $w_{esquerdo}$, $w_{direito}$, $h_{esquerdo}$ e $h_{direito}$ a largura e altura dessas mesmas regiões. Os conflitos entre as diversas regiões de interesse devolvidas pelos classificadores utilizados são removidos através da utilização das seguintes restrições:
 
@@ -287,7 +287,7 @@ Considerando $w$ a largura de uma imagem de face a alinhar e $h$ a sua altura. S
 
 \subsection{Normalização Contraste} \label{sec:normalizacao}
 
-Tal como destacado na secção \ref{sec:sub-problemas} a tarefa de normalização encontra-se presente em alguns sistemas de reconhecimento facial automático com o objetivo de melhorar os resultados obtidos independentemente de fatores como a iluminação ou pose das faces nas imagens. A tarefa de normalização do contraste de imagem tem como objetivo normalizar a face no que diz respeito à sua iluminação e aumentar o contraste existente na mesma. De forma a tornar o sistema versátil e analisar o impacto de diferentes estratégias foram implementadas as seguintes alternativas para a normalização do contraste, ilustradas na figura \ref{fig:normalizacao}:
+Tal como destacado na secção \ref{sec:sub-problemas} a tarefa de normalização encontra-se presente em alguns sistemas de reconhecimento facial automático com o objetivo de melhorar os resultados obtidos independentemente de fatores como a iluminação ou pose das faces nas imagens. A tarefa de normalização do contraste de imagem tem como objetivo normalizar a face no que diz respeito à sua iluminação e aumentar o contraste existente na mesma. De forma a tornar o sistema versátil e analisar o impacto de diferentes estratégias foram implementadas as seguintes alternativas, ilustradas na figura \ref{fig:normalizacao}, para a normalização do contraste:
 
 \begin{figure}[t]
         \centering
@@ -334,13 +334,13 @@ O histograma de uma imagem descreve a distribuição estatística dos níveis de
 
 \begin{description}
 \item[\textit{CLAHE}]
-\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na imagem \ref{fig:normalizacao-clahe} encontra-se representada resultante da normalização através da técnica CLAHE.
+\textit{Contrast limited adaptive histogram equalization (CLAHE)} procura ultrapassar as limitações da equalização de contraste, através de uma abordagem local ao problema de normalização do histograma de uma imagem. Ao contrário da abordagem tradicional apresentada acima, esta técnica tem em conta a intensidade de um conjunto de pixeis e dos seus vizinhos para a normalização do seu contraste e não a intensidade de toda a imagem. Para além disso, tal como o seu nome indica, esta abordagem incluí ainda um limite para o qual a equalização do histograma é realizada, evitando assim o mapeamento demasiado agressivo quando duas escalas de intensidade dispares se encontram na mesma região \cite{Reza2004}. Na figura \ref{fig:normalizacao-clahe} encontra-se representada uma imagem resultante da sua normalização através da técnica CLAHE.
 \end{description}
 
 \subsection{Aplicação Filtro Abstração} \label{sec:filtros}
 A quarta etapa de pré-processamento efetuada no sistema Visage corresponde à aplicação de um filtro de abstração sobre uma imagem. Os filtros de abstração constituem uma forma moderna de abstração de conteúdo visual, com a sua utilização no âmbito do sistema Visage, pretendemos analisar se o seu uso potencia o desempenho do sistema ao simplificar o conteúdo visual, destacando apenas a informação essencial presente numa imagem.
 
-Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwahara Anisotrópico, os quais constituem três níveis de abstração sucessivamente mais complexos. A abstração efetuada para cada filtro encontra  ilustrada na figura \ref{fig:filters}, apresentado-se de seguida uma breve descrição de cada um dos filtros utilizados de seguida:
+Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwahara Anisotrópico, os quais constituem três níveis de abstração sucessivamente mais complexos. A abstração efetuada para cada filtro encontra  ilustrada na figura \ref{fig:filters}, apresentado-se de seguida uma breve descrição de cada um dos filtros utilizados:
 
 \begin{figure}[t]
         \centering
@@ -377,17 +377,17 @@ Nesta etapa encontram-se disponíveis três filtros, Gaussiano, Bilateral e Kuwa
 
 \begin{description}
 \item[Filtro Gaussiano]
-A aplicação de um filtro gaussiano para a suavização de uma imagem é uma técnica amplamente utilizada com o objetivo de reduzir o ruído e detalhe de uma imagem. Um filtro gaussiano calcula um média pesada dos valores dos pixeis vizinhos, na qual o peso de um pixel na média diminuí conforme a sua distância ao centro aumenta.
+A aplicação de um filtro gaussiano para a suavização de uma imagem é uma técnica amplamente utilizada em áreas próximas do processamento de imagem e computação gráfica e tem como objetivo de reduzir o ruído e detalhe de uma imagem. Um filtro gaussiano calcula um média pesada dos valores dos pixeis vizinhos, na qual o peso de um pixel na média diminuí conforme a sua distância ao centro aumenta.
 
-No âmbito do sistema Visage a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{gaussianBlur}, tendo sido utilizada uma vizinhança de raio sete pixeis.
+No âmbito do sistema Visage a utilização deste filtro tirou partido da sua implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{gaussianBlur}, tendo sido utilizada uma vizinhança de raio sete pixeis.
 
 \item[Filtro Bilateral]
 Tal como introduzido na revisão do estado da arte efetuada em \ref{subsec:bilateral}, o filtro bilateral tem como objetivo suavizar as zonas com menor contraste na imagem sem afetar os limites de maior contraste, permitindo assim reduzir o ruído presente em uma imagem enquanto os seu contornos são preservados.
 
-Á semelhança do filtro gaussiano a utilização deste filtro tirou partido da implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{bilateralFilter}, tendo sido utilizado um de oito pixeis vizinhos na aplicação do filtro.
+À semelhança do filtro gaussiano a utilização deste filtro foi efetuada com recurso à implementação existente na biblioteca \textit{OpenCV}, nomeadamente a partir da função \textit{bilateralFilter}, tendo sido utilizado um raio de oito pixeis vizinhos na aplicação do filtro.
 
 \item[Filtro Kuwahara Anisotrópico]
-O filtro Kuwahara Anisotrópico (FKA) consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste, tal como demonstrado na figura \ref{fig:filterskid}. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
+O filtro Kuwahara Anisotrópico (FKA) consiste numa generalização do filtro Kuwahara (ver \ref{subsec:kuwahara}) que remove alguns artefactos originados na aplicação do filtro original através da adaptação da forma, escala e orientação do filtro à estrutura local das características da imagem \cite{Kyprianidis2009}. Desta forma é produzido um efeito de abstração tipo pintura, onde é removida informação não essencial em zonas de elevado contraste, enquanto são preservados os limites representados nas zonas de menor contraste. As imagens ficam assim com a clareza de uma ilustração, mas preservam a informação direcional tal como nas pinturas a óleo clássicas. Por outro lado, este filtro tira partido da placa gráfica para a realização da abstração das imagens, tornando-se assim particularmente indicado para o processamento de um elevado número de fotografias.
 
 Para a utilização deste filtro foi utilizada a implementação de Jan Kyprianidis disponível em [] \footnote{https://code.google.com/p/gpuakf/}.
 
@@ -413,7 +413,7 @@ Para a utilização deste filtro foi utilizada a implementação de Jan Kypriani
         \caption{Exemplo de face já segmentada, com e sem máscara.}\label{fig:mascara}
 \end{figure}
 
-Tal como referido anteriormente a existência de fundo e elementos externos à face numa imagem pode afetar significativamente os resultados obtidos no seu reconhecimento ao permitir que um conjunto de imagens com fundos semelhantes possam ser identificadas como pertencendo à mesma pessoa não pela face representada na imagem, mas pelos elementos presentes no fundo da mesma. A aplicação de uma máscara elíptica sobre face visa a remoção do fundo ainda existente na imagem após a deteção e segmentação da face e eventuais tarefas de pré-processamento realizadas.
+A existência de fundo e elementos externos à face numa imagem pode afetar significativamente os resultados obtidos no seu reconhecimento ao permitir que um conjunto de imagens com fundos semelhantes possam ser identificadas como pertencendo à mesma pessoa não pela face representada na imagem, mas pelos elementos presentes no fundo da mesma. A aplicação de uma máscara elíptica sobre face visa a remoção do fundo ainda existente na imagem após a deteção e segmentação da face e eventuais tarefas de pré-processamento realizadas.
 
 Um exemplo de uma imagem antes e depois da aplicação da máscara pode ser visto em \ref{fig:mascara}. A estratégia de aplicação de uma máscara para melhoria dos resultados obtidos no reconhecimento facial já foi aplicada com sucesso anteriormente em diversas situações, como são exemplo a avaliação FERET \cite{Phillips2000} ou o trabalho realizado por Ahonen \textit{et al.} \cite{ahonen2004face}.
 

@@ -328,7 +328,7 @@ Ao nível da diferença entre as imagens apenas segmentadas (conjunto Cropped) e
 
 Finalmente, através da análise do gráfico \ref{fig:exp1_comaparacao}, é possível concluir que ao nível dos algoritmos utilizados o algoritmo \textit{LBPH} obtém resultados globalmente melhores, ao passo que o algoritmo \textit{Eingefaces} obtém os piores resultados. Esta diferença verifica-se quer nos rankings inferiores, quer nos superiores, sendo menor quanto maior é o ranking utilizado, como é possível verificar pelas taxas de identificação de ranking 1 de 46,8\% e 28,1\%, no conjunto Masked, para os algoritmos \textit{LBPH} e \textit{Eigenfaces}, respetivamente, e pelas taxas de identificação de ranking 30 de 94,9\% e 89,3\%, para os mesmos algoritmos no mesmo conjunto. A análise comparativa do desempenho dos três algortimos encontra-se reportada no gráfico \ref{fig:exp1_comaparacao} para a galeria masked, uma vez esta foi a galeria que revelou melhores resultados das três analisadas.
 
-\subsection{Resultados Experiência 2: Impacto da Normalização do Contraste}
+\subsection{Resultados Experiência 2: Impacto da Normalização do Contraste} \label{sec:avaliacao2-exp2}
 \begin{figure}[p]
         \centering
         \begin{subfigure}[b]{0.58\textwidth}
@@ -486,16 +486,15 @@ Na tabela \ref{tab:resultadosprecicao} encontram-se representada a \textit{médi
 
 Através da análise dos resultados obtidos é possível concluir que o algoritmo \textit{LBPH} é aquele que possuí um melhor desempenho a nível global, apresentando os melhores resultados em 6 das galerias avaliadas, ao passo que o algoritmo \textit{Fisherfaces} foi o melhor em apenas 3 das galerias e o algoritmo \textit{Eigenfaces} em nenhuma das galerias.
 
-Por outro lado, o algoritmo \textit{LBPH} revela também uma maior sensibilidade em relação às etapas de pré-processamento efetuadas sobre as imagens, demonstrando a maior variação registada nas nove galerias avaliadas. A este nível o algoritmo \textit{Fisherfaces} revelou ser o mais robusto ao apresentar uma variação máxima de 13.9\% nas várias galerias, enquanto os algoritmos \textit{Eigenfaces} e \textit{LBPH} revelaram uma diferença entre a \textit{média da precisão na galeria} mínima e máxima obtidas nas nove galerias de 32.2\% e 43.6\%, respetivamente.
+Por outro lado, o algoritmo \textit{LBPH} revela também uma maior sensibilidade em relação às etapas de pré-processamento efetuadas sobre as imagens, demonstrando a maior variação registada nas nove galerias avaliadas. A este nível, o algoritmo \textit{Fisherfaces} revelou ser o mais robusto ao apresentar uma variação máxima de 13.9\% nas várias galerias, enquanto os algoritmos \textit{Eigenfaces} e \textit{LBPH} revelaram uma diferença entre a \textit{média da precisão na galeria} mínima e máxima obtidas nas nove galerias de 32.2\% e 43.6\%, respetivamente.
 
 Em relação às diversas tarefas de pré-processamento efetuadas o maior impacto é verificado após a deteção da face e respetiva segmentação da restante imagem, sendo que aqui, tal como verificado na experiência reportada em \ref{sec:avaliacao2-exp2}, a aplicação de uma máscara revela-se pouco significativa, apresentando apenas uma ligeira melhoria no desempenho do algoritmo \textit{Eigenfaces}. Comparando os resultados obtidos nas várias galerias é possível concluir que as etapas de pré-processamento aplicadas na galeria Equalized, nomeadamente a segmentação da face, equalização do histograma e aplicação de uma máscara, são as que produzem de forma global um desempenho mais elevado.
 
-Finalmente, o uso de filtros de abstração na cadeia de pré-processamento das imagens produz uma ligeira diminuição da \textit{média da precisão na galeria} obtida, sendo esta mais evidente para algoritmo \textit{LBPH} na galeria \textit{AKF}.
-
+Finalmente, o uso de filtros de abstração na cadeia de pré-processamento das imagens produz uma ligeira diminuição da \textit{média da precisão na galeria} obtida, sendo esta mais evidente para algoritmo \textit{LBPH} na galeria \textit{AKF}. As galerias abstraídas registam, no entanto, um desempenho melhor do que as imagens originais e próximo das restantes galerias com imagens pré-processadas.
 
 \section{Variação Desempenho} \label{sec:variacaodesempenho}
 \begin{center}
-\begin{table}[ht]
+\begin{table}[t]
     \begin{center}
     \caption{Algoritmos ordenados por desempenho nos diversos conjuntos de teste (L = LBPH, F = Fisherfaces, E = Eigenfaces; melhores a negrito).}
     \begin{tabular}{l|cccc}
@@ -521,7 +520,7 @@ Finalmente, o uso de filtros de abstração na cadeia de pré-processamento das 
 \end{center}
 
 \begin{center}
-\begin{table}[ht]
+\begin{table}[t]
     \begin{center}
     \caption{Desvio padrão ($\sigma$) entre os valores de MPG obtidos para os 4 conjuntos de teste (melhores a negrito).}
     \begin{tabular}{l|ccc}
@@ -548,18 +547,48 @@ Finalmente, o uso de filtros de abstração na cadeia de pré-processamento das 
 
 Considerando que de um ponto de vista estatístico um algoritmo de reconhecimento facial estima a identidade de uma face, é então possível interrogarmos-nos se, para uma dada categoria de imagens, se verifica uma variação no desempenho de um algoritmo quando são utilizadas galerias de treino e provas diferentes \cite{Phillips2000}.
 
-Os resultados das avaliações efetuadas apresentados nas secções \ref{sec:avaliacao1} e \ref{sec:avaliacao2}, representam a média dos resultados obtidos nos quatro conjuntos de tese criados para a avaliação do sistema de reconhecimento facial Visage. Nesta secção é efetuada uma análise à variação dos resultados obtidos para cada um dos conjuntos de teste criados, nas várias galerias e para os três algoritmos de reconhecimento facial utilizados.
+Os resultados das avaliações efetuadas apresentados nas secções \ref{sec:avaliacao1} e \ref{sec:avaliacao2}, representam a média dos resultados obtidos nos quatro conjuntos de teste criados para a avaliação do sistema de reconhecimento facial Visage. Nesta secção é efetuada uma análise à variação dos resultados obtidos para cada um dos conjuntos de teste criados, nas várias galerias e para os três algoritmos de reconhecimento facial utilizados.
 
-Os quatro conjuntos de teste criados, aqui designados de A, B, C e D,  são constituídos por 20 imagens de 59 indivíduos distintos, sendo que a diferença entre os quatro conjuntos se encontra nas imagens utilizadas como galeria de treino e provas, tal com descrito em \ref{sec:conjuntos}. As imagens de cada conjunto foram sujeitas a um conjunto de operações de pré-processamento diferentes, resultantes na criação das galerias original, cropped, masked, normalized, equalized, CLAHE, Gaussian, Bilateral e AKF onde cada galeria contem todas as imagens dos quatro conjuntos de teste, tal como descrito em \ref{sec:experiencias}. A variação do desempenho dos três algoritmos, para cada galeria, nos diversos conjuntos de teste encontra-se reportada nas tabelas \ref{tab:ordem_algoritmos} e \ref{tab:desviopadrao}.
+Cada um dos conjuntos de teste criados, aqui designados de A, B, C e D,  são constituídos por 20 imagens de 59 indivíduos distintos, sendo que a diferença entre os quatro conjuntos se encontra nas imagens utilizadas como galeria de treino e provas, tal com descrito em \ref{sec:conjuntos}. As imagens de cada conjunto foram sujeitas a um conjunto de operações de pré-processamento diferentes, resultantes na criação das galerias Original, Cropped, Masked, Normalized, Equalized, CLAHE, Gaussian, Bilateral e AKF onde cada galeria contem todas as imagens dos quatro conjuntos de teste, tal como descrito em \ref{sec:experiencias}. A variação do desempenho dos três algoritmos, para cada galeria, nos diversos conjuntos de teste encontra-se reportada nas tabelas \ref{tab:ordem_algoritmos} e \ref{tab:desviopadrao}. A primeira permite analisar se o desempenho de um conjunto em relação aos restantes varia conforme as etapas de pré-processamento aplicadas sobre as imagens, assim como, verificar se existe variação na performance de um algoritmo em relação aos restantes conforme a galeria utilizada. A segunda tabela, \ref{tab:desviopadrao}, reporta o desvio padrão ($\sigma$) existente entre os resultados obtidos para os quatro conjuntos de teste nas nove galerias.
 
-Tal como é possível verificar através da observação da tabela \ref{tab:ordem_algoritmos}, o conjunto B, apresenta os melhores resultados em todas as galerias analisadas.
+Tal como é possível verificar através da observação da tabela \ref{tab:ordem_algoritmos}, no conjunto B foram obtidos os melhores resultados em todas as galerias analisadas, verificando-se assim que o desempenho relativo do sistema num conjunto em relação aos restantes não é significativamente afetado pelas etapas de pré-processamento aplicadas nas imagens.
 
-Verifica-se variação ao nível do algoritmo com melhor desempenho, conforme o conjunto de teste analisado. -No conjunto B Fisherfaces obtem melhores resultados
+Por outro lado, na tabela \ref{tab:ordem_algoritmos}, verifica-se a existência de variação ao nível do algoritmo com melhor desempenho conforme o conjunto de teste analisado, como demonstra o facto de no conjunto B o algoritmo \textit{Fisherfaces} obter os melhores resultados em seis das nove galerias analisadas, enquanto que nos restantes conjuntos o algoritmo \textit{LBPH} regista o melhor desempenho na maioria das galerias. A existência desta variação é ainda reforçada pela existência de galerias onde o algoritmo com melhor desempenho varia conforme o conjunto analisado, como é visível na galeria Equalized.
 
--LBPH é o que apresenta melhor desempenho e menor desvio padrão, com excepção dos conjuntos abstraídos.
+Finalmente, a tabela \ref{tab:ordem_algoritmos} permite ainda confirmar que o algoritmo com melhor desempenho num dado conjunto de teste, varia conforme as etapas de pré-processamento aplicadas sobre as imagens desse conjunto, como é possível verificar ao analisar o algoritmo como melhor desempenho nas galerias Gaussian, Bilateral e AKF no conjunto de teste A.
 
--O desvio padrão varia desde 0.39\% para LBPH no conjunto Original, até um máximo de 4.03\%  para o algoritmo Fisherfaces no conjunto CLAHE
 
--Para o conjunto com melhor desempenho -  equalized lbph - desvio=1.13\%
+Por último, ao nível do desvio padrão registado entre os quatro conjuntos e sintetizado na tabela \ref{tab:desviopadrao},  verifica-se que este varia desde 0.39\% para o algoritmo LBPH no conjunto Original, até um máximo de 4.03\%  para o algoritmo Fisherfaces no conjunto CLAHE. A este nível, destaca-se o facto de o algoritmo com melhor desempenho na maioria dos conjuntos de teste, \textit{LBPH}, ser também o que apresenta um menor desvio padrão na maioria das galerias, fator ainda mais evidenciado se as galerias abstraídas não forem consideradas.
+
+\section{Análise Necessidade Armazenamento}
+O desempenho de um sistema de reconhecimento facial automático pode ser analisado do ponto de vista da sua performance no reconhecimento, tal como efetuado em \ref{sec:avaliacao1} e \ref{sec:avaliacao2}, no entanto, as necessidades de processamento e armazenamento das imagens utilizadas por este tipo de sistemas devem também ser objeto de análise para a avaliação do mesmo. 
+
+Na tabela \ref{tab:tamanho}, encontram-se sintetizadas as necessidades de armazenamento das imagens que constituem as galerias utilizadas na avaliação do sistema Visage. Todas as galerias pré-processadas reduzem em pelo menos 81\% as necessidades de armazenamento necessárias, sendo que a este nível se destacam as imagens da galeria AKF, abstraídas com recurso ao filtro kuwahara anisotrópico, e que são em média 89\% inferiores às imagens originais. As imagens abstraídas traduzem-se assim em imagens mais fáceis e rápidas de processar pelo sistema, ao mesmo tempo que permitem a redução da quantidade de dados transferidos na utilização do sistema Visage em cooperação com eventuais clientes web ou aplicação móveis.
+
+\begin{center}
+\begin{table}[t]
+    \begin{center}
+    \caption{Necessidades de armazenamento galerias pré-processadas.}
+    \begin{tabular}{l|ccccc}
+    Galeria    & Total(MB) & Médio (KB) & Máximo (KB) & Mínimo (KB) & Diferença \\ 
+    \hline\hline
+    Original   & 125.5   & 81 & 114 & 47 & - \\
+    ~ \\
+    Cropped    & 20.9   & 13 & 18 & 9 & -83.4\% \\
+    Masked     & 19.4   & 12 & 16 & 9 & -84.5\% \\  
+    ~ \\
+    Normalized & 20.7   & 13 & 16 & 10& -83.5\% \\  
+    Equalized  & 23.7   & 15 & 18 & 12& -81.1\% \\  
+    CLAHE      & 22.9   & 15 & 18 & 12& -81.7\% \\  
+    ~ \\
+    Gaussian   & 22.4   & 14 & 17 & 12& -82.2\% \\  
+    Bilateral  & 21.7   & 14 & 16 & 11& -82.7\% \\  
+    AKF        &\textbf{ 13.7}   & \textbf{9}  & \textbf{11} & \textbf{6} & \textbf{-89.1\%} \\  
+    \hline\hline
+    \end{tabular}
+    \label{tab:tamanho}
+    \end{center}
+\end{table}
+\end{center}
 
 \section{Discussão Resultados Obtidos} \label{sec:discussao}
