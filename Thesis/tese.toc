@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceDetector}}{33}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Dete\IeC {\c c}\IeC {\~a}o Face}{34}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Alinhamento e Corte}{37}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Normaliza\IeC {\c c}\IeC {\~a}o Contraste}{38}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}Normaliza\IeC {\c c}\IeC {\~a}o Contraste}{39}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Aplica\IeC {\c c}\IeC {\~a}o Filtro Abstra\IeC {\c c}\IeC {\~a}o}{40}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Aplica\IeC {\c c}\IeC {\~a}o M\IeC {\'a}scara}{41}{subsection.4.5.5}
 \contentsline {section}{\numberline {4.6}M\IeC {\'o}dulo \textit {FaceModel}}{41}{section.4.6}
@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {4.6.2}\textit {Fisherfaces}}{43}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}\textit {Local Binary Patterns Histograms (LBPH)}}{43}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Top $N$ Resultados}{44}{subsection.4.6.4}
-\contentsline {section}{\numberline {4.7}Funcionalidades}{44}{section.4.7}
+\contentsline {section}{\numberline {4.7}Funcionalidades}{45}{section.4.7}
 \contentsline {chapter}{\numberline {5}Avalia\IeC {\c c}\IeC {\~a}o e Resultados}{47}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conjuntos de Teste}{47}{section.5.1}
 \contentsline {section}{\numberline {5.2}Pr\IeC {\'e}-processamento}{50}{section.5.2}
