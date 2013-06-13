@@ -54,16 +54,18 @@
 \contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o Imagens}{52}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{52}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{53}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1: Impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{53}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{56}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{59}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1: Impacto da segmenta\IeC {\c c}\IeC {\~a}o das faces}{54}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{57}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{60}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{61}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{62}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{63}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{64}{section.5.5}
-\contentsline {section}{\numberline {5.6}An\IeC {\'a}lise Necessidade Armazenamento}{66}{section.5.6}
-\contentsline {section}{\numberline {5.7}Discuss\IeC {\~a}o Resultados Obtidos}{66}{section.5.7}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{67}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspectivas Futuras}{68}{section.6.2}
-\contentsline {chapter}{Refer\^{e}ncias}{69}{section*.40}
+\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{63}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Resultados}{65}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{66}{section.5.5}
+\contentsline {section}{\numberline {5.6}Requisitos de Armazenamento}{68}{section.5.6}
+\contentsline {section}{\numberline {5.7}Discuss\IeC {\~a}o Resultados Obtidos}{68}{section.5.7}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspetivas Futuras}{70}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Sistema de Reconhecimento Facial Visage}{70}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Avalia\IeC {\c c}\IeC {\~a}o}{70}{subsection.6.2.2}
+\contentsline {chapter}{Refer\^{e}ncias}{71}{section*.42}
