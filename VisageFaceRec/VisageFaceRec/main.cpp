@@ -4,10 +4,13 @@
 #include "Evaluator.h"
 #include "FaceDetector.h"
 
-void loadAndGetTop(string libPath, int percentageTrainned, int m, string modelFileName, string sample, int n){
+void loadAndGetTop(string requestId, string libPath, int percentageTrainned, int m, string modelFileName, string sample, int n){
 	Library myLib(libPath, percentageTrainned);
 	FaceModel model(m, modelFileName);
 	FaceDetector detector("..\\helpers\\", "lbpcascade_frontalface.xml", "mask.bmp");
+
+	ofstream outfile;
+	outfile.open("topN\\" + requestId);
 	
 	Mat image = imread(sample, CV_LOAD_IMAGE_COLOR);
 	if(image.rows > 0){
@@ -22,10 +25,13 @@ void loadAndGetTop(string libPath, int percentageTrainned, int m, string modelFi
 		for(size_t i=0; i<labels.size(); i++){
 			pp.push_back(myLib.getPerson(labels[i]));
 			cout << "  " << i+1 << ": " << pp[i].getName() << endl;
+			outfile << pp[i].getName() << ",";
+			outfile << pp[i].getImageDir() <<endl;
 		}
 		cout <<endl;
 		
 	}else{
+		outfile << "ERROR";
 		cout << "error loading sample" << endl;
 	}
 	
@@ -205,14 +211,16 @@ int topN(int argc, const char *argv[]){
 	string nResults = "10";
 	string modelType = "2";
 	string percent = "80";
-	if (argc < 4) {
-		cout << "Usage: imagePath model.xml nResults" <<endl;
+	string requestId = "default";
+	if (argc < 5) {
+		cout << "Usage: requestId imagePath model.xml nResults" <<endl;
 		return -1;
 	}
 	else{
-		imagePath = string(argv[1]);
-		model = string(argv[2]);
-		nResults = string(argv[3]);
+		requestId = string(argv[1]);
+		imagePath = string(argv[2]);
+		model = string(argv[3]);
+		nResults = string(argv[4]);
 
 		ifstream loadFile;
 		loadFile.open("..\\saved\\" + model + ".visage");
@@ -222,7 +230,7 @@ int topN(int argc, const char *argv[]){
 		loadFile >> modelType;
 		loadFile >> model;
 
-		loadAndGetTop(libPath, atoi(percent.c_str()), atoi(modelType.c_str()), model, imagePath, atoi(nResults.c_str()) );
+		loadAndGetTop(requestId, libPath, atoi(percent.c_str()), atoi(modelType.c_str()), model, imagePath, atoi(nResults.c_str()) );
 	}
 	return 0;
 }
@@ -255,13 +263,13 @@ int main(int argc, const char *argv[]) {
 	//return csvCreator(argc, argv);
 
 	/// FaceRecognizer.exe
-	return faceRecognizer(argc, argv);
+	//return faceRecognizer(argc, argv);
 
 	/// trainAndSaveModel.exe
 	//return trainAndSaveModel(argc, argv);
 
 	/// topN.exe
-	//return topN(argc, argv);
+	return topN(argc, argv);
 
 	//return exportDir(argc, argv);
 
