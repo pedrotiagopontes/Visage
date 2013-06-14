@@ -25,8 +25,8 @@ void loadAndGetTop(string requestId, string libPath, int percentageTrainned, int
 		for(size_t i=0; i<labels.size(); i++){
 			pp.push_back(myLib.getPerson(labels[i]));
 			cout << "  " << i+1 << ": " << pp[i].getName() << endl;
-			outfile << pp[i].getName() << ",";
-			outfile << pp[i].getImageDir() <<endl;
+			outfile << pp[i].getName() << ";";
+			outfile << pp[i].getImageDir() << pp[i].getName() << "\\" << endl;
 		}
 		cout <<endl;
 		
