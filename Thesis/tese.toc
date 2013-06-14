@@ -63,9 +63,9 @@
 \contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{66}{section.5.5}
 \contentsline {section}{\numberline {5.6}Requisitos de Armazenamento}{68}{section.5.6}
 \contentsline {section}{\numberline {5.7}Discuss\IeC {\~a}o Resultados Obtidos}{68}{section.5.7}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Perspetivas Futuras}{70}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Sistema de Reconhecimento Facial Visage}{70}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Avalia\IeC {\c c}\IeC {\~a}o}{70}{subsection.6.2.2}
-\contentsline {chapter}{Refer\^{e}ncias}{71}{section*.42}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspetivas Futuras}{72}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Sistema de Reconhecimento Facial Visage}{72}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Avalia\IeC {\c c}\IeC {\~a}o}{72}{subsection.6.2.2}
+\contentsline {chapter}{Refer\^{e}ncias}{73}{section*.42}
