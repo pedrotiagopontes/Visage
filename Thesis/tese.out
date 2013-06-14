@@ -38,11 +38,11 @@
 \BOOKMARK [1][-]{section.4.3}{4.3 Cole\347\343o de dados - Labeled Faces in the Wild}{chapter.4}% 38
 \BOOKMARK [1][-]{section.4.4}{4.4 Arquitetura}{chapter.4}% 39
 \BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceDetector}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o Face}{section.4.5}% 41
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o da Face}{section.4.5}% 41
 \BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 Alinhamento e Corte}{section.4.5}% 42
-\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 Normaliza\347\343o Contraste}{section.4.5}% 43
+\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 Normaliza\347\343o do Contraste}{section.4.5}% 43
 \BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 Aplica\347\343o Filtro Abstra\347\343o}{section.4.5}% 44
-\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 Aplica\347\343o M\341scara}{section.4.5}% 45
+\BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 Aplica\347\343o de M\341scara}{section.4.5}% 45
 \BOOKMARK [1][-]{section.4.6}{4.6 M\363dulo FaceModel}{chapter.4}% 46
 \BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Eigenfaces}{section.4.6}% 47
 \BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 Fisherfaces}{section.4.6}% 48
@@ -69,6 +69,4 @@
 \BOOKMARK [0][-]{chapter.6}{6 Conclus\365es e Perspetivas Futuras}{}% 69
 \BOOKMARK [1][-]{section.6.1}{6.1 Conclus\365es}{chapter.6}% 70
 \BOOKMARK [1][-]{section.6.2}{6.2 Perspetivas Futuras}{chapter.6}% 71
-\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Sistema de Reconhecimento Facial Visage}{section.6.2}% 72
-\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Avalia\347\343o}{section.6.2}% 73
-\BOOKMARK [0][-]{section*.42}{Refer\352ncias}{}% 74
+\BOOKMARK [0][-]{section*.42}{Refer\352ncias}{}% 72
