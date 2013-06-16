@@ -27,9 +27,9 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Desempenho do algoritmo Fisherfaces para as galerias Normalized, Equalized e CLAHE\relax }}{60}{figure.caption.34}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Desempenho do algoritmo LBPH para as galerias Normalized, Equalized e CLAHE\relax }}{60}{figure.caption.34}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria Equalized\relax }}{61}{figure.caption.35}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Desempenho algoritmo Eigenfaces para as galerias Gaussian, Bilateral e AKF\relax }}{63}{figure.caption.36}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Desempenho algoritmo Fisherfaces para as galerias Gaussian, Bilateral e AKF\relax }}{64}{figure.caption.37}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Desempenho algoritmo LBPH para as galerias Gaussian, Bilateral e AKF\relax }}{64}{figure.caption.37}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria AKF\relax }}{65}{figure.caption.38}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Desempenho algoritmo Eigenfaces para as galerias Gaussian, Bilateral e AKF\relax }}{62}{figure.caption.36}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Desempenho algoritmo Fisherfaces para as galerias Gaussian, Bilateral e AKF\relax }}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Desempenho algoritmo LBPH para as galerias Gaussian, Bilateral e AKF\relax }}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria AKF\relax }}{64}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
