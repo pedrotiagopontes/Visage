@@ -35,7 +35,7 @@
 \BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 35
 \BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 36
 \BOOKMARK [1][-]{section.4.2}{4.2 Visage - Vis\343o geral}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.3}{4.3 Biblioteca de Dados - Labeled Faces in the Wild}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{4.3 Biblioteca de Dados - Labelled Faces in the Wild}{chapter.4}% 38
 \BOOKMARK [1][-]{section.4.4}{4.4 Arquitetura}{chapter.4}% 39
 \BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceDetector}{chapter.4}% 40
 \BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o da Face}{section.4.5}% 41
