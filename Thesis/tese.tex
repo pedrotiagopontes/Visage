@@ -14,7 +14,7 @@
 %%          latexmk -pdf tese.tex
 %%========================================
 
-\documentclass[11pt,a4paper,oneside,openany]{report}
+\documentclass[11pt,a4paper,twoside,openright]{report}
 
 %% For iso-8859-1 (latin1), comment next line and uncomment the second line
 \usepackage[utf8]{inputenc}
@@ -23,6 +23,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \setlength{\floatsep}{10pt}
+
 %\usepackage[latin1]{inputenc}
 
 %% Portuguese version
@@ -68,7 +69,7 @@
 \degree{Mestrado Integrado em Engenharia Informática e Computação}
 
 %% Uncomment next line for date of submission
-\thesisdate{16 de Junho de 2013}
+\thesisdate{17 de Junho de 2013}
 
 %% Comment next line for copyright text if not used
 \copyrightnotice{Pedro Tiago Pontes, 2013}
@@ -89,7 +90,7 @@
 \logo{uporto-feup.pdf}
  
 %% Uncomment next line for additional text below the author's name (front page)
-\additionalfronttext{Dissertação Provisória}
+%\additionalfronttext{Dissertação Provisória}
 
 %%----------------------------------------
 %% Preliminary materials
@@ -98,7 +99,7 @@
 % remove unnecessary \include{} commands
 \begin{Prolog}
   \include{abstract} % the abstract
-%%  \include{acknows}  % the acknowledgments
+  \include{acknows}  % the acknowledgments
 %%  \include{quote}    % initial quotation if desired
   \cleardoublepage
   \pdfbookmark[0]{Conteúdo}{contents}
@@ -126,10 +127,6 @@
 \include{body/resultados}
 \include{body/conclusoes} 
 
-%% Comment next 2 commands if numbered appendices are not used
-%%\appendix
-%%\include{appendix1}
-
 %%----------------------------------------
 %% Final materials
 %%----------------------------------------
@@ -139,6 +136,11 @@
 %% Comment the next command if BibTeX file not used, 
 %% Assumes that bibliography is in ``myrefs.bib''
 \PrintBib{myrefs}
+
+%% Comment next 2 commands if numbered appendices are not used
+\appendix
+\include{appendix1}
+
 
 %% Index
 %% Uncomment next command if index is required, 

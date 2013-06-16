@@ -1,34 +1,35 @@
 \select@language {portuges}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema Gen\IeC {\'e}rico de Reconhecimento Facial\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A redu\IeC {\c c}\IeC {\~a}o da taxa de erro para os algoritmos estados da arte tal como documentado nas avalia\IeC {\c c}\IeC {\~o}es FERET, FRVT 2002, FRVT 2006 e MBE 2010 \cite {Phillips2007, Grother2010}\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sistema Gen\IeC {\'e}rico de Reconhecimento Facial\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A redu\IeC {\c c}\IeC {\~a}o da taxa de erro para os algoritmos estados da arte tal como documentado nas avalia\IeC {\c c}\IeC {\~o}es FERET, FRVT 2002, FRVT 2006 e MBE 2010 \cite {Phillips2007, Grother2010}\relax }}{21}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{23}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{24}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{26}{figure.caption.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Cronologia do desenvolvimento da \IeC {\'a}rea da IB-AR \cite {Kyprianidis2012}.\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diferentes filtros de abstra\IeC {\c c}\IeC {\~a}o aplicados sobre a mesma imagem \cite {Kyprianidis2009}.\relax }}{25}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Diffusion Shock Filter} \cite {Kang2008}.\relax }}{27}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW.\relax }}{31}{figure.caption.14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diferentes vers\IeC {\~o}es da biblioteca LFW\relax }}{32}{figure.caption.16}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{34}{figure.caption.17}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre face correctamente detectada e situa\IeC {\c c}\IeC {\~o}es de erro na deta\IeC {\c c}\IeC {\~a}o\relax }}{35}{figure.caption.19}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{38}{figure.caption.21}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e as v\IeC {\'a}rias t\IeC {\'e}cnicas de normaliza\IeC {\c c}\IeC {\~a}o dispon\IeC {\'\i }veis.\relax }}{39}{figure.caption.23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e os v\IeC {\'a}rios filtros de abstra\IeC {\c c}\IeC {\~a}o utilizados.\relax }}{40}{figure.caption.24}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Exemplo de face j\IeC {\'a} segmentada, com e sem m\IeC {\'a}scara.\relax }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribui\IeC {\c c}\IeC {\~a}o do n\IeC {\'u}mero de imagens por pessoa na biblioteca LFW.\relax }}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diferentes vers\IeC {\~o}es da biblioteca LFW\relax }}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tarefas de pr\IeC {\'e}-processamento dispon\IeC {\'\i }veis no sistema Visage.\relax }}{35}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre face correctamente detectada e situa\IeC {\c c}\IeC {\~o}es de erro na deta\IeC {\c c}\IeC {\~a}o\relax }}{36}{figure.caption.20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre vers\IeC {\~o}es original, recortada, alinhada e LFW-a.\relax }}{39}{figure.caption.22}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e as v\IeC {\'a}rias t\IeC {\'e}cnicas de normaliza\IeC {\c c}\IeC {\~a}o dispon\IeC {\'\i }veis.\relax }}{40}{figure.caption.24}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o entre imagem original e os v\IeC {\'a}rios filtros de abstra\IeC {\c c}\IeC {\~a}o utilizados.\relax }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Exemplo de face j\IeC {\'a} segmentada, com e sem m\IeC {\'a}scara.\relax }}{42}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de conjunto de teste para sujeito Angelina Jolie.\relax }}{49}{figure.caption.26}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Varia\IeC {\c c}\IeC {\~a}o da mesma imagem nos v\IeC {\'a}rios conjuntos pr\IeC {\'e}-processados analisados.\relax }}{51}{figure.caption.28}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Desempenho do algoritmo Eigenfaces para as galerias Original, Cropped e Masked\relax }}{54}{figure.caption.29}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Desempenho do algoritmo Fisherfaces para as galerias Original, Cropped e Masked\relax }}{55}{figure.caption.30}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Desempenho do algoritmo LBPH para as galerias Original, Cropped e Masked\relax }}{55}{figure.caption.30}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria Masked\relax }}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Desempenho do algoritmo Eigenfaces para as galerias Normalized, Equalized e CLAHE\relax }}{57}{figure.caption.32}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Desempenho do algoritmo Fisherfaces para as galerias Normalized, Equalized e CLAHE\relax }}{58}{figure.caption.33}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Desempenho do algoritmo LBPH para as galerias Normalized, Equalized e CLAHE\relax }}{58}{figure.caption.33}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria Equalized\relax }}{59}{figure.caption.34}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Desempenho algoritmo Eigenfaces para as galerias Gaussian, Bilateral e AKF\relax }}{61}{figure.caption.35}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Desempenho algoritmo Fisherfaces para as galerias Gaussian, Bilateral e AKF\relax }}{62}{figure.caption.36}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Desempenho algoritmo LBPH para as galerias Gaussian, Bilateral e AKF\relax }}{62}{figure.caption.36}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria AKF\relax }}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de conjunto de teste para sujeito Angelina Jolie.\relax }}{51}{figure.caption.27}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Varia\IeC {\c c}\IeC {\~a}o da mesma imagem nos v\IeC {\'a}rios conjuntos pr\IeC {\'e}-processados analisados.\relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Desempenho do algoritmo Eigenfaces para as galerias Original, Cropped e Masked\relax }}{56}{figure.caption.30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Desempenho do algoritmo Fisherfaces para as galerias Original, Cropped e Masked\relax }}{57}{figure.caption.31}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Desempenho do algoritmo LBPH para as galerias Original, Cropped e Masked\relax }}{57}{figure.caption.31}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria Masked\relax }}{58}{figure.caption.32}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Desempenho do algoritmo Eigenfaces para as galerias Normalized, Equalized e CLAHE\relax }}{59}{figure.caption.33}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Desempenho do algoritmo Fisherfaces para as galerias Normalized, Equalized e CLAHE\relax }}{60}{figure.caption.34}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Desempenho do algoritmo LBPH para as galerias Normalized, Equalized e CLAHE\relax }}{60}{figure.caption.34}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria Equalized\relax }}{61}{figure.caption.35}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Desempenho algoritmo Eigenfaces para as galerias Gaussian, Bilateral e AKF\relax }}{63}{figure.caption.36}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Desempenho algoritmo Fisherfaces para as galerias Gaussian, Bilateral e AKF\relax }}{64}{figure.caption.37}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Desempenho algoritmo LBPH para as galerias Gaussian, Bilateral e AKF\relax }}{64}{figure.caption.37}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o do desempenho dos tr\IeC {\^e}s algoritmos implementados para a galeria AKF\relax }}{65}{figure.caption.38}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
