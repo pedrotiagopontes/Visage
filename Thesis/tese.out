@@ -35,7 +35,7 @@
 \BOOKMARK [0][-]{chapter.4}{4 Sistema de Reconhecimento Facial Visage}{}% 35
 \BOOKMARK [1][-]{section.4.1}{4.1 Filtros de Abstra\347\343o de Imagens no Reconhecimento Facial}{chapter.4}% 36
 \BOOKMARK [1][-]{section.4.2}{4.2 Visage - Vis\343o geral}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.3}{4.3 Biblioteca de Dados - Labelled Faces in the Wild}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{4.3 Biblioteca de Dados - Labeled Faces in the Wild}{chapter.4}% 38
 \BOOKMARK [1][-]{section.4.4}{4.4 Arquitetura}{chapter.4}% 39
 \BOOKMARK [1][-]{section.4.5}{4.5 M\363dulo FaceDetector}{chapter.4}% 40
 \BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Dete\347\343o da Face}{section.4.5}% 41
@@ -56,12 +56,12 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Normaliza\347\343o do Contraste}{section.5.2}% 56
 \BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Abstra\347\343o de Imagens}{section.5.2}% 57
 \BOOKMARK [1][-]{section.5.3}{5.3 Avalia\347\343o Closed-Set Identification}{chapter.5}% 58
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia Avalia\347\343o}{section.5.3}% 59
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Metodologia de Avalia\347\343o}{section.5.3}% 59
 \BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Resultados Experi\352ncia 1: Impacto da Segmenta\347\343o das Faces}{section.5.3}% 60
 \BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Resultados Experi\352ncia 2: Impacto da Normaliza\347\343o do Contraste}{section.5.3}% 61
-\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3: Abstra\347\343o de Imagens}{section.5.3}% 62
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Resultados Experi\352ncia 3: Impacto da Abstra\347\343o de Imagens}{section.5.3}% 62
 \BOOKMARK [1][-]{section.5.4}{5.4 Avalia\347\343o Image Retrieval}{chapter.5}% 63
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia Avalia\347\343o}{section.5.4}% 64
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Metodologia de Avalia\347\343o}{section.5.4}% 64
 \BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Resultados}{section.5.4}% 65
 \BOOKMARK [1][-]{section.5.5}{5.5 Varia\347\343o Desempenho}{chapter.5}% 66
 \BOOKMARK [1][-]{section.5.6}{5.6 Requisitos de Armazenamento}{chapter.5}% 67

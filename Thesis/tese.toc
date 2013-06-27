@@ -32,7 +32,7 @@
 \contentsline {chapter}{\numberline {4}Sistema de Reconhecimento Facial Visage}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Filtros de Abstra\IeC {\c c}\IeC {\~a}o de Imagens no Reconhecimento Facial}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}Visage - Vis\IeC {\~a}o geral}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Biblioteca de Dados - \textit {Labelled Faces in the Wild}}{32}{section.4.3}
+\contentsline {section}{\numberline {4.3}Biblioteca de Dados - \textit {Labeled Faces in the Wild}}{32}{section.4.3}
 \contentsline {section}{\numberline {4.4}Arquitetura}{34}{section.4.4}
 \contentsline {section}{\numberline {4.5}M\IeC {\'o}dulo \textit {FaceDetector}}{35}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Dete\IeC {\c c}\IeC {\~a}o da Face}{35}{subsection.4.5.1}
@@ -40,7 +40,7 @@
 \contentsline {subsection}{\numberline {4.5.3}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{40}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Aplica\IeC {\c c}\IeC {\~a}o do Filtro de Abstra\IeC {\c c}\IeC {\~a}o}{41}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Aplica\IeC {\c c}\IeC {\~a}o de M\IeC {\'a}scara}{42}{subsection.4.5.5}
-\contentsline {section}{\numberline {4.6}M\IeC {\'o}dulo \textit {FaceModel}}{43}{section.4.6}
+\contentsline {section}{\numberline {4.6}M\IeC {\'o}dulo \textit {FaceModel}}{42}{section.4.6}
 \contentsline {subsection}{\numberline {4.6.1}\textit {Eigenfaces}}{43}{subsection.4.6.1}
 \contentsline {subsection}{\numberline {4.6.2}\textit {Fisherfaces}}{44}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}\textit {Local Binary Patterns Histograms (LBPH)}}{44}{subsection.4.6.3}
@@ -53,15 +53,15 @@
 \contentsline {subsection}{\numberline {5.2.2}Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{53}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{54}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}Avalia\IeC {\c c}\IeC {\~a}o \textit {Closed-Set Identification}}{54}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{55}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Metodologia de Avalia\IeC {\c c}\IeC {\~a}o}{55}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Resultados Experi\IeC {\^e}ncia 1: Impacto da Segmenta\IeC {\c c}\IeC {\~a}o das Faces}{56}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Resultados Experi\IeC {\^e}ncia 2: Impacto da Normaliza\IeC {\c c}\IeC {\~a}o do Contraste}{59}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{62}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Resultados Experi\IeC {\^e}ncia 3: Impacto da Abstra\IeC {\c c}\IeC {\~a}o de Imagens}{62}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Avalia\IeC {\c c}\IeC {\~a}o \textit {Image Retrieval}}{65}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodologia Avalia\IeC {\c c}\IeC {\~a}o}{65}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Resultados}{67}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{68}{section.5.5}
-\contentsline {section}{\numberline {5.6}Requisitos de Armazenamento}{70}{section.5.6}
+\contentsline {subsection}{\numberline {5.4.1}Metodologia de Avalia\IeC {\c c}\IeC {\~a}o}{65}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Resultados}{66}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Varia\IeC {\c c}\IeC {\~a}o Desempenho}{67}{section.5.5}
+\contentsline {section}{\numberline {5.6}Requisitos de Armazenamento}{69}{section.5.6}
 \contentsline {section}{\numberline {5.7}Discuss\IeC {\~a}o dos Resultados Obtidos}{70}{section.5.7}
 \contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es e Perspetivas Futuras}{73}{chapter.6}
 \contentsline {section}{\numberline {6.1}Conclus\IeC {\~o}es}{73}{section.6.1}

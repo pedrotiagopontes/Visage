@@ -10,7 +10,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Galerias criadas ap\IeC {\'o}s pr\IeC {\'e}-processamento.\relax }}{52}{table.caption.28}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Resultados da M\IeC {\'e}dia da Precis\IeC {\~a}o na Galeria (melhores a negrito).\relax }}{67}{table.caption.39}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste (L = LBPH, F = Fisherfaces, E = Eigenfaces; melhores a negrito).\relax }}{68}{table.caption.40}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Algoritmos ordenados por desempenho nos diversos conjuntos de teste (L = LBPH, F = Fisherfaces, E = Eigenfaces; Conjunto com melhor desempenho para cada galeria a negrito).\relax }}{68}{table.caption.40}
 \contentsline {table}{\numberline {5.4}{\ignorespaces Desvio padr\IeC {\~a}o ($\sigma $) entre os valores de MPG obtidos para os 4 conjuntos de teste (melhores a negrito).\relax }}{69}{table.caption.41}
 \contentsline {table}{\numberline {5.5}{\ignorespaces Necessidades de armazenamento galerias pr\IeC {\'e}-processadas.\relax }}{70}{table.caption.42}
 \addvspace {10\p@ }
