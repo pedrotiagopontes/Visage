@@ -1,0 +1,54 @@
+\begin{table}
+	\centering
+    \caption{Média dos resultados obtidos para o algoritmo \textit{Eigenfaces} nos 4 conjuntos de teste avaliados.}	
+	\begin{tabular}{c|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}}
+	Rank & Orig. & Crop. & Mask. & Norm. & Equa. & Clahe & Gaus. & Bila. & AKF \\ 
+	\hline\hline
+	1 & 12.9\% & 25.9\% & 28.1\% & 30.0\% & 43.0\% & 40.9\% & \textbf{43.4\%} & 42.7\% & 41.0\% \\ 
+	5 & 31.9\% & 50.0\% & 52.8\% & 56.7\% & 68.3\% & 68.0\% & \textbf{68.5\%} & 67.9\% & 66.1\% \\ 
+	10 & 47.6\% & 64.0\% & 65.8\% & 70.4\% & 77.9\% & \textbf{80.3\%} & 78.3\% & 77.7\% & 76.4\% \\ 
+	15 & 57.7\% & 72.9\% & 75.0\% & 79.7\% & 84.3\% &\textbf{86.8\%} & 85.0\% & 85.1\% & 83.4\% \\ 
+	20 & 65.2\% & 81.3\% & 81.5\% & 85.0\% & 89.3\% &\textbf{90.6\%} & 89.4\% & 89.7\% & 88.5\% \\ 
+	25 & 72.0\% & 86.2\% & 86.1\% & 89.4\% & 91.4\% &\textbf{93.4\%} & 91.7\% & 91.8\% & 91.2\% \\ 
+	30 & 78.4\% & 89.5\% & 89.3\% & 92.3\% & 94.0\% & \textbf{95.0\%} & 94.4\% & 94.5\% & 94.3\% \\
+	\hline\hline
+    \end{tabular}
+    \label{tab:media_eigen}
+\end{table}	
+
+\begin{table}[h]
+   	\centering
+    \caption{Média dos resultados obtidos para o algoritmo \textit{Fisherfaces} nos 4 conjuntos de teste avaliados.}	
+	\begin{tabular}{c|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}}
+	Rank & Orig. & Crop. & Mask. & Norm. & Equa. & Clahe & Gaus. & Bila. & AKF \\ 
+	\hline\hline
+	1 & 30.1\% & 44.2\% & 43.6\% & 42.2\% &\textbf{47.3\%} & 45.8\% & 44.4\% & 44.2\% & 42.7\% \\ 
+	5 & 58.8\% & 66.3\% & 66.5\% & \textbf{67.5\%} & \textbf{67.5\%} & 66.8\% & 64.8\% & 67.4\% & 66.4\% \\ 
+	10 & 71.3\% & 76.6\% & 75.3\% & 75.1\% & 77.5\% & 77.7\% & 75.6\% & 76.8\% &\textbf{77.9\%} \\ 
+	15 & 80.6\% & 81.7\% & 81.0\% & 81.1\% & \textbf{83.7\%} & 83.3\% & 81.7\% & 81.1\% & \textbf{83.7\%} \\ 
+	20 & 86.4\% & 86.4\% & 84.4\% & 85.3\% &\textbf{87.1\%} & 87.7\% & 85.0\% & 86.0\% & 86.9\% \\ 
+	25 & 90.2\% & 90.2\% & 88.6\% & 88.5\% & 89.1\% & 89.7\% & 88.7\% & 89.0\% & \textbf{91.4\%} \\ 
+	30 & 92.2\% & 92.5\% & 91.0\% & 91.3\% & 91.1\% & 91.5\% & 91.5\% & 91.3\% & \textbf{94.2\%} \\
+	\hline\hline
+    \end{tabular}
+    \label{tab:media_fisher}
+\end{table}
+
+\begin{table}
+	\centering
+    \caption{Média dos resultados obtidos para o algoritmo \textit{LBPH} nos 4 conjuntos de teste avaliados.}	
+	\begin{tabular}{c|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}>{\centering\arraybackslash}p{1.1cm}}
+	~&\multicolumn{3}{c}{\textit{Eigenfaces}}&\multicolumn{3}{c}{\textit{Fisherfaces}}&\multicolumn{3}{c}{\textit{LBPH}}\\
+	Rank & Orig. & Crop. & Mask. & Norm. & Equa. & Clahe & Gaus. & Bila. & AKF \\ 
+	\hline\hline
+	1 & 7.6\% & 47.3\% & 46.8\% & 45.7\% & 49.1\% & 46.1\% & \textbf{47.5\%} & 42.3\% & 31.5\% \\ 
+	5 & 21.6\% & 70.8\% & \textbf{71.9\%} & 70.6\% & 71.8\% & 68.3\% & 69.4\% & 66.3\% & 56.6\% \\ 
+	10 & 34.1\% & 79.8\% & 79.9\% & \textbf{80.9\%} & 80.3\% & 79.5\% & 80.0\% & 78.4\% & 67.3\% \\ 
+	15 & 43.9\% & 87.1\% & 85.8\% & \textbf{87.3\%} & 85.6\% & 86.4\% & 86.3\% & 83.3\% & 74.1\% \\ 
+	20 & 53.8\% & 90.4\% & 90.2\% &\textbf{91.0\%} & 89.3\% & 90.8\% & 90.7\% & 86.6\% & 81.4\% \\ 
+	25 & 63.5\% & 92.4\% & 93.0\% & \textbf{94.0\%} & 92.4\% & 93.3\% & 93.3\% & 89.0\% & 85.0\% \\ 
+	30 & 70.2\% & 95.4\% & 94.9\% &\textbf{95.7\%} & 94.2\% & 95.6\% & \textbf{95.7\%} & 92.1\% & 87.9\% \\
+	\hline\hline
+    \end{tabular}
+    \label{tab:media_lbph}
+\end{table}	
