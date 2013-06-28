@@ -1,0 +1,136 @@
+%-----------------------------------------------
+% Template para criação de resumos de projectos/dissertação
+% jlopes AT fe.up.pt,   Fri Jul  3 11:08:59 2009
+%-----------------------------------------------
+
+\documentclass[9pt,a4paper]{extarticle}
+
+%% English version: comment first, uncomment second
+\usepackage[portuguese]{babel}  % Portuguese
+%\usepackage[english]{babel}     % English
+\usepackage{graphicx}           % images .png or .pdf w/ pdflatex OR .eps w/ latex
+\usepackage{times}              % use Times type-1 fonts
+\usepackage[utf8]{inputenc}     % 8 bits using UTF-8
+\usepackage{url}                % URLs
+\usepackage{multicol}           % twocolumn, etc
+\usepackage{float}              % improve figures & tables floating
+\usepackage[tableposition=top]{caption} % captions
+\usepackage{mathrsfs}
+\usepackage{array}
+%% English version: comment first (maybe)
+\usepackage{indentfirst}        % portuguese standard for paragraphs
+%\usepackage{parskip}
+
+%% page layout
+\usepackage[a4paper,margin=30mm,noheadfoot]{geometry}
+
+%% space between columns
+\columnsep 12mm
+
+%% headers & footers
+\pagestyle{empty}
+
+%% figure & table caption
+\captionsetup{figurename=Fig.,tablename=Tab.,labelsep=endash,font=bf,skip=.5\baselineskip}
+
+%% heading
+\makeatletter
+\renewcommand*{\@seccntformat}[1]{%
+  \csname the#1\endcsname.\quad
+}
+\makeatother
+
+%% avoid widows and orphans
+\clubpenalty=300
+\widowpenalty=300
+
+\begin{document}
+
+\title{\vspace*{-8mm}\textbf{\textsc{Visage - Impacto dos Filtros de Abstração no Reconhecimento Facial em Imagens}}}
+\author{\emph{Pedro Tiago Pontes}\\[2mm]
+\small{Dissertação realizado sob a orientação da \textbf{\emph{Prof.\ Maria Cristina Ribeiro}} e co-orientação do \textbf{\emph{Eng.\ Filipe Coelho}}}\\
+\small{no \emph{Laboratório SAPO/U.Porto}}}
+\date{}
+\maketitle
+%no page number 
+\thispagestyle{empty}
+
+\vspace*{-4mm}\noindent\rule{\textwidth}{0.4pt}\vspace*{4mm}
+
+\begin{multicols}{2}
+
+\section{Introdução}
+Ao longo dos últimos 20 anos o reconhecimento facial em imagens sofreu uma evolução notável. Em condições de captura de imagens controladas, nomeadamente ao nível da pose, iluminação e expressões faciais, considera-se mesmo que o problema de verificação 1:1, onde se verifica se existe uma correspondência entre a pessoa representada na imagem e a identidade fornecida, se encontra praticamente resolvido. Contudo, o problema de reconhecimento facial automático ainda se encontra longe de ser um problema totalmente resolvido. Em cenários onde as condições de captura de imagens não são controladas, a identificação das entidades representadas nas imagens é ainda uma área de investigação em aberto \cite{Li2011}.
+
+Por seu lado, a abstração de imagens dota os artistas de novas ferramentas de transmissão de informação, tendo como objetivo, melhorar eficácia da comunicação visual. Os filtros de abstração permitem remover informação não essencial de uma imagem, dando apenas destaque à mensagem a transmitir. A aplicação de filtros de abstração de imagens na recuperação de informação multimédia, nomeadamente no âmbito da da ilustração automática de texto, tem a potencialidade de melhorar a informação retornada, assim como reduzir significativamente as necessidades de processamento e armazenamento das imagens \cite{Coelho:2012:IAC:2260641.2260676}. 
+
+
+\section{Sistema de Reconhecimento Facial}
+
+\subsection{Visão Geral}
+A criação do sistema de reconhecimento facial Visage teve como principal objetivo o desenvolvimento de um sistema automático de reconhecimento facial em imagens, baseado em código aberto, que permita analisar qual o impacto da abstração de imagens e outras tarefas de pré-processamento no processo de reconhecimento. Com o sistema desenvolvido pretende-se ainda a criação de uma base sólida que permita o desenvolvimento de futuras aplicações que tirem partido do reconhecimento facial automático no seu funcionamento, como por exemplo, aplicações na área de \textit{image retrieval} e contribuir para existência de um maior número de soluções de código aberto deste tipo. De seguida encontram-se descritas as principais etapas de processamento no sistema.
+
+\subsection{Pré-processmento}\label{sec:pre-processamento}
+A primeira tarefa desempenhada pelo sistema criado consiste no pré-processamento das imagens. Para esse fim foram desenvolvidas as seguintes sub-tarefas de pré-processamento:
+\begin{enumerate}
+\item \textbf{Deteção da Face:} Tem como objetivo determinar a zona da imagem onde se encontra a face a identificar.
+\item \textbf{Alinhamento e Corte:} Alinhamento da pose da face a partir da posição seus olhos, de modo a uniformizar as imagens a reconhecer. Após alinhamento é efetuado o corte da face da restante imagem.
+\item \textbf{Normalização:} Permite efetuar a normalização do contraste da imagem a partir de três técnicas:  \textit{Constrast Streching} (CS), Equalização do Histograma (EH) e \textit{Contrast limited adaptive histogram equalization} (CLAHE).
+\item \textbf{Aplicação de Filtro de Abstração:} Abstração da imagem com recurso a filtros de abstração. Foram analisados os filtros gaussiano (G), bilateral (B) - implementados na biblioteca \textit{OpenCV} - e ainda o filtro Kuwahara anisotrópico (KA), recorrendo para a sua utilização à implementação efetuada por Kyprianidis \textit{et al.} \cite{Kyprianidis2009} do mesmo filtro.
+\item \textbf{Aplicação de Máscara:} Aplicação de uma máscara elíptica sobre a imagem com o objetivo de remoção do fundo ainda existente após a deteção e segmentação da face e eventuais tarefas de pré-processamento realizadas.
+\end{enumerate}
+
+As tarefas 3, 4 e 5 são opcionais e independentes entre si, existindo assim a possibilidade de não aplicar uma das etapas sem prejudicar as restantes.
+
+\subsection{Treino e Identificação}\label{sec:treino-id}
+À fase de pré-processamento seguem-se as fases de treino e identificação. Na fase de treino é fornecido um conjunto de imagens anotadas ao sistema e pretende-se que este crie uma base de conhecimento que permita proceder à identificação de novas imagens na fase de identificação. A fase de identificação corresponde à utilização do sistema com o intuito de identificar novas imagens. Ambas as fases foram implementadas com recurso ao módulo de reconhecimento facial \textit{FaceRecognizer}, da biblioteca \textit{OpenCV}, que permite o treino de um modelo de reconhecimento facial com os algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms  (LBPH)}. O módulo \textit{FaceRecognizer} foi ainda estendido de forma a que para uma dada imagem fornecida ao sistema seja devolvida uma lista ordenada das $n$ entidades mais parecidas com essa imagem e não apenas a entidade mais parecida.
+
+\section{Avaliação}
+\subsection{Conjuntos de Teste} \label{sec:conjuntos}
+A coleção \textit{Labeled Faces in the Wild (LFW)} \cite{Huang2007} é uma base de dados fotográfica concebida para o estudo do problema de reconhecimento facial, particularmente em situações onde as condições de captura das imagens não possuem restrições. Na avaliação de desempenho aqui reportada foi utilizada uma versão pré-alinhada da biblioteca LFW, designada LFW-a, de forma a remover um importante fator de variação de desempenho, mantendo a análise efetuada centrada no impacto dos filtros de abstração e restantes tarefas de pré-processamento utilizadas. Foram criados 4 conjuntos de teste, cada um dos conjuntos possui um total de 1180 imagens, correspondentes a amostras biométricas de 59 indivíduos (20 imagens por indivíduo). Para cada conjunto foram ainda criados dois sub-conjuntos de dados, a galeria de treino ($\mathscr{G}$) - 80\% das imagens de cada pessoa - e as provas ($\mathscr{P}$)- 20\% das imagens de cada pessoa.
+
+\subsection{Galerias pré-processadas}
+Foram criadas nove galerias de imagens para a análise do impacto das diversas etapas de pré-processamento no reconhecimento facial. Na Tabela \ref{tab:colecoes} encontram-se sintetizadas as nove galerias criadas e as etapas de pré-processamento aplicadas em cada galeria (numeração das etapas de acordo com a Secção \ref{sec:pre-processamento}, 1 e 2 correspondem a deteção e corte devido ao uso de uma versão pré-alinhada da galeria).
+
+\begin{table}[H]
+  \centering
+	\caption{Galerias criadas após pré-processamento.}
+    \begin{tabular}{l|cccc}
+    \hline\hline
+    Designação & 1 e 2  &  3           	 & 4 				& 5 \\
+	\hline
+    Original   &   -       & -               & -                &   -      \\
+    Cropped    & x         & -               & -                &   -      \\
+    Masked     & x         & -               & -                & x      \\
+    Normalized & x         & CS & -        & x      \\
+    Equalized  & x         & EH & -        & x      \\
+    Clahe      & x         & CLAHE  & -        & x      \\
+    Bilateral  & x         & EH & B 		 & x      \\
+    Gaussian   & x         & EH & G 		 & x      \\
+    AKF        & x         & EH & KA	 & x \\
+    \hline\hline
+    \end{tabular}
+	\label{tab:colecoes}
+\end{table}
+
+\subsection{Avaliação \textit{Closed-set Identification}} \label{sec:avaliacao1}
+O paradigma \textit{closed-set identification} é um método padrão de avaliação do desempenho de sistemas de reconhecimento facial automático e corresponde a um sub-problema de identificação em que uma prova é apresentada ao sistema pretendendo-se que este devolva a identidade da pessoa presente na imagem. Neste caso particular do problema de identificação, todas as provas apresentadas possuem uma correspondência na galeria, em oposição ao caso geral de identificação, no qual pode ou não haver uma correspondência.
+
+
+\subsection{Avaliação \textit{Image Retrieval}} \label{sec:avaliacao2}
+A avaliação Image Retrieval teve como objetivo analisar o desempenho dos sistema de um ponto de vista mais próximo dos casos de uso que motivaram o seu desenvolvimento. Para avaliação do desempenho do sistema deste ponto de vista foi criada a medida \textit{precisão na galeria} (PG). A \textit{precisão na galeria} resulta da adaptação da precisão ao caso particular do sistema de reconhecimento facial automático desenvolvido.
+
+
+
+\section{Conclusões}\label{sec:conclusoes}
+Foi desenvolvido um sistema de reconhecimento facial de personalidades, baseado em código aberto, onde é utilizada a abstração de imagens juntamente com tarefas de pré-processamento paralelas, de forma a analisar o seu impacto no processo de reconhecimento. A avaliação foi efetuada com recurso à coleção de imagens \textit{Labeled Faces in the Wild}, sob duas perspetivas, \textit{Closed-set Identification} e \textit{Image Retrieval}, e utilizando nove cadeias de pré-processamento de imagens distintas.
+Os resultados demonstram que a aplicação de filtros de abstração no processo de reconhecimento resulta no compromisso entre a diminuição dos requisitos de armazenamento das imagens e a ligeira redução da eficácia da identificação. A deteção e segmentação das faces presentes nas imagens revelou ser a etapa de pré-processamento com maior importância para um reconhecimento eficaz. O desempenho foi avaliado através dos algoritmos \textit{Eigenfaces}, \textit{Fisherfaces} e \textit{Local Binary Patterns Histograms}, tendo o último revelado o melhor desempenho em termos globais.
+
+%%English version: comment first, uncomment second
+\bibliographystyle{unsrt-pt}  % numeric, unsorted refs
+%\bibliographystyle{unsrt}  % numeric, unsorted refs
+\bibliography{refs}
+
+\end{multicols}
+
+\end{document}
